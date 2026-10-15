@@ -1,0 +1,83 @@
+{
+  "decision": "NO-GO",
+  "decision_scope": "full-paper investment on current evidence",
+  "pilot_preparation_decision": "NO",
+  "feasibility_assessment": "CLOSED",
+  "compute_policy": "laptop only",
+  "paid_gpu_request_ready": false,
+  "hypothesis_status": "UNTESTED",
+  "audio_conditioned_restorer_executed": false,
+  "video_only_restorer_executed": true,
+  "speaker_detector_executed": true,
+  "independently_verified_speaker_labels": false,
+  "delta_false_attribution": null,
+  "speaker_accuracy": null,
+  "causal_controls_complete": false,
+  "rq1": "testable but untested",
+  "rq2": "operational recoverability only; not established",
+  "rq3": "defer new method; no measured advantage over simple rules",
+  "fixed_audio_checks": [
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "fixed_audio_hash_identical": true,
+      "audio_only_logits_identical": true
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "fixed_audio_hash_identical": true,
+      "audio_only_logits_identical": true
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "fixed_audio_hash_identical": true,
+      "audio_only_logits_identical": true
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "fixed_audio_hash_identical": true,
+      "audio_only_logits_identical": true
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "fixed_audio_hash_identical": true,
+      "audio_only_logits_identical": true
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "fixed_audio_hash_identical": true,
+      "audio_only_logits_identical": true
+    }
+  ],
+  "conditions": {
+    "C0": "available",
+    "C1": "six full clips",
+    "C2": "six short resized FastDVDnet diagnostics; task-mismatched",
+    "C3": "BLOCKED: missing genuine audio-conditioned restorer",
+    "C4": "BLOCKED: same dependency",
+    "C5": "UNVERIFIED"
+  },
+  "missing_metrics": [
+    "LPIPS",
+    "calibration",
+    "verified accuracy",
+    "false-attribution rate",
+    "conditioning-audio sensitivity",
+    "abstention performance"
+  ],
+  "software_tests": "8 passed after fixes; initial 5 passed outside sandbox",
+  "supplemental_hf_evaluation": {
+    "model": "xin1u/OmniVR",
+    "public_weights_located": true,
+    "author_output_clips_evaluated": 3,
+    "local_omnivr_restoration_executed": false,
+    "conditioning_audio_swaps_executed": false,
+    "report": "HF_CONTINUATION.md",
+    "interpretation": "CPU evaluation of author-generated outputs; not a completed causal test"
+  }
+}

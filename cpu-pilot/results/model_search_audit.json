@@ -1,0 +1,169 @@
+[
+  {
+    "url": "https://api.github.com/search/repositories?q=GAVN",
+    "checked_utc": "2026-10-13T00:24:33.015776+00:00",
+    "total_count": 241,
+    "results": [
+      {
+        "repository": "ChristopherDosin/gavn",
+        "description": "Invoice System for Freelancers as a Single Page Application built with AdonisJs and Vue.js"
+      },
+      {
+        "repository": "DeveloperNastyusha/gavno",
+        "description": null
+      },
+      {
+        "repository": "oleomanke/gavn",
+        "description": "content"
+      },
+      {
+        "repository": "tylodung/gavn",
+        "description": "dung"
+      },
+      {
+        "repository": "willow-ion95/gavn",
+        "description": "content"
+      },
+      {
+        "repository": "Wert-bity77/gavn",
+        "description": null
+      },
+      {
+        "repository": "okayguysez/gavnogleba228",
+        "description": null
+      },
+      {
+        "repository": "gavner12/gavner12",
+        "description": "Config files for my GitHub profile."
+      },
+      {
+        "repository": "FlashloveMAX/GavnO",
+        "description": null
+      },
+      {
+        "repository": "gavnukk2/gavnukk2",
+        "description": "Config files for my GitHub profile."
+      },
+      {
+        "repository": "89533717483Vv/GaVnO---01",
+        "description": "\u0425.\u0417. = \u0427\u0422\u041e _\u042d\u0422\u041e _\u0422\u0410\u041a\u041e\u0415"
+      },
+      {
+        "repository": "umnoly/gavn",
+        "description": null
+      },
+      {
+        "repository": "gavn19/gavn19",
+        "description": "Config files for my GitHub profile."
+      },
+      {
+        "repository": "davidlasu269-ops/david",
+        "description": "music is my gavn"
+      },
+      {
+        "repository": "ineedsomem1lk/gavnocodeJava",
+        "description": null
+      },
+      {
+        "repository": "MarkupUa/GavnoCoder",
+        "description": "AI agenr for coding"
+      },
+      {
+        "repository": "monteton/GavnoeKuhni",
+        "description": null
+      },
+      {
+        "repository": "gavneet0030/gavneet0030",
+        "description": null
+      },
+      {
+        "repository": "Gavnishkumar/GavnishNewsApp",
+        "description": null
+      },
+      {
+        "repository": "gavn1/gavn1",
+        "description": "Config files for my GitHub profile."
+      },
+      {
+        "repository": "lox228337/gavno666",
+        "description": "No"
+      },
+      {
+        "repository": "Gavno232/Gavno232",
+        "description": "Config files for my GitHub profile."
+      },
+      {
+        "repository": "gavneetb1/gavneet1",
+        "description": "POC for agent and add-in"
+      },
+      {
+        "repository": "KlachoW666/GavnoshkaImpalustiankasd",
+        "description": "GavnoshkaImpalustiankasd"
+      },
+      {
+        "repository": "SI7MA/GAVNO229",
+        "description": null
+      },
+      {
+        "repository": "Gavnish22/Gavnish22",
+        "description": null
+      },
+      {
+        "repository": "SARI-09/gavnoLend",
+        "description": null
+      },
+      {
+        "repository": "million1688111/gavno2",
+        "description": null
+      },
+      {
+        "repository": "tylodung/gavn2",
+        "description": "dung"
+      },
+      {
+        "repository": "dozersuperstar/gavno1337",
+        "description": null
+      }
+    ]
+  },
+  {
+    "url": "https://api.github.com/search/repositories?q=%22Audio-Assisted%20Face%20Video%20Restoration%22",
+    "checked_utc": "2026-10-13T00:24:35.001516+00:00",
+    "total_count": 0,
+    "results": []
+  },
+  {
+    "url": "https://api.github.com/search/repositories?q=%22DAVD-Net%22",
+    "checked_utc": "2026-10-13T00:24:35.237370+00:00",
+    "total_count": 1,
+    "results": [
+      {
+        "repository": "jklemmack/WebDAVdotNet",
+        "description": null
+      }
+    ]
+  },
+  {
+    "url": "https://huggingface.co/api/models?search=GAVN",
+    "checked_utc": "2026-10-13T00:24:35.608300+00:00",
+    "results": [
+      {
+        "model_id": "gavn8r/gavinfish-lora"
+      },
+      {
+        "model_id": "gavn8r/gavinfish2025-lora"
+      },
+      {
+        "model_id": "Gavnomec2000/b0mglora"
+      },
+      {
+        "model_id": "Gavnomec2000/b0mglor1"
+      }
+    ]
+  },
+  {
+    "url": "https://huggingface.co/api/models?search=DAVD-Net",
+    "checked_utc": "2026-10-13T00:24:36.071750+00:00",
+    "results": []
+  }
+]

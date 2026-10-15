@@ -1,0 +1,12 @@
+{
+  "repository": "Lightricks/LTX-2.3",
+  "revision": "3c6a4e66e5d0a684231950b9c74dd4ded7b6fadc",
+  "gated": false,
+  "weight_files": [
+    {
+      "path": "ltx-2.3-22b-dev.safetensors",
+      "bytes": 46149344974,
+      "sha256": "7ab7225325bc403448ea84b6db2269811a880e5118cd2ee2b6282a93d585016f"
+    }
+  ]
+}

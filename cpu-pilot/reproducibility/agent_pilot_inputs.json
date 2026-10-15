@@ -1,0 +1,72 @@
+{
+  "protocol_sha256": "75542084c8d7ca9ee450882c7389e2d146dadae32d858d5c2542406382879350",
+  "records": [
+    {
+      "id": "kgVz_AXYvn0__label0",
+      "source": "kgVz_AXYvn0",
+      "start": 1.0,
+      "entity": "kgVz_AXYvn0:3",
+      "label": 0,
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\agent_pilot\\kgVz_AXYvn0__label0.npz",
+      "sha256": "066dfb9481e24e9cf2e6ea0ea86a2ab29eeb0a9519745e3478df0d98a063bccd",
+      "csv_sha256": "e088f44b9a8c12015a60fbb2db4e7874bcd3fe0b331669b5678d08f4cf5319a1",
+      "video_sha256": "d811028c2701f6905d5e3577a80d304e569d329d5e5a0aaa2791890231b6c8e8",
+      "audio_sha256": "19c4e95245b0ad4312dbc01a8ff358a0d2ba2bb14a4656e6d2db7715d99a4a50"
+    },
+    {
+      "id": "kgVz_AXYvn0__label1",
+      "source": "kgVz_AXYvn0",
+      "start": 9.32,
+      "entity": "kgVz_AXYvn0:18",
+      "label": 1,
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\agent_pilot\\kgVz_AXYvn0__label1.npz",
+      "sha256": "d7a982d79620d235153b37de0d507ce314e1688faac938d3775c2fb70aec3863",
+      "csv_sha256": "e088f44b9a8c12015a60fbb2db4e7874bcd3fe0b331669b5678d08f4cf5319a1",
+      "video_sha256": "d811028c2701f6905d5e3577a80d304e569d329d5e5a0aaa2791890231b6c8e8",
+      "audio_sha256": "19c4e95245b0ad4312dbc01a8ff358a0d2ba2bb14a4656e6d2db7715d99a4a50"
+    },
+    {
+      "id": "EEey6Pt0rqI__label0",
+      "source": "EEey6Pt0rqI",
+      "start": 7.28,
+      "entity": "EEey6Pt0rqI:2",
+      "label": 0,
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\agent_pilot\\EEey6Pt0rqI__label0.npz",
+      "sha256": "053ca45741fa6979eea92ed19882002acba2bcf76a5bfe71cb84965217d69b03",
+      "csv_sha256": "af8203b16adae97e5008fbaf227e91920551610eecf86bedb106c1a7b2530823",
+      "video_sha256": "5b7d6146aaeefde840d6a5f6f228d343df07d69ebcc07a5014f5d591638384dd",
+      "audio_sha256": "ec0e7f2a39021c90f49021785d6c1f8761123d5e5942b192d71755a419f5529a"
+    },
+    {
+      "id": "EEey6Pt0rqI__label1",
+      "source": "EEey6Pt0rqI",
+      "start": 10.72,
+      "entity": "EEey6Pt0rqI:9",
+      "label": 1,
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\agent_pilot\\EEey6Pt0rqI__label1.npz",
+      "sha256": "333e0fba899271faf8aec5cf00e52ec3e18c4e66daf9cc35c3f63aed793e7ab1",
+      "csv_sha256": "af8203b16adae97e5008fbaf227e91920551610eecf86bedb106c1a7b2530823",
+      "video_sha256": "5b7d6146aaeefde840d6a5f6f228d343df07d69ebcc07a5014f5d591638384dd",
+      "audio_sha256": "ec0e7f2a39021c90f49021785d6c1f8761123d5e5942b192d71755a419f5529a"
+    }
+  ],
+  "excluded_sources": [
+    "9Zja_cIAwY8",
+    "ABqo634gI5s",
+    "Pc5iQdNpDX0",
+    "QRXbRSq8p4s",
+    "ho_oK12hY6M",
+    "lnAa1N5ynyI",
+    "qv3-HaaxGUc"
+  ],
+  "audit": [
+    {
+      "source": "kgVz_AXYvn0",
+      "status": "selected"
+    },
+    {
+      "source": "EEey6Pt0rqI",
+      "status": "selected"
+    }
+  ]
+}

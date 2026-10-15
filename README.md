@@ -1,3 +1,5 @@
+> **Added 2026-10-15: complete CPU/Qwen research project in [cpu-pilot/](cpu-pilot/).** Start with the [current research decision](cpu-pilot/RESEARCH_DECISION.md), [research questions](cpu-pilot/RESEARCH_QUESTIONS.md), [audited pilot results](cpu-pilot/QWEN_AGENT_PILOT.md), [Qwen tool traces](cpu-pilot/QWEN_AGENT_TRACES.md), and [reproduction/package notes](cpu-pilot/REPOSITORY_PACKAGE.md). The existing implementation below is preserved separately; its results are not pooled with the imported pilot.
+
 # Multimodal Video Restoration & Active Speaker Attribution Audit
 ### Empirical Study for WACV Workshop Submission
 **Evaluating When Video Restoration Helps vs. Harms Multimodal Agents (Qwen-27B)**

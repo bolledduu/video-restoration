@@ -1,0 +1,9 @@
+# Isolated Python 3.10 environment; do not replace the main CPU Torch setup.
+tensorflow-cpu==2.10.1
+tf_slim==1.1.0
+numpy==1.23.5
+scipy==1.10.1
+pillow==9.5.0
+imageio==2.31.6
+requests==2.32.3
+gdown==5.2.0

@@ -1,0 +1,1643 @@
+# Qwen agent tool traces
+
+All eight completed cases. Exact successful-call responses and tool outputs; evaluator labels are appended only after the agent finishes. Initial prompts and tool schemas are preserved in the hashed runner source.
+
+## kgVz_AXYvn0__label0__sigma15
+
+```json
+{
+  "status": "completed",
+  "submission": {
+    "candidate": "captured",
+    "confidence": 0.5,
+    "rationale": "Captured input is the only candidate with zero pixel MSE and zero prediction disagreement vs. itself, so it preserves the original speech evidence without restoration-induced alteration. Its uncalibrated TalkNet probabilities hover around 0.5 (mean ~0.48, only 3/24 frames >0.5), and visual probabilities trend downward (0.496\u21920.394), indicating no clear majority speaking. Restored candidates (spatial_nlm, fastdvdnet, fastdvdnet_55) all show high pixel MSE (~215-249) and 21-29% binary disagreement with capture, risking altered speech evidence, and their scores are also uncalibrated and near 0.5. No candidate shows a confident majority-speaking signal, so I select captured and judge not speaking for the majority, with low confidence.",
+    "speaking": false
+  },
+  "trace": [
+    {
+      "turn": 0,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "z99trvwtk",
+            "type": "function",
+            "function": {
+              "name": "list_candidates",
+              "arguments": "{}"
+            }
+          },
+          {
+            "id": "emmnrq43b",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "t6k0n3w3j",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "9d025xmht",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "316h5h4me",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "z99trvwtk",
+      "content": "{\"candidates\": [\"captured\", \"spatial_nlm\", \"fastdvdnet\", \"fastdvdnet_55\"], \"captured_is_available\": true, \"frames_scored\": 24}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "emmnrq43b",
+      "content": "{\"brisque\": 36.2830753326416, \"musiq\": 14.709430694580078, \"confidence\": 0.5374841094017029, \"probability\": [0.49292415380477905, 0.5117166638374329, 0.45417577028274536, 0.5018173456192017, 0.47169744968414307, 0.501727283000946, 0.48869508504867554, 0.4944279193878174, 0.485643595457077, 0.4722946584224701, 0.4793945848941803, 0.47711604833602905, 0.44610077142715454, 0.3883076012134552, 0.4041374623775482, 0.4550601541996002, 0.48253822326660156, 0.519356369972229, 0.48127153515815735, 0.5750752091407776, 0.5802527666091919, 0.6126141548156738, 0.48160290718078613, 0.5524470210075378], \"visual_probability\": [0.49588122963905334, 0.5001305341720581, 0.49708375334739685, 0.5426433682441711, 0.5249173641204834, 0.5322446823120117, 0.4762653708457947, 0.4810470640659332, 0.49567973613739014, 0.4714655876159668, 0.4844447076320648, 0.4463297426700592, 0.40348106622695923, 0.40662625432014465, 0.364858478307724, 0.38515326380729675, 0.395723432302475, 0.3821558952331543, 0.3602229654788971, 0.3593083918094635, 0.31860360503196716, 0.3000204563140869, 0.31725379824638367, 0.39369451999664307]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "t6k0n3w3j",
+      "content": "{\"brisque\": 54.417842864990234, \"musiq\": 16.124369939168293, \"confidence\": 0.6197624206542969, \"probability\": [0.40632590651512146, 0.4096708297729492, 0.34609752893447876, 0.3711479604244232, 0.34441715478897095, 0.3628194034099579, 0.35829994082450867, 0.35653629899024963, 0.3508163392543793, 0.33778801560401917, 0.33184778690338135, 0.35617733001708984, 0.32060813903808594, 0.2751326858997345, 0.3094148635864258, 0.3622173070907593, 0.3808489739894867, 0.43929341435432434, 0.4208132326602936, 0.47226256132125854, 0.4907286763191223, 0.5307033658027649, 0.4221371114253998, 0.4310044050216675], \"visual_probability\": [0.4881988763809204, 0.4787490665912628, 0.4664713144302368, 0.523100733757019, 0.5050274133682251, 0.5433148741722107, 0.46781522035598755, 0.46392497420310974, 0.450164794921875, 0.44195273518562317, 0.4512411057949066, 0.4239839017391205, 0.3790980875492096, 0.38389965891838074, 0.3730359673500061, 0.38838157057762146, 0.3750261068344116, 0.4038987159729004, 0.3868946433067322, 0.37912362813949585, 0.3696264624595642, 0.35933011770248413, 0.36354199051856995, 0.4202810525894165]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "9d025xmht",
+      "content": "{\"brisque\": 64.2698745727539, \"musiq\": 16.25687885284424, \"confidence\": 0.5788585543632507, \"probability\": [0.44522231817245483, 0.46315494179725647, 0.40499114990234375, 0.45141372084617615, 0.41568127274513245, 0.4481871426105499, 0.43396392464637756, 0.41817042231559753, 0.409687340259552, 0.39284414052963257, 0.3987412750720978, 0.399404913187027, 0.35717129707336426, 0.3122105300426483, 0.3384492099285126, 0.39361372590065, 0.41806158423423767, 0.4483223855495453, 0.4322088360786438, 0.5099049806594849, 0.5211508870124817, 0.5448397397994995, 0.43964123725891113, 0.4621503949165344], \"visual_probability\": [0.48611921072006226, 0.49098673462867737, 0.49115392565727234, 0.5436577796936035, 0.5319923758506775, 0.5487474799156189, 0.4641508162021637, 0.4704570472240448, 0.49015507102012634, 0.45862939953804016, 0.45931366086006165, 0.45233625173568726, 0.40591490268707275, 0.39365795254707336, 0.37240174412727356, 0.40072396397590637, 0.39126482605934143, 0.3957090675830841, 0.37089744210243225, 0.37807124853134155, 0.3709024488925934, 0.3536415100097656, 0.355380117893219, 0.4176476001739502]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "316h5h4me",
+      "content": "{\"brisque\": 68.75627899169922, \"musiq\": 16.56737168629964, \"confidence\": 0.6013062596321106, \"probability\": [0.43269774317741394, 0.4510624408721924, 0.37334755063056946, 0.4066397547721863, 0.3788197934627533, 0.40326857566833496, 0.4077152609825134, 0.39365261793136597, 0.3741263449192047, 0.35268476605415344, 0.3444550037384033, 0.3635817766189575, 0.3545182943344116, 0.2999553084373474, 0.3292577564716339, 0.38785606622695923, 0.41379693150520325, 0.45243117213249207, 0.40652111172676086, 0.45446938276290894, 0.4810014069080353, 0.5087222456932068, 0.40797939896583557, 0.40753236413002014], \"visual_probability\": [0.49212968349456787, 0.494311660528183, 0.48797914385795593, 0.5358925461769104, 0.5196420550346375, 0.5445910096168518, 0.47345679998397827, 0.4679133892059326, 0.45190945267677307, 0.4388556480407715, 0.46224135160446167, 0.45547646284103394, 0.42401358485221863, 0.4140480160713196, 0.40833115577697754, 0.42957979440689087, 0.4146205186843872, 0.4135405719280243, 0.3773016631603241, 0.3528699278831482, 0.3534197211265564, 0.34294798970222473, 0.35228487849235535, 0.4032958745956421]}"
+    },
+    {
+      "turn": 1,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "rkd34g86x",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "mg3nzg9fb",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "6cbytxa3z",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "qdx69e76w",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "rkd34g86x",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.0, \"input_pixel_mse\": 0.0}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "mg3nzg9fb",
+      "content": "{\"binary_prediction_disagreement\": 0.2916666666666667, \"mean_absolute_score_change\": 0.10930356259147327, \"input_pixel_mse\": 222.67147298177085}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "6cbytxa3z",
+      "content": "{\"binary_prediction_disagreement\": 0.20833333333333334, \"mean_absolute_score_change\": 0.06463364015022914, \"input_pixel_mse\": 214.62245930989585}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "qdx69e76w",
+      "content": "{\"binary_prediction_disagreement\": 0.2916666666666667, \"mean_absolute_score_change\": 0.0926792360842228, \"input_pixel_mse\": 249.3036279296875}"
+    },
+    {
+      "turn": 2,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "907pf0z10",
+            "type": "function",
+            "function": {
+              "name": "submit_selection",
+              "arguments": "{\"candidate\":\"captured\",\"confidence\":0.5,\"rationale\":\"Captured input is the only candidate with zero pixel MSE and zero prediction disagreement vs. itself, so it preserves the original speech evidence without restoration-induced alteration. Its uncalibrated TalkNet probabilities hover around 0.5 (mean ~0.48, only 3/24 frames \\u003e0.5), and visual probabilities trend downward (0.496\u21920.394), indicating no clear majority speaking. Restored candidates (spatial_nlm, fastdvdnet, fastdvdnet_55) all show high pixel MSE (~215-249) and 21-29% binary disagreement with capture, risking altered speech evidence, and their scores are also uncalibrated and near 0.5. No candidate shows a confident majority-speaking signal, so I select captured and judge not speaking for the majority, with low confidence.\",\"speaking\":false}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "907pf0z10",
+      "content": "{\"accepted\": true}"
+    }
+  ],
+  "usage": [
+    {
+      "queue_time": 0.036752687,
+      "prompt_tokens": 797,
+      "prompt_time": 0.063925597,
+      "completion_tokens": 135,
+      "completion_time": 0.270859619,
+      "total_tokens": 932,
+      "total_time": 0.334785216
+    },
+    {
+      "queue_time": 0.030489497,
+      "prompt_tokens": 5231,
+      "prompt_time": 0.377598277,
+      "completion_tokens": 125,
+      "completion_time": 0.243524439,
+      "total_tokens": 5356,
+      "total_time": 0.621122716
+    },
+    {
+      "queue_time": 0.030174057,
+      "prompt_tokens": 5661,
+      "prompt_time": 0.391150763,
+      "completion_tokens": 249,
+      "completion_time": 0.981812008,
+      "total_tokens": 5910,
+      "total_time": 1.372962771
+    }
+  ],
+  "id": "kgVz_AXYvn0__label0__sigma15",
+  "evaluation": {
+    "selected_frame_error": 0.3333333333333333,
+    "majority_answer_correct": true,
+    "captured_frame_error": 0.3333333333333333
+  }
+}
+```
+
+## kgVz_AXYvn0__label0__sigma40
+
+```json
+{
+  "status": "completed",
+  "submission": {
+    "candidate": "captured",
+    "confidence": 0.5,
+    "rationale": "All four candidates' uncalibrated active-speaker probabilities stay near 0.3\u20130.53 across the 24 frames, with no sustained majority above 0.5, so the visible person does not clearly speak for the majority of the interval. The captured input is the safest evidence: it has zero pixel MSE and zero prediction disagreement versus itself, whereas the restored candidates (spatial_nlm, fastdvdnet, fastdvdnet_55) introduce pixel changes (MSE ~400\u20131430) and 12.5% binary prediction disagreement, risking altered speech evidence. Although spatial_nlm has the best BRISQUE (46.2 vs 62.6), the quality gain is not worth the risk of modifying speech evidence when the speaking signal is already weak/ambiguous.",
+    "speaking": false
+  },
+  "trace": [
+    {
+      "turn": 0,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "wmcyaw6e4",
+            "type": "function",
+            "function": {
+              "name": "list_candidates",
+              "arguments": "{}"
+            }
+          },
+          {
+            "id": "k4maxd58h",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "1kc1kgyvx",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "ttb32bz8w",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "3p86032qr",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "wmcyaw6e4",
+      "content": "{\"candidates\": [\"captured\", \"spatial_nlm\", \"fastdvdnet\", \"fastdvdnet_55\"], \"captured_is_available\": true, \"frames_scored\": 24}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "k4maxd58h",
+      "content": "{\"brisque\": 62.56959533691406, \"musiq\": 14.743904113769531, \"confidence\": 0.6138013005256653, \"probability\": [0.3748609721660614, 0.37836435437202454, 0.32636573910713196, 0.3550179600715637, 0.3358962833881378, 0.3270438611507416, 0.31960251927375793, 0.3217109143733978, 0.32902100682258606, 0.3513236343860626, 0.3583148419857025, 0.41205358505249023, 0.38786643743515015, 0.35887789726257324, 0.37306228280067444, 0.4104023873806, 0.41043949127197266, 0.46499472856521606, 0.4139919877052307, 0.526252806186676, 0.5031706690788269, 0.5367921590805054, 0.39630386233329773, 0.4294692277908325], \"visual_probability\": [0.4869868755340576, 0.5153588056564331, 0.5014021396636963, 0.5278577208518982, 0.509223997592926, 0.49809592962265015, 0.4478357434272766, 0.4097115993499756, 0.4310876727104187, 0.41844606399536133, 0.4238176643848419, 0.43739622831344604, 0.4232202470302582, 0.45571279525756836, 0.4035950005054474, 0.3696191906929016, 0.38619643449783325, 0.36013248562812805, 0.34298598766326904, 0.3704007863998413, 0.3500595688819885, 0.33357858657836914, 0.3559052050113678, 0.40721821784973145]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "1kc1kgyvx",
+      "content": "{\"brisque\": 46.17080561319987, \"musiq\": 14.946715672810873, \"confidence\": 0.7065885663032532, \"probability\": [0.31333500146865845, 0.3152022957801819, 0.26695990562438965, 0.2900257706642151, 0.27153322100639343, 0.2747832238674164, 0.25722798705101013, 0.23430712521076202, 0.2223077267408371, 0.2519286572933197, 0.2473146915435791, 0.27614304423332214, 0.27083373069763184, 0.24744749069213867, 0.23929373919963837, 0.26361045241355896, 0.2855583429336548, 0.32957133650779724, 0.3097436726093292, 0.4010964035987854, 0.38538041710853577, 0.4449629783630371, 0.30888572335243225, 0.3344205915927887], \"visual_probability\": [0.4945380985736847, 0.5089090466499329, 0.4870215356349945, 0.5215637683868408, 0.5085225701332092, 0.49307921528816223, 0.43650564551353455, 0.4166049361228943, 0.410040020942688, 0.4105093777179718, 0.4162377417087555, 0.433004766702652, 0.43579551577568054, 0.4446944296360016, 0.4005148112773895, 0.3934853971004486, 0.41694068908691406, 0.3792663812637329, 0.3561873137950897, 0.3690621256828308, 0.3521420359611511, 0.3446069657802582, 0.3520139753818512, 0.415426641702652]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "ttb32bz8w",
+      "content": "{\"brisque\": 57.25148137410482, \"musiq\": 16.02107302347819, \"confidence\": 0.6377893090248108, \"probability\": [0.40848010778427124, 0.4119929075241089, 0.34469011425971985, 0.38427430391311646, 0.36145880818367004, 0.35565078258514404, 0.35464516282081604, 0.3407360315322876, 0.3280125856399536, 0.29569071531295776, 0.30527693033218384, 0.32305172085762024, 0.3142673373222351, 0.27007415890693665, 0.28183066844940186, 0.32266858220100403, 0.36124852299690247, 0.39672014117240906, 0.3867650330066681, 0.45238497853279114, 0.4598802626132965, 0.48265236616134644, 0.37502560019493103, 0.37557902932167053], \"visual_probability\": [0.4912353754043579, 0.49630311131477356, 0.4893815815448761, 0.5376399755477905, 0.5249131321907043, 0.5376877784729004, 0.45614007115364075, 0.4607049524784088, 0.4476890563964844, 0.4069439470767975, 0.45618751645088196, 0.46338316798210144, 0.4429171681404114, 0.42311927676200867, 0.41239601373672485, 0.4213022291660309, 0.41930443048477173, 0.4035818874835968, 0.3718739449977875, 0.34831613302230835, 0.3458908498287201, 0.32993704080581665, 0.3501717150211334, 0.4061089754104614]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "3p86032qr",
+      "content": "{\"brisque\": 65.49280802408855, \"musiq\": 16.449822743733723, \"confidence\": 0.6240594983100891, \"probability\": [0.414739191532135, 0.4191782772541046, 0.3529203534126282, 0.3882877230644226, 0.3655206859111786, 0.3661132752895355, 0.36431413888931274, 0.3520468771457672, 0.3346778154373169, 0.31142935156822205, 0.30831754207611084, 0.3339223265647888, 0.3383868336677551, 0.295394629240036, 0.3159281611442566, 0.36448603868484497, 0.3981616199016571, 0.416414350271225, 0.39301085472106934, 0.4587791860103607, 0.47239476442337036, 0.4903534948825836, 0.38345763087272644, 0.3843366205692291], \"visual_probability\": [0.4940778613090515, 0.49319925904273987, 0.4802439212799072, 0.533159613609314, 0.5187742710113525, 0.5296586155891418, 0.4592167139053345, 0.45902401208877563, 0.43968430161476135, 0.4099061191082001, 0.4544101357460022, 0.4546754062175751, 0.436696857213974, 0.436064749956131, 0.4224928021430969, 0.42773905396461487, 0.43442031741142273, 0.4107348620891571, 0.3726746737957001, 0.3335690200328827, 0.34351736307144165, 0.32486122846603394, 0.3531762659549713, 0.40354764461517334]}"
+    },
+    {
+      "turn": 1,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "dfgg5kpbb",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "kpybkg272",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "4yks9tvfc",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "p2256q4ae",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "dfgg5kpbb",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.0, \"input_pixel_mse\": 0.0}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "kpybkg272",
+      "content": "{\"binary_prediction_disagreement\": 0.125, \"mean_absolute_score_change\": 0.09830525331199169, \"input_pixel_mse\": 398.9787736002604}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "4yks9tvfc",
+      "content": "{\"binary_prediction_disagreement\": 0.125, \"mean_absolute_score_change\": 0.048094749450683594, \"input_pixel_mse\": 1395.8605314127603}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "p2256q4ae",
+      "content": "{\"binary_prediction_disagreement\": 0.125, \"mean_absolute_score_change\": 0.03993572170535723, \"input_pixel_mse\": 1429.9068627929687}"
+    },
+    {
+      "turn": 2,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "xhvb1fz0t",
+            "type": "function",
+            "function": {
+              "name": "submit_selection",
+              "arguments": "{\"candidate\":\"captured\",\"confidence\":0.5,\"rationale\":\"All four candidates' uncalibrated active-speaker probabilities stay near 0.3\u20130.53 across the 24 frames, with no sustained majority above 0.5, so the visible person does not clearly speak for the majority of the interval. The captured input is the safest evidence: it has zero pixel MSE and zero prediction disagreement versus itself, whereas the restored candidates (spatial_nlm, fastdvdnet, fastdvdnet_55) introduce pixel changes (MSE ~400\u20131430) and 12.5% binary prediction disagreement, risking altered speech evidence. Although spatial_nlm has the best BRISQUE (46.2 vs 62.6), the quality gain is not worth the risk of modifying speech evidence when the speaking signal is already weak/ambiguous.\",\"speaking\":false}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "xhvb1fz0t",
+      "content": "{\"accepted\": true}"
+    }
+  ],
+  "usage": [
+    {
+      "queue_time": 0.02218142,
+      "prompt_tokens": 797,
+      "prompt_time": 0.063917752,
+      "completion_tokens": 135,
+      "completion_time": 0.271863539,
+      "total_tokens": 932,
+      "total_time": 0.335781291
+    },
+    {
+      "queue_time": 0.021943742,
+      "prompt_tokens": 5226,
+      "prompt_time": 0.361317705,
+      "completion_tokens": 125,
+      "completion_time": 0.243395627,
+      "total_tokens": 5351,
+      "total_time": 0.604713332
+    },
+    {
+      "queue_time": 0.021860623,
+      "prompt_tokens": 5618,
+      "prompt_time": 0.399457177,
+      "completion_tokens": 240,
+      "completion_time": 0.938727381,
+      "total_tokens": 5858,
+      "total_time": 1.338184558
+    }
+  ],
+  "id": "kgVz_AXYvn0__label0__sigma40",
+  "evaluation": {
+    "selected_frame_error": 0.125,
+    "majority_answer_correct": true,
+    "captured_frame_error": 0.125
+  }
+}
+```
+
+## kgVz_AXYvn0__label1__sigma15
+
+```json
+{
+  "status": "completed",
+  "submission": {
+    "candidate": "captured",
+    "confidence": 0.5,
+    "rationale": "Captured input has the best image quality (BRISQUE 25.5, lowest; MUSIQ 16.8, highest) and zero pixel deviation from itself, so it preserves the original speech evidence without restoration artifacts. All four candidates agree on the binary speaking prediction (disagreement 0.0), and the captured active-speaker probabilities hover around 0.30\u20130.47 (mean ~0.36), below 0.5, indicating the visible person does not speak for the majority of the interval. Restored candidates (spatial_nlm, fastdvdnet, fastdvdnet_55) show higher BRISQUE (51.9\u201361.2) and larger pixel MSE (206\u2013266) with no binary-prediction benefit, so they are not preferred. Confidence is moderate because the uncalibrated scores are near the 0.5 threshold.",
+    "speaking": false
+  },
+  "trace": [
+    {
+      "turn": 0,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "ewgzab256",
+            "type": "function",
+            "function": {
+              "name": "list_candidates",
+              "arguments": "{}"
+            }
+          },
+          {
+            "id": "0bwn3yfkc",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "c8kcz85wj",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "wcezbz68r",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "bbh7nfhwq",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "ewgzab256",
+      "content": "{\"candidates\": [\"captured\", \"spatial_nlm\", \"fastdvdnet\", \"fastdvdnet_55\"], \"captured_is_available\": true, \"frames_scored\": 24}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "0bwn3yfkc",
+      "content": "{\"brisque\": 25.466705322265625, \"musiq\": 16.762259165445965, \"confidence\": 0.6319257616996765, \"probability\": [0.4402982294559479, 0.45695367455482483, 0.4425148367881775, 0.46871015429496765, 0.4543166160583496, 0.4544878900051117, 0.4268293082714081, 0.3199576735496521, 0.31511634588241577, 0.33232608437538147, 0.31074416637420654, 0.34330686926841736, 0.37236660718917847, 0.37107813358306885, 0.309807151556015, 0.30251210927963257, 0.3476300537586212, 0.3401661813259125, 0.3232211172580719, 0.3019302189350128, 0.3330160081386566, 0.3424135148525238, 0.39463189244270325, 0.3294464647769928], \"visual_probability\": [0.46059444546699524, 0.4826286733150482, 0.49277937412261963, 0.5029128193855286, 0.46262142062187195, 0.5181967616081238, 0.5113146901130676, 0.4601624011993408, 0.4487491846084595, 0.5081297159194946, 0.41149064898490906, 0.4449683427810669, 0.4664837419986725, 0.5104114413261414, 0.44038915634155273, 0.4359199106693268, 0.3953971266746521, 0.441275030374527, 0.4227852523326874, 0.4387916624546051, 0.45594170689582825, 0.4924542009830475, 0.3911380469799042, 0.39370447397232056]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "c8kcz85wj",
+      "content": "{\"brisque\": 51.90443674723307, \"musiq\": 15.440023104349772, \"confidence\": 0.8326215744018555, \"probability\": [0.22260813415050507, 0.2227305918931961, 0.2250136286020279, 0.22140070796012878, 0.20095358788967133, 0.1976810097694397, 0.19718427956104279, 0.15221090614795685, 0.14795342087745667, 0.14225991070270538, 0.13384459912776947, 0.160702183842659, 0.16709014773368835, 0.19007161259651184, 0.15005728602409363, 0.1340741217136383, 0.15659824013710022, 0.13337762653827667, 0.14039474725723267, 0.11663384735584259, 0.128406822681427, 0.14495313167572021, 0.17080001533031464, 0.16008207201957703], \"visual_probability\": [0.47885262966156006, 0.5002744197845459, 0.5129562020301819, 0.5115052461624146, 0.4763627350330353, 0.5102746486663818, 0.5019664168357849, 0.43587884306907654, 0.45227479934692383, 0.5031932592391968, 0.4256126284599304, 0.4140564203262329, 0.4524652659893036, 0.5235925912857056, 0.4794342815876007, 0.48098403215408325, 0.4139009714126587, 0.4434177577495575, 0.4358101785182953, 0.480886846780777, 0.46806368231773376, 0.5041657090187073, 0.4027414917945862, 0.3935999870300293]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "wcezbz68r",
+      "content": "{\"brisque\": 53.8348642985026, \"musiq\": 15.480005900065104, \"confidence\": 0.68702632188797, \"probability\": [0.36588412523269653, 0.39598405361175537, 0.3995357155799866, 0.419300377368927, 0.39884886145591736, 0.39339688420295715, 0.3665381968021393, 0.26830050349235535, 0.2696450352668762, 0.2764151692390442, 0.2584439814090729, 0.2838130593299866, 0.31615862250328064, 0.32214614748954773, 0.264252632856369, 0.2546656131744385, 0.287919282913208, 0.2692905366420746, 0.25424081087112427, 0.24125738441944122, 0.2891366183757782, 0.2912798821926117, 0.34535205364227295, 0.27956318855285645], \"visual_probability\": [0.4646504819393158, 0.48442551493644714, 0.4928838312625885, 0.5080676078796387, 0.4658101499080658, 0.5151026844978333, 0.4805118441581726, 0.445514976978302, 0.460872083902359, 0.5175637602806091, 0.41455531120300293, 0.4296235740184784, 0.4686884582042694, 0.5040842890739441, 0.4329986870288849, 0.42695093154907227, 0.39579862356185913, 0.43183767795562744, 0.4226219952106476, 0.4460467994213104, 0.46683552861213684, 0.493297815322876, 0.39929381012916565, 0.39513280987739563]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "bbh7nfhwq",
+      "content": "{\"brisque\": 61.201157887776695, \"musiq\": 15.981949170430502, \"confidence\": 0.7859201431274414, \"probability\": [0.2607658803462982, 0.2666064202785492, 0.2713435888290405, 0.26752033829689026, 0.25911322236061096, 0.25990092754364014, 0.2589065134525299, 0.18593157827854156, 0.1835804283618927, 0.18272820115089417, 0.17522799968719482, 0.17985416948795319, 0.21819688379764557, 0.2502998411655426, 0.1981966346502304, 0.1806146651506424, 0.2030126005411148, 0.1830674707889557, 0.16708937287330627, 0.16240419447422028, 0.18578723073005676, 0.20097805559635162, 0.22897154092788696, 0.207818403840065], \"visual_probability\": [0.4688883423805237, 0.48475944995880127, 0.49248671531677246, 0.5067435503005981, 0.46777161955833435, 0.5228477716445923, 0.4901058077812195, 0.4471593499183655, 0.4738706052303314, 0.5238828659057617, 0.43469780683517456, 0.45031237602233887, 0.4725794196128845, 0.509046196937561, 0.4316595494747162, 0.4365973174571991, 0.39883536100387573, 0.43391287326812744, 0.4115956723690033, 0.45148271322250366, 0.44753971695899963, 0.48511162400245667, 0.4061148464679718, 0.3994356393814087]}"
+    },
+    {
+      "turn": 1,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "wsbxbnra1",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "aay7qdwyx",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "3nw74a183",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "py5zjx89j",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "wsbxbnra1",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.0, \"input_pixel_mse\": 0.0}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "aay7qdwyx",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.20069577793280283, \"input_pixel_mse\": 257.8434423828125}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "3nw74a183",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.055100523556272187, \"input_pixel_mse\": 206.368544921875}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "py5zjx89j",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.15399438080688319, \"input_pixel_mse\": 265.5153173828125}"
+    },
+    {
+      "turn": 2,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "dby2r3h5d",
+            "type": "function",
+            "function": {
+              "name": "submit_selection",
+              "arguments": "{\"candidate\":\"captured\",\"confidence\":0.5,\"rationale\":\"Captured input has the best image quality (BRISQUE 25.5, lowest; MUSIQ 16.8, highest) and zero pixel deviation from itself, so it preserves the original speech evidence without restoration artifacts. All four candidates agree on the binary speaking prediction (disagreement 0.0), and the captured active-speaker probabilities hover around 0.30\u20130.47 (mean ~0.36), below 0.5, indicating the visible person does not speak for the majority of the interval. Restored candidates (spatial_nlm, fastdvdnet, fastdvdnet_55) show higher BRISQUE (51.9\u201361.2) and larger pixel MSE (206\u2013266) with no binary-prediction benefit, so they are not preferred. Confidence is moderate because the uncalibrated scores are near the 0.5 threshold.\",\"speaking\":false}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "dby2r3h5d",
+      "content": "{\"accepted\": true}"
+    }
+  ],
+  "usage": [
+    {
+      "queue_time": 0.022454588,
+      "prompt_tokens": 797,
+      "prompt_time": 0.054663571,
+      "completion_tokens": 135,
+      "completion_time": 0.26198819,
+      "total_tokens": 932,
+      "total_time": 0.316651761
+    },
+    {
+      "queue_time": 0.021867229,
+      "prompt_tokens": 5230,
+      "prompt_time": 0.371973967,
+      "completion_tokens": 125,
+      "completion_time": 0.24430922,
+      "total_tokens": 5355,
+      "total_time": 0.616283187
+    },
+    {
+      "queue_time": 0.025693372,
+      "prompt_tokens": 5613,
+      "prompt_time": 0.38650268,
+      "completion_tokens": 263,
+      "completion_time": 1.048532629,
+      "total_tokens": 5876,
+      "total_time": 1.4350353089999999
+    }
+  ],
+  "id": "kgVz_AXYvn0__label1__sigma15",
+  "evaluation": {
+    "selected_frame_error": 1.0,
+    "majority_answer_correct": false,
+    "captured_frame_error": 1.0
+  }
+}
+```
+
+## kgVz_AXYvn0__label1__sigma40
+
+```json
+{
+  "status": "completed",
+  "submission": {
+    "candidate": "captured",
+    "confidence": 0.55,
+    "rationale": "Captured input is the only candidate with zero pixel MSE and zero prediction disagreement vs. itself, so it preserves the original speech evidence. Its uncalibrated TalkNet scores are consistently above 0.5 (mean ~0.61, 24/24 frames >0.5), indicating the visible person speaks for the majority of the interval. Restored candidates (spatial_nlm, fastdvdnet, fastdvdnet_55) all show 100% binary disagreement and large pixel MSE (1063\u20131401), meaning they substantially alter the speech evidence; spatial_nlm's very low BRISQUE (3.17) reflects over-smoothing, not correctness. Since the restored versions flip the speaking signal and distort pixels, the captured input is the safer evidence despite its higher BRISQUE (60.6). Confidence is moderate because the TalkNet scores are uncalibrated and only marginally above 0.5.",
+    "speaking": true
+  },
+  "trace": [
+    {
+      "turn": 0,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "eakkvrmr8",
+            "type": "function",
+            "function": {
+              "name": "list_candidates",
+              "arguments": "{}"
+            }
+          },
+          {
+            "id": "az04ez7qc",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "mkerer79e",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "gw7ebxmmg",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "jxpsdw4vg",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "eakkvrmr8",
+      "content": "{\"candidates\": [\"captured\", \"spatial_nlm\", \"fastdvdnet\", \"fastdvdnet_55\"], \"captured_is_available\": true, \"frames_scored\": 24}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "az04ez7qc",
+      "content": "{\"brisque\": 60.57050069173177, \"musiq\": 16.31605339050293, \"confidence\": 0.6108793616294861, \"probability\": [0.6348747611045837, 0.6725611686706543, 0.617480993270874, 0.6456953287124634, 0.6622706055641174, 0.5976917743682861, 0.5926759243011475, 0.5487524271011353, 0.5146256685256958, 0.5379837155342102, 0.5880075097084045, 0.574225902557373, 0.6371808052062988, 0.6336846947669983, 0.5922544002532959, 0.6141613721847534, 0.636358916759491, 0.6362226009368896, 0.6357669830322266, 0.5992396473884583, 0.6366768479347229, 0.6321308612823486, 0.6370435357093811, 0.5835379362106323], \"visual_probability\": [0.4954056143760681, 0.4867267906665802, 0.4925259053707123, 0.47858336567878723, 0.429104208946228, 0.5268338322639465, 0.5463249683380127, 0.4836995601654053, 0.46682295203208923, 0.46325042843818665, 0.4026786684989929, 0.3604905605316162, 0.39005017280578613, 0.45507875084877014, 0.4391024708747864, 0.4280001223087311, 0.4173196256160736, 0.4811432361602783, 0.4203304052352905, 0.3988882303237915, 0.39459049701690674, 0.42942047119140625, 0.3658536374568939, 0.3705745339393616]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "mkerer79e",
+      "content": "{\"brisque\": 3.1700547536214194, \"musiq\": 14.618747075398764, \"confidence\": 0.8120698928833008, \"probability\": [0.24025727808475494, 0.23117297887802124, 0.21633975207805634, 0.22918207943439484, 0.20521585643291473, 0.21461573243141174, 0.2129451334476471, 0.15939444303512573, 0.14157980680465698, 0.14612314105033875, 0.1430826336145401, 0.18380427360534668, 0.2006777822971344, 0.23253536224365234, 0.19522815942764282, 0.1642753928899765, 0.19547756016254425, 0.19376614689826965, 0.18267351388931274, 0.15196610987186432, 0.14490675926208496, 0.15659543871879578, 0.19014158844947815, 0.17836783826351166], \"visual_probability\": [0.48652949929237366, 0.4974971413612366, 0.515663743019104, 0.5160514712333679, 0.4710933566093445, 0.5244110226631165, 0.5486531853675842, 0.4635656774044037, 0.4540225565433502, 0.5076524615287781, 0.43203526735305786, 0.393969863653183, 0.47211894392967224, 0.5499772429466248, 0.505278468132019, 0.4901016652584076, 0.39778950810432434, 0.4461286664009094, 0.4346747100353241, 0.4834275245666504, 0.48338010907173157, 0.48657843470573425, 0.39621925354003906, 0.3842181861400604]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "gw7ebxmmg",
+      "content": "{\"brisque\": 51.259849548339844, \"musiq\": 15.39635944366455, \"confidence\": 0.735704243183136, \"probability\": [0.3134734630584717, 0.3220023512840271, 0.330096036195755, 0.31792548298835754, 0.318754106760025, 0.3188053369522095, 0.299883097410202, 0.23102329671382904, 0.2077040672302246, 0.21240168809890747, 0.21243400871753693, 0.22981366515159607, 0.268960177898407, 0.30160611867904663, 0.24160556495189667, 0.23650583624839783, 0.2628333270549774, 0.24761393666267395, 0.20186428725719452, 0.21379585564136505, 0.24478963017463684, 0.2541019022464752, 0.2833651006221771, 0.2717404365539551], \"visual_probability\": [0.4636300206184387, 0.47585999965667725, 0.49087604880332947, 0.5169685482978821, 0.47841697931289673, 0.5143927335739136, 0.49363335967063904, 0.42808184027671814, 0.4254397451877594, 0.48893794417381287, 0.41630277037620544, 0.43559831380844116, 0.47294923663139343, 0.512184739112854, 0.45846492052078247, 0.45876288414001465, 0.4266746938228607, 0.4683716595172882, 0.41739991307258606, 0.45956164598464966, 0.46261897683143616, 0.4811573326587677, 0.38745465874671936, 0.38166743516921997]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "jxpsdw4vg",
+      "content": "{\"brisque\": 60.44144058227539, \"musiq\": 15.781336148579916, \"confidence\": 0.7508811950683594, \"probability\": [0.297761470079422, 0.30639970302581787, 0.31799301505088806, 0.2986007630825043, 0.2901883125305176, 0.2917798161506653, 0.2799031436443329, 0.21380715072155, 0.19535943865776062, 0.1988542079925537, 0.20110273361206055, 0.21432927250862122, 0.25794366002082825, 0.2922655940055847, 0.2292962670326233, 0.2274460792541504, 0.24826854467391968, 0.2356380820274353, 0.19300450384616852, 0.20323187112808228, 0.22490639984607697, 0.24125361442565918, 0.26344814896583557, 0.2560710310935974], \"visual_probability\": [0.4628082513809204, 0.4793940484523773, 0.49508559703826904, 0.5179410576820374, 0.4788018763065338, 0.5169135332107544, 0.4925024211406708, 0.4360639452934265, 0.43738284707069397, 0.4844105541706085, 0.4148395359516144, 0.4376191198825836, 0.47495555877685547, 0.5117889046669006, 0.4517044126987457, 0.45759350061416626, 0.4241575300693512, 0.46059444546699524, 0.41630852222442627, 0.46131059527397156, 0.4558899998664856, 0.4832957983016968, 0.3900175094604492, 0.3830012381076813]}"
+    },
+    {
+      "turn": 1,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "5vs8avqnd",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "vae22ayrc",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "5ha05hc89",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "aykhgwpce",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "5vs8avqnd",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.0, \"input_pixel_mse\": 0.0}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "vae22ayrc",
+      "content": "{\"binary_prediction_disagreement\": 1.0, \"mean_absolute_score_change\": 0.42294915082554024, \"input_pixel_mse\": 1063.2211572265626}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "5ha05hc89",
+      "content": "{\"binary_prediction_disagreement\": 1.0, \"mean_absolute_score_change\": 0.34658356693883735, \"input_pixel_mse\": 1344.9114322916666}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "aykhgwpce",
+      "content": "{\"binary_prediction_disagreement\": 1.0, \"mean_absolute_score_change\": 0.36176048157115775, \"input_pixel_mse\": 1401.3036751302084}"
+    },
+    {
+      "turn": 2,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "dayr7nb42",
+            "type": "function",
+            "function": {
+              "name": "submit_selection",
+              "arguments": "{\"candidate\":\"captured\",\"confidence\":0.55,\"rationale\":\"Captured input is the only candidate with zero pixel MSE and zero prediction disagreement vs. itself, so it preserves the original speech evidence. Its uncalibrated TalkNet scores are consistently above 0.5 (mean ~0.61, 24/24 frames \\u003e0.5), indicating the visible person speaks for the majority of the interval. Restored candidates (spatial_nlm, fastdvdnet, fastdvdnet_55) all show 100% binary disagreement and large pixel MSE (1063\u20131401), meaning they substantially alter the speech evidence; spatial_nlm's very low BRISQUE (3.17) reflects over-smoothing, not correctness. Since the restored versions flip the speaking signal and distort pixels, the captured input is the safer evidence despite its higher BRISQUE (60.6). Confidence is moderate because the TalkNet scores are uncalibrated and only marginally above 0.5.\",\"speaking\":true}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "dayr7nb42",
+      "content": "{\"accepted\": true}"
+    }
+  ],
+  "usage": [
+    {
+      "queue_time": 0.033167237,
+      "prompt_tokens": 797,
+      "prompt_time": 0.066071093,
+      "completion_tokens": 135,
+      "completion_time": 0.273938045,
+      "total_tokens": 932,
+      "total_time": 0.340009138
+    },
+    {
+      "queue_time": 0.02705222,
+      "prompt_tokens": 5227,
+      "prompt_time": 0.420781763,
+      "completion_tokens": 125,
+      "completion_time": 0.24964991,
+      "total_tokens": 5352,
+      "total_time": 0.670431673
+    },
+    {
+      "queue_time": 0.021991225,
+      "prompt_tokens": 5613,
+      "prompt_time": 0.386631047,
+      "completion_tokens": 271,
+      "completion_time": 1.084588665,
+      "total_tokens": 5884,
+      "total_time": 1.471219712
+    }
+  ],
+  "id": "kgVz_AXYvn0__label1__sigma40",
+  "evaluation": {
+    "selected_frame_error": 0.0,
+    "majority_answer_correct": true,
+    "captured_frame_error": 0.0
+  }
+}
+```
+
+## EEey6Pt0rqI__label0__sigma15
+
+```json
+{
+  "status": "completed",
+  "submission": {
+    "candidate": "captured",
+    "confidence": 0.55,
+    "rationale": "All four candidates' uncalibrated active-speaker probabilities stay below 0.5 for every one of the 24 frames (captured peaks ~0.39, spatial_nlm ~0.51 only in 2 frames, fastdvdnet ~0.43, fastdvdnet_55 ~0.47), so no candidate indicates the visible person speaks for a majority of the interval. Captured input is the safest evidence: it has zero pixel MSE and zero prediction disagreement with itself, whereas the restored candidates (spatial_nlm, fastdvdnet, fastdvdnet_55) introduce pixel changes (MSE ~200-273) and small score shifts that could alter speech evidence. Although spatial_nlm has better BRISQUE (37.2 vs 43.7) and MUSIQ (17.8 vs 13.8), the quality gain is not worth the risk of altering speech evidence when the speaking signal is already uniformly low. Therefore select captured and report speaking=false with modest confidence, since the uncalibrated scores are only marginally below threshold.",
+    "speaking": false
+  },
+  "trace": [
+    {
+      "turn": 0,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "r4sh33bs6",
+            "type": "function",
+            "function": {
+              "name": "list_candidates",
+              "arguments": "{}"
+            }
+          },
+          {
+            "id": "ebqqtjj8b",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "r1fskpjes",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "xd9bm53an",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "54sx1dc2a",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "r4sh33bs6",
+      "content": "{\"candidates\": [\"captured\", \"spatial_nlm\", \"fastdvdnet\", \"fastdvdnet_55\"], \"captured_is_available\": true, \"frames_scored\": 24}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "ebqqtjj8b",
+      "content": "{\"brisque\": 43.659498850504555, \"musiq\": 13.83592446645101, \"confidence\": 0.7177842259407043, \"probability\": [0.38808104395866394, 0.39376989006996155, 0.3643922507762909, 0.3497137725353241, 0.3162180185317993, 0.26623520255088806, 0.25173836946487427, 0.27047795057296753, 0.25616198778152466, 0.2796056866645813, 0.28526368737220764, 0.25350865721702576, 0.29763519763946533, 0.26681315898895264, 0.24373993277549744, 0.22505390644073486, 0.23668944835662842, 0.26268962025642395, 0.27545008063316345, 0.2744167447090149, 0.24610553681850433, 0.2229394018650055, 0.2659405469894409, 0.280537873506546], \"visual_probability\": [0.5208106637001038, 0.5315593481063843, 0.5054266452789307, 0.4802675247192383, 0.4338665008544922, 0.3994607925415039, 0.392590194940567, 0.4541208744049072, 0.44929206371307373, 0.42769551277160645, 0.38424593210220337, 0.34114935994148254, 0.44954967498779297, 0.46844831109046936, 0.48576149344444275, 0.4638110101222992, 0.4909451901912689, 0.5015674233436584, 0.4262670874595642, 0.398172527551651, 0.3807384669780731, 0.3619474172592163, 0.3939073383808136, 0.4360226094722748]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "r1fskpjes",
+      "content": "{\"brisque\": 37.22907638549805, \"musiq\": 17.824696858723957, \"confidence\": 0.6394833922386169, \"probability\": [0.5121716856956482, 0.5130307674407959, 0.48957517743110657, 0.4725145101547241, 0.4264273941516876, 0.38583865761756897, 0.3834180533885956, 0.3721769154071808, 0.35755136609077454, 0.3739260137081146, 0.39731618762016296, 0.3501952588558197, 0.40032997727394104, 0.34933194518089294, 0.31337806582450867, 0.2933183014392853, 0.2991611957550049, 0.2807859480381012, 0.2996343672275543, 0.3066357672214508, 0.2710729241371155, 0.25463855266571045, 0.3005046248435974, 0.29986974596977234], \"visual_probability\": [0.4902835488319397, 0.5104021430015564, 0.4859517514705658, 0.49990296363830566, 0.43448495864868164, 0.43219584226608276, 0.48835840821266174, 0.5108963847160339, 0.5053219795227051, 0.4580964148044586, 0.424031525850296, 0.38236764073371887, 0.44407281279563904, 0.44498419761657715, 0.46623629331588745, 0.4574870765209198, 0.4930435121059418, 0.45272958278656006, 0.38452592492103577, 0.3726769983768463, 0.374462366104126, 0.3570651113986969, 0.3964916169643402, 0.4310453236103058]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "xd9bm53an",
+      "content": "{\"brisque\": 68.27440770467122, \"musiq\": 17.0087734858195, \"confidence\": 0.7069795727729797, \"probability\": [0.4298352301120758, 0.4286462664604187, 0.4141979217529297, 0.386962890625, 0.3525891602039337, 0.29655420780181885, 0.29919517040252686, 0.2929108142852783, 0.2712380290031433, 0.2719669044017792, 0.3169180154800415, 0.2782858610153198, 0.28936582803726196, 0.2817456126213074, 0.2552874982357025, 0.23103109002113342, 0.24530673027038574, 0.2409396916627884, 0.24218130111694336, 0.24247299134731293, 0.2258174568414688, 0.20961260795593262, 0.25612151622772217, 0.27330851554870605], \"visual_probability\": [0.5238969326019287, 0.5337265133857727, 0.5330432653427124, 0.49482959508895874, 0.42635512351989746, 0.4072510004043579, 0.4417564868927002, 0.4889028072357178, 0.47329798340797424, 0.4298618733882904, 0.40852922201156616, 0.34084320068359375, 0.3867488503456116, 0.4445330798625946, 0.4736821949481964, 0.4357947111129761, 0.46981823444366455, 0.44394540786743164, 0.3711816072463989, 0.3542023003101349, 0.36607497930526733, 0.35486969351768494, 0.3878326416015625, 0.4429958462715149]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "54sx1dc2a",
+      "content": "{\"brisque\": 75.72021738688152, \"musiq\": 16.41888173421224, \"confidence\": 0.6766061186790466, \"probability\": [0.43948206305503845, 0.46646010875701904, 0.4448530972003937, 0.44701844453811646, 0.4250524938106537, 0.35352200269699097, 0.34261879324913025, 0.348974347114563, 0.35524922609329224, 0.3291764259338379, 0.34918633103370667, 0.33144882321357727, 0.3579188883304596, 0.2999359965324402, 0.28112781047821045, 0.23855534195899963, 0.25085294246673584, 0.23859642446041107, 0.2410924732685089, 0.23611965775489807, 0.22943563759326935, 0.21650327742099762, 0.2600674331188202, 0.27820631861686707], \"visual_probability\": [0.5036699771881104, 0.5181045532226562, 0.49669092893600464, 0.5171032547950745, 0.4840567409992218, 0.43340978026390076, 0.46937060356140137, 0.5154781937599182, 0.534641683101654, 0.48275941610336304, 0.4362073540687561, 0.39596718549728394, 0.43760326504707336, 0.42451992630958557, 0.44279205799102783, 0.4326305389404297, 0.45214414596557617, 0.42399483919143677, 0.3636890947818756, 0.32429206371307373, 0.34890100359916687, 0.3226150870323181, 0.3660365045070648, 0.4220108389854431]}"
+    },
+    {
+      "turn": 1,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "bgvtpjrt2",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "nvyg3r962",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "qy4rfq94p",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "dbq8qr5s4",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "bgvtpjrt2",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.0, \"input_pixel_mse\": 0.0}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "nvyg3r962",
+      "content": "{\"binary_prediction_disagreement\": 0.08333333333333333, \"mean_absolute_score_change\": 0.08040105986098449, \"input_pixel_mse\": 201.88130208333334}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "qy4rfq94p",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.023599212368329365, \"input_pixel_mse\": 197.55159830729167}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "dbq8qr5s4",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.051849731554587684, \"input_pixel_mse\": 272.81188802083335}"
+    },
+    {
+      "turn": 2,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "8k0zvvrtp",
+            "type": "function",
+            "function": {
+              "name": "submit_selection",
+              "arguments": "{\"candidate\":\"captured\",\"confidence\":0.55,\"rationale\":\"All four candidates' uncalibrated active-speaker probabilities stay below 0.5 for every one of the 24 frames (captured peaks ~0.39, spatial_nlm ~0.51 only in 2 frames, fastdvdnet ~0.43, fastdvdnet_55 ~0.47), so no candidate indicates the visible person speaks for a majority of the interval. Captured input is the safest evidence: it has zero pixel MSE and zero prediction disagreement with itself, whereas the restored candidates (spatial_nlm, fastdvdnet, fastdvdnet_55) introduce pixel changes (MSE ~200-273) and small score shifts that could alter speech evidence. Although spatial_nlm has better BRISQUE (37.2 vs 43.7) and MUSIQ (17.8 vs 13.8), the quality gain is not worth the risk of altering speech evidence when the speaking signal is already uniformly low. Therefore select captured and report speaking=false with modest confidence, since the uncalibrated scores are only marginally below threshold.\",\"speaking\":false}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "8k0zvvrtp",
+      "content": "{\"accepted\": true}"
+    }
+  ],
+  "usage": [
+    {
+      "queue_time": 0.025603684,
+      "prompt_tokens": 797,
+      "prompt_time": 0.0638773,
+      "completion_tokens": 135,
+      "completion_time": 0.27096314,
+      "total_tokens": 932,
+      "total_time": 0.33484044
+    },
+    {
+      "queue_time": 0.054548223,
+      "prompt_tokens": 5237,
+      "prompt_time": 0.359860663,
+      "completion_tokens": 125,
+      "completion_time": 0.241913262,
+      "total_tokens": 5362,
+      "total_time": 0.601773925
+    },
+    {
+      "queue_time": 0.028440197,
+      "prompt_tokens": 5641,
+      "prompt_time": 0.388026144,
+      "completion_tokens": 305,
+      "completion_time": 1.233446866,
+      "total_tokens": 5946,
+      "total_time": 1.6214730099999999
+    }
+  ],
+  "id": "EEey6Pt0rqI__label0__sigma15",
+  "evaluation": {
+    "selected_frame_error": 0.0,
+    "majority_answer_correct": true,
+    "captured_frame_error": 0.0
+  }
+}
+```
+
+## EEey6Pt0rqI__label0__sigma40
+
+```json
+{
+  "status": "completed",
+  "submission": {
+    "candidate": "spatial_nlm",
+    "confidence": 0.6,
+    "rationale": "All candidates' uncalibrated active-speaker probabilities stay below 0.5 for every frame (captured max ~0.35, spatial_nlm max ~0.32), so no candidate indicates the person speaks for a majority of the interval. The fastdvdnet variants show higher probabilities (~0.56) but also the largest pixel MSE (~1214/1290) and 20.8% binary disagreement with the capture, so their apparent shift is a restoration artifact risk rather than reliable evidence. spatial_nlm preserves the captured prediction exactly (0% binary disagreement, minimal score change) while improving BRISQUE (50.9 vs 62.8) with negligible MUSIQ change, making it the safest higher-quality choice.",
+    "speaking": false
+  },
+  "trace": [
+    {
+      "turn": 0,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "7je3s1xxs",
+            "type": "function",
+            "function": {
+              "name": "list_candidates",
+              "arguments": "{}"
+            }
+          },
+          {
+            "id": "b46kk6n98",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "c6xma96zm",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "50g77k7x5",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "zjjeg94kz",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "7je3s1xxs",
+      "content": "{\"candidates\": [\"captured\", \"spatial_nlm\", \"fastdvdnet\", \"fastdvdnet_55\"], \"captured_is_available\": true, \"frames_scored\": 24}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "b46kk6n98",
+      "content": "{\"brisque\": 62.77609380086263, \"musiq\": 13.739511489868164, \"confidence\": 0.7297520637512207, \"probability\": [0.3472023904323578, 0.3030419945716858, 0.3010554015636444, 0.281432181596756, 0.2939296364784241, 0.2758118212223053, 0.2833186686038971, 0.30094969272613525, 0.28008973598480225, 0.277157723903656, 0.26734814047813416, 0.2520264983177185, 0.2896190285682678, 0.2693246603012085, 0.2603949010372162, 0.27513885498046875, 0.2572343349456787, 0.2347049117088318, 0.2533901333808899, 0.24738216400146484, 0.22253350913524628, 0.22382572293281555, 0.2341299206018448, 0.25490736961364746], \"visual_probability\": [0.5106306076049805, 0.514056921005249, 0.4454730153083801, 0.4141447842121124, 0.3807125389575958, 0.366573303937912, 0.37506839632987976, 0.40076249837875366, 0.393271803855896, 0.37248530983924866, 0.3558652997016907, 0.3553333282470703, 0.39013803005218506, 0.4097902178764343, 0.4211883246898651, 0.4295242428779602, 0.43254268169403076, 0.43714457750320435, 0.4534915089607239, 0.44081735610961914, 0.4001061022281647, 0.3941420912742615, 0.41537296772003174, 0.45085811614990234]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "c6xma96zm",
+      "content": "{\"brisque\": 50.87214279174805, \"musiq\": 13.763710339864096, \"confidence\": 0.725243866443634, \"probability\": [0.3215385675430298, 0.26797568798065186, 0.26211681962013245, 0.26087385416030884, 0.243312805891037, 0.24103301763534546, 0.25625360012054443, 0.2818077802658081, 0.26286065578460693, 0.31818464398384094, 0.3096662163734436, 0.2759542167186737, 0.2997024953365326, 0.27461451292037964, 0.2752417325973511, 0.28550103306770325, 0.2657337486743927, 0.27737972140312195, 0.2809937000274658, 0.265271931886673, 0.2520316541194916, 0.25716686248779297, 0.27358129620552063, 0.2853493094444275], \"visual_probability\": [0.5077049136161804, 0.5118566155433655, 0.4452269971370697, 0.45058783888816833, 0.39018210768699646, 0.4090433120727539, 0.4307957887649536, 0.4363933205604553, 0.3907795548439026, 0.41309428215026855, 0.40885666012763977, 0.3965153992176056, 0.4270561635494232, 0.42584094405174255, 0.456879585981369, 0.44836050271987915, 0.45934104919433594, 0.47511765360832214, 0.4779056906700134, 0.4554044008255005, 0.4266456663608551, 0.4218711853027344, 0.45755356550216675, 0.465283066034317]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "50g77k7x5",
+      "content": "{\"brisque\": 61.099648793538414, \"musiq\": 15.960729598999023, \"confidence\": 0.597155749797821, \"probability\": [0.5617810487747192, 0.6000595688819885, 0.5806710124015808, 0.5691238045692444, 0.5262328386306763, 0.4921115040779114, 0.474569171667099, 0.4768125116825104, 0.47046035528182983, 0.4765086770057678, 0.4681413769721985, 0.43688467144966125, 0.47141000628471375, 0.43532904982566833, 0.39223620295524597, 0.37008875608444214, 0.3347807824611664, 0.31786131858825684, 0.3298226594924927, 0.32672014832496643, 0.30290335416793823, 0.29013994336128235, 0.31004056334495544, 0.3293100595474243], \"visual_probability\": [0.4972507655620575, 0.5285753011703491, 0.5150633454322815, 0.5363268852233887, 0.488748699426651, 0.45917266607284546, 0.5397399067878723, 0.5683863759040833, 0.5330186486244202, 0.4995667338371277, 0.4314917325973511, 0.40179169178009033, 0.44961562752723694, 0.4802246391773224, 0.46201252937316895, 0.4536217153072357, 0.4638442099094391, 0.44705766439437866, 0.3892868459224701, 0.3513755202293396, 0.3453916907310486, 0.3534987270832062, 0.3863857090473175, 0.4339207708835602]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "zjjeg94kz",
+      "content": "{\"brisque\": 71.89259719848633, \"musiq\": 15.690409024556478, \"confidence\": 0.6287416815757751, \"probability\": [0.5422027707099915, 0.5796642303466797, 0.5620023608207703, 0.5531564950942993, 0.5142011642456055, 0.4640006721019745, 0.43940937519073486, 0.44703954458236694, 0.4320583641529083, 0.4416530728340149, 0.4043770134449005, 0.4047280251979828, 0.42315319180488586, 0.35737547278404236, 0.32574740052223206, 0.3020443320274353, 0.277377724647522, 0.2744188904762268, 0.30236777663230896, 0.27567923069000244, 0.2633148431777954, 0.25320693850517273, 0.27659353613853455, 0.2968814969062805], \"visual_probability\": [0.5076550841331482, 0.5374899506568909, 0.5211008191108704, 0.5566807389259338, 0.5240710377693176, 0.47550883889198303, 0.5422350764274597, 0.5913655757904053, 0.5386139154434204, 0.48886531591415405, 0.4147293269634247, 0.4054544270038605, 0.4417368769645691, 0.44610166549682617, 0.46108534932136536, 0.43867939710617065, 0.4397534430027008, 0.43623802065849304, 0.381816029548645, 0.3360479772090912, 0.33662036061286926, 0.35124728083610535, 0.3885716199874878, 0.4291287362575531]}"
+    },
+    {
+      "turn": 1,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "h34sgbx9h",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "dgbd1yzce",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "fbw9qtsh8",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "xt79zyps5",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "h34sgbx9h",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.0, \"input_pixel_mse\": 0.0}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "dgbd1yzce",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.026929747313261032, \"input_pixel_mse\": 175.50148681640624}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "fbw9qtsh8",
+      "content": "{\"binary_prediction_disagreement\": 0.20833333333333334, \"mean_absolute_score_change\": 0.16075208286444345, \"input_pixel_mse\": 1213.8419401041667}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "xt79zyps5",
+      "content": "{\"binary_prediction_disagreement\": 0.20833333333333334, \"mean_absolute_score_change\": 0.12194602191448212, \"input_pixel_mse\": 1290.4577652994792}"
+    },
+    {
+      "turn": 2,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "jk3pxbww1",
+            "type": "function",
+            "function": {
+              "name": "submit_selection",
+              "arguments": "{\"candidate\":\"spatial_nlm\",\"confidence\":0.6,\"rationale\":\"All candidates' uncalibrated active-speaker probabilities stay below 0.5 for every frame (captured max ~0.35, spatial_nlm max ~0.32), so no candidate indicates the person speaks for a majority of the interval. The fastdvdnet variants show higher probabilities (~0.56) but also the largest pixel MSE (~1214/1290) and 20.8% binary disagreement with the capture, so their apparent shift is a restoration artifact risk rather than reliable evidence. spatial_nlm preserves the captured prediction exactly (0% binary disagreement, minimal score change) while improving BRISQUE (50.9 vs 62.8) with negligible MUSIQ change, making it the safest higher-quality choice.\",\"speaking\":false}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "jk3pxbww1",
+      "content": "{\"accepted\": true}"
+    }
+  ],
+  "usage": [
+    {
+      "queue_time": 0.024114082,
+      "prompt_tokens": 797,
+      "prompt_time": 0.063992977,
+      "completion_tokens": 135,
+      "completion_time": 0.269281187,
+      "total_tokens": 932,
+      "total_time": 0.333274164
+    },
+    {
+      "queue_time": 0.027742899,
+      "prompt_tokens": 5219,
+      "prompt_time": 0.359364829,
+      "completion_tokens": 125,
+      "completion_time": 0.243997995,
+      "total_tokens": 5344,
+      "total_time": 0.603362824
+    },
+    {
+      "queue_time": 0.0241095,
+      "prompt_tokens": 5638,
+      "prompt_time": 0.389815026,
+      "completion_tokens": 230,
+      "completion_time": 0.893308372,
+      "total_tokens": 5868,
+      "total_time": 1.283123398
+    }
+  ],
+  "id": "EEey6Pt0rqI__label0__sigma40",
+  "evaluation": {
+    "selected_frame_error": 0.0,
+    "majority_answer_correct": true,
+    "captured_frame_error": 0.0
+  }
+}
+```
+
+## EEey6Pt0rqI__label1__sigma15
+
+```json
+{
+  "status": "completed",
+  "submission": {
+    "candidate": "captured",
+    "confidence": 0.9,
+    "rationale": "All four candidates show near-identical active-speaker outputs (binary disagreement 0.0 vs capture; mean score change \u22640.0105), with per-frame probabilities rising from ~0.67\u20130.79 to ~0.998\u20130.999 across the 24 frames, indicating the visible person speaks for the majority of the interval. Captured input has the best BRISQUE (35.77 vs 54.8\u201360.9 for restored versions) and zero pixel MSE to itself, so it preserves the original speech evidence without restoration-induced alteration. MUSIQ is slightly lower for captured (14.95 vs ~17), but the restored candidates' higher BRISQUE (worse) and non-zero pixel MSE make captured the safer choice for preserving speech evidence.",
+    "speaking": true
+  },
+  "trace": [
+    {
+      "turn": 0,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "qxa9shgz8",
+            "type": "function",
+            "function": {
+              "name": "list_candidates",
+              "arguments": "{}"
+            }
+          },
+          {
+            "id": "nvt38pfc6",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "teq5a7adt",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "67n6pwe8n",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "8jgecme1v",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "qxa9shgz8",
+      "content": "{\"candidates\": [\"captured\", \"spatial_nlm\", \"fastdvdnet\", \"fastdvdnet_55\"], \"captured_is_available\": true, \"frames_scored\": 24}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "nvt38pfc6",
+      "content": "{\"brisque\": 35.772071838378906, \"musiq\": 14.95292059580485, \"confidence\": 0.9737018942832947, \"probability\": [0.7595191597938538, 0.8284600377082825, 0.9175857305526733, 0.9228404760360718, 0.9678937196731567, 0.9936729669570923, 0.9978836178779602, 0.9984093308448792, 0.9980481863021851, 0.9981714487075806, 0.997147262096405, 0.9971210360527039, 0.998576283454895, 0.9987296462059021, 0.9992327690124512, 0.999752938747406, 0.9997629523277283, 0.999733030796051, 0.9996684789657593, 0.999495267868042, 0.9995385408401489, 0.9996154308319092, 0.9993240833282471, 0.9986624717712402], \"visual_probability\": [0.45381784439086914, 0.5497859120368958, 0.562868595123291, 0.583461582660675, 0.5430790185928345, 0.576637327671051, 0.5664548277854919, 0.513823390007019, 0.449722558259964, 0.5064007043838501, 0.605510950088501, 0.6699342131614685, 0.6202905774116516, 0.5894400477409363, 0.6105726957321167, 0.5351367592811584, 0.5412464141845703, 0.5775370001792908, 0.6268343329429626, 0.5998595952987671, 0.615634024143219, 0.5918575525283813, 0.5422085523605347, 0.533846914768219]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "teq5a7adt",
+      "content": "{\"brisque\": 54.816689809163414, \"musiq\": 17.355043411254883, \"confidence\": 0.9632970690727234, \"probability\": [0.6720709800720215, 0.7759248614311218, 0.8691589832305908, 0.873595654964447, 0.9608705043792725, 0.9919301867485046, 0.9974898099899292, 0.998026430606842, 0.9979265928268433, 0.9977422952651978, 0.9969468712806702, 0.9970542192459106, 0.9983658194541931, 0.998488187789917, 0.9990205764770508, 0.9996644258499146, 0.9996834993362427, 0.9996652603149414, 0.9995974898338318, 0.9993515610694885, 0.9994507431983948, 0.9995276927947998, 0.999112069606781, 0.998465895652771], \"visual_probability\": [0.4535662531852722, 0.5329573750495911, 0.5513288378715515, 0.5901850461959839, 0.5619198679924011, 0.5950371026992798, 0.5646175146102905, 0.5062721371650696, 0.4666750431060791, 0.5103990435600281, 0.5987874865531921, 0.6599885821342468, 0.6273550391197205, 0.6005039811134338, 0.6014446020126343, 0.4950055480003357, 0.5287967324256897, 0.5774316787719727, 0.6225839257240295, 0.5844107270240784, 0.6190171241760254, 0.5734590291976929, 0.5203593969345093, 0.5341699123382568]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "67n6pwe8n",
+      "content": "{\"brisque\": 55.33484141031901, \"musiq\": 17.25550715128581, \"confidence\": 0.9754201769828796, \"probability\": [0.7607113718986511, 0.849418044090271, 0.9211006164550781, 0.9286760091781616, 0.9720955491065979, 0.9949584603309631, 0.9983226656913757, 0.9986414313316345, 0.9986525177955627, 0.9986891150474548, 0.9978577494621277, 0.9978916049003601, 0.9988530874252319, 0.9989448189735413, 0.9992827773094177, 0.9997592568397522, 0.9997789263725281, 0.9997580647468567, 0.9996986389160156, 0.9995482563972473, 0.9995751976966858, 0.9996474981307983, 0.9994053840637207, 0.9988184571266174], \"visual_probability\": [0.4601781964302063, 0.5486622452735901, 0.5502439141273499, 0.5679522752761841, 0.5351542234420776, 0.5780410766601562, 0.5510473251342773, 0.507850170135498, 0.46791020035743713, 0.5161558389663696, 0.6059255599975586, 0.646109402179718, 0.6115173697471619, 0.5969724655151367, 0.6071293354034424, 0.5070356130599976, 0.5359740257263184, 0.5805860757827759, 0.6245523691177368, 0.5954186916351318, 0.6186748147010803, 0.582731306552887, 0.539260983467102, 0.534324049949646]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "8jgecme1v",
+      "content": "{\"brisque\": 60.94138844807943, \"musiq\": 16.963449478149414, \"confidence\": 0.977730929851532, \"probability\": [0.7931543588638306, 0.8564750552177429, 0.9294607043266296, 0.9344921708106995, 0.9753057956695557, 0.9952482581138611, 0.9978026747703552, 0.9985009431838989, 0.9986996650695801, 0.9987118244171143, 0.9978417158126831, 0.9980523586273193, 0.9987107515335083, 0.9987132549285889, 0.9989713430404663, 0.99968421459198, 0.999721348285675, 0.9997133612632751, 0.9996091723442078, 0.9994366765022278, 0.9994677901268005, 0.9995831847190857, 0.9993438124656677, 0.998839795589447], \"visual_probability\": [0.46654707193374634, 0.5377295017242432, 0.5609855055809021, 0.6012684106826782, 0.5701451897621155, 0.5988416075706482, 0.5430416464805603, 0.5125486254692078, 0.4848233163356781, 0.5368093252182007, 0.6028358340263367, 0.6496406197547913, 0.604185163974762, 0.5832942128181458, 0.5970617532730103, 0.5021682381629944, 0.5177755951881409, 0.5781134963035583, 0.6189501881599426, 0.5996018052101135, 0.6197686195373535, 0.5803551077842712, 0.5395070910453796, 0.54008948802948]}"
+    },
+    {
+      "turn": 1,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "wscvkz9ap",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "sp2mjsyxe",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "stvxzpdes",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "xkw099w3n",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "wscvkz9ap",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.0, \"input_pixel_mse\": 0.0}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "sp2mjsyxe",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.010404760638872782, \"input_pixel_mse\": 240.12706868489585}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "stvxzpdes",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.0017183596889177959, \"input_pixel_mse\": 216.42843668619793}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "xkw099w3n",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.004088111221790314, \"input_pixel_mse\": 244.75215494791667}"
+    },
+    {
+      "turn": 2,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "31cgvsvnc",
+            "type": "function",
+            "function": {
+              "name": "submit_selection",
+              "arguments": "{\"candidate\":\"captured\",\"confidence\":0.9,\"rationale\":\"All four candidates show near-identical active-speaker outputs (binary disagreement 0.0 vs capture; mean score change \u22640.0105), with per-frame probabilities rising from ~0.67\u20130.79 to ~0.998\u20130.999 across the 24 frames, indicating the visible person speaks for the majority of the interval. Captured input has the best BRISQUE (35.77 vs 54.8\u201360.9 for restored versions) and zero pixel MSE to itself, so it preserves the original speech evidence without restoration-induced alteration. MUSIQ is slightly lower for captured (14.95 vs ~17), but the restored candidates' higher BRISQUE (worse) and non-zero pixel MSE make captured the safer choice for preserving speech evidence.\",\"speaking\":true}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "31cgvsvnc",
+      "content": "{\"accepted\": true}"
+    }
+  ],
+  "usage": [
+    {
+      "queue_time": 0.024950688,
+      "prompt_tokens": 797,
+      "prompt_time": 0.06384512,
+      "completion_tokens": 135,
+      "completion_time": 0.27013149,
+      "total_tokens": 932,
+      "total_time": 0.33397661
+    },
+    {
+      "queue_time": 0.021612094,
+      "prompt_tokens": 5133,
+      "prompt_time": 0.353099716,
+      "completion_tokens": 125,
+      "completion_time": 0.25547208,
+      "total_tokens": 5258,
+      "total_time": 0.608571796
+    },
+    {
+      "queue_time": 0.022491061,
+      "prompt_tokens": 5523,
+      "prompt_time": 0.388398334,
+      "completion_tokens": 243,
+      "completion_time": 0.952431746,
+      "total_tokens": 5766,
+      "total_time": 1.34083008
+    }
+  ],
+  "id": "EEey6Pt0rqI__label1__sigma15",
+  "evaluation": {
+    "selected_frame_error": 0.0,
+    "majority_answer_correct": true,
+    "captured_frame_error": 0.0
+  }
+}
+```
+
+## EEey6Pt0rqI__label1__sigma40
+
+```json
+{
+  "status": "completed",
+  "submission": {
+    "candidate": "spatial_nlm",
+    "confidence": 0.9,
+    "rationale": "All four candidates show near-identical active-speaker outputs (binary disagreement 0.0 vs capture; mean score change \u22640.011), with per-frame probabilities consistently high (\u22480.85\u20130.999) across all 24 frames, indicating the visible person speaks for the majority of the interval. Spatial NLM is preferred over captured because it has the best visual quality (BRISQUE 41.96 vs 62.95) while introducing the smallest deviation from the captured input (pixel MSE 486.9 vs ~1436\u20131466 for the temporal denoisers) and the smallest score change (0.0046), so it preserves the speech evidence with minimal alteration.",
+    "speaking": true
+  },
+  "trace": [
+    {
+      "turn": 0,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "vjzc2aw4z",
+            "type": "function",
+            "function": {
+              "name": "list_candidates",
+              "arguments": "{}"
+            }
+          },
+          {
+            "id": "rjjggt2df",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "506ttq4w2",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "21207vah0",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "g84yqt9he",
+            "type": "function",
+            "function": {
+              "name": "inspect_candidate",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "vjzc2aw4z",
+      "content": "{\"candidates\": [\"captured\", \"spatial_nlm\", \"fastdvdnet\", \"fastdvdnet_55\"], \"captured_is_available\": true, \"frames_scored\": 24}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "rjjggt2df",
+      "content": "{\"brisque\": 62.94781494140625, \"musiq\": 15.724623362223307, \"confidence\": 0.9923012256622314, \"probability\": [0.9529862403869629, 0.9526680707931519, 0.9720050692558289, 0.973401665687561, 0.9810845255851746, 0.9970280528068542, 0.9988435506820679, 0.9990440011024475, 0.9989237189292908, 0.9989293217658997, 0.9983963370323181, 0.9980717301368713, 0.9990264177322388, 0.9990147352218628, 0.9993972778320312, 0.9997751116752625, 0.9997895359992981, 0.99978107213974, 0.9996947050094604, 0.9996055960655212, 0.9996358156204224, 0.9996700286865234, 0.9995015859603882, 0.9989556074142456], \"visual_probability\": [0.5080292820930481, 0.5895942449569702, 0.5952144265174866, 0.6313095688819885, 0.5996301770210266, 0.6111441850662231, 0.5898298621177673, 0.5317467451095581, 0.44470784068107605, 0.4663041830062866, 0.5734080076217651, 0.6672605276107788, 0.6310768127441406, 0.5680636167526245, 0.6054477691650391, 0.5636207461357117, 0.49203404784202576, 0.5702764987945557, 0.6178562045097351, 0.5780760049819946, 0.5795367360115051, 0.5810595750808716, 0.5408720374107361, 0.5337077975273132]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "506ttq4w2",
+      "content": "{\"brisque\": 41.957218170166016, \"musiq\": 15.224085172017416, \"confidence\": 0.9877057075500488, \"probability\": [0.9098461866378784, 0.924406886100769, 0.9552116990089417, 0.9597584009170532, 0.976811945438385, 0.9956108927726746, 0.9981208443641663, 0.9985882639884949, 0.9981160163879395, 0.9987070560455322, 0.9979556798934937, 0.998049259185791, 0.9990334510803223, 0.9990009665489197, 0.9994514584541321, 0.9997785687446594, 0.9997935891151428, 0.9997819066047668, 0.9997022747993469, 0.9996108412742615, 0.9996770620346069, 0.9996871948242188, 0.99945467710495, 0.9987813830375671], \"visual_probability\": [0.47174662351608276, 0.5658277273178101, 0.5498142838478088, 0.6081939339637756, 0.5762561559677124, 0.5905493497848511, 0.5661529898643494, 0.5175067186355591, 0.43560680747032166, 0.5363547205924988, 0.633064866065979, 0.6998518705368042, 0.6308886408805847, 0.5794626474380493, 0.6069949269294739, 0.5249335169792175, 0.5037623047828674, 0.5760632753372192, 0.6080386638641357, 0.5778494477272034, 0.593295693397522, 0.5726662278175354, 0.5382683277130127, 0.5287973880767822]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "21207vah0",
+      "content": "{\"brisque\": 51.37677892049154, \"musiq\": 16.199537595113117, \"confidence\": 0.9816414713859558, \"probability\": [0.853561282157898, 0.8789165616035461, 0.9352342486381531, 0.9359674453735352, 0.9754077196121216, 0.9953461289405823, 0.9983029365539551, 0.9988364577293396, 0.9988160133361816, 0.9989748001098633, 0.9982185959815979, 0.9983932375907898, 0.9990587830543518, 0.9990251064300537, 0.9992935657501221, 0.9997740387916565, 0.9997881054878235, 0.999776303768158, 0.9997135996818542, 0.9995498061180115, 0.9995916485786438, 0.9996641874313354, 0.999482274055481, 0.9987012147903442], \"visual_probability\": [0.4990162253379822, 0.5626751184463501, 0.5645383596420288, 0.5704410076141357, 0.5551238059997559, 0.5980691909790039, 0.560431957244873, 0.518561065196991, 0.47801563143730164, 0.5388550162315369, 0.6310335397720337, 0.6693640351295471, 0.6004564166069031, 0.5969228148460388, 0.6132913827896118, 0.5121477246284485, 0.534885048866272, 0.6017706990242004, 0.6150082349777222, 0.5831867456436157, 0.6021139621734619, 0.578403890132904, 0.5312358736991882, 0.5214227437973022]}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "g84yqt9he",
+      "content": "{\"brisque\": 59.94523493448893, \"musiq\": 16.591758728027344, \"confidence\": 0.9842861294746399, \"probability\": [0.8722496628761292, 0.9029906392097473, 0.9470851421356201, 0.9450964331626892, 0.9771581888198853, 0.9955030083656311, 0.997967541217804, 0.9986757636070251, 0.9987371563911438, 0.9988324046134949, 0.9979913234710693, 0.9983342289924622, 0.9989469647407532, 0.9989063739776611, 0.999106228351593, 0.9996867179870605, 0.9997289776802063, 0.9997273087501526, 0.9996411800384521, 0.9994565844535828, 0.9995061159133911, 0.9995991587638855, 0.9993641972541809, 0.9985771179199219], \"visual_probability\": [0.5034157633781433, 0.5661345720291138, 0.5681300163269043, 0.5786986351013184, 0.5579348802566528, 0.595337450504303, 0.5479097366333008, 0.5118163824081421, 0.4890129864215851, 0.5483877062797546, 0.62478107213974, 0.662991464138031, 0.5973190665245056, 0.5913493633270264, 0.606554388999939, 0.49724826216697693, 0.522201657295227, 0.5852364897727966, 0.6001461744308472, 0.5807911157608032, 0.6043062210083008, 0.5761488676071167, 0.5286073684692383, 0.5186086893081665]}"
+    },
+    {
+      "turn": 1,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "a4xqeg8mp",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "6dsv6qzzh",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          },
+          {
+            "id": "0wvjvvfmb",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "zbrw6y5b4",
+            "type": "function",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\":\"fastdvdnet_55\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "a4xqeg8mp",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.0, \"input_pixel_mse\": 0.0}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "6dsv6qzzh",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.004607285062472026, \"input_pixel_mse\": 486.88327880859373}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "0wvjvvfmb",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.01069553941488266, \"input_pixel_mse\": 1435.8183260091146}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "zbrw6y5b4",
+      "content": "{\"binary_prediction_disagreement\": 0.0, \"mean_absolute_score_change\": 0.008036931355794271, \"input_pixel_mse\": 1465.6470133463542}"
+    },
+    {
+      "turn": 2,
+      "message": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "6a8b3265w",
+            "type": "function",
+            "function": {
+              "name": "submit_selection",
+              "arguments": "{\"candidate\":\"spatial_nlm\",\"confidence\":0.9,\"rationale\":\"All four candidates show near-identical active-speaker outputs (binary disagreement 0.0 vs capture; mean score change \u22640.011), with per-frame probabilities consistently high (\u22480.85\u20130.999) across all 24 frames, indicating the visible person speaks for the majority of the interval. Spatial NLM is preferred over captured because it has the best visual quality (BRISQUE 41.96 vs 62.95) while introducing the smallest deviation from the captured input (pixel MSE 486.9 vs ~1436\u20131466 for the temporal denoisers) and the smallest score change (0.0046), so it preserves the speech evidence with minimal alteration.\",\"speaking\":true}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "6a8b3265w",
+      "content": "{\"accepted\": true}"
+    }
+  ],
+  "usage": [
+    {
+      "queue_time": 0.022451014,
+      "prompt_tokens": 797,
+      "prompt_time": 0.063902656,
+      "completion_tokens": 135,
+      "completion_time": 0.269697176,
+      "total_tokens": 932,
+      "total_time": 0.333599832
+    },
+    {
+      "queue_time": 0.02298048,
+      "prompt_tokens": 5144,
+      "prompt_time": 0.353830447,
+      "completion_tokens": 125,
+      "completion_time": 0.245318754,
+      "total_tokens": 5269,
+      "total_time": 0.599149201
+    },
+    {
+      "queue_time": 0.024284621,
+      "prompt_tokens": 5532,
+      "prompt_time": 0.383444955,
+      "completion_tokens": 230,
+      "completion_time": 0.888855877,
+      "total_tokens": 5762,
+      "total_time": 1.272300832
+    }
+  ],
+  "id": "EEey6Pt0rqI__label1__sigma40",
+  "evaluation": {
+    "selected_frame_error": 0.0,
+    "majority_answer_correct": true,
+    "captured_frame_error": 0.0
+  }
+}
+```

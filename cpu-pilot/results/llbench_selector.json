@@ -1,0 +1,1539 @@
+{
+  "penalty": 1,
+  "overall": [
+    0.4999999999999999,
+    0.17075645756457564
+  ],
+  "models": {
+    "BiLaLoRA": [
+      0.2821316614420062,
+      0.23129533019468126
+    ],
+    "CIDNet": [
+      0.7381818181818182,
+      0.04943419434194342
+    ],
+    "CSUD": [
+      0.40432294977749533,
+      0.08886408794157871
+    ],
+    "Codiff": [
+      0.6006060606060605,
+      0.03610086100861009
+    ],
+    "DFPIR": [
+      0.722437137330754,
+      0.03944217633665698
+    ],
+    "DM-water": [
+      0.6482142857142856,
+      0.030492224565102793
+    ],
+    "Daclip": [
+      0.4241966492721782,
+      0.09579324645210198
+    ],
+    "DeRaindrop": [
+      0.5268595041322313,
+      0.03880828581013083
+    ],
+    "Deflaremamba": [
+      0.33999999999999997,
+      0.07735898787559305
+    ],
+    "EVSSM": [
+      0.8462566844919786,
+      0.02511124375949642
+    ],
+    "FoundIR": [
+      0.7119386637458923,
+      0.020573067176454896
+    ],
+    "Hunyuan-Image-3": [
+      0.6658579362759416,
+      0.15938645720862354
+    ],
+    "IDF": [
+      0.8817086527929898,
+      0.05671764548970791
+    ],
+    "InstructIR": [
+      0.2623178348369189,
+      0.013034844088898904
+    ],
+    "LLF-LUT": [
+      0.9143790849673205,
+      0.011160552781998408
+    ],
+    "NRKNet": [
+      0.7386363636363635,
+      0.04268911439114391
+    ],
+    "NanoBanana": [
+      0.35544187859300425,
+      0.05863618925578323
+    ],
+    "NanoBananaPro": [
+      0.657410114001755,
+      0.06828249150658709
+    ],
+    "ODTSR": [
+      0.8504510756419154,
+      0.028302019661417988
+    ],
+    "SeedDream_4_5": [
+      0.4564065088180836,
+      0.3083682364154831
+    ],
+    "SnowMaster": [
+      0.39220779220779217,
+      0.04878755930416447
+    ],
+    "StableShadowRemoval": [
+      0.7334152334152332,
+      0.03658871048169941
+    ],
+    "Unirestore": [
+      0.39981447124304287,
+      0.017424128322915882
+    ],
+    "Windowseat": [
+      0.809375,
+      0.05336139298892989
+    ],
+    "bagel": [
+      0.1382344343759137,
+      0.498078847347959
+    ],
+    "flux2_image_edit": [
+      0.44208321153658814,
+      0.2183360820746471
+    ],
+    "gpt-image2": [
+      0.8424924486017733,
+      0.10793951187100297
+    ],
+    "longcat_image_edit": [
+      0.431335866705641,
+      0.17439181626542954
+    ],
+    "qwen_image_edit_plus": [
+      0.34072883172561574,
+      0.25263404563306086
+    ],
+    "step1x_image_edit": [
+      0.4779109422196229,
+      0.09400596417539739
+    ]
+  },
+  "tasks": [
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "Codiff",
+      "estimates": [
+        0.6140202020202019,
+        0.01814678146781468
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "Daclip",
+      "estimates": [
+        0.45595349263022966,
+        0.03943909952694693
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.7578719672610346,
+        0.08791819429448314
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "NanoBanana",
+      "estimates": [
+        0.28739225047906736,
+        0.04781815856743776
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.7118971061093248,
+        0.08910433220087828
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.6402481405696837,
+        0.18778243152206442
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "bagel",
+      "estimates": [
+        0.025703985189515766,
+        0.3864105129797279
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.5813686706291209,
+        0.40244481094328627
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "gpt-image2",
+      "estimates": [
+        0.9099080840559939,
+        0.0410586015828004
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.25023872162135824,
+        0.02325224216872394
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.481794147260385,
+        0.11368453941774144
+      ]
+    },
+    {
+      "task": "Compression_Artifact_Removal",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.2612972165383741,
+        0.03920079522338632
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.464191756796258,
+        0.06484661430215588
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "NRKNet",
+      "estimates": [
+        0.7982954545454545,
+        0.010672278597785977
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "NanoBanana",
+      "estimates": [
+        0.3070422878300692,
+        0.06465904731394581
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.6620798012277114,
+        0.04207062287664677
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.24819253629542998,
+        0.6020920591038708
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "Unirestore",
+      "estimates": [
+        0.5113172541743971,
+        0.0043560320807289705
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "bagel",
+      "estimates": [
+        0.06864951768488751,
+        0.8245197118369898
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.6241571665205106,
+        0.6795840205186618
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "gpt-image2",
+      "estimates": [
+        0.931077657604989,
+        0.25198487796775076
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.3873794212218648,
+        0.2185979540663574
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.28518220793140386,
+        0.08815851140826522
+      ]
+    },
+    {
+      "task": "Defocus_Deblurring",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.6990231901003602,
+        0.12350149104384936
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "BiLaLoRA",
+      "estimates": [
+        0.2070046481461463,
+        0.2521708035154073
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "DFPIR",
+      "estimates": [
+        0.39331688121123176,
+        0.08256626770229551
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.7029604168976601,
+        0.08944360593400812
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "NanoBanana",
+      "estimates": [
+        0.16331851612924914,
+        0.05470213422613215
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.6781038010664359,
+        0.09251120396778865
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.5555006770219096,
+        0.1408166332467183
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "bagel",
+      "estimates": [
+        0.19500246953401407,
+        0.27519960253377895
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.5066744616583846,
+        0.07528830416367142
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "gpt-image2",
+      "estimates": [
+        0.8735867377623671,
+        0.17515155581758723
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.5311816468263966,
+        0.16358338491911362
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.49053345294613715,
+        0.19056346401140029
+      ]
+    },
+    {
+      "task": "Dehaze",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.6381511086023778,
+        0.06689860833634392
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "FoundIR",
+      "estimates": [
+        0.7374734425104577,
+        0.0024786827923439633
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.6738711642829719,
+        0.2722152358082679
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "IDF",
+      "estimates": [
+        0.9276976471053984,
+        0.042978029577073244
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "NanoBanana",
+      "estimates": [
+        0.12497109161580551,
+        0.05525737219949196
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.40888840365848095,
+        0.08051596283211893
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.18313769547643938,
+        0.2540202694476486
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "bagel",
+      "estimates": [
+        0.22804576974956253,
+        0.6624191382346939
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.47494978452248043,
+        0.08654651591260809
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "gpt-image2",
+      "estimates": [
+        0.9054481591962706,
+        0.12143849540614494
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.3696023497673828,
+        0.26197491762234093
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.583767986297719,
+        0.4521245838112121
+      ]
+    },
+    {
+      "task": "Denoise",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.43052596237038177,
+        0.05951879086450571
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "CSUD",
+      "estimates": [
+        0.39763224696473276,
+        0.08313734880710341
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "Daclip",
+      "estimates": [
+        0.166981329574024,
+        0.19551001723441272
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.6956416865800086,
+        0.4517053466579457
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "NanoBanana",
+      "estimates": [
+        0.5181809323873048,
+        0.053051481766138685
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.6645359901717691,
+        0.17960017423122987
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.5716495333566366,
+        0.49009568086821553
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "bagel",
+      "estimates": [
+        0.12409776718458394,
+        0.9159495697446124
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.32080683615322636,
+        0.1831004253199054
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "gpt-image2",
+      "estimates": [
+        0.8211533180840391,
+        0.18936639943153866
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.5845180834949906,
+        0.22897844868989017
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.4675652711314797,
+        0.430254129065249
+      ]
+    },
+    {
+      "task": "Derain",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.6418119540013723,
+        0.209371046445832
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "Daclip",
+      "estimates": [
+        0.32379644524659634,
+        0.027369498986314852
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.6421931765983209,
+        0.10268184491674957
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "NanoBanana",
+      "estimates": [
+        0.4132431341434558,
+        0.04532462550165235
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.7358834091953066,
+        0.10522356900188204
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.45767458693503693,
+        0.5166766389758524
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "SnowMaster",
+      "estimates": [
+        0.36141001855287563,
+        0.013939302658332707
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "bagel",
+      "estimates": [
+        0.1096254228087026,
+        0.7137368135279883
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.570465333166298,
+        0.09095316630704203
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "gpt-image2",
+      "estimates": [
+        0.6952575827173897,
+        0.5451255748202866
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.5544076502275856,
+        0.10696909036155129
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.396052393480046,
+        0.27218115589516023
+      ]
+    },
+    {
+      "task": "Desnow",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.6326498795952169,
+        0.16971598976439925
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "Deflaremamba",
+      "estimates": [
+        0.29428571428571426,
+        0.05067399653588373
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.6873879817931262,
+        0.1883961306310353
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "NanoBanana",
+      "estimates": [
+        0.3186976795980012,
+        0.10246748264450949
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.6535457468576442,
+        0.048080711859024884
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.28468757394802385,
+        0.6309623532615666
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "bagel",
+      "estimates": [
+        0.1194955526788325,
+        0.31373681352798827
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.5091666318675966,
+        0.20523888059275633
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "gpt-image2",
+      "estimates": [
+        0.8292835567433637,
+        0.17369700339171515
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.6232388190587546,
+        0.39268337607583703
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.37449395192160445,
+        0.07218115589516025
+      ]
+    },
+    {
+      "task": "Flare_Removal",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.7051174120627495,
+        0.1411445611929707
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.7598599958350288,
+        0.049633101778341404
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "LLF-LUT",
+      "estimates": [
+        0.9414626852919818,
+        0.000729447894248262
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "NanoBanana",
+      "estimates": [
+        0.28532299860084986,
+        0.029976221519985833
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.6717261512419449,
+        0.010998855654025301
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.5213337587462802,
+        0.16394563636702505
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "bagel",
+      "estimates": [
+        0.14302185845594217,
+        0.4704626697613045
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.500789752388012,
+        0.04695007072383314
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "gpt-image2",
+      "estimates": [
+        0.8269602907582859,
+        0.03319866090660151
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.4013945010918719,
+        0.10943737361211958
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.05625678638729514,
+        0.21912640821131116
+      ]
+    },
+    {
+      "task": "HDR_Imaging",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.4063994079882106,
+        0.019216076089895257
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "CIDNet",
+      "estimates": [
+        0.7699393939393939,
+        0.033257892578925786
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "DFPIR",
+      "estimates": [
+        0.8793552546744033,
+        0.005258956844887598
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.5178719672610346,
+        0.0745848609611498
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "NanoBanana",
+      "estimates": [
+        0.38314982623664307,
+        0.04781815856743776
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.6682607424729614,
+        0.02243766553421161
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.44873298905453246,
+        0.12111576485539777
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "bagel",
+      "estimates": [
+        0.10570398518951571,
+        0.21307717964639453
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.22015654941699958,
+        0.14911147760995297
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "gpt-image2",
+      "estimates": [
+        0.8177868719347816,
+        0.01439193491613373
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.6781175095001459,
+        0.03658557550205727
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.06603657150280937,
+        0.40701787275107476
+      ]
+    },
+    {
+      "task": "Low_Light_Enhancement",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.48069115593231343,
+        0.052534128556719656
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "EVSSM",
+      "estimates": [
+        0.8971767851525636,
+        0.0036928299646318266
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.5885619959764085,
+        0.4646156554718564
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "NanoBanana",
+      "estimates": [
+        0.22072006235993377,
+        0.06744649841996812
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.6835763536633594,
+        0.05415918992743928
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.2743378555748521,
+        0.6777012112375711
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "Unirestore",
+      "estimates": [
+        0.31949143293681115,
+        0.002562371812193512
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "bagel",
+      "estimates": [
+        0.04572966280929212,
+        0.5144233599041117
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.6372047503596584,
+        0.8409317767756834
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "gpt-image2",
+      "estimates": [
+        0.9033077130296723,
+        0.030579339981029848
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.32412693226954614,
+        0.1727046788625632
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.5233692132216815,
+        0.1842108890636854
+      ]
+    },
+    {
+      "task": "Motion_Deblurring",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.5903344968504793,
+        0.08735381826108786
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "Daclip",
+      "estimates": [
+        0.782358742603181,
+        0.021771192375477724
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "DeRaindrop",
+      "estimates": [
+        0.5329639368895566,
+        0.008820064956847916
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.6038106879965982,
+        0.08167874027468716
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "NanoBanana",
+      "estimates": [
+        0.3803690219942777,
+        0.08150822483085983
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.5461056044218865,
+        0.1064278389787698
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.34959652059915125,
+        0.18372005373079164
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "bagel",
+      "estimates": [
+        0.037615264011054764,
+        0.36319973803362704
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.7017131265888938,
+        0.04962183683514707
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "gpt-image2",
+      "estimates": [
+        0.8691615069136261,
+        0.04725897997068249
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.5587746804496292,
+        0.1078163218785067
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.22413258572276387,
+        0.12559864673478655
+      ]
+    },
+    {
+      "task": "Raindrop_Removal",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.3586161232317325,
+        0.04409226458531759
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.5549556050862317,
+        0.17480826787769485
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "NanoBanana",
+      "estimates": [
+        0.3267005870603138,
+        0.04957380914243226
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.5741906606255485,
+        0.08383827859580847
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.39262703400565113,
+        0.5026150738798385
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "Windowseat",
+      "estimates": [
+        0.9060546875,
+        0.01667543530904059
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "bagel",
+      "estimates": [
+        0.07757326074247303,
+        0.7493996397962372
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.5131510036051838,
+        0.16198002564832722
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "gpt-image2",
+      "estimates": [
+        0.8820288901880543,
+        0.03373109745968843
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.46604245834551283,
+        0.30449744258294675
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.4096027599142549,
+        0.4539481392603315
+      ]
+    },
+    {
+      "task": "Reflection_Removal",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.4337221694436322,
+        0.1856268638048117
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "Daclip",
+      "estimates": [
+        0.7133435275429231,
+        0.02645854681785162
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.43027564249429184,
+        0.021538710433597775
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "NanoBanana",
+      "estimates": [
+        0.2323078705715362,
+        0.021437322872403138
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.6060382217938488,
+        0.022740877230619877
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.545706039275171,
+        0.14977949140749774
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "StableShadowRemoval",
+      "estimates": [
+        0.7649578325253998,
+        0.018457933848878297
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "bagel",
+      "estimates": [
+        0.12310293339232245,
+        0.4456863307226972
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.5314854462764431,
+        0.05653190298306042
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "gpt-image2",
+      "estimates": [
+        0.7489854660272666,
+        0.04161344755013554
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.4784360507833176,
+        0.03707997517100399
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.294201684876926,
+        0.10170730346392713
+      ]
+    },
+    {
+      "task": "Shadow_Removal",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.5264990216758705,
+        0.09378458975343208
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.7774076148441031,
+        0.02743408070294836
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "InstructIR",
+      "estimates": [
+        0.24417415810691273,
+        0.0009950262663281605
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "NanoBanana",
+      "estimates": [
+        0.5392773120369401,
+        0.07317833505769337
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.7819674618599537,
+        0.043380342863098255
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "ODTSR",
+      "estimates": [
+        0.8772030661489317,
+        0.01742763508865786
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.48730375848021434,
+        0.2907151325508002
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "bagel",
+      "estimates": [
+        0.2888312198343861,
+        0.1601586906372488
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.22458650469744953,
+        0.2685752734408128
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "gpt-image2",
+      "estimates": [
+        0.8248953291784832,
+        0.13037706197488572
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.2355634596374883,
+        0.24231998597446028
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.3653575097084093,
+        0.22539191188038632
+      ]
+    },
+    {
+      "task": "Super_Resolution",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.3473769629730456,
+        0.11404625680728224
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "DM-water",
+      "estimates": [
+        0.6746811224489796,
+        0.005445040100911213
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "Hunyuan-Image-3",
+      "estimates": [
+        0.8081889171921323,
+        0.04631901021582563
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "NanoBanana",
+      "estimates": [
+        0.5152574783201794,
+        0.13547074808138987
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "NanoBananaPro",
+      "estimates": [
+        0.7281089489288848,
+        0.03005044491189055
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "SeedDream_4_5",
+      "estimates": [
+        0.5011440194318005,
+        0.09078004221705056
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "bagel",
+      "estimates": [
+        0.1014704347099846,
+        0.5175140798835641
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "flux2_image_edit",
+      "estimates": [
+        0.2664434306315336,
+        0.16398858608475844
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "gpt-image2",
+      "estimates": [
+        0.9183022229646021,
+        0.05498919854839339
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "longcat_image_edit",
+      "estimates": [
+        0.3020242619117216,
+        0.3525699671902553
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "qwen_image_edit_plus",
+      "estimates": [
+        0.3251301485224314,
+        0.17011322243447516
+      ]
+    },
+    {
+      "task": "Underwater_Enhancement",
+      "model": "step1x_image_edit",
+      "estimates": [
+        0.3514126682535041,
+        0.0346439221741781
+      ]
+    }
+  ]
+}

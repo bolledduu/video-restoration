@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "name": "WVAQ blind-quality selection feasibility",
+  "hypothesis": "Increasing the candidate budget of a blind-IQA selector improves its selected metric score but increases active-speaker error.",
+  "design": "Retrospective exploratory reuse of all 8 previously inspected UniTalk clips from 4 sources at both resolutions. Previous task outcomes known; BRISQUE selection outcomes not yet computed. No untouched-test or novelty claim.",
+  "primary_pool": [
+    "degraded",
+    "visual_only",
+    "matching",
+    "unsharp_1"
+  ],
+  "conventional_control_pool": [
+    "degraded",
+    "unsharp_0.5",
+    "unsharp_1",
+    "unsharp_2"
+  ],
+  "duplicate_control_pool": [
+    "degraded",
+    "duplicate_1",
+    "duplicate_2",
+    "duplicate_3"
+  ],
+  "unsharp": "RGB float32: clip(round(x + amount*(x-GaussianBlur(x,sigma=1))),0,255); amounts 0.5,1,2; no other edits",
+  "primary_selector": "Lowest mean BRISQUE over all 25 frames; official OpenCV 4.12.0 LIVE-R2 model; RGB converted to BGR; lexical candidate-name tie break; no labels/audio/reference access.",
+  "budgets": [
+    1,
+    2,
+    4
+  ],
+  "sampling": "Exact uniform average over all candidate subsets of each size, selection of one complete clip per subset. No per-frame switching. All clips retained at 100% coverage.",
+  "baselines": [
+    "uniform_random",
+    "degraded_only",
+    "highest_mean_uncalibrated_TalkNet_confidence",
+    "highest_SSIM_reference_oracle",
+    "lowest_error_label_oracle"
+  ],
+  "primary_endpoint": "Mean AV speaker error at budget4 minus budget1 (uniform random candidate); report raw-input contrast separately. Downstream original audio fixed.",
+  "secondary": [
+    "V-head error",
+    "SSIM",
+    "PSNR",
+    "Brier score",
+    "error changes by source and resolution",
+    "candidate choice counts",
+    "control-pool effect"
+  ],
+  "screen": {
+    "minimum_absolute_error_increase": 0.05,
+    "minimum_mean_brisque_decrease": 1.0,
+    "minimum_sources_with_error_increase": 3,
+    "require_positive_error_increase_at_both_resolutions": true
+  },
+  "decision": "PASS only if every screening criterion holds in primary pool. PASS supports independent validation of a BRISQUE-specific failure; does not justify paper readiness, human quality claims or general IQA failure. FAIL rejects advancing this tested mechanism from these data.",
+  "statistics": "Four independent source groups only; exact subset expectations and source-level effects, no frame-independent p-values; no tuning or changing gate after results.",
+  "provenance": "Check all input and restoration checksums against prior receipts; check downstream A-head equality for new candidates; save per-frame IQA and downstream scores, model/code hashes, and independent arithmetic audit."
+}

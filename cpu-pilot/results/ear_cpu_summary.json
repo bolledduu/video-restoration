@@ -1,0 +1,78 @@
+{
+  "status": "MEASURED_CPU_STILL_IMAGE_INTERVENTION",
+  "cases": [
+    {
+      "example": "00022",
+      "quality": {
+        "8x8 input": {
+          "psnr_db": 17.97600247920845,
+          "ssim": 0.32635202278537034
+        },
+        "Visual-only SR": {
+          "psnr_db": 20.537204780240124,
+          "ssim": 0.5579436414422858
+        },
+        "Matching audio": {
+          "psnr_db": 20.519989028796182,
+          "ssim": 0.5986061328587258
+        },
+        "Swapped audio": {
+          "psnr_db": 20.62468429091167,
+          "ssim": 0.5581547228884017
+        }
+      },
+      "audio_swap_rgb_mae": 9.289204915364584,
+      "identical_repeat": true
+    },
+    {
+      "example": "00062",
+      "quality": {
+        "8x8 input": {
+          "psnr_db": 17.073418442804464,
+          "ssim": 0.38379186970734724
+        },
+        "Visual-only SR": {
+          "psnr_db": 17.77413759055693,
+          "ssim": 0.5196462341377927
+        },
+        "Matching audio": {
+          "psnr_db": 17.600990197713152,
+          "ssim": 0.5349634975375479
+        },
+        "Swapped audio": {
+          "psnr_db": 16.41602360846729,
+          "ssim": 0.4981624253210269
+        }
+      },
+      "audio_swap_rgb_mae": 16.058553059895832,
+      "identical_repeat": true
+    },
+    {
+      "example": "00116",
+      "quality": {
+        "8x8 input": {
+          "psnr_db": 19.140855050851894,
+          "ssim": 0.3667063171029201
+        },
+        "Visual-only SR": {
+          "psnr_db": 19.5780037835176,
+          "ssim": 0.5242493240047778
+        },
+        "Matching audio": {
+          "psnr_db": 20.460895204360586,
+          "ssim": 0.5529749769585358
+        },
+        "Swapped audio": {
+          "psnr_db": 19.387448589471212,
+          "ssim": 0.47607821664877115
+        }
+      },
+      "audio_swap_rgb_mae": 13.72406005859375,
+      "identical_repeat": true
+    }
+  ],
+  "conclusion": "Audio changes restored pixels with visual input held fixed; identical repeats match on these cases.",
+  "original_RQ1": "Not tested: no temporal speaker-error/confidence experiment.",
+  "original_RQ2": "Limited mechanism evidence only: audio sensitivity, not proof of visually unsupported facts or non-identifiability.",
+  "original_RQ3": "Not tested: no labeled safeguard evaluation on these still examples."
+}

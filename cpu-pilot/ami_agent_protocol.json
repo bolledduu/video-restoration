@@ -1,0 +1,16 @@
+{
+  "created": "2026-10-15",
+  "purpose": "Separate meeting-domain transfer check; not pooled with primary UniTalk screen",
+  "meeting": "ES2002a",
+  "target": "A",
+  "camera": "Closeup1",
+  "selection": "Earliest target segment >=1.4s, and earliest other-speaker segment >=1.4s with no overlapping target speech. Start segment+0.2s rounded up to video frame grid; one second each.",
+  "labels": "Published transcript segment proxy for activity, not independently annotated dense visual speaking labels",
+  "crop": "Fixed manually reviewed box [130,100,270,245] on original Closeup1 frames, shared across both segments and all variants",
+  "input_only_amendment": "Haar failed on a selected first frame. Before any AMI model inference, inspected both original first frames and fixed a common face box. No segments changed; hand occlusion on the silent segment retained.",
+  "sigma": 40,
+  "seed": 20261015,
+  "candidates": ["captured", "fastdvdnet"],
+  "metrics": ["TalkNet AV", "BRISQUE", "MUSIQ", "reference SSIM"],
+  "claim_limit": "One meeting, two segments, descriptive domain transfer; no ASR evaluation, no full conversation agent, no independent replication count beyond one meeting"
+}

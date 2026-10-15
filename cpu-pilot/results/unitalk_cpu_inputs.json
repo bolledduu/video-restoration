@@ -1,0 +1,216 @@
+{
+  "protocol": {
+    "version": 1,
+    "dataset": "plnguyen2908/UniTalk-ASD",
+    "revision": "0c0f80331c91b57ce772bc674f81d40a24247383",
+    "split": "val",
+    "selection": "Ascending video archive byte size, then video ID; first four sources with one eligible positive and one eligible negative track. Select by timestamps and published labels, never model outcomes. Minimum native crop side 64 pixels, continuous 100-frame context, 25 stable-label target frames beginning 37 frames into context.",
+    "sources": 4,
+    "frames": 25,
+    "fps": 25,
+    "context_frames": 100,
+    "target_offset": 37,
+    "minimum_crop_side": 64,
+    "restoration": "Official Ear-for-Face-SR released weights applied independently to frames; fixed four-second source soundtrack for all target frames. This is framewise restoration, not a trained temporal model.",
+    "effective_resolutions": [
+      8,
+      4
+    ],
+    "conditions": [
+      "visual_only",
+      "matching",
+      "swapped"
+    ],
+    "donor_rule": "Next selected source cyclically, its positive track context; identical for both tracks of a source. No donor selected using outcomes.",
+    "downstream": "Official TalkNet TalkSet checkpoint, V head before cross-attention and AV head with identical original one-second audio in every condition; threshold 0.5.",
+    "primary_head": "AV",
+    "quality": "Per-frame SSIM and PSNR against the unmodified face crop resized to 128; degraded bicubic and visual-only restoration are explicit baselines.",
+    "RQ1_event": "At least five target frames in a track where reference, degraded and matching AV predictions are correct, swapped AV is wrong, swapped wrong-class softmax increases at least 0.10 versus matching, and swapped SSIM exceeds degraded SSIM. Report both false positives and misses; require at least two independent source videos for a positive pilot screen.",
+    "RQ2": "Compare native 8x8 versus effective 4x4 with fixed visual arrays and audio intervention. Attribute downstream changes to audio only after exact repeat and fixed downstream A-head checks; pixel change alone is insufficient.",
+    "RQ3": "Predefined rankings: audio-conditioning score sensitivity, disagreement with degraded-video scores, low-resolution re-degradation residual, and model confidence. Compare selective error at identical 50% and 75% frame coverage. Also report degraded/visual-only/full-coverage and abstain-all. No tuning. A positive safeguard screen requires lower pooled AV error than confidence at both coverages and a reduction at 75% in at least two sources.",
+    "repeat": "Recompute first matching target frame for every track and degradation; deterministic noise-disabled generator.",
+    "statistics": "Descriptive source-level pilot, four sources; no frame-independent significance claims. Scores are uncalibrated softmax, not probability of correctness. Report all selected cases including failures.",
+    "decision": "GO for a bounded follow-up only if the RQ1 two-source screen and the RQ3 safeguard screen both pass; otherwise NO-GO for scaling this tested setup. This does not establish or falsify all audio-conditioned restorers."
+  },
+  "protocol_sha256": "d2f967bb2a6b4ff330513af37fe48e1281a6133da23254203785353be6a09075",
+  "records": [
+    {
+      "id": "lnAa1N5ynyI__label0",
+      "source": "lnAa1N5ynyI",
+      "entity": "lnAa1N5ynyI:2",
+      "label": 0,
+      "target_start": 19.4,
+      "context_start": 17.92,
+      "track_audio_origin": 16.28,
+      "path": "lnAa1N5ynyI__label0.npz",
+      "bundle_sha256": "f12cc81052d98af5fe0a37ed6d499dd9ca165dc7e8d00719c7be3378e1d67688",
+      "csv_sha256": "13472d2fe0e2264eb10822c184f7b7440d2cb158b30af07b4456fd98617d7b26",
+      "video_zip_sha256": "9b6b5ed74d2ef01ecbb2f4dac2029436c76160625e760ab61cf3a4ddad3b688f",
+      "audio_zip_sha256": "89224352e3b6e79f39f56d8e0508ad28fea742fd5cb91dc65949072b719ba9c7",
+      "original_audio_sha256": "ee8adbc9876301e97b63781bd7464dbe765f312c5047c32747a9fe6a3a975f5f",
+      "conditioning_sha256": "93441feb0e81c81bc5421d33e5467c659bc890efec42d7e0e5a36e6ad1c06957",
+      "annotation_provenance": "Published UniTalk validation labels; not model-generated or independently re-annotated here",
+      "donor_id": "Pc5iQdNpDX0__label1"
+    },
+    {
+      "id": "lnAa1N5ynyI__label1",
+      "source": "lnAa1N5ynyI",
+      "entity": "lnAa1N5ynyI:2",
+      "label": 1,
+      "target_start": 22.92,
+      "context_start": 21.44,
+      "track_audio_origin": 16.28,
+      "path": "lnAa1N5ynyI__label1.npz",
+      "bundle_sha256": "ee4141b736409d4658658b29a4dae693289c04717603312c97b03113e1f97c6a",
+      "csv_sha256": "13472d2fe0e2264eb10822c184f7b7440d2cb158b30af07b4456fd98617d7b26",
+      "video_zip_sha256": "9b6b5ed74d2ef01ecbb2f4dac2029436c76160625e760ab61cf3a4ddad3b688f",
+      "audio_zip_sha256": "89224352e3b6e79f39f56d8e0508ad28fea742fd5cb91dc65949072b719ba9c7",
+      "original_audio_sha256": "1de2dc99f3fd58a17f2c37a0a1e247a9929791e1a7da74b1116f03892c1d2c2f",
+      "conditioning_sha256": "a63d9e6b85597d743e02f7a5b0602c67334d41b06309b34db04eb014f89d45c2",
+      "annotation_provenance": "Published UniTalk validation labels; not model-generated or independently re-annotated here",
+      "donor_id": "Pc5iQdNpDX0__label1"
+    },
+    {
+      "id": "Pc5iQdNpDX0__label0",
+      "source": "Pc5iQdNpDX0",
+      "entity": "Pc5iQdNpDX0:81",
+      "label": 0,
+      "target_start": 149.56,
+      "context_start": 148.08,
+      "track_audio_origin": 146.48,
+      "path": "Pc5iQdNpDX0__label0.npz",
+      "bundle_sha256": "29479278baf85be3f60441575b958166a256ce969859c159e6caa5ec3b83a5f7",
+      "csv_sha256": "8695dc935ca6314eb96f39ed32e62c7f915eda81060562f054e7f9f20a50774a",
+      "video_zip_sha256": "b1bd791cf524dd3302fdf8e4882643b57eb83c190f0e4f770454b570890b4a1d",
+      "audio_zip_sha256": "ed33968048e37455a6a2d7f45d3f7df3b4f7fa1821d13f4aa9b665f792112409",
+      "original_audio_sha256": "82621a1d48db2d7fcc8a761bd86f5f3c612a3af24796d4bba6965863ac902e41",
+      "conditioning_sha256": "1ccd9a7f072aff20cbbda926910337049b69f16cafca67a0ca3c704043bd7597",
+      "annotation_provenance": "Published UniTalk validation labels; not model-generated or independently re-annotated here",
+      "donor_id": "QRXbRSq8p4s__label1"
+    },
+    {
+      "id": "Pc5iQdNpDX0__label1",
+      "source": "Pc5iQdNpDX0",
+      "entity": "Pc5iQdNpDX0:47",
+      "label": 1,
+      "target_start": 78.96,
+      "context_start": 77.48,
+      "track_audio_origin": 77.48,
+      "path": "Pc5iQdNpDX0__label1.npz",
+      "bundle_sha256": "83d1cc059212dad918b1de8d02fffd7b96a7357873d5a4b148d6ebdd17fb8a9a",
+      "csv_sha256": "8695dc935ca6314eb96f39ed32e62c7f915eda81060562f054e7f9f20a50774a",
+      "video_zip_sha256": "b1bd791cf524dd3302fdf8e4882643b57eb83c190f0e4f770454b570890b4a1d",
+      "audio_zip_sha256": "ed33968048e37455a6a2d7f45d3f7df3b4f7fa1821d13f4aa9b665f792112409",
+      "original_audio_sha256": "b82209f59635edba819e276faef078aebb1285847ed5c0c38a42be7795c02a1e",
+      "conditioning_sha256": "ede4c871401b659ce9b78030fd8c945196a9b2deb487b7bced1027916c150a92",
+      "annotation_provenance": "Published UniTalk validation labels; not model-generated or independently re-annotated here",
+      "donor_id": "QRXbRSq8p4s__label1"
+    },
+    {
+      "id": "QRXbRSq8p4s__label0",
+      "source": "QRXbRSq8p4s",
+      "entity": "QRXbRSq8p4s:10",
+      "label": 0,
+      "target_start": 5.64,
+      "context_start": 4.16,
+      "track_audio_origin": 4.16,
+      "path": "QRXbRSq8p4s__label0.npz",
+      "bundle_sha256": "66e18df216a6f086c72303441c95f3699dd4f61c2bbbda3602d89275d5c2f95e",
+      "csv_sha256": "ad1b52b2da414276f5f9c919458108588e3601950904be784e445d4ef90ed654",
+      "video_zip_sha256": "0095fab2882031939b88acc0c956a999da848fd08b1e7387760e48050c8d721e",
+      "audio_zip_sha256": "64e57117953a77e55a2618a7578f1ec44638534a5f7e377715f5d3e3b8a56a84",
+      "original_audio_sha256": "8d7f7b831af36b4762362be273a4f0cbf58fbed31e4c9249948951437bcd17aa",
+      "conditioning_sha256": "07ff64f793cfc0401a4f3956538a424b17a0094ebee75d7afe75d8165f4f7ed3",
+      "annotation_provenance": "Published UniTalk validation labels; not model-generated or independently re-annotated here",
+      "donor_id": "ho_oK12hY6M__label1"
+    },
+    {
+      "id": "QRXbRSq8p4s__label1",
+      "source": "QRXbRSq8p4s",
+      "entity": "QRXbRSq8p4s:26",
+      "label": 1,
+      "target_start": 32.52,
+      "context_start": 31.04,
+      "track_audio_origin": 31.04,
+      "path": "QRXbRSq8p4s__label1.npz",
+      "bundle_sha256": "ff1723f88a2f09cb0b899a50cfd62a379329d2e70c8607ba676cc532e2817029",
+      "csv_sha256": "ad1b52b2da414276f5f9c919458108588e3601950904be784e445d4ef90ed654",
+      "video_zip_sha256": "0095fab2882031939b88acc0c956a999da848fd08b1e7387760e48050c8d721e",
+      "audio_zip_sha256": "64e57117953a77e55a2618a7578f1ec44638534a5f7e377715f5d3e3b8a56a84",
+      "original_audio_sha256": "6a43fcd2e50a5285c4fc42c956be478275520ebbc967f6591d2dbc483107602f",
+      "conditioning_sha256": "9e2fa39d653a1d584bc1071ab6dc292df5cae7620b65bd65a078b10d67203272",
+      "annotation_provenance": "Published UniTalk validation labels; not model-generated or independently re-annotated here",
+      "donor_id": "ho_oK12hY6M__label1"
+    },
+    {
+      "id": "ho_oK12hY6M__label0",
+      "source": "ho_oK12hY6M",
+      "entity": "ho_oK12hY6M:32",
+      "label": 0,
+      "target_start": 56.8,
+      "context_start": 55.32,
+      "track_audio_origin": 55.32,
+      "path": "ho_oK12hY6M__label0.npz",
+      "bundle_sha256": "bad6713d43fdd5cb504992f88607a19577fc5744b9fd6983e24a91f4e7157416",
+      "csv_sha256": "a7696172ee20fcbef7992d21fd1a60644642667addb388f8cca6013037f604ee",
+      "video_zip_sha256": "898cc56d1c2ad45b360057655351d165f7d96991c57c4bef9e3d8ed49930f4a8",
+      "audio_zip_sha256": "26edc70adee91fc237726dd37918f409fd1dfe5b7e43ee517e5c001e445a3b86",
+      "original_audio_sha256": "ddc2cbec2328d0f5187396db72c150c66e43b732997b064c9f1307cbd0b1bccc",
+      "conditioning_sha256": "d5b228a53a4cd46cde60c7f32cd1821c3972222b3c0dae50619f62fc8a95994f",
+      "annotation_provenance": "Published UniTalk validation labels; not model-generated or independently re-annotated here",
+      "donor_id": "lnAa1N5ynyI__label1"
+    },
+    {
+      "id": "ho_oK12hY6M__label1",
+      "source": "ho_oK12hY6M",
+      "entity": "ho_oK12hY6M:81",
+      "label": 1,
+      "target_start": 152.04,
+      "context_start": 150.56,
+      "track_audio_origin": 150.56,
+      "path": "ho_oK12hY6M__label1.npz",
+      "bundle_sha256": "d46189d8e713310d3b3e0e32efb19800f51f1c57f0ebe217acad3394ea1233e4",
+      "csv_sha256": "a7696172ee20fcbef7992d21fd1a60644642667addb388f8cca6013037f604ee",
+      "video_zip_sha256": "898cc56d1c2ad45b360057655351d165f7d96991c57c4bef9e3d8ed49930f4a8",
+      "audio_zip_sha256": "26edc70adee91fc237726dd37918f409fd1dfe5b7e43ee517e5c001e445a3b86",
+      "original_audio_sha256": "a663572a7861ff8313f1a7a285f2a0abe6c066afbcb6d8a746aa766de63ab2dc",
+      "conditioning_sha256": "8da1378b0a63bb4fb5f2768aaf866c597cdfce507b3956ae9e5dc8b32d6cfaef",
+      "annotation_provenance": "Published UniTalk validation labels; not model-generated or independently re-annotated here",
+      "donor_id": "lnAa1N5ynyI__label1"
+    }
+  ],
+  "selection_audit": [
+    {
+      "video": "lnAa1N5ynyI",
+      "status": "SELECTED"
+    },
+    {
+      "video": "Pc5iQdNpDX0",
+      "status": "SELECTED"
+    },
+    {
+      "video": "9Zja_cIAwY8",
+      "status": "INSUFFICIENT_NATIVE_CROP_RESOLUTION_OR_MISSING_IMAGES"
+    },
+    {
+      "video": "ABqo634gI5s",
+      "status": "INSUFFICIENT_NATIVE_CROP_RESOLUTION_OR_MISSING_IMAGES"
+    },
+    {
+      "video": "QRXbRSq8p4s",
+      "status": "SELECTED"
+    },
+    {
+      "video": "qv3-HaaxGUc",
+      "status": "INSUFFICIENT_NATIVE_CROP_RESOLUTION_OR_MISSING_IMAGES"
+    },
+    {
+      "video": "kgVz_AXYvn0",
+      "status": "INSUFFICIENT_NATIVE_CROP_RESOLUTION_OR_MISSING_IMAGES"
+    },
+    {
+      "video": "ho_oK12hY6M",
+      "status": "SELECTED"
+    }
+  ]
+}

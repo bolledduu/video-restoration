@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "question": "Do two different blind image-quality models agree on restorations that increase labeled speaker errors?",
+  "design": "Retrospective failure-focused discovery. Native 8x8 is the primary stratum because previous BRISQUE failure was concentrated there. 4x4 is retained as a counterexample stratum. Neither is an independent holdout.",
+  "candidates": [
+    "degraded",
+    "visual_only",
+    "matching",
+    "unsharp_1"
+  ],
+  "frame_indices": [
+    0,
+    6,
+    12,
+    18,
+    24
+  ],
+  "metrics": {
+    "brisque": "Official OpenCV LIVE-R2 model; lower mean sampled-frame score wins",
+    "musiq": "PyIQA 0.1.14.1 MUSIQ KonIQ10k checkpoint; higher mean sampled-frame score wins; CPU; default native-resolution preprocessing"
+  },
+  "comparison": "Identical five sampled frames for both IQA models, full 24 aligned frames for existing TalkNet AV error. Choose whole clip. Ties lexical. No source, reference or label in either quality selector.",
+  "primary_failure_screen": {
+    "native8_mean_error_increase_over_degraded_min": 0.1,
+    "native8_sources_with_musiq_harm_min": 3
+  },
+  "consensus_screen": {
+    "native8_agreed_noninput_cases_min": 3,
+    "native8_sources_with_agreed_harm_min": 2
+  },
+  "decision": "A screen pass justifies a failure-focused independent validation study, not full-paper readiness. Both screens needed to recommend metric-consensus research as the next candidate. Do not change prior failed budget gate.",
+  "controls": [
+    "report all 4x4 cases",
+    "compare BRISQUE and MUSIQ disagreements",
+    "always degraded baseline",
+    "repeat first MUSIQ frame identically",
+    "verify model/input/output hashes",
+    "show reference-based SSIM only as diagnostic"
+  ],
+  "novelty": "Unestablished. Compare to LL-Bench, CDI, RQI, existing IQA ensembles and quality-guided selection before making claims."
+}

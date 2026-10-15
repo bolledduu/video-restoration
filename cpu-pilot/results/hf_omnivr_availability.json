@@ -1,0 +1,22 @@
+{
+  "repository": "xin1u/OmniVR",
+  "revision": "3a58cc2cf24262ce7b81e053454c462614fd5eae",
+  "gated": false,
+  "weight_files": [
+    {
+      "path": "tinydecoder/taeltx2_3_wide.pth",
+      "bytes": 60400499,
+      "sha256": "007788e6b9cb7f77e8589ae30ba7456b119d38b0d017e1d349c1c1d11e3d6339"
+    },
+    {
+      "path": "weights/ominivr_lora_step_01800.safetensors",
+      "bytes": 7605551032,
+      "sha256": "8b8d38399f2cd2448c40dd06121fd316145d56ee37b19f199160f274f7e6e59c"
+    },
+    {
+      "path": "weights/ominivr_lora_step_02400.safetensors",
+      "bytes": 7605551032,
+      "sha256": "0f818d760f07c7e7ce0fd0dc1c536dbba8eea30248b87180ca4e730945367777"
+    }
+  ]
+}

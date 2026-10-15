@@ -1,0 +1,20 @@
+{
+  "created": "2026-10-15",
+  "purpose": "Bounded independent-source CPU screen of quality-guided video processing for a speaker-evidence agent",
+  "dataset": "plnguyen2908/UniTalk-ASD",
+  "revision": "0c0f80331c91b57ce772bc674f81d40a24247383",
+  "source_count": 2,
+  "selection": "First two sources by archive size/name with both earliest eligible speaking and silent 25-frame tracks; exclude all seven previously evaluated sources; minimum native side 32. Select before inference.",
+  "frames": 25,
+  "fps": 25,
+  "size": 128,
+  "seed": 20261015,
+  "sigma": [15, 40],
+  "candidates": ["captured", "spatial_nlm", "fastdvdnet", "fastdvdnet_55"],
+  "restorer": "Official FastDVDnet model_clipped_noise.pth, CPU, five frames; true sigma and fixed sigma55 settings",
+  "quality_frames": [0, 12, 24],
+  "primary_screen": "At least two independent sources with a BRISQUE/MUSIQ agreed restoration increasing speaker error by >=1/24, plus any restoration reducing error in at least one source.",
+  "guard": "Use MUSIQ winner unless >0.1 of its binary speaker decisions disagree with captured input; otherwise retain captured. Fixed, untrained baseline, not proposed novel method.",
+  "agent": "Qwen via Groq; bounded tools over cached real model outputs. No labels, source IDs, reference images, reference metrics or oracle outcomes in model context. Maximum 8 calls and 2048 output tokens per call per case.",
+  "scope": "Descriptive pilot; no human quality judgment, calibrated confidence, audio-conditioned restoration, novel assessor validation or full quotation task. No outcome-dependent sample replacement. Report all cases."
+}

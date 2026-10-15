@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "tests": {
+    "predicted_quality": "raw-label and independent rank recomputation passed",
+    "risk_adjusted": "raw-label and independent rank recomputation passed",
+    "risk_only": "raw-label and independent rank recomputation passed",
+    "specialist_or_all_in_one": "raw-label and independent rank recomputation passed"
+  },
+  "metadata_only_selector_replay": "PASS",
+  "source_split_disjointness": "PASS",
+  "source_and_protocol_hashes": "PASS"
+}

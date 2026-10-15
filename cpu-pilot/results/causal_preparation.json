@@ -1,0 +1,135 @@
+{
+  "status": "INPUTS_PREPARED_NOT_RESTORED",
+  "protocol": {
+    "scope": "Original RQ1-RQ3: audio-caused false corroboration, evidence origin, and independent-evidence safeguards",
+    "source_manifest": "manifest.json",
+    "source_start_seconds": 1.0,
+    "frames": 49,
+    "fps": 24,
+    "width": 512,
+    "height": 288,
+    "audio_rate": 16000,
+    "degradations": {
+      "moderate": {
+        "blur_sigma": 1.2,
+        "downsample": 2
+      },
+      "severe": {
+        "blur_sigma": 2.5,
+        "downsample": 4
+      }
+    },
+    "conditions": [
+      "matching",
+      "swapped",
+      "audio_disabled"
+    ],
+    "seeds": [
+      0,
+      1
+    ],
+    "repeat_matching_seed_zero": true,
+    "donor_selection": "Next sample in manifest order, cyclic; not selected for outcome",
+    "downstream_audio": "Original source segment for every condition; generated and donor audio must never enter fixed-audio evaluation",
+    "omnivr": {
+      "code_revision": "81d00ff1cb271ef79210a4082e2058b33ddc310d",
+      "hf_revision": "3a58cc2cf24262ce7b81e053454c462614fd5eae",
+      "checkpoint_file": "weights/ominivr_lora_step_02400.safetensors",
+      "base_revision": "3c6a4e66e5d0a684231950b9c74dd4ded7b6fadc",
+      "strategy": "neg_cfg",
+      "guidance_scale": 3.0,
+      "num_steps": 15,
+      "condition_noise": 0.3
+    },
+    "interpretation": {
+      "RQ1": "Requires independently verified face/speaking labels, quality improvement, and increased downstream wrong-class score on the same source. Raw softmax is not calibrated confidence. PSNR/SSIM alone do not prove perceptual improvement or synchrony.",
+      "RQ2": "Within-seed audio intervention estimates audio sensitivity. Compare to identical-input repeat and between-seed variation. Sensitivity alone does not prove factual unsupportedness or exact non-identifiability.",
+      "RQ3": "Evaluate provenance-aware and sensitivity-based safeguards against confidence and abstention baselines at matched coverage; no threshold fitting on reported test examples. Cannot claim validation without labels and held-out evaluation."
+    },
+    "limits": "Three source clips are a case pilot, not independent frame-level statistical evidence. Existing annotations are provisional. No natural off-screen condition is certified. Reduced-resolution inference is not reproduction of the OmniVR paper benchmark."
+  },
+  "protocol_sha256": "3615d5e37dce5267b1c19d020ad7a3cc2a5a8b13708aeeb56f8ce9a13373f620",
+  "records": [
+    {
+      "id": "pilot_01_speaker_recognition__moderate",
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "path": "pilot_01_speaker_recognition__moderate.npz",
+      "bundle_sha256": "62b70ce149de1136a2fececb978b596c55ce90b75a4f298953aec748300a6da0",
+      "source_sha256": "3f5ef74c2471d30f9035424907c5c67acc04f82af9cc0d242151d70e999f9358",
+      "video_array_sha256": "0851129242fdfc5e033f91bf161fa51713dfa68c32dce826b27b2e43680dc81f",
+      "original_audio_sha256": "b0b46de64af3b8857642f45e3d691f39bdac1becea0270cf34a37de44c857353",
+      "matching_audio_sha256": "b0b46de64af3b8857642f45e3d691f39bdac1becea0270cf34a37de44c857353",
+      "swapped_audio_sha256": "ee47281d31454a840b2f38ed51cddaa12b558d2545da44fdb72c7e78a03c644a",
+      "donor_id": "pilot_02_speaker_detection_positive"
+    },
+    {
+      "id": "pilot_01_speaker_recognition__severe",
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "path": "pilot_01_speaker_recognition__severe.npz",
+      "bundle_sha256": "d897fca7f37089a2a6f704ac8b1ae9f9c6dcb118b49298c687df74883330f345",
+      "source_sha256": "3f5ef74c2471d30f9035424907c5c67acc04f82af9cc0d242151d70e999f9358",
+      "video_array_sha256": "29c62799d696f844ed8b5b412b94d77aaa0eb69d0c1da7ff1a6b846a444823ab",
+      "original_audio_sha256": "b0b46de64af3b8857642f45e3d691f39bdac1becea0270cf34a37de44c857353",
+      "matching_audio_sha256": "b0b46de64af3b8857642f45e3d691f39bdac1becea0270cf34a37de44c857353",
+      "swapped_audio_sha256": "ee47281d31454a840b2f38ed51cddaa12b558d2545da44fdb72c7e78a03c644a",
+      "donor_id": "pilot_02_speaker_detection_positive"
+    },
+    {
+      "id": "pilot_02_speaker_detection_positive__moderate",
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "path": "pilot_02_speaker_detection_positive__moderate.npz",
+      "bundle_sha256": "80378de50082d1911e18a909dce8be75358d976e1ccbfd6fadbb02bfa1549e28",
+      "source_sha256": "e08e8a3ccd6000169d2534a6f80a2d3d253040daa6e874a3f66d2295fc01c2bc",
+      "video_array_sha256": "ce7c1b9f4e9a70f75b54f4ed9577b98650dedbbfc16f99ed8da3764ffe50d378",
+      "original_audio_sha256": "ee47281d31454a840b2f38ed51cddaa12b558d2545da44fdb72c7e78a03c644a",
+      "matching_audio_sha256": "ee47281d31454a840b2f38ed51cddaa12b558d2545da44fdb72c7e78a03c644a",
+      "swapped_audio_sha256": "6a8af06f45c24bc24995547bfe7bbe872db7bb58f52572d44f60e9cbfc704166",
+      "donor_id": "pilot_03_speaker_detection_negative"
+    },
+    {
+      "id": "pilot_02_speaker_detection_positive__severe",
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "path": "pilot_02_speaker_detection_positive__severe.npz",
+      "bundle_sha256": "31826189dd786f4c2150c261c9a9b1d8819a5a2af8456b83921f9875d3d29107",
+      "source_sha256": "e08e8a3ccd6000169d2534a6f80a2d3d253040daa6e874a3f66d2295fc01c2bc",
+      "video_array_sha256": "fcd8ba58707cf8e600680fbd8bbf60cd024a489e27c7b36cc122e7e356f0c061",
+      "original_audio_sha256": "ee47281d31454a840b2f38ed51cddaa12b558d2545da44fdb72c7e78a03c644a",
+      "matching_audio_sha256": "ee47281d31454a840b2f38ed51cddaa12b558d2545da44fdb72c7e78a03c644a",
+      "swapped_audio_sha256": "6a8af06f45c24bc24995547bfe7bbe872db7bb58f52572d44f60e9cbfc704166",
+      "donor_id": "pilot_03_speaker_detection_negative"
+    },
+    {
+      "id": "pilot_03_speaker_detection_negative__moderate",
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "path": "pilot_03_speaker_detection_negative__moderate.npz",
+      "bundle_sha256": "069fea86c47044cfda3745c57387ebc6abca2d9fd2fbd59f984d028b61c48d1f",
+      "source_sha256": "a55d337f4ebe3d97895568b4fe1eb6992014a25f8e2d2ac6deabb8b669bde660",
+      "video_array_sha256": "e40dc59afa3e1ce368d9b3d9973ab5cfd5496cb485bf8e4326e2d72dbb136d37",
+      "original_audio_sha256": "6a8af06f45c24bc24995547bfe7bbe872db7bb58f52572d44f60e9cbfc704166",
+      "matching_audio_sha256": "6a8af06f45c24bc24995547bfe7bbe872db7bb58f52572d44f60e9cbfc704166",
+      "swapped_audio_sha256": "b0b46de64af3b8857642f45e3d691f39bdac1becea0270cf34a37de44c857353",
+      "donor_id": "pilot_01_speaker_recognition"
+    },
+    {
+      "id": "pilot_03_speaker_detection_negative__severe",
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "path": "pilot_03_speaker_detection_negative__severe.npz",
+      "bundle_sha256": "b9c6ebef77fa0514f125d8a0988d9f77b5e5b97eaa7df41a1b453e33d965cc64",
+      "source_sha256": "a55d337f4ebe3d97895568b4fe1eb6992014a25f8e2d2ac6deabb8b669bde660",
+      "video_array_sha256": "cb4b431146ca3232943da97e9cd97f7b81d8a99bac4a43db3faaca0ab83e72ff",
+      "original_audio_sha256": "6a8af06f45c24bc24995547bfe7bbe872db7bb58f52572d44f60e9cbfc704166",
+      "matching_audio_sha256": "6a8af06f45c24bc24995547bfe7bbe872db7bb58f52572d44f60e9cbfc704166",
+      "swapped_audio_sha256": "b0b46de64af3b8857642f45e3d691f39bdac1becea0270cf34a37de44c857353",
+      "donor_id": "pilot_01_speaker_recognition"
+    }
+  ],
+  "gpu_runs": 0,
+  "speaking_labels_verified": false,
+  "paired_jobs": 42
+}

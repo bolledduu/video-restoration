@@ -1,0 +1,7 @@
+{
+  "status": "PASSED",
+  "cases": 16,
+  "result_sha256": "e13ef0cc5734d2a364742ea916e3c6f5947ab19d85792a519cf0eb62ab501402",
+  "checked": "Prior outcome/pixel linkage; matched sample means; all winners; all resolution/source/consensus summaries; fixed screening decision.",
+  "scope": "Arithmetic audit only; no independent annotations, independent source validation, or model-quality validation."
+}

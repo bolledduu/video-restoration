@@ -1,0 +1,42 @@
+{
+  "repository": "xin1u/JoyAI-Echo-SR",
+  "revision": "561670d3c2ca841729548075db5a05c3c326831c",
+  "gated": false,
+  "weight_files": [
+    {
+      "path": "av-sr-1k-distill-video-step005100.safetensors",
+      "bytes": 7611640784,
+      "sha256": "a71141531096d5d8ea36b7c000862133dffbedaa46023ad0fdbad2c54231626e"
+    },
+    {
+      "path": "av-sr-1k-multistep-step09900.safetensors",
+      "bytes": 7611640896,
+      "sha256": "eba40526929cb09322a213c41ea7d5961173778fbf975e30ec1aafb7d2a91789"
+    },
+    {
+      "path": "av-sr-2k-multistep-step08000.safetensors",
+      "bytes": 7614440736,
+      "sha256": "b9c4720ddbb34b4596982bc60cf963706abe779673c63d7a53fc65f95cc7f3cf"
+    },
+    {
+      "path": "echo-sr-ltx2-19b-dmd-step18300.safetensors",
+      "bytes": 7527142216,
+      "sha256": "f085294f1e28314144ecc7b5815a07b3e4a3b3a7274eea8c9d8638e95660ee19"
+    },
+    {
+      "path": "echo-sr-ltx2.3-22b-dmd-step04600.safetensors",
+      "bytes": 7605563152,
+      "sha256": "4ca99a7c9f87071914581e1245e1befaf667253d2ffd5ca2eb1b6b4b4ec799b8"
+    },
+    {
+      "path": "prompt/sr_prompt_embeddings.pt",
+      "bytes": 50354773,
+      "sha256": "92e3175462190ab1a37fc28e0e352835ab441ad7cb8f3c245e38dc4a554a5cce"
+    },
+    {
+      "path": "tinydecoder/taeltx2_3_wide.pth",
+      "bytes": 60400499,
+      "sha256": "007788e6b9cb7f77e8589ae30ba7456b119d38b0d017e1d349c1c1d11e3d6339"
+    }
+  ]
+}

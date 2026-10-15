@@ -1,0 +1,11 @@
+{
+  "status": "AWAITING_RESTORATIONS",
+  "missing_runs": 42,
+  "expected_runs": 42,
+  "RQ1": "NOT_EVALUATED",
+  "RQ2": "NOT_EVALUATED",
+  "RQ3": "NOT_EVALUATED",
+  "cases": [],
+  "score_interpretation": "Uncalibrated TalkNet softmax, not calibrated probability of correctness. PSNR/SSIM do not establish perceptual preference or synchronization.",
+  "inference_unit": "Descriptive source/track cases; frames and seeds are not independent subjects."
+}

@@ -1,0 +1,29 @@
+{
+  "investment_decision": "NO",
+  "decision_scope": "pursue a full paper from the current pilot",
+  "feasibility_assessment": "CLOSED",
+  "scientific_hypothesis": "UNTESTED",
+  "compute_policy": "laptop only; no paid allocation; no further pilot preparation scheduled",
+  "decision_basis": "Required positive evidence is absent; the executable audio-conditioned model was not available in the recorded search. This is not evidence that the effect is absent.",
+  "source_clips": 3,
+  "dependent_quality_cases": 6,
+  "talknet_condition_runs": 18,
+  "psnr_improved_cases": 2,
+  "ssim_improved_cases": 3,
+  "changed_prediction_cases": {
+    "visual_only": 5,
+    "audio_only": 0,
+    "fixed_audio_visual": 4
+  },
+  "checks": "All six groups have identical frame counts, timestamps, crops, downstream audio hashes and audio-only logits across conditions; all logits finite.",
+  "interpretation": "Frame disagreements show prediction sensitivity to video-only processing. They are neither errors nor verified speaking states; reference predictions are not ground truth.",
+  "speaker_accuracy": null,
+  "delta_false_attribution": null,
+  "rq1": "Not demonstrated; do not claim false corroboration.",
+  "rq2": "Not demonstrated; do not claim non-identifiability.",
+  "rq3": "Do not develop a new method from these results.",
+  "input_sha256": {
+    "video_baseline.json": "26ebad8585fb787d84facfa3dc4f88f3cbddca2f67cb38d66700089f77466511",
+    "talknet_diagnostics.json": "ae0fe33d363a6286611e3f46a1cefe2080255fc71c303fdcb77959ea08a8853f"
+  }
+}

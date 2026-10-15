@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": [
+    "protocol/code/input/output hashes",
+    "balanced source-disjoint selection",
+    "frame score alignment and error arithmetic",
+    "same audio-only outputs across visual interventions",
+    "metric selection and guard arithmetic",
+    "fixed screen arithmetic",
+    "agent tool allowlist excludes labels/reference/oracle scores",
+    "separate AMI proxy-label result arithmetic",
+    "Qwen outputs evaluated offline against original measurements"
+  ],
+  "independent_sources": 2,
+  "primary_cases": 8,
+  "per_case_scored_frames": 24,
+  "frames_are_not_independent": true
+}

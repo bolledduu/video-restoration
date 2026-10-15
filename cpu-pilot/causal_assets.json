@@ -1,0 +1,169 @@
+{
+  "files": [
+    {
+      "role": "base",
+      "repository": "Lightricks/LTX-2.3",
+      "revision": "3c6a4e66e5d0a684231950b9c74dd4ded7b6fadc",
+      "file": "ltx-2.3-22b-dev.safetensors",
+      "bytes": 46149344974,
+      "sha256": "7ab7225325bc403448ea84b6db2269811a880e5118cd2ee2b6282a93d585016f",
+      "git_blob_sha1": "795740d92d97ec2936b75fa220f3db08fdb758c7"
+    },
+    {
+      "role": "adapter",
+      "repository": "xin1u/OmniVR",
+      "revision": "3a58cc2cf24262ce7b81e053454c462614fd5eae",
+      "file": "weights/ominivr_lora_step_02400.safetensors",
+      "bytes": 7605551032,
+      "sha256": "0f818d760f07c7e7ce0fd0dc1c536dbba8eea30248b87180ca4e730945367777",
+      "git_blob_sha1": "4e2434522d4bb52f576408ca04c535f5e1f41dcc"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "added_tokens.json",
+      "bytes": 35,
+      "sha256": null,
+      "git_blob_sha1": "e17bde03d42feda32d1abfca6d3b598b9a020df7"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "chat_template.json",
+      "bytes": 1615,
+      "sha256": null,
+      "git_blob_sha1": "719b0cd0d7a373a400b0c119ee0e051f41ea88d9"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "config.json",
+      "bytes": 1611,
+      "sha256": null,
+      "git_blob_sha1": "3a7def67463fc91e0f6bf89dd44079c09f7b4871"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "generation_config.json",
+      "bytes": 173,
+      "sha256": null,
+      "git_blob_sha1": "3d589876faad712a9bfb6d3a98073e0f4ab5f75c"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "model-00001-of-00005.safetensors",
+      "bytes": 4979902192,
+      "sha256": "e6fb899db428481aafb45a20130457df6e247e7cb03b7d9f01ee4bc2a9a08138",
+      "git_blob_sha1": "929550ba33fa0f9a1196223bc342a607a504358f"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "model-00002-of-00005.safetensors",
+      "bytes": 4931296592,
+      "sha256": "d251e7fe9799d529405ddb61705a44cd700bd30a8b66a8d44ae26ddf8365dbc6",
+      "git_blob_sha1": "03c1f6e0b1276e7a87af4d497114ce3a0c6158a6"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "model-00003-of-00005.safetensors",
+      "bytes": 4931296656,
+      "sha256": "0684ef801385f0669a0b3e4ab160c50877efdbfa40eb97788595985de2743e78",
+      "git_blob_sha1": "36fe751199c0c85613d396bf035798673f389678"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "model-00004-of-00005.safetensors",
+      "bytes": 4931296656,
+      "sha256": "b4b964e6526f81ccfa625c900b72ce92d5e0fd2debb75998763038ad06b9c541",
+      "git_blob_sha1": "9ce830030b55567d4aa970a5e442e1b0409ac2fc"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "model-00005-of-00005.safetensors",
+      "bytes": 4601000928,
+      "sha256": "4ef2de8f93e165b4e02425769fc566000b0674256ef0c3a27b23a0d45eb12088",
+      "git_blob_sha1": "40179f2c2f0812aa58efb413079b96d0ffc09d52"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "model.safetensors.index.json",
+      "bytes": 108605,
+      "sha256": null,
+      "git_blob_sha1": "c5eb054c21efb5496f4623aeb619a750c9ed9357"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "preprocessor_config.json",
+      "bytes": 570,
+      "sha256": null,
+      "git_blob_sha1": "b1e00fc184f61b698181821169c6374cd5813e5c"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "processor_config.json",
+      "bytes": 70,
+      "sha256": null,
+      "git_blob_sha1": "453c7966d4b5d0b4a317c585989f64c58c2a6bf0"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "special_tokens_map.json",
+      "bytes": 662,
+      "sha256": null,
+      "git_blob_sha1": "1a6193244714d3d78be48666cb02cdbfac62ad86"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "tokenizer.json",
+      "bytes": 33384570,
+      "sha256": "7d4046bf0505a327dd5a0abbb427ecd4fc82f99c2ceaa170bc61ecde12809b0c",
+      "git_blob_sha1": "8d5bbd14966010dddf92b58a87bb9f58cb53d7b6"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "tokenizer.model",
+      "bytes": 4689074,
+      "sha256": "1299c11d7cf632ef3b4e11937501358ada021bbdf7c47638d13c0ee982f2e79c",
+      "git_blob_sha1": "14f810a829755bae3fafd6f97096dbd2eac556bd"
+    },
+    {
+      "role": "text_encoder",
+      "repository": "google/gemma-3-12b-it-qat-q4_0-unquantized",
+      "revision": "68f7ee4fbd59087436ada77ed2d62f373fdd4482",
+      "file": "tokenizer_config.json",
+      "bytes": 1157001,
+      "sha256": null,
+      "git_blob_sha1": "72c9f6bc082907666631052305438b5e7db2a8e2"
+    }
+  ],
+  "total_bytes": 78169033016,
+  "text_encoder_access": "manual HF approval required",
+  "code_revision": "81d00ff1cb271ef79210a4082e2058b33ddc310d"
+}

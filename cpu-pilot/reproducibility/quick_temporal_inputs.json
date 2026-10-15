@@ -1,0 +1,46 @@
+{
+  "records": [
+    {
+      "source": "9Zja_cIAwY8",
+      "entity": "9Zja_cIAwY8:0",
+      "start": 0.0,
+      "label": 0,
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\quick_temporal\\9Zja_cIAwY8.npz",
+      "sha256": "da4c1350124db3d13f8de1c9da7d186c29f1f5aa6e0921e38d74caed9213934a",
+      "video_sha256": "5e173ecedb6fffbcbf202cbcfd072c3b870874bcd05ed602fd21ae2a0d69cd98",
+      "audio_sha256": "ba1c9b5b9ccd04cc4ca22fbe88d475f2f560f6da2b53bce131c3a265000c42bb",
+      "csv_sha256": "f69797926508cce0ae58bf4cf6a421eb558b8cd3ccf677623541a07b881c19ba"
+    },
+    {
+      "source": "ABqo634gI5s",
+      "entity": "ABqo634gI5s:23",
+      "start": 55.32,
+      "label": 0,
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\quick_temporal\\ABqo634gI5s.npz",
+      "sha256": "461737987ce4b801dbdfb35037092e19471487b0f13befe3e2e935460a61c0b5",
+      "video_sha256": "88ff591ed89c1f45fbe6456d6b71646c40b720b210bd3d2b0f255f5aba32da9f",
+      "audio_sha256": "4907e27bc09c49b2cd94340e73764f80251e39b9396294c6a16637c9d032d2f8",
+      "csv_sha256": "9ead06bab233cb2a2b59ddd373ea96cc6343f310dcace472d5819ba4c7fa19d4"
+    },
+    {
+      "source": "qv3-HaaxGUc",
+      "entity": "qv3-HaaxGUc:5",
+      "start": 14.52,
+      "label": 0,
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\quick_temporal\\qv3-HaaxGUc.npz",
+      "sha256": "a1add9fac2d3fb451081a0d69a0781c345b44889553c2b639564fd3dfc093d69",
+      "video_sha256": "fbaf853594521a09a19bb9f1d9c8aee6a61f610eb4765071bf91f7634a592bc3",
+      "audio_sha256": "3aafa52225664bb1f8ad1b94726a426feed2a74a5ecefd86d25fd5641a22ee1c",
+      "csv_sha256": "186f3c3c3f6a0471a097ef82b627e92b1ac843044288c5bbcd843623e9dffb23"
+    }
+  ],
+  "audit": [],
+  "excluded_sources": [
+    "Pc5iQdNpDX0",
+    "QRXbRSq8p4s",
+    "ho_oK12hY6M",
+    "lnAa1N5ynyI"
+  ],
+  "dataset": "plnguyen2908/UniTalk-ASD",
+  "revision": "0c0f80331c91b57ce772bc674f81d40a24247383"
+}

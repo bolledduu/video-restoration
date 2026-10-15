@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "cases": 3,
+  "checks": "Distinct new sources, file hashes, all frame errors, all selectors, guard, summary and screen recomputed",
+  "results_sha256": "9135ef76aff2d7e84eace3f9061bdb96dd9505a1c6dfa98c9e3c14b5538d6658"
+}

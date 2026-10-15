@@ -1,0 +1,17 @@
+{
+  "dataset": "anonymousllbench/llbench-dataset",
+  "revision": "1b3ad9b45437d9655277d5e943feaa5cf67422bb",
+  "seed": "llbench-selection-v1-2026-10-13",
+  "split": "SHA256(seed|dataset|image_name), first 8 hex digits / 2**32: train < .6, dev < .8, else test",
+  "scope": "with_gt trials with at least two scored candidates; all candidates require metadata and yes/no labels",
+  "quality": "within-trial midrank percentile of published human BT scores; higher is better",
+  "risk": "published yes over-processing/hallucination flag, not independently verified factual hallucination",
+  "shrinkage": 10,
+  "risk_penalties": [0, 0.25, 0.5, 1, 2, 4],
+  "maximum_quality_loss": 0.05,
+  "minimum_absolute_risk_reduction": 0.01,
+  "bootstrap_samples": 5000,
+  "bootstrap_seed": 20261013,
+  "decision": "GO only if held-out risk reduction >= .01, paired source-bootstrap 95% lower bound > 0, and quality-loss 95% upper bound <= .05 versus train-only predicted-quality selection",
+  "disclosure": "Retrospective pilot. Aggregate oracle counts were explored before freezing this protocol. This is not an untouched external validation or a preregistration. No test-label tuning is permitted."
+}

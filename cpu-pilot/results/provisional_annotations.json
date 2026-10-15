@@ -1,0 +1,74 @@
+[
+  {
+    "sample_id": "pilot_01_speaker_recognition",
+    "video_id": "I0CPeFpSIbE",
+    "published_answer": "D",
+    "source_byte_hash_verified": true,
+    "technical_verification": "download path, published record, decoded streams and timing checked",
+    "visual_review": "sampled keyframes inspected, not full motion annotation",
+    "observations": "Four people visible in sampled couch/unboxing frames; camera cuts/zoom, sunglasses and hand occlusion. Published question requires a specific box-removal event; inference excerpt is not verified to cover that event.",
+    "audio_review": "decoded signal inspected numerically; no independent listening/transcript verification",
+    "audio_signal": {
+      "first_time_seconds": 0.0,
+      "decoded_end_seconds": 16.02176870748299,
+      "samples_per_channel": 706560,
+      "mean_frame_rms": 0.1459276455579661,
+      "peak_absolute_sample": 1.0159345865249634
+    },
+    "speaker_states": [],
+    "speech_timestamps": [],
+    "published_answer_independently_verified": false,
+    "suitability": "PROVISIONAL; not accepted for causal or accuracy evaluation",
+    "natural_offscreen_condition_verified": false,
+    "review_decision": "User requested keeping annotations provisional on 2026-10-12",
+    "license": "Dataset README body says CC BY-NC 4.0; header says MIT. Source media rights not independently established; no media committed."
+  },
+  {
+    "sample_id": "pilot_02_speaker_detection_positive",
+    "video_id": "V9WCCw5UWmw",
+    "published_answer": "A",
+    "source_byte_hash_verified": true,
+    "technical_verification": "download path, published record, decoded streams and timing checked",
+    "visual_review": "sampled keyframes inspected, not full motion annotation",
+    "observations": "Alternating shots of a suited man and a man in a dark short-sleeve shirt; cut within the diagnostic excerpt. Automatic largest-face identity changes are possible.",
+    "audio_review": "decoded signal inspected numerically; no independent listening/transcript verification",
+    "audio_signal": {
+      "first_time_seconds": 0.0,
+      "decoded_end_seconds": 8.010884353741497,
+      "samples_per_channel": 353280,
+      "mean_frame_rms": 0.06620096030824518,
+      "peak_absolute_sample": 0.9274101257324219
+    },
+    "speaker_states": [],
+    "speech_timestamps": [],
+    "published_answer_independently_verified": false,
+    "suitability": "PROVISIONAL; not accepted for causal or accuracy evaluation",
+    "natural_offscreen_condition_verified": false,
+    "review_decision": "User requested keeping annotations provisional on 2026-10-12",
+    "license": "Dataset README body says CC BY-NC 4.0; header says MIT. Source media rights not independently established; no media committed."
+  },
+  {
+    "sample_id": "pilot_03_speaker_detection_negative",
+    "video_id": "gFNigX2jrnM",
+    "published_answer": "C",
+    "source_byte_hash_verified": true,
+    "technical_verification": "download path, published record, decoded streams and timing checked",
+    "visual_review": "sampled keyframes inspected, not full motion annotation",
+    "observations": "Office ensemble scene with cuts and occlusion. Late excerpt centers on a light-shirted man, not necessarily the woman named in the question. Do not score this crop using published answer C.",
+    "audio_review": "decoded signal inspected numerically; no independent listening/transcript verification",
+    "audio_signal": {
+      "first_time_seconds": 0.0,
+      "decoded_end_seconds": 9.009342403628118,
+      "samples_per_channel": 397312,
+      "mean_frame_rms": 0.021261581363827407,
+      "peak_absolute_sample": 0.26679322123527527
+    },
+    "speaker_states": [],
+    "speech_timestamps": [],
+    "published_answer_independently_verified": false,
+    "suitability": "PROVISIONAL; not accepted for causal or accuracy evaluation",
+    "natural_offscreen_condition_verified": false,
+    "review_decision": "User requested keeping annotations provisional on 2026-10-12",
+    "license": "Dataset README body says CC BY-NC 4.0; header says MIT. Source media rights not independently established; no media committed."
+  }
+]

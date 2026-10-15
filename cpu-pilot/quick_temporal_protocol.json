@@ -1,0 +1,14 @@
+{
+  "scope": "Three-source CPU feasibility transfer probe, not full confirmation of generative restoration or agent quotation attribution",
+  "selection": "Unused cached UniTalk video archives in ascending byte size then name; first 25 consecutive same-label frames with native crop side >=32, by timestamp then entity. One track per source; no selection by predictions. Stop at three eligible sources. Report label imbalance.",
+  "frames": 25,
+  "fps": 25,
+  "seed": 20261014,
+  "noise_sigma": 25,
+  "candidates": ["degraded", "spatial_nlm", "temporal_nlm"],
+  "restoration": "OpenCV colored nonlocal means h=hColor=15, template=7, search=21; temporal window=5 with reflected temporal padding. Conventional CPU temporal denoising, not learned or audio-conditioned.",
+  "quality": "BRISQUE and MUSIQ on frame indices 0,12,24; SSIM against pre-noise captures is reference fidelity, not human quality",
+  "screen": "Feasibility signal only if assessors agree on a noninput candidate with >=1/24 more AV error on at least two sources, and some restored candidate improves AV error on at least one source. Otherwise do not promote this tested setup. No population confidence claim.",
+  "safeguard": "At full coverage choose MUSIQ winner unless >10% of its frame decisions disagree with captured-input decisions, then retain input. Untuned baseline, not a novel method. Compare confidence winner and retain-input.",
+  "limits": "No human perceptual ratings, no trained novel assessor, no real acquisition noise, no full agent evaluation. This run cannot pass the full research-readiness gate."
+}

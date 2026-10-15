@@ -1,0 +1,63 @@
+{
+  "dataset": "plnguyen2908/AV-SpeakerBench",
+  "dataset_revision": "d8acc2ec40bbc753a418341e8eb0a4d407f9bdee",
+  "dataset_card": "https://huggingface.co/datasets/plnguyen2908/AV-SpeakerBench",
+  "metadata_source": "https://huggingface.co/datasets/plnguyen2908/AV-SpeakerBench/blob/main/test.csv",
+  "license_warning": "Check noncommercial dataset card and original media rights before redistribution.",
+  "samples": [
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "question_id": "7dcafacb-9a43-4774-8932-0c50ab67f26d",
+      "video_id": "I0CPeFpSIbE",
+      "file": "audiovisual/I0CPeFpSIbE_280_296.mp4",
+      "clip_seconds": 16,
+      "task": "Speaker Recognition",
+      "question": "Who speaks right after the man in the blue shirt takes a smaller box out of the larger box?",
+      "choices": [
+        "A. The man in blue shirt says I can't even see the camera",
+        "B. The man in black hoodie says This is actually quite nice",
+        "C. The man in the blue t-shirt says Oh this is heavy",
+        "D. The man in black hoodie says No way"
+      ],
+      "published_answer": "D",
+      "pilot_role": "speaker attribution",
+      "verification": "Downloaded and technical metadata checked; sampled frames reviewed; speaking labels remain provisional."
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "question_id": "bf454539-c307-4ab3-bd55-f8bcdc2d4eb0",
+      "video_id": "V9WCCw5UWmw",
+      "file": "audiovisual/V9WCCw5UWmw_146_154.mp4",
+      "clip_seconds": 8,
+      "task": "Speaker Detection",
+      "question": "Does the man in the black shirt speak after the man in the black suit finishes saying 'I need my PS5 back right now'?",
+      "choices": [
+        "A. Yes, he expresses confusion",
+        "B. No, he remains silent",
+        "C. Yes, he urges the man",
+        "D. No, he runs along the hallway"
+      ],
+      "published_answer": "A",
+      "pilot_role": "positive speaking condition",
+      "verification": "Downloaded and technical metadata checked; sampled frames reviewed; speaking labels remain provisional."
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "question_id": "6c0ec315-514b-47cf-b8e4-d2a3bfdafe59",
+      "video_id": "gFNigX2jrnM",
+      "file": "audiovisual/gFNigX2jrnM_1593_1602.mp4",
+      "clip_seconds": 9,
+      "task": "Speaker Detection",
+      "question": "Does the woman in the blue shirt speak before the man with gray hair starts saying 'Why did you do that?'?",
+      "choices": [
+        "A. No, she only looks angry",
+        "B. Yes, she snaps angrily",
+        "C. No, she only observes the man",
+        "D. Yes, she yells at the man"
+      ],
+      "published_answer": "C",
+      "pilot_role": "negative speaking condition",
+      "verification": "Downloaded and technical metadata checked; sampled frames reviewed; speaking labels remain provisional."
+    }
+  ]
+}

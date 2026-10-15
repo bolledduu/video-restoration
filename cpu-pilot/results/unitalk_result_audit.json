@@ -1,0 +1,6 @@
+{
+  "status": "PASSED",
+  "cases": 16,
+  "metrics": "Errors, wrong scores, high-score counts, A invariance, joint events, three selection rankings, decision logic",
+  "note": "Separate standard-library calculation; does not re-run neural networks or independently re-annotate ground truth."
+}

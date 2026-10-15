@@ -1,0 +1,35 @@
+{
+  "scope": "Original RQ1-RQ3: audio-caused false corroboration, evidence origin, and independent-evidence safeguards",
+  "source_manifest": "manifest.json",
+  "source_start_seconds": 1.0,
+  "frames": 49,
+  "fps": 24,
+  "width": 512,
+  "height": 288,
+  "audio_rate": 16000,
+  "degradations": {
+    "moderate": {"blur_sigma": 1.2, "downsample": 2},
+    "severe": {"blur_sigma": 2.5, "downsample": 4}
+  },
+  "conditions": ["matching", "swapped", "audio_disabled"],
+  "seeds": [0, 1],
+  "repeat_matching_seed_zero": true,
+  "donor_selection": "Next sample in manifest order, cyclic; not selected for outcome",
+  "downstream_audio": "Original source segment for every condition; generated and donor audio must never enter fixed-audio evaluation",
+  "omnivr": {
+    "code_revision": "81d00ff1cb271ef79210a4082e2058b33ddc310d",
+    "hf_revision": "3a58cc2cf24262ce7b81e053454c462614fd5eae",
+    "checkpoint_file": "weights/ominivr_lora_step_02400.safetensors",
+    "base_revision": "3c6a4e66e5d0a684231950b9c74dd4ded7b6fadc",
+    "strategy": "neg_cfg",
+    "guidance_scale": 3.0,
+    "num_steps": 15,
+    "condition_noise": 0.3
+  },
+  "interpretation": {
+    "RQ1": "Requires independently verified face/speaking labels, quality improvement, and increased downstream wrong-class score on the same source. Raw softmax is not calibrated confidence. PSNR/SSIM alone do not prove perceptual improvement or synchrony.",
+    "RQ2": "Within-seed audio intervention estimates audio sensitivity. Compare to identical-input repeat and between-seed variation. Sensitivity alone does not prove factual unsupportedness or exact non-identifiability.",
+    "RQ3": "Evaluate provenance-aware and sensitivity-based safeguards against confidence and abstention baselines at matched coverage; no threshold fitting on reported test examples. Cannot claim validation without labels and held-out evaluation."
+  },
+  "limits": "Three source clips are a case pilot, not independent frame-level statistical evidence. Existing annotations are provisional. No natural off-screen condition is certified. Reduced-resolution inference is not reproduction of the OmniVR paper benchmark."
+}

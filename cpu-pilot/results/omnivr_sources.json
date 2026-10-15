@@ -1,0 +1,199 @@
+{
+  "repository": "xin1u/OmniVR",
+  "revision": "3a58cc2cf24262ce7b81e053454c462614fd5eae",
+  "selection": "First three with_gt records in filename order, chosen before inspecting predictions.",
+  "restoration_provenance": "Published author outputs; no local OmniVR inference.",
+  "authentication_used": false,
+  "source_media_redistribution": "Not committed; source rights not independently verified.",
+  "records": [
+    {
+      "sample": {
+        "name": "speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+        "group": "with_gt",
+        "has_gt": true,
+        "lq_path": "with_gt/lq/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+        "gt_path": "with_gt/gt/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+        "content": "speech / talking-head",
+        "bw": true,
+        "resolution": "1920x1080",
+        "audio_sr": 48000,
+        "speech_ratio": 0.897,
+        "src_uuid": "4b8f0f25-7620-45cb-9523-5a5f07b8277a"
+      },
+      "condition": "reference",
+      "url": "https://huggingface.co/xin1u/OmniVR/resolve/3a58cc2cf24262ce7b81e053454c462614fd5eae/omnibench/with_gt/gt/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+      "local_path": "data/omnivr/reference/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+      "bytes": 2045635,
+      "sha256": "3c62a089b8970ab171658fca3a86c1147cbc1d859a4b96a7608138715691317b",
+      "hash_verified": true
+    },
+    {
+      "sample": {
+        "name": "speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+        "group": "with_gt",
+        "has_gt": true,
+        "lq_path": "with_gt/lq/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+        "gt_path": "with_gt/gt/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+        "content": "speech / talking-head",
+        "bw": true,
+        "resolution": "1920x1080",
+        "audio_sr": 48000,
+        "speech_ratio": 0.897,
+        "src_uuid": "4b8f0f25-7620-45cb-9523-5a5f07b8277a"
+      },
+      "condition": "degraded",
+      "url": "https://huggingface.co/xin1u/OmniVR/resolve/3a58cc2cf24262ce7b81e053454c462614fd5eae/omnibench/with_gt/lq/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+      "local_path": "data/omnivr/degraded/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+      "bytes": 7866853,
+      "sha256": "02ff27e1ad71c499eae746e8e92e198e6d5c9791507400f14db94c66cce849e2",
+      "hash_verified": true
+    },
+    {
+      "sample": {
+        "name": "speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+        "group": "with_gt",
+        "has_gt": true,
+        "lq_path": "with_gt/lq/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+        "gt_path": "with_gt/gt/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+        "content": "speech / talking-head",
+        "bw": true,
+        "resolution": "1920x1080",
+        "audio_sr": 48000,
+        "speech_ratio": 0.897,
+        "src_uuid": "4b8f0f25-7620-45cb-9523-5a5f07b8277a"
+      },
+      "condition": "omnivr_author_output",
+      "url": "https://huggingface.co/xin1u/OmniVR/resolve/3a58cc2cf24262ce7b81e053454c462614fd5eae/predictions/withgt_step02400_neg_cfg/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+      "local_path": "data/omnivr/omnivr_author_output/speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+      "bytes": 3741272,
+      "sha256": "2e10f22e03cfe1c6d7264d2174dfa2fc92ee46fff5628d3a0a45a5ba7f0c4855",
+      "hash_verified": true
+    },
+    {
+      "sample": {
+        "name": "speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+        "group": "with_gt",
+        "has_gt": true,
+        "lq_path": "with_gt/lq/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+        "gt_path": "with_gt/gt/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+        "content": "speech / talking-head",
+        "bw": true,
+        "resolution": "1920x1080",
+        "audio_sr": 48000,
+        "speech_ratio": 0.993,
+        "src_uuid": "7230c6dc-4da3-4b59-9038-22f9afe05f34"
+      },
+      "condition": "reference",
+      "url": "https://huggingface.co/xin1u/OmniVR/resolve/3a58cc2cf24262ce7b81e053454c462614fd5eae/omnibench/with_gt/gt/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+      "local_path": "data/omnivr/reference/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+      "bytes": 2960313,
+      "sha256": "dd8523131094a9478e319eee5a3ad3f08a9c147d2c1be2a4e548c3a65ae27afb",
+      "hash_verified": true
+    },
+    {
+      "sample": {
+        "name": "speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+        "group": "with_gt",
+        "has_gt": true,
+        "lq_path": "with_gt/lq/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+        "gt_path": "with_gt/gt/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+        "content": "speech / talking-head",
+        "bw": true,
+        "resolution": "1920x1080",
+        "audio_sr": 48000,
+        "speech_ratio": 0.993,
+        "src_uuid": "7230c6dc-4da3-4b59-9038-22f9afe05f34"
+      },
+      "condition": "degraded",
+      "url": "https://huggingface.co/xin1u/OmniVR/resolve/3a58cc2cf24262ce7b81e053454c462614fd5eae/omnibench/with_gt/lq/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+      "local_path": "data/omnivr/degraded/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+      "bytes": 14146828,
+      "sha256": "bd8dad314ae74cd7844cf28f0dbec88a52e4885b55f34319db3b779813e334d7",
+      "hash_verified": true
+    },
+    {
+      "sample": {
+        "name": "speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+        "group": "with_gt",
+        "has_gt": true,
+        "lq_path": "with_gt/lq/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+        "gt_path": "with_gt/gt/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+        "content": "speech / talking-head",
+        "bw": true,
+        "resolution": "1920x1080",
+        "audio_sr": 48000,
+        "speech_ratio": 0.993,
+        "src_uuid": "7230c6dc-4da3-4b59-9038-22f9afe05f34"
+      },
+      "condition": "omnivr_author_output",
+      "url": "https://huggingface.co/xin1u/OmniVR/resolve/3a58cc2cf24262ce7b81e053454c462614fd5eae/predictions/withgt_step02400_neg_cfg/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+      "local_path": "data/omnivr/omnivr_author_output/speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+      "bytes": 3657423,
+      "sha256": "ae7a5169c612a7236ebc59b6930bae43d011b26cfb89bbc286f6d83a30cd5e92",
+      "hash_verified": true
+    },
+    {
+      "sample": {
+        "name": "speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+        "group": "with_gt",
+        "has_gt": true,
+        "lq_path": "with_gt/lq/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+        "gt_path": "with_gt/gt/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+        "content": "speech / talking-head",
+        "bw": true,
+        "resolution": "1920x1080",
+        "audio_sr": 48000,
+        "speech_ratio": 0.979,
+        "src_uuid": "68fec0b4-495f-482d-b597-ed82d335f2f8"
+      },
+      "condition": "reference",
+      "url": "https://huggingface.co/xin1u/OmniVR/resolve/3a58cc2cf24262ce7b81e053454c462614fd5eae/omnibench/with_gt/gt/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+      "local_path": "data/omnivr/reference/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+      "bytes": 4786166,
+      "sha256": "044f45ad52e136ac5fa2af1675f7fb669039ca596637e17c30e0c977cb322dc8",
+      "hash_verified": true
+    },
+    {
+      "sample": {
+        "name": "speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+        "group": "with_gt",
+        "has_gt": true,
+        "lq_path": "with_gt/lq/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+        "gt_path": "with_gt/gt/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+        "content": "speech / talking-head",
+        "bw": true,
+        "resolution": "1920x1080",
+        "audio_sr": 48000,
+        "speech_ratio": 0.979,
+        "src_uuid": "68fec0b4-495f-482d-b597-ed82d335f2f8"
+      },
+      "condition": "degraded",
+      "url": "https://huggingface.co/xin1u/OmniVR/resolve/3a58cc2cf24262ce7b81e053454c462614fd5eae/omnibench/with_gt/lq/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+      "local_path": "data/omnivr/degraded/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+      "bytes": 18607558,
+      "sha256": "4bd099f7b906f8372415c7c20f5cab933ab74ebc981cd0bc720a33a2bc85ee38",
+      "hash_verified": true
+    },
+    {
+      "sample": {
+        "name": "speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+        "group": "with_gt",
+        "has_gt": true,
+        "lq_path": "with_gt/lq/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+        "gt_path": "with_gt/gt/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+        "content": "speech / talking-head",
+        "bw": true,
+        "resolution": "1920x1080",
+        "audio_sr": 48000,
+        "speech_ratio": 0.979,
+        "src_uuid": "68fec0b4-495f-482d-b597-ed82d335f2f8"
+      },
+      "condition": "omnivr_author_output",
+      "url": "https://huggingface.co/xin1u/OmniVR/resolve/3a58cc2cf24262ce7b81e053454c462614fd5eae/predictions/withgt_step02400_neg_cfg/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+      "local_path": "data/omnivr/omnivr_author_output/speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+      "bytes": 17327640,
+      "sha256": "b7b7976c6a4b2b88240d5a86baedd1643a715c59557a6eb918f049d66799f2ab",
+      "hash_verified": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "code_revision": "81d00ff1cb271ef79210a4082e2058b33ddc310d",
+  "source_url": "https://raw.githubusercontent.com/xin1u/OminiVR/81d00ff1cb271ef79210a4082e2058b33ddc310d/packages/omini-restore-trainer/scripts/infer.py",
+  "code_evidence": [
+    {
+      "line": 348,
+      "text": "device = torch.device(f\"cuda:{args.gpu}\")"
+    }
+  ],
+  "total_laptop_ram_bytes": 7951212544,
+  "free_ram_bytes_at_check": 997584896,
+  "base_checkpoint_bytes": 46149344974,
+  "adapter_bytes": 7605551032,
+  "local_restoration_inference_attempted": false,
+  "reason": "Published CUDA inference path and base-plus-adapter size exceed physical RAM for ordinary loading. No demonstrated small CPU implementation. Reduced frames do not reduce weight storage.",
+  "alternative_executed": "CPU evaluation of public author-generated predictions; separately identified provenance",
+  "token_used": false
+}

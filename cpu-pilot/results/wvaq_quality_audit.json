@@ -1,0 +1,7 @@
+{
+  "status": "PASSED",
+  "cases": 16,
+  "result_sha256": "91da92f02fd4d363053b1d5f0cebdba569dc45b40cf960fcce8c0569d5133e53",
+  "checked": "Frame-score means, speaker errors, Brier/confidence, audio invariance, duplicate controls, every subset curve and fixed decision gate.",
+  "scope": "Independent arithmetic implementation; no independent ground-truth relabeling or IQA-model validation."
+}

@@ -1,0 +1,600 @@
+{
+  "protocol": {
+    "dataset": "anonymousllbench/llbench-dataset",
+    "revision": "1b3ad9b45437d9655277d5e943feaa5cf67422bb",
+    "seed": "llbench-selection-v1-2026-10-13",
+    "split": "SHA256(seed|dataset|image_name), first 8 hex digits / 2**32: train < .6, dev < .8, else test",
+    "scope": "with_gt trials with at least two scored candidates; all candidates require metadata and yes/no labels",
+    "quality": "within-trial midrank percentile of published human BT scores; higher is better",
+    "risk": "published yes over-processing/hallucination flag, not independently verified factual hallucination",
+    "shrinkage": 10,
+    "risk_penalties": [
+      0,
+      0.25,
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "maximum_quality_loss": 0.05,
+    "minimum_absolute_risk_reduction": 0.01,
+    "bootstrap_samples": 5000,
+    "bootstrap_seed": 20261013,
+    "decision": "GO only if held-out risk reduction >= .01, paired source-bootstrap 95% lower bound > 0, and quality-loss 95% upper bound <= .05 versus train-only predicted-quality selection",
+    "disclosure": "Retrospective pilot. Aggregate oracle counts were explored before freezing this protocol. This is not an untouched external validation or a preregistration. No test-label tuning is permitted."
+  },
+  "protocol_sha256": "76e8ceabdbb3fdb9c559982980dbc9331beb740a0663fcfb32f6ad623185f57f",
+  "sources": {
+    "images.csv": {
+      "url": "https://huggingface.co/datasets/anonymousllbench/llbench-dataset/resolve/1b3ad9b45437d9655277d5e943feaa5cf67422bb/metadata/images.csv",
+      "sha256": "d22340917ba3a113bbf39204d46fb6a96f7d937472d40373677d20a3d4ad37e4",
+      "bytes": 10029738
+    },
+    "bradley_terry_quality_scores.csv": {
+      "url": "https://huggingface.co/datasets/anonymousllbench/llbench-dataset/resolve/1b3ad9b45437d9655277d5e943feaa5cf67422bb/human_preference/bradley_terry_quality_scores.csv",
+      "sha256": "651f4c1a585ca3b19f7e1c02885b3c47257a47ba1a1febf21aebdbeaa90d3c29",
+      "bytes": 3411087
+    },
+    "hallucination_labels.csv": {
+      "url": "https://huggingface.co/datasets/anonymousllbench/llbench-dataset/resolve/1b3ad9b45437d9655277d5e943feaa5cf67422bb/human_preference/hallucination_labels.csv",
+      "sha256": "4efb5095f3cf419cf0bc7c0936d627353c309f0017537a013a085bde8575efde",
+      "bytes": 2459496
+    }
+  },
+  "runtime": {
+    "python": "3.13.0",
+    "numpy": "2.2.6",
+    "device": "CPU; tabular analysis only"
+  },
+  "input_counts": {
+    "metadata_rows": 28919,
+    "scored_rows": 28334,
+    "label_rows": 28919
+  },
+  "exclusions": {
+    "no_scored_candidates": 17
+  },
+  "splits": {
+    "train": {
+      "trials": 923,
+      "source_groups": 923,
+      "candidates": 10840
+    },
+    "dev": {
+      "trials": 324,
+      "source_groups": 324,
+      "candidates": 3798
+    },
+    "test": {
+      "trials": 301,
+      "source_groups": 301,
+      "candidates": 3522
+    }
+  },
+  "selected_penalty": 1,
+  "development": [
+    {
+      "n": 324,
+      "flagged": 16,
+      "risk": 0.04938271604938271,
+      "quality": 0.8777216610549944,
+      "penalty": 0,
+      "quality_loss": 0.0
+    },
+    {
+      "n": 324,
+      "flagged": 15,
+      "risk": 0.046296296296296294,
+      "quality": 0.8780022446689114,
+      "penalty": 0.25,
+      "quality_loss": -0.00028058361391702924
+    },
+    {
+      "n": 324,
+      "flagged": 15,
+      "risk": 0.046296296296296294,
+      "quality": 0.8780022446689114,
+      "penalty": 0.5,
+      "quality_loss": -0.00028058361391702924
+    },
+    {
+      "n": 324,
+      "flagged": 13,
+      "risk": 0.040123456790123455,
+      "quality": 0.8732323232323232,
+      "penalty": 1,
+      "quality_loss": 0.004489337822671136
+    },
+    {
+      "n": 324,
+      "flagged": 13,
+      "risk": 0.040123456790123455,
+      "quality": 0.86175645342312,
+      "penalty": 2,
+      "quality_loss": 0.015965207631874367
+    },
+    {
+      "n": 324,
+      "flagged": 10,
+      "risk": 0.030864197530864196,
+      "quality": 0.803956228956229,
+      "penalty": 4,
+      "quality_loss": 0.0737654320987654
+    }
+  ],
+  "test": {
+    "predicted_quality": {
+      "n": 301,
+      "flagged": 25,
+      "risk": 0.08305647840531562,
+      "quality": 0.8821806100875867
+    },
+    "risk_adjusted": {
+      "n": 301,
+      "flagged": 20,
+      "risk": 0.0664451827242525,
+      "quality": 0.8738749622470553
+    },
+    "risk_only": {
+      "n": 301,
+      "flagged": 4,
+      "risk": 0.013289036544850499,
+      "quality": 0.6070673512533976
+    },
+    "specialist_or_all_in_one": {
+      "n": 301,
+      "flagged": 6,
+      "risk": 0.019933554817275746,
+      "quality": 0.7311688311688311
+    }
+  },
+  "primary_comparison": {
+    "source_groups": 301,
+    "risk_reduction": 0.016611295681063124,
+    "risk_reduction_ci95": [
+      0.0033222591362126247,
+      0.03322259136212625
+    ],
+    "quality_loss": 0.008305647840531559,
+    "quality_loss_ci95": [
+      0.002567200241618847,
+      0.01449713077620054
+    ],
+    "note": "Paired source bootstrap, conditional on fixed fitted rule and published judgments; not annotation uncertainty or independent-dataset validation."
+  },
+  "gates": {
+    "material_risk_reduction": true,
+    "positive_risk_reduction_ci": true,
+    "quality_noninferiority": true
+  },
+  "decision": "GO",
+  "sensitivity": {
+    "improved": 5,
+    "worsened": 0,
+    "exact_paired_two_sided_p": 0.0625,
+    "dataset_cluster_bootstrap": {
+      "source_groups": 18,
+      "risk_reduction": 0.016611295681063124,
+      "risk_reduction_ci95": [
+        0.0,
+        0.06302521008403361
+      ],
+      "quality_loss": 0.008305647840531562,
+      "quality_loss_ci95": [
+        0.0,
+        0.023443092340730137
+      ],
+      "note": "Paired dataset-cluster bootstrap within these 18 observed datasets; not unseen-dataset validation."
+    },
+    "status": "Post-result diagnostics, not selection criteria. Sparse discordant pairs and dataset concentration limit strength of inference."
+  },
+  "decision_scope": "Advance to focused restoration-selection research. This pilot does not establish a generalizable method, original audio causality, or paper readiness.",
+  "oracle_audit": {
+    "all": {
+      "unique_quality_winners": 1547,
+      "tied_trials": 1,
+      "flagged_winners": 45,
+      "flagged_with_unflagged_alternative": 45,
+      "note": "Retrospective human-quality oracle, not deployable selection."
+    },
+    "test": {
+      "unique_quality_winners": 300,
+      "tied_trials": 1,
+      "flagged_winners": 11,
+      "flagged_with_unflagged_alternative": 11,
+      "note": "Retrospective human-quality oracle, not deployable selection."
+    }
+  },
+  "test_by_task": {
+    "Compression_Artifact_Removal": {
+      "predicted_quality": {
+        "n": 18,
+        "flagged": 1,
+        "risk": 0.05555555555555555,
+        "quality": 0.9191919191919192
+      },
+      "risk_adjusted": {
+        "n": 18,
+        "flagged": 1,
+        "risk": 0.05555555555555555,
+        "quality": 0.9191919191919192
+      },
+      "risk_only": {
+        "n": 18,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.5505050505050505
+      },
+      "specialist_or_all_in_one": {
+        "n": 18,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.5505050505050505
+      }
+    },
+    "Defocus_Deblurring": {
+      "predicted_quality": {
+        "n": 11,
+        "flagged": 5,
+        "risk": 0.45454545454545453,
+        "quality": 0.9214876033057849
+      },
+      "risk_adjusted": {
+        "n": 11,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.8347107438016529
+      },
+      "risk_only": {
+        "n": 11,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.5371900826446281
+      },
+      "specialist_or_all_in_one": {
+        "n": 11,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.8347107438016529
+      }
+    },
+    "Dehaze": {
+      "predicted_quality": {
+        "n": 4,
+        "flagged": 1,
+        "risk": 0.25,
+        "quality": 0.9545454545454546
+      },
+      "risk_adjusted": {
+        "n": 4,
+        "flagged": 1,
+        "risk": 0.25,
+        "quality": 0.9545454545454546
+      },
+      "risk_only": {
+        "n": 4,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.022727272727272728
+      },
+      "specialist_or_all_in_one": {
+        "n": 4,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.25
+      }
+    },
+    "Denoise": {
+      "predicted_quality": {
+        "n": 19,
+        "flagged": 1,
+        "risk": 0.05263157894736842,
+        "quality": 0.9330143540669856
+      },
+      "risk_adjusted": {
+        "n": 19,
+        "flagged": 1,
+        "risk": 0.05263157894736842,
+        "quality": 0.9330143540669856
+      },
+      "risk_only": {
+        "n": 19,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.7511961722488038
+      },
+      "specialist_or_all_in_one": {
+        "n": 19,
+        "flagged": 1,
+        "risk": 0.05263157894736842,
+        "quality": 0.9330143540669856
+      }
+    },
+    "Derain": {
+      "predicted_quality": {
+        "n": 46,
+        "flagged": 13,
+        "risk": 0.2826086956521739,
+        "quality": 0.8201581027667981
+      },
+      "risk_adjusted": {
+        "n": 46,
+        "flagged": 13,
+        "risk": 0.2826086956521739,
+        "quality": 0.8201581027667981
+      },
+      "risk_only": {
+        "n": 46,
+        "flagged": 1,
+        "risk": 0.021739130434782608,
+        "quality": 0.4782608695652174
+      },
+      "specialist_or_all_in_one": {
+        "n": 46,
+        "flagged": 2,
+        "risk": 0.043478260869565216,
+        "quality": 0.42885375494071154
+      }
+    },
+    "Desnow": {
+      "predicted_quality": {
+        "n": 7,
+        "flagged": 1,
+        "risk": 0.14285714285714285,
+        "quality": 0.7402597402597403
+      },
+      "risk_adjusted": {
+        "n": 7,
+        "flagged": 1,
+        "risk": 0.14285714285714285,
+        "quality": 0.7402597402597403
+      },
+      "risk_only": {
+        "n": 7,
+        "flagged": 1,
+        "risk": 0.14285714285714285,
+        "quality": 0.20779220779220783
+      },
+      "specialist_or_all_in_one": {
+        "n": 7,
+        "flagged": 1,
+        "risk": 0.14285714285714285,
+        "quality": 0.20779220779220783
+      }
+    },
+    "Flare_Removal": {
+      "predicted_quality": {
+        "n": 12,
+        "flagged": 1,
+        "risk": 0.08333333333333333,
+        "quality": 0.8916666666666669
+      },
+      "risk_adjusted": {
+        "n": 12,
+        "flagged": 1,
+        "risk": 0.08333333333333333,
+        "quality": 0.8916666666666669
+      },
+      "risk_only": {
+        "n": 12,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.6833333333333332
+      },
+      "specialist_or_all_in_one": {
+        "n": 12,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.25833333333333336
+      }
+    },
+    "HDR_Imaging": {
+      "predicted_quality": {
+        "n": 52,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.9192307692307692
+      },
+      "risk_adjusted": {
+        "n": 52,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.9192307692307692
+      },
+      "risk_only": {
+        "n": 52,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.9192307692307692
+      },
+      "specialist_or_all_in_one": {
+        "n": 52,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.9192307692307692
+      }
+    },
+    "Low_Light_Enhancement": {
+      "predicted_quality": {
+        "n": 27,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.883838383838384
+      },
+      "risk_adjusted": {
+        "n": 27,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.883838383838384
+      },
+      "risk_only": {
+        "n": 27,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.883838383838384
+      },
+      "specialist_or_all_in_one": {
+        "n": 27,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.883838383838384
+      }
+    },
+    "Motion_Deblurring": {
+      "predicted_quality": {
+        "n": 18,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.9545454545454546
+      },
+      "risk_adjusted": {
+        "n": 18,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.8686868686868687
+      },
+      "risk_only": {
+        "n": 18,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.4090909090909091
+      },
+      "specialist_or_all_in_one": {
+        "n": 18,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.8686868686868687
+      }
+    },
+    "Raindrop_Removal": {
+      "predicted_quality": {
+        "n": 10,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.8818181818181818
+      },
+      "risk_adjusted": {
+        "n": 10,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.8818181818181818
+      },
+      "risk_only": {
+        "n": 10,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.5181818181818181
+      },
+      "specialist_or_all_in_one": {
+        "n": 10,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.8545454545454545
+      }
+    },
+    "Reflection_Removal": {
+      "predicted_quality": {
+        "n": 8,
+        "flagged": 1,
+        "risk": 0.125,
+        "quality": 0.8
+      },
+      "risk_adjusted": {
+        "n": 8,
+        "flagged": 1,
+        "risk": 0.125,
+        "quality": 0.8
+      },
+      "risk_only": {
+        "n": 8,
+        "flagged": 1,
+        "risk": 0.125,
+        "quality": 0.8
+      },
+      "specialist_or_all_in_one": {
+        "n": 8,
+        "flagged": 1,
+        "risk": 0.125,
+        "quality": 0.8
+      }
+    },
+    "Shadow_Removal": {
+      "predicted_quality": {
+        "n": 11,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.7851239669421488
+      },
+      "risk_adjusted": {
+        "n": 11,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.7851239669421488
+      },
+      "risk_only": {
+        "n": 11,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.7851239669421488
+      },
+      "specialist_or_all_in_one": {
+        "n": 11,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.7851239669421488
+      }
+    },
+    "Super_Resolution": {
+      "predicted_quality": {
+        "n": 40,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.875
+      },
+      "risk_adjusted": {
+        "n": 40,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.875
+      },
+      "risk_only": {
+        "n": 40,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.2386363636363636
+      },
+      "specialist_or_all_in_one": {
+        "n": 40,
+        "flagged": 0,
+        "risk": 0.0,
+        "quality": 0.875
+      }
+    },
+    "Underwater_Enhancement": {
+      "predicted_quality": {
+        "n": 18,
+        "flagged": 1,
+        "risk": 0.05555555555555555,
+        "quality": 0.8888888888888888
+      },
+      "risk_adjusted": {
+        "n": 18,
+        "flagged": 1,
+        "risk": 0.05555555555555555,
+        "quality": 0.8888888888888888
+      },
+      "risk_only": {
+        "n": 18,
+        "flagged": 1,
+        "risk": 0.05555555555555555,
+        "quality": 0.6722222222222223
+      },
+      "specialist_or_all_in_one": {
+        "n": 18,
+        "flagged": 1,
+        "risk": 0.05555555555555555,
+        "quality": 0.6722222222222223
+      }
+    }
+  }
+}

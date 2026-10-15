@@ -1,0 +1,128 @@
+{
+  "protocol": {
+    "created": "2026-10-15",
+    "purpose": "Separate meeting-domain transfer check; not pooled with primary UniTalk screen",
+    "meeting": "ES2002a",
+    "target": "A",
+    "camera": "Closeup1",
+    "selection": "Earliest target segment >=1.4s, and earliest other-speaker segment >=1.4s with no overlapping target speech. Start segment+0.2s rounded up to video frame grid; one second each.",
+    "labels": "Published transcript segment proxy for activity, not independently annotated dense visual speaking labels",
+    "crop": "Fixed manually reviewed box [130,100,270,245] on original Closeup1 frames, shared across both segments and all variants",
+    "input_only_amendment": "Haar failed on a selected first frame. Before any AMI model inference, inspected both original first frames and fixed a common face box. No segments changed; hand occlusion on the silent segment retained.",
+    "sigma": 40,
+    "seed": 20261015,
+    "candidates": [
+      "captured",
+      "fastdvdnet"
+    ],
+    "metrics": [
+      "TalkNet AV",
+      "BRISQUE",
+      "MUSIQ",
+      "reference SSIM"
+    ],
+    "claim_limit": "One meeting, two segments, descriptive domain transfer; no ASR evaluation, no full conversation agent, no independent replication count beyond one meeting"
+  },
+  "protocol_sha256": "54732f9f7bdd5e52d6cefd357a1eca6460ab3826c9b5e2b01d6ded793b50e9d3",
+  "records": [
+    {
+      "id": "ES2002a__targetA__label1",
+      "source": "AMI_ES2002a",
+      "label": 1,
+      "start": 77.64,
+      "segment": [
+        77.408,
+        80.955
+      ],
+      "transcript_speaker": "A",
+      "transcript_excerpt": "Hi I'm David and",
+      "timestamps": [
+        77.64,
+        77.68,
+        77.72,
+        77.76,
+        77.8,
+        77.84,
+        77.88,
+        77.92,
+        77.96,
+        78.0,
+        78.04,
+        78.08,
+        78.12,
+        78.16,
+        78.2,
+        78.24,
+        78.28,
+        78.32,
+        78.36,
+        78.4,
+        78.44,
+        78.48,
+        78.52,
+        78.56,
+        78.6
+      ],
+      "box": [
+        130,
+        100,
+        270,
+        245
+      ],
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\agent_pilot\\ami\\ES2002a__targetA__label1.npz",
+      "sha256": "d26f54a818e25790c3655d05089d4b870da505fe8e0030e8b1e3c5da375bfe38"
+    },
+    {
+      "id": "ES2002a__targetA__label0",
+      "source": "AMI_ES2002a",
+      "label": 0,
+      "start": 81.8,
+      "segment": [
+        81.575,
+        84.576
+      ],
+      "transcript_speaker": "D",
+      "transcript_excerpt": "And I'm Andrew",
+      "timestamps": [
+        81.8,
+        81.84,
+        81.88,
+        81.92,
+        81.96,
+        82.0,
+        82.04,
+        82.08,
+        82.12,
+        82.16,
+        82.2,
+        82.24,
+        82.28,
+        82.32,
+        82.36,
+        82.4,
+        82.44,
+        82.48,
+        82.52,
+        82.56,
+        82.6,
+        82.64,
+        82.68,
+        82.72,
+        82.76
+      ],
+      "box": [
+        130,
+        100,
+        270,
+        245
+      ],
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\agent_pilot\\ami\\ES2002a__targetA__label0.npz",
+      "sha256": "9b8fcd7439878ba201d29a6424ba84f198fa2e116f078bb073fab8ee934e65e2"
+    }
+  ],
+  "source_hashes": {
+    "annotations.zip": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d",
+    "closeup1.avi": "6c06fb51f16fffb266d08ba50220812dca898932c540da06014b8e94fade383b",
+    "mix.wav": "9c76866990fcc8b84006dc32d273ad99df439090b748ebe72103bb78c3216ee7"
+  }
+}

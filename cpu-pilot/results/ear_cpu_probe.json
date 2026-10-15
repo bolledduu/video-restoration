@@ -1,0 +1,67 @@
+{
+  "status": "CPU_FORWARD_PASS_COMPLETED",
+  "model": "Learning to Have an Ear for Face Super-Resolution",
+  "upstream_commit": "c7f342b1b2984ed674b7407a95305f9cd6f89613",
+  "tensorflow": "2.10.1",
+  "generator_configuration": {
+    "num_channels": 3,
+    "resolution": 128,
+    "label_size": 0
+  },
+  "restored_variables": 143,
+  "device": "CPU",
+  "examples": [
+    {
+      "example": "00022",
+      "donor": "00062",
+      "wall_seconds": {
+        "video_only": 5.719329000006837,
+        "matching_audio": 11.209605700001703,
+        "swapped_audio": 4.373265299997001,
+        "matching_repeat": 2.447517100001278
+      },
+      "matching_repeat_equal": true,
+      "audio_swap_rgb_mae": 9.289204915364584,
+      "input_image_sha256": "5e0950a3f46b7b60c0e5d8edb64aaa51661130e8af9dc1f15f91146b2b3a1cb4",
+      "matching_audio_sha256": "12eca8f5d5dc182c38c273bafa22126817ee15fe9b736a71261797966c562c02",
+      "donor_audio_sha256": "e2b4dd921e712575b795449afd1f889471608c8d6121bfa463dafd68d14d56be"
+    },
+    {
+      "example": "00062",
+      "donor": "00116",
+      "wall_seconds": {
+        "video_only": 1.0459459999983665,
+        "matching_audio": 2.3627736999987974,
+        "swapped_audio": 2.419213299996045,
+        "matching_repeat": 2.3897950000027777
+      },
+      "matching_repeat_equal": true,
+      "audio_swap_rgb_mae": 16.058553059895832,
+      "input_image_sha256": "14242e59466da2d8672066ad593791d5d25aa6458d8cfaf37d9496abbede31fd",
+      "matching_audio_sha256": "e2b4dd921e712575b795449afd1f889471608c8d6121bfa463dafd68d14d56be",
+      "donor_audio_sha256": "d1658d8422ba700c449e3c436ee4c0fa5501d4b518c0f7c91ceefd6e7a7cd657"
+    },
+    {
+      "example": "00116",
+      "donor": "00374",
+      "wall_seconds": {
+        "video_only": 1.0782619000019622,
+        "matching_audio": 2.4723803000015323,
+        "swapped_audio": 2.248008000002301,
+        "matching_repeat": 2.236309700005222
+      },
+      "matching_repeat_equal": true,
+      "audio_swap_rgb_mae": 13.72406005859375,
+      "input_image_sha256": "57ba7fa3ecf990503b63de0bf826b8574bf7390814ee76fda0c1414b0c6ba1df",
+      "matching_audio_sha256": "d1658d8422ba700c449e3c436ee4c0fa5501d4b518c0f7c91ceefd6e7a7cd657",
+      "donor_audio_sha256": "998c86b6c96cbf9af913959e3d7dc654995412e77f993370af5a02d3867e424a"
+    }
+  ],
+  "weights_sha256": "fc99bed110e02f0507fa84c6043f759def33d681f22aef4dcdc14a3e1cc5bda5",
+  "wall_seconds": 99.91696199999569,
+  "limitations": [
+    "Single-image model; not a temporal restoration experiment.",
+    "TF1 compatibility adaptation; numerical equivalence to the original TF1 GPU runtime has not been established.",
+    "No verified speaker labels or downstream error measurements; RQ1-RQ3 are not validated by this probe."
+  ]
+}
