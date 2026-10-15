@@ -1,0 +1,1325 @@
+[
+  {
+    "rec_id": "Rec_1_Studio_Teleconference",
+    "window_id": "Rec1_Win1_Spk",
+    "situation": "visible_speaker",
+    "true_speaker": "Person A",
+    "degradation": "Level_0_Original",
+    "raw_correct": true,
+    "raw_abstain": false,
+    "cand_evals": {
+      "captured_input": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.6649858355522156,
+        "quality_score": 9.004579758174984,
+        "lipsync_score": 0.5647192957703104,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.47265175351960864,
+        "transition": "C_to_C (Success)"
+      },
+      "temporal_vsr": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9453006982803345,
+        "quality_score": 9.988329183284053,
+        "lipsync_score": 0.5245977911591857,
+        "consistency_score": 0.7921747703061056,
+        "disagreement": false,
+        "input_aware_score": 0.3754791350281572,
+        "transition": "C_to_C (Success)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.938508927822113,
+        "quality_score": 9.2408994525925,
+        "lipsync_score": 0.5662692790509317,
+        "consistency_score": 0.7717151047639532,
+        "disagreement": false,
+        "input_aware_score": 0.38188028957340747,
+        "transition": "C_to_C (Success)"
+      }
+    },
+    "quality_chosen": "temporal_vsr",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_1_Studio_Teleconference",
+    "window_id": "Rec1_Win1_Spk",
+    "situation": "visible_speaker",
+    "true_speaker": "Person A",
+    "degradation": "Level_1_Moderate",
+    "raw_correct": true,
+    "raw_abstain": false,
+    "cand_evals": {
+      "captured_input": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.6634988188743591,
+        "quality_score": 6.247829539301743,
+        "lipsync_score": 0.5640212545738823,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.4724074391008588,
+        "transition": "C_to_C (Success)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.44611939787864685,
+        "quality_score": 6.721280874055264,
+        "lipsync_score": 0.5369430648911993,
+        "consistency_score": 0.9839937202394036,
+        "disagreement": true,
+        "input_aware_score": 0.4565275608076812,
+        "transition": "C_to_I (Harm)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9752083420753479,
+        "quality_score": 6.93041193861087,
+        "lipsync_score": 0.5601281603289833,
+        "consistency_score": 0.6844879922889358,
+        "disagreement": false,
+        "input_aware_score": 0.21984005303071844,
+        "transition": "C_to_C (Success)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_1_Studio_Teleconference",
+    "window_id": "Rec1_Win1_Spk",
+    "situation": "visible_speaker",
+    "true_speaker": "Person A",
+    "degradation": "Level_2_Severe",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.18844030797481537,
+        "quality_score": 5.085675522206408,
+        "lipsync_score": 0.5744536185776083,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.4760587665021629,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.0028983515221625566,
+        "quality_score": 5.609476864889153,
+        "lipsync_score": 0.5409053551913936,
+        "consistency_score": 0.994206466366629,
+        "disagreement": false,
+        "input_aware_score": 0.4619994608636394,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9545989036560059,
+        "quality_score": 6.280051161720927,
+        "lipsync_score": 0.548416311045943,
+        "consistency_score": 0.6866182872409404,
+        "disagreement": true,
+        "input_aware_score": 0.21659302376245626,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_1_Studio_Teleconference",
+    "window_id": "Rec1_Win2_Lis",
+    "situation": "silent_listener",
+    "true_speaker": "Person A",
+    "degradation": "Level_0_Original",
+    "raw_correct": true,
+    "raw_abstain": false,
+    "cand_evals": {
+      "captured_input": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.6649858355522156,
+        "quality_score": 9.004579758174984,
+        "lipsync_score": 0.5645940865132271,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.47260793027962944,
+        "transition": "C_to_C (Success)"
+      },
+      "temporal_vsr": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9453166723251343,
+        "quality_score": 9.988329183284053,
+        "lipsync_score": 0.5245623498673717,
+        "consistency_score": 0.7921747703061056,
+        "disagreement": false,
+        "input_aware_score": 0.3754667305760224,
+        "transition": "C_to_C (Success)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9385259747505188,
+        "quality_score": 9.2408994525925,
+        "lipsync_score": 0.5661441757562318,
+        "consistency_score": 0.7717151047639532,
+        "disagreement": false,
+        "input_aware_score": 0.38183650342026243,
+        "transition": "C_to_C (Success)"
+      }
+    },
+    "quality_chosen": "temporal_vsr",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_1_Studio_Teleconference",
+    "window_id": "Rec1_Win2_Lis",
+    "situation": "silent_listener",
+    "true_speaker": "Person A",
+    "degradation": "Level_1_Moderate",
+    "raw_correct": true,
+    "raw_abstain": false,
+    "cand_evals": {
+      "captured_input": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.6635082960128784,
+        "quality_score": 6.247829539301743,
+        "lipsync_score": 0.5639008156515685,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.47236528547804896,
+        "transition": "C_to_C (Success)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.4461136758327484,
+        "quality_score": 6.721280874055264,
+        "lipsync_score": 0.5368720508576938,
+        "consistency_score": 0.9839937202394036,
+        "disagreement": true,
+        "input_aware_score": 0.45650270589595426,
+        "transition": "C_to_I (Harm)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9752150774002075,
+        "quality_score": 6.93041193861087,
+        "lipsync_score": 0.5600331387563906,
+        "consistency_score": 0.6844879922889358,
+        "disagreement": false,
+        "input_aware_score": 0.21980679548031098,
+        "transition": "C_to_C (Success)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_1_Studio_Teleconference",
+    "window_id": "Rec1_Win2_Lis",
+    "situation": "silent_listener",
+    "true_speaker": "Person A",
+    "degradation": "Level_2_Severe",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.1884632706642151,
+        "quality_score": 5.085675522206408,
+        "lipsync_score": 0.5743519779868258,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.47602319229538903,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.002904290333390236,
+        "quality_score": 5.609476864889153,
+        "lipsync_score": 0.5408394857310231,
+        "consistency_score": 0.994206466366629,
+        "disagreement": false,
+        "input_aware_score": 0.4619764065525097,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9545931220054626,
+        "quality_score": 6.280051161720927,
+        "lipsync_score": 0.5483906634196724,
+        "consistency_score": 0.6866182872409404,
+        "disagreement": true,
+        "input_aware_score": 0.2165840470932615,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_1_Studio_Teleconference",
+    "window_id": "Rec1_Win3_Trn",
+    "situation": "speaker_transition",
+    "true_speaker": "Person B",
+    "degradation": "Level_0_Original",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.4824024438858032,
+        "quality_score": 9.009508048683518,
+        "lipsync_score": 0.5803413463096199,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.35311947120836695,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.6561328172683716,
+        "quality_score": 9.98407065631812,
+        "lipsync_score": 0.5217424331946123,
+        "consistency_score": 0.7954950993548775,
+        "disagreement": true,
+        "input_aware_score": 0.2508078913600653,
+        "transition": "I_to_C (Recovery)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.7297654151916504,
+        "quality_score": 9.245035251171293,
+        "lipsync_score": 0.582137680061082,
+        "consistency_score": 0.7713439254034484,
+        "disagreement": true,
+        "input_aware_score": 0.26228575818275807,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "temporal_vsr",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_1_Studio_Teleconference",
+    "window_id": "Rec1_Win3_Trn",
+    "situation": "speaker_transition",
+    "true_speaker": "Person B",
+    "degradation": "Level_1_Moderate",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.4185240864753723,
+        "quality_score": 6.255472176404764,
+        "lipsync_score": 0.5782072947393521,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.35237255315877325,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.06316791474819183,
+        "quality_score": 6.727680290126674,
+        "lipsync_score": 0.5370896521544288,
+        "consistency_score": 0.9850533481790431,
+        "disagreement": false,
+        "input_aware_score": 0.33200271752566735,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.9331764578819275,
+        "quality_score": 6.93394280141546,
+        "lipsync_score": 0.5761844386679429,
+        "consistency_score": 0.6860758387228538,
+        "disagreement": true,
+        "input_aware_score": 0.22609488902292152,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_1_Studio_Teleconference",
+    "window_id": "Rec1_Win3_Trn",
+    "situation": "speaker_transition",
+    "true_speaker": "Person B",
+    "degradation": "Level_2_Severe",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.012185190804302692,
+        "quality_score": 5.084370282361368,
+        "lipsync_score": 0.5868301731159219,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.35539056059057267,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.00032271698000840843,
+        "quality_score": 5.603693532766165,
+        "lipsync_score": 0.5435191794515779,
+        "consistency_score": 0.9948219552623124,
+        "disagreement": false,
+        "input_aware_score": 0.3381604949129772,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.8655826449394226,
+        "quality_score": 6.266031097517603,
+        "lipsync_score": 0.5491141227387433,
+        "consistency_score": 0.6898727647299141,
+        "disagreement": true,
+        "input_aware_score": 0.21813904885052576,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_2_MultiParty_Panel",
+    "window_id": "Rec2_Win1_Spk",
+    "situation": "visible_speaker",
+    "true_speaker": "Person B",
+    "degradation": "Level_0_Original",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.4962369203567505,
+        "quality_score": 9.012603345233497,
+        "lipsync_score": 0.566866175656756,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.4734031614798646,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.6477116942405701,
+        "quality_score": 9.983318729093137,
+        "lipsync_score": 0.5222079349557571,
+        "consistency_score": 0.7975192589355582,
+        "disagreement": true,
+        "input_aware_score": 0.3767804808087383,
+        "transition": "I_to_C (Recovery)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.7271513938903809,
+        "quality_score": 9.247500237160303,
+        "lipsync_score": 0.5686417660614538,
+        "consistency_score": 0.7718410165002065,
+        "disagreement": true,
+        "input_aware_score": 0.3827610247215914,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "temporal_vsr",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_2_MultiParty_Panel",
+    "window_id": "Rec2_Win1_Spk",
+    "situation": "visible_speaker",
+    "true_speaker": "Person B",
+    "degradation": "Level_1_Moderate",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.43387240171432495,
+        "quality_score": 6.260168949080882,
+        "lipsync_score": 0.5671389058885526,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.4734986170609934,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.057512540370225906,
+        "quality_score": 6.731684076588959,
+        "lipsync_score": 0.539242001865025,
+        "consistency_score": 0.9860952189755716,
+        "disagreement": false,
+        "input_aware_score": 0.45817278824298735,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.9310686588287354,
+        "quality_score": 6.9363348045990385,
+        "lipsync_score": 0.5537349277808015,
+        "consistency_score": 0.6883302212130401,
+        "disagreement": true,
+        "input_aware_score": 0.23215095947924852,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_2_MultiParty_Panel",
+    "window_id": "Rec2_Win1_Spk",
+    "situation": "visible_speaker",
+    "true_speaker": "Person B",
+    "degradation": "Level_2_Severe",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.012684552930295467,
+        "quality_score": 5.083177426606843,
+        "lipsync_score": 0.5780510810608358,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.4773178783712925,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.00026369778788648546,
+        "quality_score": 5.601146178112344,
+        "lipsync_score": 0.5450101836831698,
+        "consistency_score": 0.9955350325119954,
+        "disagreement": false,
+        "input_aware_score": 0.46396757729390753,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.8751201629638672,
+        "quality_score": 6.252616656160991,
+        "lipsync_score": 0.5399246883718538,
+        "consistency_score": 0.6942064834408855,
+        "disagreement": true,
+        "input_aware_score": 0.21665623430650305,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_2_MultiParty_Panel",
+    "window_id": "Rec2_Win2_Lis",
+    "situation": "silent_listener",
+    "true_speaker": "Person B",
+    "degradation": "Level_0_Original",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.49625682830810547,
+        "quality_score": 9.012603345233497,
+        "lipsync_score": 0.5669360905611379,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.47342763169639823,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.6477239727973938,
+        "quality_score": 9.983318729093137,
+        "lipsync_score": 0.5222008692723985,
+        "consistency_score": 0.7975192589355582,
+        "disagreement": true,
+        "input_aware_score": 0.3767780078195628,
+        "transition": "I_to_C (Recovery)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.7271450161933899,
+        "quality_score": 9.247500237160303,
+        "lipsync_score": 0.5687143152799099,
+        "consistency_score": 0.7718410165002065,
+        "disagreement": true,
+        "input_aware_score": 0.382786416948051,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "temporal_vsr",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_2_MultiParty_Panel",
+    "window_id": "Rec2_Win2_Lis",
+    "situation": "silent_listener",
+    "true_speaker": "Person B",
+    "degradation": "Level_1_Moderate",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.43388789892196655,
+        "quality_score": 6.260168949080882,
+        "lipsync_score": 0.5672067756998295,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.4735223714949403,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.05747811496257782,
+        "quality_score": 6.731684076588959,
+        "lipsync_score": 0.539287291687601,
+        "consistency_score": 0.9860952189755716,
+        "disagreement": false,
+        "input_aware_score": 0.45818863968088896,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.9310629367828369,
+        "quality_score": 6.9363348045990385,
+        "lipsync_score": 0.5536647836015055,
+        "consistency_score": 0.6883302212130401,
+        "disagreement": true,
+        "input_aware_score": 0.2321264090164949,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_2_MultiParty_Panel",
+    "window_id": "Rec2_Win2_Lis",
+    "situation": "silent_listener",
+    "true_speaker": "Person B",
+    "degradation": "Level_2_Severe",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.012676243670284748,
+        "quality_score": 5.083177426606843,
+        "lipsync_score": 0.5781199738714597,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.4773419908550109,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.0002634667616803199,
+        "quality_score": 5.601146178112344,
+        "lipsync_score": 0.5450528094363518,
+        "consistency_score": 0.9955350325119954,
+        "disagreement": false,
+        "input_aware_score": 0.46398249630752125,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.8751072883605957,
+        "quality_score": 6.252616656160991,
+        "lipsync_score": 0.5400952304896259,
+        "consistency_score": 0.6942064834408855,
+        "disagreement": true,
+        "input_aware_score": 0.21671592404772333,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_2_MultiParty_Panel",
+    "window_id": "Rec2_Win3_Trn",
+    "situation": "speaker_transition",
+    "true_speaker": "Person A",
+    "degradation": "Level_0_Original",
+    "raw_correct": true,
+    "raw_abstain": false,
+    "cand_evals": {
+      "captured_input": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.6628227233886719,
+        "quality_score": 9.008273055229964,
+        "lipsync_score": 0.5799364550806773,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.35297775927823705,
+        "transition": "C_to_C (Success)"
+      },
+      "temporal_vsr": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.940716564655304,
+        "quality_score": 9.984640290677522,
+        "lipsync_score": 0.5229113993970322,
+        "consistency_score": 0.7947698143078008,
+        "disagreement": false,
+        "input_aware_score": 0.25092691551208157,
+        "transition": "C_to_C (Success)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9432700276374817,
+        "quality_score": 9.24398393209464,
+        "lipsync_score": 0.5816321346985291,
+        "consistency_score": 0.7713271168560696,
+        "disagreement": false,
+        "input_aware_score": 0.2621020938869131,
+        "transition": "C_to_C (Success)"
+      }
+    },
+    "quality_chosen": "temporal_vsr",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_2_MultiParty_Panel",
+    "window_id": "Rec2_Win3_Trn",
+    "situation": "speaker_transition",
+    "true_speaker": "Person A",
+    "degradation": "Level_1_Moderate",
+    "raw_correct": true,
+    "raw_abstain": false,
+    "cand_evals": {
+      "captured_input": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.6547418832778931,
+        "quality_score": 6.253609388454107,
+        "lipsync_score": 0.5775421564324461,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.3521397547513561,
+        "transition": "C_to_C (Success)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.4582599401473999,
+        "quality_score": 6.726042766054405,
+        "lipsync_score": 0.5370976759005952,
+        "consistency_score": 0.9847655773417079,
+        "disagreement": true,
+        "input_aware_score": 0.33189041750189147,
+        "transition": "C_to_I (Harm)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9804444313049316,
+        "quality_score": 6.9331073897577555,
+        "lipsync_score": 0.5767509841074417,
+        "consistency_score": 0.6856842102979006,
+        "disagreement": false,
+        "input_aware_score": 0.22613652855676486,
+        "transition": "C_to_C (Success)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_2_MultiParty_Panel",
+    "window_id": "Rec2_Win3_Trn",
+    "situation": "speaker_transition",
+    "true_speaker": "Person A",
+    "degradation": "Level_2_Severe",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.18407098948955536,
+        "quality_score": 5.084512931477057,
+        "lipsync_score": 0.5859962003394474,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.3550986701188066,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.007581363897770643,
+        "quality_score": 5.6046790926870145,
+        "lipsync_score": 0.5439222047648455,
+        "consistency_score": 0.9946444735521541,
+        "disagreement": false,
+        "input_aware_score": 0.3382305610885576,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9383421540260315,
+        "quality_score": 6.268746836228823,
+        "lipsync_score": 0.5526268191648593,
+        "consistency_score": 0.6891584348628619,
+        "disagreement": true,
+        "input_aware_score": 0.21908276065284552,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_3_InTheWild_Field",
+    "window_id": "Rec3_Win1_Spk",
+    "situation": "visible_speaker",
+    "true_speaker": "Person A",
+    "degradation": "Level_0_Original",
+    "raw_correct": true,
+    "raw_abstain": false,
+    "cand_evals": {
+      "captured_input": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.664969265460968,
+        "quality_score": 9.004579758174984,
+        "lipsync_score": 0.564631685245897,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.472621089836064,
+        "transition": "C_to_C (Success)"
+      },
+      "temporal_vsr": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9453135132789612,
+        "quality_score": 9.988329183284053,
+        "lipsync_score": 0.5245305073202078,
+        "consistency_score": 0.7921747703061056,
+        "disagreement": false,
+        "input_aware_score": 0.375455585684515,
+        "transition": "C_to_C (Success)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9385233521461487,
+        "quality_score": 9.2408994525925,
+        "lipsync_score": 0.5661839280384465,
+        "consistency_score": 0.7717151047639532,
+        "disagreement": false,
+        "input_aware_score": 0.38185041671903763,
+        "transition": "C_to_C (Success)"
+      }
+    },
+    "quality_chosen": "temporal_vsr",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_3_InTheWild_Field",
+    "window_id": "Rec3_Win1_Spk",
+    "situation": "visible_speaker",
+    "true_speaker": "Person A",
+    "degradation": "Level_1_Moderate",
+    "raw_correct": true,
+    "raw_abstain": false,
+    "cand_evals": {
+      "captured_input": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.6634832620620728,
+        "quality_score": 6.247829539301743,
+        "lipsync_score": 0.5639441140998649,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.4723804399349527,
+        "transition": "C_to_C (Success)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.4461078941822052,
+        "quality_score": 6.721280874055264,
+        "lipsync_score": 0.5368680574869686,
+        "consistency_score": 0.9839937202394036,
+        "disagreement": true,
+        "input_aware_score": 0.4565013082162005,
+        "transition": "C_to_I (Harm)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9752033948898315,
+        "quality_score": 6.93041193861087,
+        "lipsync_score": 0.5601640165990955,
+        "consistency_score": 0.6844879922889358,
+        "disagreement": false,
+        "input_aware_score": 0.21985260272525775,
+        "transition": "C_to_C (Success)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_3_InTheWild_Field",
+    "window_id": "Rec3_Win1_Spk",
+    "situation": "visible_speaker",
+    "true_speaker": "Person A",
+    "degradation": "Level_2_Severe",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.18845480680465698,
+        "quality_score": 5.085675522206408,
+        "lipsync_score": 0.5744035852570449,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.47604125483996573,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.0029007387347519398,
+        "quality_score": 5.609476864889153,
+        "lipsync_score": 0.5408492277959455,
+        "consistency_score": 0.994206466366629,
+        "disagreement": false,
+        "input_aware_score": 0.46197981627523255,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.954592764377594,
+        "quality_score": 6.280051161720927,
+        "lipsync_score": 0.5485011120688091,
+        "consistency_score": 0.6866182872409404,
+        "disagreement": true,
+        "input_aware_score": 0.2166227041204594,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_3_InTheWild_Field",
+    "window_id": "Rec3_Win2_Lis",
+    "situation": "silent_listener",
+    "true_speaker": "Person A",
+    "degradation": "Level_0_Original",
+    "raw_correct": true,
+    "raw_abstain": false,
+    "cand_evals": {
+      "captured_input": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.6649736762046814,
+        "quality_score": 9.004579758174984,
+        "lipsync_score": 0.5646784805679258,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.472637468198774,
+        "transition": "C_to_C (Success)"
+      },
+      "temporal_vsr": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9453179836273193,
+        "quality_score": 9.988329183284053,
+        "lipsync_score": 0.524603844973724,
+        "consistency_score": 0.7921747703061056,
+        "disagreement": false,
+        "input_aware_score": 0.3754812538632457,
+        "transition": "C_to_C (Success)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9385226368904114,
+        "quality_score": 9.2408994525925,
+        "lipsync_score": 0.5662312118423163,
+        "consistency_score": 0.7717151047639532,
+        "disagreement": false,
+        "input_aware_score": 0.38186696605039205,
+        "transition": "C_to_C (Success)"
+      }
+    },
+    "quality_chosen": "temporal_vsr",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_3_InTheWild_Field",
+    "window_id": "Rec3_Win2_Lis",
+    "situation": "silent_listener",
+    "true_speaker": "Person A",
+    "degradation": "Level_1_Moderate",
+    "raw_correct": true,
+    "raw_abstain": false,
+    "cand_evals": {
+      "captured_input": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.6634857058525085,
+        "quality_score": 6.247829539301743,
+        "lipsync_score": 0.563996155785724,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.4723986545250034,
+        "transition": "C_to_C (Success)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.44609808921813965,
+        "quality_score": 6.721280874055264,
+        "lipsync_score": 0.5369154275705459,
+        "consistency_score": 0.9839937202394036,
+        "disagreement": true,
+        "input_aware_score": 0.4565178877454525,
+        "transition": "C_to_I (Harm)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9752095937728882,
+        "quality_score": 6.93041193861087,
+        "lipsync_score": 0.5600912263757329,
+        "consistency_score": 0.6844879922889358,
+        "disagreement": false,
+        "input_aware_score": 0.21982712614708083,
+        "transition": "C_to_C (Success)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_3_InTheWild_Field",
+    "window_id": "Rec3_Win2_Lis",
+    "situation": "silent_listener",
+    "true_speaker": "Person A",
+    "degradation": "Level_2_Severe",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.188455730676651,
+        "quality_score": 5.085675522206408,
+        "lipsync_score": 0.5744701847865956,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.47606456467530844,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.002899854676797986,
+        "quality_score": 5.609476864889153,
+        "lipsync_score": 0.540905819319514,
+        "consistency_score": 0.994206466366629,
+        "disagreement": false,
+        "input_aware_score": 0.46199962330848154,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person A",
+        "confidence": 0.9545985460281372,
+        "quality_score": 6.280051161720927,
+        "lipsync_score": 0.5484878105613868,
+        "consistency_score": 0.6866182872409404,
+        "disagreement": true,
+        "input_aware_score": 0.21661804859286155,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_3_InTheWild_Field",
+    "window_id": "Rec3_Win3_Trn",
+    "situation": "speaker_transition",
+    "true_speaker": "Person B",
+    "degradation": "Level_0_Original",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.4824097156524658,
+        "quality_score": 9.009508048683518,
+        "lipsync_score": 0.5804637431278622,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.3531623100947518,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.6561235189437866,
+        "quality_score": 9.98407065631812,
+        "lipsync_score": 0.521815586681857,
+        "consistency_score": 0.7954950993548775,
+        "disagreement": true,
+        "input_aware_score": 0.25083349508060093,
+        "transition": "I_to_C (Recovery)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.7297812700271606,
+        "quality_score": 9.245035251171293,
+        "lipsync_score": 0.5822641339967658,
+        "consistency_score": 0.7713439254034484,
+        "disagreement": true,
+        "input_aware_score": 0.2623300170602474,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "temporal_vsr",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_3_InTheWild_Field",
+    "window_id": "Rec3_Win3_Trn",
+    "situation": "speaker_transition",
+    "true_speaker": "Person B",
+    "degradation": "Level_1_Moderate",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.41853806376457214,
+        "quality_score": 6.255472176404764,
+        "lipsync_score": 0.578335206983053,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.35241732244406854,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.06318263709545135,
+        "quality_score": 6.727680290126674,
+        "lipsync_score": 0.537207263548624,
+        "consistency_score": 0.9850533481790431,
+        "disagreement": false,
+        "input_aware_score": 0.3320438815136357,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.9331800937652588,
+        "quality_score": 6.93394280141546,
+        "lipsync_score": 0.5762988363065265,
+        "consistency_score": 0.6860758387228538,
+        "disagreement": true,
+        "input_aware_score": 0.22613492819642583,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  },
+  {
+    "rec_id": "Rec_3_InTheWild_Field",
+    "window_id": "Rec3_Win3_Trn",
+    "situation": "speaker_transition",
+    "true_speaker": "Person B",
+    "degradation": "Level_2_Severe",
+    "raw_correct": false,
+    "raw_abstain": true,
+    "cand_evals": {
+      "captured_input": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.012179993093013763,
+        "quality_score": 5.084370282361368,
+        "lipsync_score": 0.5869931441224694,
+        "consistency_score": 1.0,
+        "disagreement": false,
+        "input_aware_score": 0.3554476004428643,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "temporal_vsr": {
+        "correct": false,
+        "abstain": true,
+        "decision": "Uncertain",
+        "confidence": 0.0003241628874093294,
+        "quality_score": 5.603693532766165,
+        "lipsync_score": 0.5436682902611836,
+        "consistency_score": 0.9948219552623124,
+        "disagreement": false,
+        "input_aware_score": 0.3382126836963392,
+        "transition": "I_to_I (Persistent Fail)"
+      },
+      "generative_face": {
+        "correct": true,
+        "abstain": false,
+        "decision": "Person B",
+        "confidence": 0.8655543923377991,
+        "quality_score": 6.266031097517603,
+        "lipsync_score": 0.5491549023222158,
+        "consistency_score": 0.6898727647299141,
+        "disagreement": true,
+        "input_aware_score": 0.21815332170474117,
+        "transition": "I_to_C (Recovery)"
+      }
+    },
+    "quality_chosen": "generative_face",
+    "input_aware_chosen": "captured_input"
+  }
+]

@@ -1,0 +1,554 @@
+[
+  {
+    "window_id": "Win1_Real_SpeakerA",
+    "situation": "visible_speaker",
+    "degradation": "Level_0_Clean",
+    "true_speaker": "Person A",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 8.330106720228445,
+        "motion_b": 1.1735897684098442,
+        "sharpness": 206.2468129921379,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits a significantly higher real mouth motion (8.33 px/frame) compared to Person B (1.17 px/frame), with a positive articulatory margin of +7.16 px/frame, indicating Person A is the active speaker during the target interval."
+      },
+      "bicubic_sr": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 8.252341311134234,
+        "motion_b": 1.1714360041623308,
+        "sharpness": 166.97120461619946,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits a significantly higher real mouth motion (8.25 px/frame) compared to Person B (1.17 px/frame), with a positive articulatory margin of +7.08 px/frame, indicating Person A is the active speaker during the target interval."
+      },
+      "unsharp_mask": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 11.142856278585775,
+        "motion_b": 1.5920189724850566,
+        "sharpness": 596.65157025096,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits a significantly higher real mouth motion (11.14 px/frame) compared to Person B (1.59 px/frame), with a positive articulatory margin of +9.55 px/frame, indicating Person A is the active speaker during the target interval."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win1_Real_SpeakerA",
+    "situation": "visible_speaker",
+    "degradation": "Level_1_Moderate",
+    "true_speaker": "Person A",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 3.8541792706241074,
+        "motion_b": 1.3066754591873773,
+        "sharpness": 67.6498939605604,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher real mouth motion (3.85 px/frame) compared to Person B (1.31 px/frame), with a positive articulatory margin of +2.55 px/frame, indicating Person A is the active speaker during the target interval."
+      },
+      "bicubic_sr": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 3.8347953923964866,
+        "motion_b": 1.321074220167945,
+        "sharpness": 45.58316503684806,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher real mouth motion (3.83 px/frame) compared to Person B (1.32 px/frame), with a positive articulatory margin of +2.51 px/frame, indicating Person A is the active speaker during the target interval."
+      },
+      "unsharp_mask": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 4.38383587832442,
+        "motion_b": 1.5559555211383491,
+        "sharpness": 218.29402985410815,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher real mouth motion (4.38 px/frame) compared to Person B (1.56 px/frame), with a positive articulatory margin of +2.83 px/frame, indicating Person A is the active speaker during the target interval."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win1_Real_SpeakerA",
+    "situation": "visible_speaker",
+    "degradation": "Level_2_Severe",
+    "true_speaker": "Person A",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.033020351862159,
+        "motion_b": 0.7315599061055587,
+        "sharpness": 13.148813319970843,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher real mouth motion (2.03 px/frame) compared to Person B (0.73 px/frame), with a positive articulatory margin of +1.30 px/frame, indicating Person A is the active speaker during the target interval."
+      },
+      "bicubic_sr": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.030473344142487,
+        "motion_b": 0.7337499697505021,
+        "sharpness": 9.201118096047944,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher real mouth motion (2.03 px/frame) compared to Person B (0.73 px/frame), with a positive articulatory margin of +1.30 px/frame, indicating Person A is the active speaker during the target interval."
+      },
+      "unsharp_mask": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.138869394768047,
+        "motion_b": 0.7760932168526004,
+        "sharpness": 43.138100552721085,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher real mouth motion (2.14 px/frame) compared to Person B (0.78 px/frame), with a positive articulatory margin of +1.36 px/frame, indicating Person A is the active speaker during the target interval."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win2_Real_SpeakerB",
+    "situation": "visible_speaker",
+    "degradation": "Level_0_Clean",
+    "true_speaker": "Person B",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.0689803598440593,
+        "motion_b": 6.416329492209118,
+        "sharpness": 174.81728477825,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "The acoustic and visual evidence indicates that Person B exhibited prominent real speech articulation (6.42 px/frame) compared to Person A (2.07 px/frame). The negative articulatory margin (-4.35 px/frame) confirms that Person B was the active speaker during the target interval."
+      },
+      "bicubic_sr": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.039581616715654,
+        "motion_b": 6.3664604675759096,
+        "sharpness": 144.59990828903187,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "The acoustic and visual evidence indicates that Person B exhibited prominent real speech articulation (6.37 px/frame) compared to Person A (2.04 px/frame). The negative articulatory margin (-4.33 px/frame) confirms that Person B was the active speaker during the target interval."
+      },
+      "unsharp_mask": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.9282894494115332,
+        "motion_b": 7.8952320047224935,
+        "sharpness": 505.67006254615796,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "The acoustic and visual evidence indicates that Person B exhibited prominent real speech articulation (7.90 px/frame) compared to Person A (2.93 px/frame). The negative articulatory margin (-4.97 px/frame) confirms that Person B was the active speaker during the target interval."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win2_Real_SpeakerB",
+    "situation": "visible_speaker",
+    "degradation": "Level_1_Moderate",
+    "true_speaker": "Person B",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 1.6290998979253006,
+        "motion_b": 5.368600346808015,
+        "sharpness": 86.68160462269584,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person B exhibits significantly higher mouth motion (5.37 px/frame) compared to Person A (1.63 px/frame), with a negative articulatory margin (-3.74 px/frame) indicating Person B is the active speaker during the target interval."
+      },
+      "bicubic_sr": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 1.6422589253870843,
+        "motion_b": 5.366349784167353,
+        "sharpness": 58.099714810319284,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person B exhibits significantly higher real mouth motion (5.37 px/frame) compared to Person A (1.64 px/frame), with a negative articulatory margin (-3.72 px/frame) indicating Person B is the active speaker during the target interval."
+      },
+      "unsharp_mask": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 1.9599572024153578,
+        "motion_b": 5.7158633920775275,
+        "sharpness": 279.6241948483599,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "The acoustic and visual evidence indicates that Person B exhibited prominent real speech articulation (5.72 px/frame) compared to Person A (1.96 px/frame). The negative articulatory margin (-3.76 px/frame) confirms that Person B was the active speaker during the target interval."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win2_Real_SpeakerB",
+    "situation": "visible_speaker",
+    "degradation": "Level_2_Severe",
+    "true_speaker": "Person B",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 0.7719245385116771,
+        "motion_b": 4.302743718716564,
+        "sharpness": 13.728563199473339,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person B exhibits significantly higher mouth motion (4.30 px/frame) compared to Person A (0.77 px/frame), indicating that Person B is the active speaker during the target interval."
+      },
+      "bicubic_sr": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 0.7722319924243355,
+        "motion_b": 4.303702974924059,
+        "sharpness": 9.686845529542463,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person B exhibits significantly higher mouth motion (4.30 px/frame) compared to Person A (0.77 px/frame), with a negative articulatory margin indicating Person B is the active speaker during the target interval."
+      },
+      "unsharp_mask": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 0.826473011695547,
+        "motion_b": 4.395766974530519,
+        "sharpness": 44.873215314351555,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person B exhibits significantly higher mouth motion (4.40 px/frame) compared to Person A (0.83 px/frame), indicating that Person B is the active speaker during the target interval."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win3_Real_SilentListener",
+    "situation": "silent_listener",
+    "degradation": "Level_0_Clean",
+    "true_speaker": "Person A",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 6.537558569970361,
+        "motion_b": 1.699150197385412,
+        "sharpness": 156.12181524142534,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher mouth motion (6.54 px/frame) compared to Person B (1.70 px/frame), with a positive articulatory margin of +4.84 px/frame, indicating Person A is the active speaker during the target interval."
+      },
+      "bicubic_sr": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 6.480292204198592,
+        "motion_b": 1.6893977592758846,
+        "sharpness": 129.2114611054461,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher mouth motion (6.48 px/frame) compared to Person B (1.69 px/frame), with a positive articulatory margin of +4.79 px/frame, indicating Person A is the active speaker during the target interval."
+      },
+      "unsharp_mask": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 8.904609349058576,
+        "motion_b": 2.288883696333919,
+        "sharpness": 454.14837033983326,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher mouth motion (8.90 px/frame) compared to Person B (2.29 px/frame), with a positive articulatory margin of +6.62 px/frame, indicating Person A is the active speaker during the target interval."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win3_Real_SilentListener",
+    "situation": "silent_listener",
+    "degradation": "Level_1_Moderate",
+    "true_speaker": "Person A",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.8747248287481706,
+        "motion_b": 1.6341421420928999,
+        "sharpness": 71.20875678900593,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher real mouth motion (2.87 px/frame) compared to Person B (1.63 px/frame), with a positive articulatory margin of +1.24 px/frame, indicating Person A is the active speaker during the target interval."
+      },
+      "bicubic_sr": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.8644620171436306,
+        "motion_b": 1.6481927859013934,
+        "sharpness": 48.08122891293614,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher real mouth motion (2.86 px/frame) compared to Person B (1.65 px/frame), with a positive articulatory margin of +1.22 px/frame, indicating Person A is the active speaker during the target interval."
+      },
+      "unsharp_mask": {
+        "decision": "Person A",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 3.321639836188555,
+        "motion_b": 1.9287014376544953,
+        "sharpness": 229.7865081966797,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "Person A exhibits significantly higher real mouth motion (3.32 px/frame) compared to Person B (1.93 px/frame), with a positive articulatory margin of +1.39 px/frame, indicating Person A is the active speaker during the target interval."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win3_Real_SilentListener",
+    "situation": "silent_listener",
+    "degradation": "Level_2_Severe",
+    "true_speaker": "Person A",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Uncertain",
+        "confidence": 0.3,
+        "correct": false,
+        "abstain": true,
+        "motion_a": 1.9038530124334359,
+        "motion_b": 1.2147073653659315,
+        "sharpness": 15.652208741359448,
+        "disagreement": false,
+        "transition": "I_to_I (Persistent Fail)",
+        "reasoning": "The measured mouth motion for both participants is below the confident speech threshold (Person A: 1.90 px/frame, Person B: 1.21 px/frame). Although Person A shows slightly higher articulatory activity, the difference is marginal and the overall motion is classified as ambiguous or quiescent, making definitive attribution impossible based on visual evidence alone."
+      },
+      "bicubic_sr": {
+        "decision": "Uncertain",
+        "confidence": 0.2,
+        "correct": false,
+        "abstain": true,
+        "motion_a": 1.9038284161204233,
+        "motion_b": 1.219097807238695,
+        "sharpness": 10.884134298880841,
+        "disagreement": false,
+        "transition": "I_to_I (Persistent Fail)",
+        "reasoning": "The visual evidence indicates ambiguous or quiescent mouth motion for both participants, with measured values (1.90 px/frame for A, 1.22 px/frame for B) falling below the confident speech threshold. Although Person A shows slightly higher motion, the difference is not sufficient to definitively attribute the utterance, especially given the low video sharpness (10.9)."
+      },
+      "unsharp_mask": {
+        "decision": "Uncertain",
+        "confidence": 0.3,
+        "correct": false,
+        "abstain": true,
+        "motion_a": 2.011105235325225,
+        "motion_b": 1.2904332640537184,
+        "sharpness": 51.249349386932195,
+        "disagreement": false,
+        "transition": "I_to_I (Persistent Fail)",
+        "reasoning": "The measured mouth motion for both participants is below the confident speech threshold (Person A: 2.01 px/frame, Person B: 1.29 px/frame). Although Person A shows slightly higher articulatory activity, the difference is marginal and the overall motion is classified as ambiguous or quiescent, making definitive attribution impossible based on visual evidence alone."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win4_Real_Transition",
+    "situation": "speaker_transition",
+    "degradation": "Level_0_Clean",
+    "true_speaker": "Person B",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Uncertain",
+        "confidence": 0.0,
+        "correct": false,
+        "abstain": true,
+        "motion_a": 7.424822307271734,
+        "motion_b": 7.590740905565374,
+        "sharpness": 140.72254089292977,
+        "disagreement": false,
+        "transition": "I_to_I (Persistent Fail)",
+        "reasoning": "API Timeout"
+      },
+      "bicubic_sr": {
+        "decision": "Uncertain",
+        "confidence": 0.1,
+        "correct": false,
+        "abstain": true,
+        "motion_a": 7.349263163248439,
+        "motion_b": 7.552525843325237,
+        "sharpness": 115.86250110712544,
+        "disagreement": false,
+        "transition": "I_to_I (Persistent Fail)",
+        "reasoning": "The visual evidence indicates ambiguous or quiescent mouth motion for both participants, with a negligible articulatory margin (-0.20 px/frame) that falls below the threshold for confident speech attribution. Neither Person A nor Person B shows distinct, dominant lip movement to definitively assign the utterance."
+      },
+      "unsharp_mask": {
+        "decision": "Uncertain",
+        "confidence": 0.2,
+        "correct": false,
+        "abstain": true,
+        "motion_a": 9.741077218457157,
+        "motion_b": 9.19474995867611,
+        "sharpness": 409.19006772775487,
+        "disagreement": false,
+        "transition": "I_to_I (Persistent Fail)",
+        "reasoning": "The visual evidence indicates ambiguous or quiescent mouth motion for both participants, with a negligible articulatory margin of +0.55 px/frame. This falls below the confident speech threshold, making it impossible to definitively attribute the statement to either Person A or Person B based on lip movement alone."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win4_Real_Transition",
+    "situation": "speaker_transition",
+    "degradation": "Level_1_Moderate",
+    "true_speaker": "Person B",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 4.224128065914784,
+        "motion_b": 5.714108611898738,
+        "sharpness": 99.78083014455784,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "The acoustic and visual evidence indicates that Person B exhibited prominent real speech articulation (5.71 px/frame) compared to Person A (4.22 px/frame) during the specified interval. The negative articulatory margin (-1.49 px/frame) confirms Person B was the active speaker."
+      },
+      "bicubic_sr": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 4.205220796724605,
+        "motion_b": 5.700484443144685,
+        "sharpness": 66.69160023384353,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "The acoustic and visual evidence indicates that Person B exhibited prominent real speech articulation (5.70 px/frame) compared to Person A (4.21 px/frame). The negative articulatory margin (-1.50 px/frame) confirms Person B was the active speaker during the target interval."
+      },
+      "unsharp_mask": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 4.70917517514972,
+        "motion_b": 6.189415998067314,
+        "sharpness": 320.12372885342194,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "The acoustic and visual evidence indicates that Person B exhibited prominent real speech articulation (6.19 px/frame) compared to Person A (4.71 px/frame) during the specified interval. The negative articulatory margin (-1.48 px/frame) confirms Person B was the active speaker."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  },
+  {
+    "window_id": "Win4_Real_Transition",
+    "situation": "speaker_transition",
+    "degradation": "Level_2_Severe",
+    "true_speaker": "Person B",
+    "cand_evals": {
+      "captured_raw": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.6718247358449783,
+        "motion_b": 4.370974099457068,
+        "sharpness": 32.34666772959184,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "The acoustic and visual evidence indicates that Person B exhibited significantly higher mouth motion (4.37 px/frame) compared to Person A (2.67 px/frame) during the specified interval. The negative articulatory margin (-1.70 px/frame) confirms that Person B was the active speaker, aligning with the provided verdict of prominent real speech articulation for Person B."
+      },
+      "bicubic_sr": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.676402151385304,
+        "motion_b": 4.374362658461226,
+        "sharpness": 21.9701065582483,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "The acoustic and visual evidence indicates that Person B exhibited prominent real speech articulation (4.37 px/frame) compared to Person A (2.68 px/frame) during the specified interval. The negative articulatory margin (-1.70 px/frame) confirms Person B was the active speaker."
+      },
+      "unsharp_mask": {
+        "decision": "Person B",
+        "confidence": 0.95,
+        "correct": true,
+        "abstain": false,
+        "motion_a": 2.8228285885030577,
+        "motion_b": 4.539543784251147,
+        "sharpness": 103.88157817814626,
+        "disagreement": false,
+        "transition": "C_to_C (Success)",
+        "reasoning": "The acoustic and visual evidence indicates that Person B exhibited prominent real speech articulation (4.54 px/frame) compared to Person A (2.82 px/frame). The negative articulatory margin (-1.72 px/frame) confirms that Person B was the active speaker during the target interval."
+      }
+    },
+    "quality_chosen": "unsharp_mask",
+    "gated_chosen": "unsharp_mask"
+  }
+]
