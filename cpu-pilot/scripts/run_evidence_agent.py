@@ -64,14 +64,19 @@ class Provider:
 def blind_case(case):
     return {'candidates':{k:v for k,v in case['candidates'].items() if k in ('captured','fastdvdnet','spatial_nlm')}}
 
-def run_episode(provider, model, case, provider_name):
-    env=EvidenceEnvironment(blind_case(case));usage=[];served=[];messages=[{'role':'system','content':SYSTEM},
+def run_episode(provider, model, case, provider_name, allowed_tools=None, max_turns=12):
+    env=EvidenceEnvironment(blind_case(case), allowed_tools=allowed_tools);usage=[];served=[];messages=[{'role':'system','content':SYSTEM},
         {'role':'user','content':f'The total number of scored timestamps for this clip is exactly {env.n}. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to {env.n} using submit_decisions.'}]
 
-    for turn in range(8):
+    for turn in range(max_turns):
+        has_compare = (allowed_tools is None or 'compare_with_capture' in allowed_tools)
         ready = (set(env.data) <= env.inspected and
-                 (set(env.data) - {'captured'}) <= env.compared)
-        tools = schemas()
+                 ((set(env.data) - {'captured'}) <= env.compared if has_compare else True))
+        all_s = schemas()
+        if allowed_tools is not None:
+            tools = [s for s in all_s if s['function']['name'] in allowed_tools or s['function']['name'] == 'submit_decisions']
+        else:
+            tools = all_s
         tool_choice = 'auto'
         if ready and turn >= 4:
             tools = [s for s in tools if s['function']['name'] == 'submit_decisions']

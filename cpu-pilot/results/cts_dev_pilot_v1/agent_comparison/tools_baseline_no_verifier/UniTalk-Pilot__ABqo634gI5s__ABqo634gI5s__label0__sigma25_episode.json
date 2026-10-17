@@ -1,0 +1,187 @@
+{
+  "case": "UniTalk-Pilot::ABqo634gI5s::ABqo634gI5s__label0__sigma25",
+  "run": {
+    "status": "PROVIDER_FAILED",
+    "submission": null,
+    "error": "Provider HTTP 429; response body omitted to protect credentials",
+    "evidence_sha256": "6aa8841916bcd1e4fc207220e6c687a8e4ad16e142e6121687dbd8f64e86a04a",
+    "served_models": [
+      "qwen/qwen3.8-27b",
+      "qwen/qwen3.8-27b"
+    ],
+    "usage": [
+      {
+        "queue_time": 0.029532261,
+        "prompt_tokens": 1012,
+        "prompt_time": 0.084561647,
+        "completion_tokens": 15,
+        "completion_time": 0.030568793,
+        "total_tokens": 1027,
+        "total_time": 0.11513044
+      },
+      {
+        "queue_time": 0.022593769,
+        "prompt_tokens": 1156,
+        "prompt_time": 0.09610667,
+        "completion_tokens": 88,
+        "completion_time": 0.183933411,
+        "total_tokens": 1244,
+        "total_time": 0.280040081
+      }
+    ],
+    "messages": [
+      {
+        "role": "system",
+        "content": "You select audiovisual evidence for a visible person's speaking-state decisions.\nYou have NO direct access to pixels, audio, transcripts, identities or true labels.\nUse only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance\nquality, not attribution correctness. TalkNet probabilities are uncalibrated.\nInspect captured and restored candidates before choosing. Compare restored evidence\nwith capture before selecting it. Disagreement alone does not establish an error.\nSpeaking inspections return [start, end_exclusive, speaking_0_or_1] intervals,\nwhich preserve every threshold decision. Request local scores only if needed.\nAfter inspecting the candidates and comparisons, submit without repeating inspections.\nSubmit consecutive intervals with start, exclusive end, and a speaking/not_speaking/abstain\ndecision using submit_decisions. Cover every timestamp from 0 to the total count.\nPrefer useful quality improvements only when evidence supports\nthem. Do not invent observations. Finish within 8 model turns and 24 tool calls."
+      },
+      {
+        "role": "user",
+        "content": "The total number of scored timestamps for this clip is exactly 24. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to 24 using submit_decisions."
+      },
+      {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "1vdvea3dp",
+            "type": "function",
+            "function": {
+              "name": "list_evidence",
+              "arguments": "{}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "1vdvea3dp",
+        "content": "{\"candidates\": [\"captured\", \"fastdvdnet\", \"spatial_nlm\"], \"scored_timestamps\": 24, \"evidence_hash\": \"6aa8841916bcd1e4fc207220e6c687a8e4ad16e142e6121687dbd8f64e86a04a\", \"access\": \"tool_measurements_only\", \"scores_are_uncalibrated\": true}"
+      },
+      {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "tdjkxmmk9",
+            "type": "function",
+            "function": {
+              "name": "inspect_quality",
+              "arguments": "{\"candidate\":\"captured\"}"
+            }
+          },
+          {
+            "id": "9g8qjse2h",
+            "type": "function",
+            "function": {
+              "name": "inspect_quality",
+              "arguments": "{\"candidate\":\"fastdvdnet\"}"
+            }
+          },
+          {
+            "id": "a6vw0kf82",
+            "type": "function",
+            "function": {
+              "name": "inspect_quality",
+              "arguments": "{\"candidate\":\"spatial_nlm\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "tdjkxmmk9",
+        "content": "{\"musiq\": 15.560964266459147, \"brisque\": 51.929951985677086, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "9g8qjse2h",
+        "content": "{\"musiq\": 18.809516270955402, \"brisque\": 52.04312515258789, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "a6vw0kf82",
+        "content": "{\"musiq\": 13.7830810546875, \"brisque\": 46.513937632242836, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+      }
+    ],
+    "tool_trace": [
+      {
+        "tool": "list_evidence",
+        "arguments": {},
+        "output": {
+          "candidates": [
+            "captured",
+            "fastdvdnet",
+            "spatial_nlm"
+          ],
+          "scored_timestamps": 24,
+          "evidence_hash": "6aa8841916bcd1e4fc207220e6c687a8e4ad16e142e6121687dbd8f64e86a04a",
+          "access": "tool_measurements_only",
+          "scores_are_uncalibrated": true
+        }
+      },
+      {
+        "tool": "inspect_quality",
+        "arguments": {
+          "candidate": "captured"
+        },
+        "output": {
+          "musiq": 15.560964266459147,
+          "brisque": 51.929951985677086,
+          "musiq_direction": "higher",
+          "brisque_direction": "lower"
+        }
+      },
+      {
+        "tool": "inspect_quality",
+        "arguments": {
+          "candidate": "fastdvdnet"
+        },
+        "output": {
+          "musiq": 18.809516270955402,
+          "brisque": 52.04312515258789,
+          "musiq_direction": "higher",
+          "brisque_direction": "lower"
+        }
+      },
+      {
+        "tool": "inspect_quality",
+        "arguments": {
+          "candidate": "spatial_nlm"
+        },
+        "output": {
+          "musiq": 13.7830810546875,
+          "brisque": 46.513937632242836,
+          "musiq_direction": "higher",
+          "brisque_direction": "lower"
+        }
+      }
+    ]
+  },
+  "evaluation": {
+    "eligible": 24,
+    "captured_errors": 0,
+    "restorers": {
+      "fastdvdnet": {
+        "errors": 0,
+        "harm": 0,
+        "corrections": 0
+      },
+      "spatial_nlm": {
+        "errors": 0,
+        "harm": 0,
+        "corrections": 0
+      }
+    }
+  },
+  "summary": {
+    "case_id": "UniTalk-Pilot::ABqo634gI5s::ABqo634gI5s__label0__sigma25",
+    "category": "unknown",
+    "status": "PROVIDER_FAILED",
+    "selected_candidate": "captured",
+    "answered": 0,
+    "agent_errors": 0,
+    "captured_errors": 0,
+    "harms": 0,
+    "corrections": 0,
+    "tool_calls": 4,
+    "rationale": null
+  }
+}

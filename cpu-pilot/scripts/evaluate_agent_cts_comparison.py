@@ -34,8 +34,8 @@ def save(p: Path, obj: Any) -> None:
 def run_agent_condition_comparison(
     dev_cases: List[Dict[str, Any]],
     output_dir: Path,
-    provider_name: str = "groq",
-    model_name: str = "qwen/qwen3.8-27b",
+    provider_name: str = "openrouter",
+    model_name: str = "qwen/qwen3-vl-8b-instruct",
 ) -> Dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -45,55 +45,94 @@ def run_agent_condition_comparison(
         "tools_plus_cts_verifier",
     ]
 
-    results = {c: {"cases": [], "total_answered": 0, "total_errors": 0, "total_harms": 0, "total_corrections": 0} for c in conditions}
+    tool_mappings = {
+        "tools_baseline_no_verifier": ["list_evidence", "inspect_quality", "inspect_speaking", "inspect_interval", "submit_decisions"],
+        "tools_plus_consistency": ["list_evidence", "inspect_quality", "inspect_speaking", "inspect_interval", "compare_with_capture", "submit_decisions"],
+        "tools_plus_cts_verifier": ["list_evidence", "inspect_quality", "inspect_speaking", "inspect_interval", "compare_with_capture", "verify_captured_temporal_support", "submit_decisions"],
+    }
+
+    results = {
+        c: {
+            "cases": [],
+            "total_answered": 0,
+            "total_errors": 0,
+            "total_captured_errors": 0,
+            "total_harms": 0,
+            "total_corrections": 0,
+            "selected_candidates": {},
+        }
+        for c in conditions
+    }
 
     provider = Provider(provider_name)
 
-    # Test on first 3 development episodes (speaking, listener, transition from 4ZpjKfu6Cl8)
-    eval_cases = dev_cases[:3]
+    # Test on the 3 development episodes from 4ZpjKfu6Cl8 (speaking, listener, transition)
+    eval_cases = [c for c in dev_cases if "4ZpjKfu6Cl8" in c.get("source", "")]
+    if not eval_cases:
+        eval_cases = dev_cases[:3]
 
     for condition in conditions:
-        print(f"--- Running condition: {condition} ---")
+        print(f"\n=== Running Condition: {condition} ===", flush=True)
         cond_dir = output_dir / condition
         cond_dir.mkdir(parents=True, exist_ok=True)
+        allowed = tool_mappings[condition]
 
         for case in eval_cases:
             case_id = case["id"]
             truth = np.array(case["labels"])
             cap_pred = np.array([int(p >= 0.5) for p in case["candidates"]["captured"]["probability"]])
 
-            # Filter schemas depending on condition
-            all_schemas = schemas()
-            if condition == "tools_baseline_no_verifier":
-                cond_schemas = [s for s in all_schemas if s["function"]["name"] != "verify_captured_temporal_support"]
-            elif condition == "tools_plus_consistency":
-                # replace description or keep standard
-                cond_schemas = [s for s in all_schemas if s["function"]["name"] != "verify_captured_temporal_support"]
-            else:
-                cond_schemas = all_schemas
-
-            # Run episode using provider
+            # Run episode using provider with exact allowed tools and 12 turns
             try:
-                run = run_episode(provider, model_name, case, provider_name)
+                run = run_episode(provider, model_name, case, provider_name, allowed_tools=allowed, max_turns=12)
             except Exception as e:
                 run = {"status": "PROVIDER_FAILED", "error": str(e), "submission": None}
 
             eval_res = score(case, run)
             answered = eval_res.get("answered", 0)
             agent_errs = eval_res.get("agent_errors", 0)
+            cap_errs = eval_res.get("captured_errors_on_same_answered_frames", 0)
 
-            results[condition]["cases"].append({
+            # Compute harm & correction on answered frames
+            harms = 0
+            corrections = 0
+            sel_cand = "captured"
+            if run.get("submission"):
+                decisions = [int(v == "speaking") for v in run["submission"]["decisions"] if v != "abstain"]
+                if len(decisions) == len(truth):
+                    harms = int(np.sum((cap_pred == truth) & (np.array(decisions) != truth)))
+                    corrections = int(np.sum((cap_pred != truth) & (np.array(decisions) == truth)))
+                sel_cand = run["submission"].get("candidate", "captured")
+
+            case_summary = {
                 "case_id": case_id,
+                "category": case.get("category") or "unknown",
                 "status": run.get("status"),
+                "selected_candidate": sel_cand,
                 "answered": answered,
                 "agent_errors": agent_errs,
-                "captured_errors": eval_res.get("captured_errors_on_same_answered_frames", 0),
+                "captured_errors": cap_errs,
+                "harms": harms,
+                "corrections": corrections,
                 "tool_calls": len(run.get("tool_trace", [])),
-            })
+                "rationale": run.get("submission", {}).get("rationale") if run.get("submission") else None,
+            }
+
+            # Save full episode record with tool trace and messages
+            safe_id = case_id.replace("::", "__").replace(":", "_")
+            save(cond_dir / f"{safe_id}_episode.json", {"case": case_id, "run": run, "evaluation": eval_res, "summary": case_summary})
+
+            results[condition]["cases"].append(case_summary)
             results[condition]["total_answered"] += answered
             results[condition]["total_errors"] += agent_errs
+            results[condition]["total_captured_errors"] += cap_errs
+            results[condition]["total_harms"] += harms
+            results[condition]["total_corrections"] += corrections
+            results[condition]["selected_candidates"][sel_cand] = results[condition]["selected_candidates"].get(sel_cand, 0) + 1
 
-        save(cond_dir / "results.json", results[condition])
+            print(f"Case {case_id} ({case_summary['category']}): Status={case_summary['status']}, Candidate={sel_cand}, AgentErrs={agent_errs}/{answered}, CapErrs={cap_errs}, Harms={harms}, Corrs={corrections}", flush=True)
+
+        save(cond_dir / "condition_summary.json", results[condition])
 
     save(output_dir / "agent_comparison_summary.json", results)
     return results

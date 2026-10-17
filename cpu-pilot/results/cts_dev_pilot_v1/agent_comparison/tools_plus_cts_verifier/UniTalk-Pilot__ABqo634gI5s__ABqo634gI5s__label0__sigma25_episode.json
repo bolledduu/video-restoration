@@ -1,0 +1,51 @@
+{
+  "case": "UniTalk-Pilot::ABqo634gI5s::ABqo634gI5s__label0__sigma25",
+  "run": {
+    "status": "PROVIDER_FAILED",
+    "submission": null,
+    "error": "Provider HTTP 429; response body omitted to protect credentials",
+    "evidence_sha256": "6aa8841916bcd1e4fc207220e6c687a8e4ad16e142e6121687dbd8f64e86a04a",
+    "served_models": [],
+    "usage": [],
+    "messages": [
+      {
+        "role": "system",
+        "content": "You select audiovisual evidence for a visible person's speaking-state decisions.\nYou have NO direct access to pixels, audio, transcripts, identities or true labels.\nUse only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance\nquality, not attribution correctness. TalkNet probabilities are uncalibrated.\nInspect captured and restored candidates before choosing. Compare restored evidence\nwith capture before selecting it. Disagreement alone does not establish an error.\nSpeaking inspections return [start, end_exclusive, speaking_0_or_1] intervals,\nwhich preserve every threshold decision. Request local scores only if needed.\nAfter inspecting the candidates and comparisons, submit without repeating inspections.\nSubmit consecutive intervals with start, exclusive end, and a speaking/not_speaking/abstain\ndecision using submit_decisions. Cover every timestamp from 0 to the total count.\nPrefer useful quality improvements only when evidence supports\nthem. Do not invent observations. Finish within 8 model turns and 24 tool calls."
+      },
+      {
+        "role": "user",
+        "content": "The total number of scored timestamps for this clip is exactly 24. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to 24 using submit_decisions."
+      }
+    ],
+    "tool_trace": []
+  },
+  "evaluation": {
+    "eligible": 24,
+    "captured_errors": 0,
+    "restorers": {
+      "fastdvdnet": {
+        "errors": 0,
+        "harm": 0,
+        "corrections": 0
+      },
+      "spatial_nlm": {
+        "errors": 0,
+        "harm": 0,
+        "corrections": 0
+      }
+    }
+  },
+  "summary": {
+    "case_id": "UniTalk-Pilot::ABqo634gI5s::ABqo634gI5s__label0__sigma25",
+    "category": "unknown",
+    "status": "PROVIDER_FAILED",
+    "selected_candidate": "captured",
+    "answered": 0,
+    "agent_errors": 0,
+    "captured_errors": 0,
+    "harms": 0,
+    "corrections": 0,
+    "tool_calls": 0,
+    "rationale": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "cases": [
+    {
+      "case_id": "ES2002a__targetA__label1",
+      "category": "speaking",
+      "status": "COMPLETE",
+      "selected_candidate": "fastdvdnet",
+      "answered": 24,
+      "agent_errors": 24,
+      "captured_errors": 24,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 7,
+      "rationale": "FastDVDNet provides superior appearance quality (higher MUSIQ, lower BRISQUE) compared to captured. The comparison with capture shows no disagreement and a significant quality improvement. Both speaking inspections indicate 'not_speaking' for the entire duration, and since the quality improvement is substantial, FastDVDNet is the best candidate for decision-making."
+    },
+    {
+      "case_id": "ES2002a__targetA__label0",
+      "category": "listener",
+      "status": "COMPLETE",
+      "selected_candidate": "fastdvdnet",
+      "answered": 24,
+      "agent_errors": 0,
+      "captured_errors": 0,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 7,
+      "rationale": "FastDVDNet provides superior quality metrics (higher MUSIQ, lower BRISQUE) compared to captured. The comparison with capture shows no disagreement and a significant quality improvement. Both speaking inspections indicate 'not_speaking' for the entire duration, and since the quality improvement is substantial, FastDVDNet is the best candidate for decision-making."
+    }
+  ],
+  "total_answered": 48,
+  "total_errors": 24,
+  "total_captured_errors": 24,
+  "total_harms": 0,
+  "total_corrections": 0,
+  "selected_candidates": {
+    "fastdvdnet": 2
+  }
+}

@@ -21,8 +21,9 @@ def decision_intervals(values):
     return intervals
 
 class EvidenceEnvironment:
-    def __init__(self, measured, budget=24):
+    def __init__(self, measured, budget=24, allowed_tools=None):
         self.data = {}
+        self.allowed_tools = set(allowed_tools) if allowed_tools is not None else None
         for name, value in measured['candidates'].items():
             if name not in {'captured', 'fastdvdnet', 'spatial_nlm'}:
                 raise ValueError('Unsupported candidate')
@@ -48,6 +49,8 @@ class EvidenceEnvironment:
     def call(self, name, args):
         if self.submission is not None: raise ValueError('Episode already finalized')
         if len(self.trace)>=self.budget: raise ValueError('Tool budget exhausted')
+        if self.allowed_tools is not None and name not in self.allowed_tools and name != 'submit_decisions':
+            raise ValueError(f"Tool {name} is not available in this condition")
         event={'tool':name,'arguments':copy.deepcopy(args)}
         self.trace.append(event)  # Invalid calls consume budget too.
         try:
@@ -101,8 +104,8 @@ class EvidenceEnvironment:
                     'recommendation':rec,'diagnostic_validity':validity,'provenance':'withheld_pixel_temporal_audit'}
         if name=='submit_decisions':
             if set(args) not in ({'candidate','decisions','rationale'},{'candidate','intervals','rationale'}): raise ValueError('Unexpected arguments')
-            if 'captured' not in self.inspected or candidate not in self.inspected: raise ValueError('Inspect captured and selected speaking evidence first')
-            if candidate!='captured' and candidate not in self.compared: raise ValueError('Compare restored evidence first')
+            has_compare = (self.allowed_tools is None or 'compare_with_capture' in self.allowed_tools)
+            if has_compare and candidate!='captured' and candidate not in self.compared: raise ValueError('Compare restored evidence first')
             if 'intervals' in args:
                 if isinstance(args['intervals'], str):
                     try: args['intervals'] = json.loads(args['intervals'])
