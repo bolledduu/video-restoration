@@ -147,6 +147,7 @@ def compute_captured_temporal_support(
     - mask_stability: L2 difference between full candidate and audit candidate
     - diagnostic_validity: VALID or UNRELIABLE_MASK_INSTABILITY
     """
+    if restorer_fn is None:raise ValueError('A real masked restoration callback is required; filling the full restored output leaks withheld information')
     T, H, W, C = captured.shape
     mouth_mask, cheek_mask = get_face_regions(H)
     splitter = MaskedAuditSplit(captured.shape, mask_fraction=0.15, seed=seed)

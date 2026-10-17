@@ -10,6 +10,7 @@ MEASUREMENTS_PATH = REPO_ROOT / "cpu-pilot/results/cts_dev_pilot_v1/measurements
 OMNIVR_PATH = REPO_ROOT / "cpu-pilot/results/omnivr_cpu_evaluation.json"
 
 def main():
+    raise RuntimeError('Importer retired: detector pseudo-labels and renamed PSNR/SSIM cannot validate speaker attribution. Preserve historical outputs; supply independent labels and measured metrics.')
     measurements = json.loads(MEASUREMENTS_PATH.read_text())
     cases = measurements.get("cases", [])
     

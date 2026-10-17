@@ -19,7 +19,7 @@ def trim_audio_rounding(audio, expected, tolerance=16):
     return audio[:expected].copy(), excess
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--runtime-root',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--max-sources',type=int,default=1);ap.add_argument('--data-root',type=Path);ap.add_argument('--media-manifest',type=Path);ap.add_argument('--episode-id');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--runtime-root',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--max-sources',type=int,default=1);ap.add_argument('--data-root',type=Path);ap.add_argument('--media-manifest',type=Path);ap.add_argument('--episode-id');ap.add_argument('--detector-checkpoint',type=Path);args=ap.parse_args()
     root=args.runtime_root.resolve();out=args.output.resolve();out.mkdir(parents=True,exist_ok=True)
     for f in ['tools/quality_cpu','tools/iqa_models','tools/python','tools/media_runtime','scripts']:sys.path.insert(0,str(root/f))
     import av, cv2, torch, numpy as np, pyiqa, imageio_ffmpeg
@@ -40,6 +40,7 @@ def main():
         sources=[episodes[0]['source']]
     protocol={'dataset':'AVA-ActiveSpeaker v1.0 validation','scope':'One-source smoke test' if len(sources)==1 else 'Frozen integration batch','sources':sources,'episode_ids':[e['episode_id'] for e in episodes],'manifest_sha256':sha(mp),'code_sha256':sha(__file__),'noise_sigma':25,'seed':20261017,'fps':25,'seconds':4,'crop_size':128,'candidate_names':['captured','fastdvdnet','spatial_nlm'],'quality_frames':[0,49,99],'label_policy':'Official published annotations; inaudible speech excluded; no independent relabeling','alignment_policy':'Select decoded frames by absolute PTS; nearest official face annotation within 25ms; original audio segment at matching source time; technical alignment only, human sync review pending'}
     protocol['source_sha256']={source:downloads[source]['sha256'] for source in sources}
+    if args.detector_checkpoint:protocol['detector_checkpoint_sha256']=sha(args.detector_checkpoint)
     pp=out/'protocol.json'
     if pp.exists() and json.loads(pp.read_text())!=protocol:raise RuntimeError('Configuration mismatch: use a new output directory')
     save(pp,protocol)
@@ -47,7 +48,11 @@ def main():
         receipt=downloads[source];p=Path(receipt['path'])
         if sha(p)!=receipt['sha256']:raise RuntimeError('Source media hash mismatch')
     torch.set_num_threads(2);torch.manual_seed(0);cv2.setNumThreads(2)
-    detector=TalkNetCPU();restorer=FastDVDnet().cpu().eval();weight=root/'external/fastdvdnet/model_clipped_noise.pth'
+    if args.detector_checkpoint:
+        from talknet_checkpoint_cpu import load_detector
+        detector=load_detector(root,args.detector_checkpoint)
+    else:detector=TalkNetCPU()
+    restorer=FastDVDnet().cpu().eval();weight=root/'external/fastdvdnet/model_clipped_noise.pth'
     state=torch.load(weight,map_location='cpu',weights_only=True);restorer.load_state_dict({k.removeprefix('module.'):v for k,v in state.items()})
     metric=pyiqa.create_metric('musiq',device='cpu').eval();bd=root/'external/brisque'
     brisque=cv2.quality.QualityBRISQUE_create(str(bd/'brisque_model_live.yml'),str(bd/'brisque_range_live.yml'))

@@ -76,7 +76,8 @@ class TestCapturedTemporalSupport(unittest.TestCase):
 
     def test_cts_support_diagnostics_structure(self):
         """Verify complete diagnostic dictionary without ground truth leakage."""
-        diag = compute_captured_temporal_support(self.captured, self.restored)
+        with self.assertRaises(ValueError):compute_captured_temporal_support(self.captured,self.restored)
+        diag = compute_captured_temporal_support(self.captured, self.restored,restorer_fn=lambda v:v.copy())
         required_keys = [
             "cts_support",
             "cheek_support",

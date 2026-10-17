@@ -1,3 +1,5 @@
+> **CORRECTION:** This historical report uses constructed proxy diagnostics. Its claim of improvement over captured input contradicts its own 216-versus-207 error counts. It is invalid as evidence for the masked CTS framework. See `../EXPERIMENT_VALIDITY.json` and `../../reviews/remote_bb0ed81/REVIEW.md`. Original text is retained below for traceability.
+
 # Captured Temporal Support (CTS) Safeguard: Development Pilot Report
 
 ## 1. Executive Summary & Scientific Findings

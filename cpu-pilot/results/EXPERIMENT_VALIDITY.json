@@ -14,5 +14,21 @@
   "corrected_audit_v2/agent_rescore.json": {
     "status": "RESCORED_HISTORICAL_RUNS",
     "reason": "Different protocols and attempts retained separately; not a fair model ranking"
+  },
+  "cts_dev_pilot_v1": {
+    "status": "INVALID_FOR_MASKED_FRAMEWORK_CLAIMS",
+    "reason": "44 proxy scores instead of real masked measurements; pooled partitions; legacy tool bypasses learned assessor; coverage differs"
+  },
+  "omnivr_v1/measurements.json": {
+    "status": "REFERENCE_DETECTOR_AGREEMENT_ONLY",
+    "reason": "Detector-derived pseudo-labels; PSNR/SSIM values mislabeled as MUSIQ/BRISQUE; constructed CTS"
+  },
+  "captured_support_dev_v1": {
+    "status": "ACTUAL_AUDITS_DEVELOPMENT_ONLY",
+    "reason": "Real checkpoints, masked inference and control measurements; seven historical sources; final-validation gate not passed"
+  },
+  "cts_train_JNb_v1": {
+    "status": "TRAINING_MEASUREMENTS_COMPLETE",
+    "reason": "Three new-source clips; no observed captured/restored decision transitions"
   }
 }

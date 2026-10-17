@@ -240,6 +240,7 @@ def generate_latex_tables(all_results: Dict[str, Any], summaries: Dict[str, Any]
 
 
 def main():
+    raise RuntimeError('Publication tables blocked: source measurements contain proxy CTS, pseudo-labels and unequal coverage. Use validated evaluation reports before generating LaTeX.')
     measurements_path = RESULTS_DIR / "measurements.json"
     data = json.loads(measurements_path.read_text(encoding="utf-8"))
     all_cases = data["cases"]

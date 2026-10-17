@@ -6,14 +6,13 @@ from ava_evidence_environment import EvidenceEnvironment, schemas
 
 PROVIDERS = {'groq': ('https://api.groq.com/openai/v1', 'GROQ_API_KEY'),
              'gemini': ('https://generativelanguage.googleapis.com/v1beta/openai', 'GEMINI_API_KEY'),
-             'openrouter': ('https://openrouter.ai/api/v1', 'OPENROUTER_API_KEY'),
-             'huggingface': ('https://router.huggingface.co/hf-inference/v1', 'HF_TOKEN')}
+             'openrouter': ('https://openrouter.ai/api/v1', 'OPENROUTER_API_KEY')}
 SYSTEM = """You select audiovisual evidence for a visible person's speaking-state decisions.
 You have NO direct access to pixels, audio, transcripts, identities or true labels.
 Use only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance
 quality, not attribution correctness. TalkNet probabilities are uncalibrated.
 Inspect captured and restored candidates before choosing. Compare restored evidence
-with capture before selecting it. Disagreement alone does not establish an error.
+with capture before selecting it when comparison tools are available. Disagreement alone does not establish an error.
 Speaking inspections return [start, end_exclusive, speaking_0_or_1] intervals,
 which preserve every threshold decision. Request local scores only if needed.
 After inspecting the candidates and comparisons, submit without repeating inspections.
@@ -53,7 +52,7 @@ class Provider:
             except requests.RequestException:raise RuntimeError('Provider transport failed; no response recorded') from None
             if r.status_code==401 and self.backup and not self.used_backup:
                 self.key=self.backup;self.used_backup=True;continue
-            if r.status_code in (402,429,500,502,503,504) and attempt<9:
+            if r.status_code in (429,500,502,503,504) and attempt<9:
                 try:delay=float(r.headers.get('retry-after','6'))
                 except ValueError:delay=6
                 time.sleep(min(45,max(4,delay)+2));continue
@@ -63,34 +62,42 @@ class Provider:
 
 
 def blind_case(case):
-    return {'candidates':{k:v for k,v in case['candidates'].items() if k in ('captured','fastdvdnet','spatial_nlm','omnivr')}}
+    return {'candidates':{k:v for k,v in case['candidates'].items() if k in ('captured','fastdvdnet','spatial_nlm')}}
 
-def run_episode(provider, model, case, provider_name, allowed_tools=None, max_turns=12):
-    env=EvidenceEnvironment(blind_case(case), allowed_tools=allowed_tools);usage=[];served=[];messages=[{'role':'system','content':SYSTEM}]
-    has_verifier = (allowed_tools is not None and 'verify_captured_temporal_support' in allowed_tools)
-    initial_user_msg = f'The total number of scored timestamps for this clip is exactly {env.n}. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to {env.n} using submit_decisions.'
-    if has_verifier:
-        initial_user_msg += ' Always run verify_captured_temporal_support on restored candidates before deciding whether to select them or revert to captured.'
-    messages.append({'role':'user','content':initial_user_msg})
+def run_episode(provider, model, case, provider_name, assessment=None, allowed_tools=None, max_turns=8):
+    if allowed_tools and 'verify_captured_temporal_support' in allowed_tools:
+        raise ValueError('Legacy proxy verifier disabled. Supply a measured assessor receipt and use assess_restoration.')
+    if type(max_turns) is not int or not 1 <= max_turns <= 12:raise ValueError('Invalid turn budget')
+    if assessment is None:
+        env=EvidenceEnvironment(blind_case(case));tool_definitions=schemas
+    else:
+        from captured_support_tool import SupportEvidenceEnvironment, support_schemas
+        env=SupportEvidenceEnvironment(blind_case(case),assessment);tool_definitions=support_schemas
+    available_definitions=[v for v in tool_definitions() if v['function']['name']!='verify_captured_temporal_support']
+    if allowed_tools is not None:
+        if not set(allowed_tools)<={v['function']['name'] for v in available_definitions}:raise ValueError('Unknown or unavailable tool')
+        available_definitions=[v for v in available_definitions if v['function']['name'] in allowed_tools]
+    env.allowed_tools={v['function']['name'] for v in available_definitions}
+    has_compare='compare_with_capture' in env.allowed_tools
+    if assessment is not None and 'assess_restoration' not in env.allowed_tools:raise ValueError('Assessor provided but its tool is unavailable')
+    usage=[];served=[];messages=[{'role':'system','content':SYSTEM.replace('within 8 model turns',f'within {max_turns} model turns')},
+        {'role':'user','content':f'The total number of scored timestamps for this clip is exactly {env.n}. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to {env.n} using submit_decisions.'}]
 
+    if assessment is not None:
+        messages.append({'role':'user','content':'Inspect assess_restoration once before selecting evidence. Its estimates concern detector transitions, not verified truth or calibrated agent-error probabilities.'})
     for turn in range(max_turns):
-        has_compare = (allowed_tools is None or 'compare_with_capture' in allowed_tools)
         ready = (set(env.data) <= env.inspected and
                  ((set(env.data) - {'captured'}) <= env.compared if has_compare else True) and
-                 ((set(env.data) - {'captured'}) <= env.verified if has_verifier else True))
-        all_s = schemas()
-        if allowed_tools is not None:
-            tools = [s for s in all_s if s['function']['name'] in allowed_tools or s['function']['name'] == 'submit_decisions']
-        else:
-            tools = all_s
+                 (assessment is None or any(e['tool']=='assess_restoration' and 'output' in e for e in env.trace)))
+        tools = available_definitions
         tool_choice = 'auto'
         if ready and turn >= 4:
             tools = [s for s in tools if s['function']['name'] == 'submit_decisions']
             tool_choice = {'type':'function', 'function':{'name':'submit_decisions'}}
         elif turn >= 5:
             messages.append({'role':'user', 'content':
-                'Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections.'})
-        payload={'model':model,'messages':messages,'tools':tools,'tool_choice':tool_choice,'temperature':0,'max_completion_tokens':512}
+                'Complete missing candidate inspections and comparisons, then submit. Do not repeat completed inspections.'})
+        payload={'model':model,'messages':messages,'tools':tools,'tool_choice':tool_choice,'temperature':0,'max_completion_tokens':1024}
 
 
         if provider_name == 'gemini': payload['reasoning_effort'] = 'low'
@@ -133,16 +140,31 @@ def score(case, run):
         pairs=[(i,int(v=='speaking')) for i,v in enumerate(decisions) if v!='abstain']
         result.update(answered=len(pairs),coverage=len(pairs)/len(truth),
             agent_errors=sum(p!=truth[i] for i,p in pairs),
-            captured_errors_on_same_answered_frames=sum(base[i]!=truth[i] for i,p in pairs))
+            captured_errors_on_same_answered_frames=sum(base[i]!=truth[i] for i,p in pairs),
+            agent_error_rate=sum(p!=truth[i] for i,p in pairs)/len(pairs) if pairs else None,
+            agent_harm=sum(base[i]==truth[i] and p!=truth[i] for i,p in pairs),
+            agent_corrections=sum(base[i]!=truth[i] and p==truth[i] for i,p in pairs))
     return result
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--measurements',type=Path,required=True);ap.add_argument('--output',type=Path,required=True)
-    ap.add_argument('--provider',choices=PROVIDERS,required=True);ap.add_argument('--model',required=True);args=ap.parse_args()
+    ap.add_argument('--assessments',type=Path);ap.add_argument('--provider',choices=PROVIDERS,required=True);ap.add_argument('--model',required=True);args=ap.parse_args()
     measured=json.loads(args.measurements.read_text())
+    assessments=None
+    if args.assessments:
+        receipt=json.loads(args.assessments.read_text())
+        if receipt['measurements_sha256']!=sha(args.measurements):raise ValueError('Assessor/measurement identity mismatch')
+        artifact=Path(receipt['model_artifact'])
+        if not artifact.exists():artifact=args.assessments.parent/artifact.name
+        if sha(artifact)!=receipt['model_artifact_sha256']:raise ValueError('Frozen assessor artifact changed')
+        if json.loads(artifact.read_text())['status']!='FROZEN_BEFORE_TEST':raise ValueError('Assessor is not frozen')
+        assessments=receipt['assessments']
+        if set(assessments)!={c['id'] for c in measured['cases']}:raise ValueError('Assessor case set mismatch')
     if measured['status'] not in ('COMPLETE','COMPLETE_WITH_EXCLUSIONS'):raise RuntimeError('Measurements are incomplete')
     if not measured['cases']:raise RuntimeError('No eligible cases')
     identity={'measurements_sha256':sha(args.measurements),'runner_sha256':sha(__file__),
+        'assessments_sha256':sha(args.assessments) if args.assessments else None,
+        'support_tool_sha256':sha(Path(__file__).with_name('captured_support_tool.py')) if args.assessments else None,
         'environment_sha256':sha(Path(__file__).with_name('ava_evidence_environment.py')),'provider':args.provider,'model':args.model,
         'max_turns':8,'max_tools':24,'max_completion_tokens':1024,'access':'tool_measurements_only','temperature':0,
         'finalization_policy':'Force submission from turn 5 only after all inspections and comparisons; incomplete evidence exhausts budget','submission_format':'complete interval partition'}
@@ -160,7 +182,7 @@ def main():
     for case in measured['cases']:
         if case['id'] in done:continue
         save(args.output,report)
-        try:run=run_episode(provider,args.model,case,args.provider)
+        try:run=run_episode(provider,args.model,case,args.provider,assessments[case['id']] if assessments else None)
         except Exception as error:
             report['status']='FAILED';report['failure']={'case':case['id'],'type':type(error).__name__,'message':str(error)};save(args.output,report);raise
         report['cases'].append({'id':case['id'],'run':run,'evaluation':score(case,run)})

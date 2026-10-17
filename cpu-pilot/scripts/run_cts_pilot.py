@@ -66,6 +66,7 @@ def run_cts_pilot_on_cases(
     output_dir: Path,
     runtime_root: Optional[Path] = None,
 ) -> Dict[str, Any]:
+    raise RuntimeError('Proxy CTS experiment retired: this function constructs scores instead of measuring masked restorations. Use measure_captured_support.py.')
     output_dir.mkdir(parents=True, exist_ok=True)
 
     protocol = {

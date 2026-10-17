@@ -24,3 +24,9 @@ paper/*.synctex.gz
 paper/*.fls
 paper/*.fdb_latexmk
 paper/*.pdf
+
+# Local primary-study media and process logs; retain JSON scientific receipts.
+/cpu-pilot/results/primary_cts_ava_v1/**/*.npz
+/cpu-pilot/results/primary_cts_ava_v1/**/*.jpg
+/cpu-pilot/results/primary_cts_ava_v1/*.log
+/cpu-pilot/results/primary_cts_ava_v1/process.json

@@ -1,0 +1,29 @@
+{
+  "repo": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration",
+  "runtime": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual",
+  "checkpoint": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\external\\TalkNet-ASD\\pretrain_AVA.model",
+  "checkpoint_sha256": "a83d7e88c46633ebd06025337512a7d78edd8ebb8981b148b702c02de767a4e0",
+  "source_protocol_sha256": "dba6da3988f2e51cdc0b722e3982fa1675d421c89159d49e836de301f527e3cf",
+  "code_sha256": {
+    "run_ava_local.py": "ff5c32756c77c571664933a7730371e5d69dea4b59b548a83c88d53202f32c7a",
+    "talknet_checkpoint_cpu.py": "3958729a9096a88df02bd21f20bef70d0a9038d0731d44eaf625f11f7bb8ff2b",
+    "captured_support.py": "b688d5a0e9e78486894cb2d86b953ff287193bf12207ae05373c13abb0e49019",
+    "measure_captured_support.py": "229653c0d5ed3b71b4244e12ab9643b0e78cf7d5335574ddecf88a56fe8ee3d0",
+    "evaluate_captured_support.py": "4f6cd3f768e179d30acaa96375a2aef8bb65b1617ef19b3ba52962ca000f68a0",
+    "captured_support_tool.py": "c75e714871f5156a48ec40022a474de8af80015f5ea474aa37647b760980c58c",
+    "ava_evidence_environment.py": "e2a3903e2fab55dda22e004ccb3d92a53ddc91c8076ff5aef8ca4cb40693e875",
+    "run_primary_cts_study.py": "1ed2980e1f44b7f7abe419568dd591595dfd37537fcbf5f8b7e18a07ebb2654d"
+  },
+  "primary_scope": "AVA sigma25, FastDVDnet, official AVA TalkNet checkpoint, deterministic assessor; real LLM-agent transfer and other datasets remain separate",
+  "resource_policy": "Sequential CPU stages, two Torch threads; zero paid API calls",
+  "environment": {
+    "python": "3.13.0",
+    "packages": {
+      "torch": "2.8.0",
+      "numpy": "2.2.6",
+      "scipy": "1.16.2",
+      "scikit-learn": "1.7.2",
+      "pyiqa": "not in default environment; runtime path supplies dependency"
+    }
+  }
+}

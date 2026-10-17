@@ -1,0 +1,241 @@
+{
+  "scope": "Actual CTS component development on all available noise25 pairs in predefined cohorts; historical sources only; NOT final validation",
+  "rows": [
+    {
+      "id": "ABqo634gI5s__label0__sigma25",
+      "source": "ABqo634gI5s",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\transfer_rq\\ABqo634gI5s__label0__sigma25_source.npz",
+      "source_sha256": "461737987ce4b801dbdfb35037092e19471487b0f13befe3e2e935460a61c0b5",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\transfer_rq\\ABqo634gI5s__label0__sigma25_outputs.npz",
+      "output_sha256": "bcda00866a49f0cbc46af6b38b870b8c54477f2300668717407d82c0fa9ba84f",
+      "candidate_key": "fastdvdnet",
+      "quality": {
+        "captured": {
+          "musiq": 15.560964266459147,
+          "brisque": 51.929951985677086
+        },
+        "fastdvdnet": {
+          "musiq": 18.809516270955402,
+          "brisque": 52.04312515258789
+        }
+      },
+      "measurement_sha256": "d6f62331531ce2436b4406c8cf0f49bbdced7fa4085c0256ce4a6e9f12d761a3"
+    },
+    {
+      "id": "ABqo634gI5s__label1__sigma25",
+      "source": "ABqo634gI5s",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\transfer_rq\\ABqo634gI5s__label1__sigma25_source.npz",
+      "source_sha256": "4b5c3a67748ac3d659a738cd49f293de286357dbc3e3a8e9c52d64f0b4caa6d3",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\transfer_rq\\ABqo634gI5s__label1__sigma25_outputs.npz",
+      "output_sha256": "2182b2246e87fd136b118605e32a61b7229cbd9ec7b6a920d5a21ad5dddcf668",
+      "candidate_key": "fastdvdnet",
+      "quality": {
+        "captured": {
+          "musiq": 15.128881454467773,
+          "brisque": 54.94544219970703
+        },
+        "fastdvdnet": {
+          "musiq": 17.323820114135742,
+          "brisque": 50.683502197265625
+        }
+      },
+      "measurement_sha256": "d6f62331531ce2436b4406c8cf0f49bbdced7fa4085c0256ce4a6e9f12d761a3"
+    },
+    {
+      "id": "qv3-HaaxGUc__label0__sigma25",
+      "source": "qv3-HaaxGUc",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\transfer_rq\\qv3-HaaxGUc__label0__sigma25_source.npz",
+      "source_sha256": "a1add9fac2d3fb451081a0d69a0781c345b44889553c2b639564fd3dfc093d69",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\transfer_rq\\qv3-HaaxGUc__label0__sigma25_outputs.npz",
+      "output_sha256": "0f18322a939b4387bf2fd13617322132a16bb562183852f1ca5b8930730341ce",
+      "candidate_key": "fastdvdnet",
+      "quality": {
+        "captured": {
+          "musiq": 15.40327231089274,
+          "brisque": 49.89996465047201
+        },
+        "fastdvdnet": {
+          "musiq": 28.25683657328288,
+          "brisque": 48.999436696370445
+        }
+      },
+      "measurement_sha256": "d6f62331531ce2436b4406c8cf0f49bbdced7fa4085c0256ce4a6e9f12d761a3"
+    },
+    {
+      "id": "qv3-HaaxGUc__label1__sigma25",
+      "source": "qv3-HaaxGUc",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\transfer_rq\\qv3-HaaxGUc__label1__sigma25_source.npz",
+      "source_sha256": "3ee79502cc089a50b80a6401463bfa26558e59b454dfd71a0ed3c3f207821f15",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\transfer_rq\\qv3-HaaxGUc__label1__sigma25_outputs.npz",
+      "output_sha256": "987097998169538a540cccccf00bf0b435ff2838ba1039ad8ed737de88aad1e7",
+      "candidate_key": "fastdvdnet",
+      "quality": {
+        "captured": {
+          "musiq": 14.385731061299643,
+          "brisque": 46.28762181599935
+        },
+        "fastdvdnet": {
+          "musiq": 20.194323857625324,
+          "brisque": 46.24505869547526
+        }
+      },
+      "measurement_sha256": "d6f62331531ce2436b4406c8cf0f49bbdced7fa4085c0256ce4a6e9f12d761a3"
+    },
+    {
+      "id": "Pc5iQdNpDX0__noise25",
+      "source": "Pc5iQdNpDX0",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\benefit_screen\\Pc5iQdNpDX0_source.npz",
+      "source_sha256": "c612ebc1de9feddff22c6641419bacd0f2cb1339b1491bdf30dd5ef9581ef5c8",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\benefit_screen\\Pc5iQdNpDX0__noise25_outputs.npz",
+      "output_sha256": "c6a0f4258da878b0029a923d590b9643b080a00aca4172aa69ecae58d29d70aa",
+      "candidate_key": "restored",
+      "quality": {
+        "captured": {
+          "musiq": 16.48602294921875,
+          "brisque": 47.72807057698568
+        },
+        "restored": {
+          "musiq": 22.88962999979655,
+          "brisque": 38.23144785563151
+        }
+      },
+      "measurement_sha256": "8eabff06a66aadb85ed3b3f8cfc334d50ae855d6ad542ea0d735ae2b514ae637"
+    },
+    {
+      "id": "QRXbRSq8p4s__noise25",
+      "source": "QRXbRSq8p4s",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\benefit_screen\\QRXbRSq8p4s_source.npz",
+      "source_sha256": "c34fa091217d160f7f5ec95c98f0603eb154f976a6e7cd7c6f52827b371b8963",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\benefit_screen\\QRXbRSq8p4s__noise25_outputs.npz",
+      "output_sha256": "08e05bc0e2f6838f651d74d8dc055aee2f493fc74a032dc6604dd403bcaf0f1d",
+      "candidate_key": "restored",
+      "quality": {
+        "captured": {
+          "musiq": 14.530897776285807,
+          "brisque": 50.973626454671226
+        },
+        "restored": {
+          "musiq": 29.71031888326009,
+          "brisque": 46.376609802246094
+        }
+      },
+      "measurement_sha256": "8eabff06a66aadb85ed3b3f8cfc334d50ae855d6ad542ea0d735ae2b514ae637"
+    },
+    {
+      "id": "ho_oK12hY6M__noise25",
+      "source": "ho_oK12hY6M",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\benefit_screen\\ho_oK12hY6M_source.npz",
+      "source_sha256": "838a8b346bd46bad1f147059fa031e87f3a7da7adc45c6af30fd7318315cb31c",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\benefit_screen\\ho_oK12hY6M__noise25_outputs.npz",
+      "output_sha256": "ac4d58ee5a22a0898b6f18175697fb9be605257276c651087672b0df4dfa3b53",
+      "candidate_key": "restored",
+      "quality": {
+        "captured": {
+          "musiq": 13.523432095845541,
+          "brisque": 52.33130900065104
+        },
+        "restored": {
+          "musiq": 16.36275068918864,
+          "brisque": 49.16822052001953
+        }
+      },
+      "measurement_sha256": "8eabff06a66aadb85ed3b3f8cfc334d50ae855d6ad542ea0d735ae2b514ae637"
+    },
+    {
+      "id": "aca7e0ed106b9ca1",
+      "source": "4ZpjKfu6Cl8",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\ava_agent\\aca7e0ed106b9ca1_smoke_outputs.npz",
+      "source_sha256": "fbe1d04a59ea158dc6f4592b7aff770dff6a967c645d33fe9fa97323a0c1a7d0",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\ava_agent\\aca7e0ed106b9ca1_smoke_outputs.npz",
+      "output_sha256": "fbe1d04a59ea158dc6f4592b7aff770dff6a967c645d33fe9fa97323a0c1a7d0",
+      "candidate_key": "fastdvdnet",
+      "quality": {
+        "captured": {
+          "musiq": 18.14721171061198,
+          "brisque": 41.14602915445963
+        },
+        "fastdvdnet": {
+          "musiq": 32.5880978902181,
+          "brisque": 35.3070182800293
+        }
+      },
+      "measurement_sha256": "37108cc49ec3aacafc0735b1b8ba1c1f458ff2bc0c6645b20fd9e0a8cce061f0"
+    },
+    {
+      "id": "b5e7d06dbd1cfb8a",
+      "source": "4ZpjKfu6Cl8",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\ava_agent\\b5e7d06dbd1cfb8a_smoke_outputs.npz",
+      "source_sha256": "a6dfbf0cf6ea8fd82dc749df2c8e590165f8e9d3725bcec3c797914a44567a3f",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\ava_agent\\b5e7d06dbd1cfb8a_smoke_outputs.npz",
+      "output_sha256": "a6dfbf0cf6ea8fd82dc749df2c8e590165f8e9d3725bcec3c797914a44567a3f",
+      "candidate_key": "fastdvdnet",
+      "quality": {
+        "captured": {
+          "musiq": 15.8765287399292,
+          "brisque": 49.42034149169922
+        },
+        "fastdvdnet": {
+          "musiq": 15.766924540201822,
+          "brisque": 48.053941090901695
+        }
+      },
+      "measurement_sha256": "37108cc49ec3aacafc0735b1b8ba1c1f458ff2bc0c6645b20fd9e0a8cce061f0"
+    },
+    {
+      "id": "eaa58bfe0ca84011",
+      "source": "4ZpjKfu6Cl8",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\ava_agent\\eaa58bfe0ca84011_smoke_outputs.npz",
+      "source_sha256": "a098f8fd254a760d48309fdcbd1f69408f729a7ae67ebda110aa5bca2f8e2cf3",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\ava_agent\\eaa58bfe0ca84011_smoke_outputs.npz",
+      "output_sha256": "a098f8fd254a760d48309fdcbd1f69408f729a7ae67ebda110aa5bca2f8e2cf3",
+      "candidate_key": "fastdvdnet",
+      "quality": {
+        "captured": {
+          "musiq": 22.969134012858074,
+          "brisque": 43.00470860799154
+        },
+        "fastdvdnet": {
+          "musiq": 31.10271708170573,
+          "brisque": 35.67409642537435
+        }
+      },
+      "measurement_sha256": "37108cc49ec3aacafc0735b1b8ba1c1f458ff2bc0c6645b20fd9e0a8cce061f0"
+    },
+    {
+      "id": "d389b6e89b92cde6",
+      "source": "IKdBLciu_-A",
+      "source_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\results\\ava_corrected_dev_v3\\d389b6e89b92cde6_smoke_outputs.npz",
+      "source_sha256": "e2c41bd075b6ac5f76c5fa736029dd7b3009c1b8e30da1be4bdb20e46435cafc",
+      "output_bundle": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\results\\ava_corrected_dev_v3\\d389b6e89b92cde6_smoke_outputs.npz",
+      "output_sha256": "e2c41bd075b6ac5f76c5fa736029dd7b3009c1b8e30da1be4bdb20e46435cafc",
+      "candidate_key": "fastdvdnet",
+      "quality": {
+        "captured": {
+          "musiq": 24.577608108520508,
+          "brisque": 44.818827311197914
+        },
+        "fastdvdnet": {
+          "musiq": 39.814056396484375,
+          "brisque": 20.752731323242188
+        }
+      },
+      "measurement_sha256": "29175cc7a8ab8fcbd623d3e68a5d3005cf307a6fcc1ab658d3c37d7d8c40323c"
+    }
+  ],
+  "mask_seeds": [
+    1729,
+    1730
+  ],
+  "mask_fraction": 0.1,
+  "mask_type": "Fixed spatial sites across all frames; all RGB channels withheld",
+  "shifts": [
+    -3,
+    3
+  ],
+  "region_definition": "Prespecified normalized lower-face proxy, not verified mouth landmarks; no full-input registration",
+  "degradation": "Already cached clipped quantized Gaussian sigma25; empirical scores, no unbiased-risk claim",
+  "audio_policy": "Unchanged original audio for every detector call",
+  "code_sha256": "e11ffde55d0655a897bc09bbb85b665f96b048c13ca584f7eef835f661f99c60",
+  "core_sha256": "b688d5a0e9e78486894cb2d86b953ff287193bf12207ae05373c13abb0e49019",
+  "control_policy": "Support MSE: lower-face, cheek, full frame, static, half/double dynamic amplitude; detector: shifts for each region and static/amplitude for lower face"
+}

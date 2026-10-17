@@ -39,6 +39,7 @@ def run_agent_condition_comparison(
     dataset_name: str = "ava",
     case_ids: Optional[List[str]] = None,
 ) -> Dict[str, Any]:
+    raise RuntimeError('Legacy comparison runner uses unmeasured proxy diagnostics. Use run_evidence_agent.py with a verified --assessments receipt and matched protocol.')
     output_dir.mkdir(parents=True, exist_ok=True)
 
     conditions = [

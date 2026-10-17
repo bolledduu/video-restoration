@@ -1,0 +1,60 @@
+{
+  "case_count": 14,
+  "source_count": 5,
+  "checkpoint_sha256": "a83d7e88c46633ebd06025337512a7d78edd8ebb8981b148b702c02de767a4e0",
+  "summary": {
+    "captured": {
+      "eligible": 1386,
+      "errors": 28,
+      "harm": 0,
+      "corrections": 0,
+      "harm_sources": [],
+      "correction_sources": []
+    },
+    "fastdvdnet": {
+      "eligible": 1386,
+      "errors": 28,
+      "harm": 6,
+      "corrections": 6,
+      "harm_sources": [
+        "JNb4nWexD0I",
+        "a5mEmM6w_ks",
+        "xJmRNZVDDCY"
+      ],
+      "correction_sources": [
+        "4ZpjKfu6Cl8",
+        "IKdBLciu_-A"
+      ]
+    },
+    "spatial_nlm": {
+      "eligible": 1386,
+      "errors": 32,
+      "harm": 7,
+      "corrections": 3,
+      "harm_sources": [
+        "4ZpjKfu6Cl8",
+        "JNb4nWexD0I",
+        "a5mEmM6w_ks"
+      ],
+      "correction_sources": [
+        "4ZpjKfu6Cl8",
+        "IKdBLciu_-A"
+      ]
+    },
+    "reference": {
+      "eligible": 1386,
+      "errors": 49,
+      "harm": 26,
+      "corrections": 5,
+      "harm_sources": [
+        "4ZpjKfu6Cl8",
+        "JNb4nWexD0I",
+        "a5mEmM6w_ks"
+      ],
+      "correction_sources": [
+        "4ZpjKfu6Cl8",
+        "IKdBLciu_-A"
+      ]
+    }
+  }
+}

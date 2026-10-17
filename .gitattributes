@@ -1,6 +1,6 @@
 # Preserve bytes of hashed experiment code and receipts across Windows checkouts.
 cpu-pilot/scripts/prepare_ava_agent.py -text
-cpu-pilot/scripts/ava_evidence_environment.py -text
+cpu-pilot/scripts/ava_evidence_environment.py -text whitespace=cr-at-eol
 cpu-pilot/scripts/run_ava_local.py -text whitespace=cr-at-eol
 cpu-pilot/scripts/run_evidence_agent.py -text whitespace=cr-at-eol
 cpu-pilot/results/ava_smoke_v1/*.json -text whitespace=cr-at-eol
@@ -82,3 +82,25 @@ cpu-pilot/scripts/run_gemini_av_pilot.py -text whitespace=cr-at-eol
 cpu-pilot/scripts/continue_gemini_av_pilot.py -text whitespace=cr-at-eol
 cpu-pilot/scripts/report_gemini_av_pilot.py -text whitespace=cr-at-eol
 cpu-pilot/results/gemini_av_pilot_v1/*.json -text whitespace=cr-at-eol
+
+# Preserve actual CTS audit provenance.
+cpu-pilot/scripts/captured_support.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/captured_support_tool.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/evaluate_captured_support.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/freeze_cts_ava_protocol.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/measure_captured_support.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/prepare_cts_training_batch.py -text whitespace=cr-at-eol
+cpu-pilot/results/captured_support_dev_v1/*.json -text whitespace=cr-at-eol
+cpu-pilot/protocols/*.json -text whitespace=cr-at-eol
+cpu-pilot/results/cts_train_JNb_v1/*.json -text whitespace=cr-at-eol
+
+# Frozen primary study code and receipts.
+cpu-pilot/scripts/check_ava_checkpoint.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/rescore_ava_checkpoint.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/talknet_checkpoint_cpu.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/validate_cts_evidence.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/run_primary_cts_study.py -text whitespace=cr-at-eol
+cpu-pilot/results/primary_cts_ava_v1/** -text whitespace=cr-at-eol
+cpu-pilot/results/ava_checkpoint_training_v1/*.json -text whitespace=cr-at-eol
+cpu-pilot/results/cts_train_IKd_AVA_v2/*.json -text whitespace=cr-at-eol
+cpu-pilot/results/cts_train_remaining_v1/*.json -text whitespace=cr-at-eol

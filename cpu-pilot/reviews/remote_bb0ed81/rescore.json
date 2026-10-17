@@ -1,0 +1,367 @@
+{
+  "reviewed_commit": "bb0ed81",
+  "measurement_cases": 23,
+  "proxy_formula_matches": 44,
+  "mask_stability_counts": {
+    "15.0": 44
+  },
+  "raw_score_mismatches": [],
+  "datasets": {
+    "ava": {
+      "tools_baseline_no_verifier": [
+        {
+          "case": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+          "status": "COMPLETE",
+          "answered": 99,
+          "errors": 62,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 11
+        },
+        {
+          "case": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
+          "status": "COMPLETE",
+          "answered": 99,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+          "status": "COMPLETE",
+          "answered": 99,
+          "errors": 45,
+          "captured_errors": 45,
+          "harm": 0,
+          "corrections": 0
+        }
+      ],
+      "tools_plus_consistency": [
+        {
+          "case": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+          "status": "COMPLETE",
+          "answered": 99,
+          "errors": 62,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 11
+        },
+        {
+          "case": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
+          "status": "COMPLETE",
+          "answered": 99,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+          "status": "COMPLETE",
+          "answered": 99,
+          "errors": 45,
+          "captured_errors": 45,
+          "harm": 0,
+          "corrections": 0
+        }
+      ],
+      "tools_plus_cts_verifier": [
+        {
+          "case": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+          "status": "COMPLETE",
+          "answered": 99,
+          "errors": 62,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 11
+        },
+        {
+          "case": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
+          "status": "COMPLETE",
+          "answered": 99,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+          "status": "COMPLETE",
+          "answered": 99,
+          "errors": 45,
+          "captured_errors": 45,
+          "harm": 0,
+          "corrections": 0
+        }
+      ]
+    },
+    "ami": {
+      "tools_baseline_no_verifier": [
+        {
+          "case": "AMI-Meeting::ES2002a::ES2002a__targetA__label0",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "AMI-Meeting::ES2002a::ES2002a__targetA__label1",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 24,
+          "captured_errors": 24,
+          "harm": 0,
+          "corrections": 0
+        }
+      ],
+      "tools_plus_consistency": [
+        {
+          "case": "AMI-Meeting::ES2002a::ES2002a__targetA__label0",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "AMI-Meeting::ES2002a::ES2002a__targetA__label1",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 24,
+          "captured_errors": 24,
+          "harm": 0,
+          "corrections": 0
+        }
+      ],
+      "tools_plus_cts_verifier": [
+        {
+          "case": "AMI-Meeting::ES2002a::ES2002a__targetA__label0",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "AMI-Meeting::ES2002a::ES2002a__targetA__label1",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 24,
+          "captured_errors": 24,
+          "harm": 0,
+          "corrections": 0
+        }
+      ]
+    },
+    "unitalk": {
+      "tools_baseline_no_verifier": [
+        {
+          "case": "UniTalk-ASD::EEey6Pt0rqI::EEey6Pt0rqI__label0__sigma15",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 2,
+          "captured_errors": 0,
+          "harm": 2,
+          "corrections": 0
+        },
+        {
+          "case": "UniTalk-ASD::kgVz_AXYvn0::kgVz_AXYvn0__label0__sigma15",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 8,
+          "captured_errors": 8,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "UniTalk-ASD::kgVz_AXYvn0::kgVz_AXYvn0__label1__sigma40",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "UniTalk-Pilot::qv3-HaaxGUc::qv3-HaaxGUc__label1__sigma25",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 18,
+          "captured_errors": 6,
+          "harm": 12,
+          "corrections": 0
+        }
+      ],
+      "tools_plus_consistency": [
+        {
+          "case": "UniTalk-ASD::EEey6Pt0rqI::EEey6Pt0rqI__label0__sigma15",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 2,
+          "captured_errors": 0,
+          "harm": 2,
+          "corrections": 0
+        },
+        {
+          "case": "UniTalk-ASD::kgVz_AXYvn0::kgVz_AXYvn0__label0__sigma15",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 8,
+          "captured_errors": 8,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "UniTalk-ASD::kgVz_AXYvn0::kgVz_AXYvn0__label1__sigma40",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "UniTalk-Pilot::qv3-HaaxGUc::qv3-HaaxGUc__label1__sigma25",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 18,
+          "captured_errors": 6,
+          "harm": 12,
+          "corrections": 0
+        }
+      ],
+      "tools_plus_cts_verifier": [
+        {
+          "case": "UniTalk-ASD::EEey6Pt0rqI::EEey6Pt0rqI__label0__sigma15",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 2,
+          "captured_errors": 0,
+          "harm": 2,
+          "corrections": 0
+        },
+        {
+          "case": "UniTalk-ASD::kgVz_AXYvn0::kgVz_AXYvn0__label0__sigma15",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 8,
+          "captured_errors": 8,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "UniTalk-ASD::kgVz_AXYvn0::kgVz_AXYvn0__label1__sigma40",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "UniTalk-Pilot::qv3-HaaxGUc::qv3-HaaxGUc__label1__sigma25",
+          "status": "COMPLETE",
+          "answered": 24,
+          "errors": 7,
+          "captured_errors": 6,
+          "harm": 1,
+          "corrections": 0
+        }
+      ]
+    },
+    "omnivr": {
+      "tools_baseline_no_verifier": [
+        {
+          "case": "OmniVR-Author::speech_000::speech_000",
+          "status": "COMPLETE",
+          "answered": 49,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "OmniVR-Author::speech_001::speech_001",
+          "status": "COMPLETE",
+          "answered": 49,
+          "errors": 11,
+          "captured_errors": 11,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "OmniVR-Author::speech_002::speech_002",
+          "status": "COMPLETE",
+          "answered": 49,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        }
+      ],
+      "tools_plus_consistency": [
+        {
+          "case": "OmniVR-Author::speech_000::speech_000",
+          "status": "COMPLETE",
+          "answered": 49,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "OmniVR-Author::speech_001::speech_001",
+          "status": "COMPLETE",
+          "answered": 49,
+          "errors": 0,
+          "captured_errors": 11,
+          "harm": 0,
+          "corrections": 11
+        },
+        {
+          "case": "OmniVR-Author::speech_002::speech_002",
+          "status": "COMPLETE",
+          "answered": 49,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        }
+      ],
+      "tools_plus_cts_verifier": [
+        {
+          "case": "OmniVR-Author::speech_000::speech_000",
+          "status": "COMPLETE",
+          "answered": 49,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "OmniVR-Author::speech_001::speech_001",
+          "status": "COMPLETE",
+          "answered": 0,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        },
+        {
+          "case": "OmniVR-Author::speech_002::speech_002",
+          "status": "COMPLETE",
+          "answered": 49,
+          "errors": 0,
+          "captured_errors": 0,
+          "harm": 0,
+          "corrections": 0
+        }
+      ]
+    }
+  }
+}

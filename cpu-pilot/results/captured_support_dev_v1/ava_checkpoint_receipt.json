@@ -1,0 +1,8 @@
+{
+  "source_repository": "https://github.com/TaoRuijie/TalkNet-ASD",
+  "upstream_download_id": "1NVIkksrD3zbxbDuDbPc_846bLfPSZcZm",
+  "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\external\\TalkNet-ASD\\pretrain_AVA.model",
+  "bytes": 63239310,
+  "sha256": "a83d7e88c46633ebd06025337512a7d78edd8ebb8981b148b702c02de767a4e0",
+  "role": "AVA checkpoint baseline check; does not replace historical TalkSet runs"
+}

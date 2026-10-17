@@ -1,0 +1,333 @@
+{
+  "status": "DEVELOPMENT_EVALUATION_COMPLETE",
+  "final_method_validation": "NOT_ESTABLISHED",
+  "audit_sha256": "025902421b0a3d6a3728feb67c54ffa8b05a5da56abb7b2f5dc493549e9a5be6",
+  "evaluation_sha256": "1ca0544056e071822783ec9bbf01f6d6b746bf3e3bb92c040b9718633ff528ca",
+  "actual_masked_cases": 11,
+  "actual_sources": 7,
+  "full_grid_transition_counts": {
+    "CC": 413,
+    "CI_harm": 20,
+    "IC_correction": 11,
+    "II": 195
+  },
+  "audit_grid_transition_counts": {
+    "CC": 378,
+    "CI_harm": 17,
+    "IC_correction": 11,
+    "II": 178
+  },
+  "transition_sources": {
+    "CC": [
+      "4ZpjKfu6Cl8",
+      "ABqo634gI5s",
+      "IKdBLciu_-A",
+      "QRXbRSq8p4s",
+      "ho_oK12hY6M",
+      "qv3-HaaxGUc"
+    ],
+    "II": [
+      "4ZpjKfu6Cl8",
+      "ABqo634gI5s",
+      "Pc5iQdNpDX0",
+      "ho_oK12hY6M",
+      "qv3-HaaxGUc"
+    ],
+    "CI_harm": [
+      "ho_oK12hY6M",
+      "qv3-HaaxGUc"
+    ],
+    "IC_correction": [
+      "4ZpjKfu6Cl8"
+    ]
+  },
+  "methods": {
+    "base": {
+      "evaluable_sources": [
+        "ABqo634gI5s",
+        "IKdBLciu_-A",
+        "Pc5iQdNpDX0",
+        "QRXbRSq8p4s"
+      ],
+      "evaluated": {
+        "eligible": 245,
+        "errors": 73,
+        "captured_errors": 73,
+        "harm": 0,
+        "corrections": 0
+      },
+      "matched_baselines": {
+        "captured": {
+          "eligible": 245,
+          "errors": 73,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 0
+        },
+        "restored": {
+          "eligible": 245,
+          "errors": 73,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 0
+        },
+        "musiq": {
+          "eligible": 245,
+          "errors": 73,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 0
+        }
+      },
+      "selected_restored_cases": 4,
+      "blocked_sources": [
+        "4ZpjKfu6Cl8",
+        "ho_oK12hY6M",
+        "qv3-HaaxGUc"
+      ]
+    },
+    "ordinary_audit": {
+      "evaluable_sources": [
+        "ABqo634gI5s",
+        "IKdBLciu_-A",
+        "Pc5iQdNpDX0",
+        "QRXbRSq8p4s"
+      ],
+      "evaluated": {
+        "eligible": 245,
+        "errors": 73,
+        "captured_errors": 73,
+        "harm": 0,
+        "corrections": 0
+      },
+      "matched_baselines": {
+        "captured": {
+          "eligible": 245,
+          "errors": 73,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 0
+        },
+        "restored": {
+          "eligible": 245,
+          "errors": 73,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 0
+        },
+        "musiq": {
+          "eligible": 245,
+          "errors": 73,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 0
+        }
+      },
+      "selected_restored_cases": 4,
+      "blocked_sources": [
+        "4ZpjKfu6Cl8",
+        "ho_oK12hY6M",
+        "qv3-HaaxGUc"
+      ]
+    },
+    "support": {
+      "evaluable_sources": [
+        "ABqo634gI5s",
+        "IKdBLciu_-A",
+        "Pc5iQdNpDX0",
+        "QRXbRSq8p4s"
+      ],
+      "evaluated": {
+        "eligible": 245,
+        "errors": 73,
+        "captured_errors": 73,
+        "harm": 0,
+        "corrections": 0
+      },
+      "matched_baselines": {
+        "captured": {
+          "eligible": 245,
+          "errors": 73,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 0
+        },
+        "restored": {
+          "eligible": 245,
+          "errors": 73,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 0
+        },
+        "musiq": {
+          "eligible": 245,
+          "errors": 73,
+          "captured_errors": 73,
+          "harm": 0,
+          "corrections": 0
+        }
+      },
+      "selected_restored_cases": 3,
+      "blocked_sources": [
+        "4ZpjKfu6Cl8",
+        "ho_oK12hY6M",
+        "qv3-HaaxGUc"
+      ]
+    }
+  },
+  "new_training_pairs": [
+    {
+      "case_id": "8f182a7098fec123",
+      "source": "JNb4nWexD0I",
+      "restorer": "fastdvdnet",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "8f182a7098fec123",
+      "source": "JNb4nWexD0I",
+      "restorer": "spatial_nlm",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "061ac09c403b2e62",
+      "source": "JNb4nWexD0I",
+      "restorer": "fastdvdnet",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "061ac09c403b2e62",
+      "source": "JNb4nWexD0I",
+      "restorer": "spatial_nlm",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "a8907bcd9666ea11",
+      "source": "JNb4nWexD0I",
+      "restorer": "fastdvdnet",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "a8907bcd9666ea11",
+      "source": "JNb4nWexD0I",
+      "restorer": "spatial_nlm",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "d8556a258fd49e89",
+      "source": "a5mEmM6w_ks",
+      "restorer": "fastdvdnet",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "d8556a258fd49e89",
+      "source": "a5mEmM6w_ks",
+      "restorer": "spatial_nlm",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "07f4b3b8f75e58a7",
+      "source": "a5mEmM6w_ks",
+      "restorer": "fastdvdnet",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "07f4b3b8f75e58a7",
+      "source": "a5mEmM6w_ks",
+      "restorer": "spatial_nlm",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "a36735e6fe7fad5e",
+      "source": "a5mEmM6w_ks",
+      "restorer": "fastdvdnet",
+      "eligible": 99,
+      "harm": 3,
+      "corrections": 1
+    },
+    {
+      "case_id": "a36735e6fe7fad5e",
+      "source": "a5mEmM6w_ks",
+      "restorer": "spatial_nlm",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 1
+    },
+    {
+      "case_id": "0b06881acdfd3e10",
+      "source": "xJmRNZVDDCY",
+      "restorer": "fastdvdnet",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "0b06881acdfd3e10",
+      "source": "xJmRNZVDDCY",
+      "restorer": "spatial_nlm",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "632b43ee1d7d4b30",
+      "source": "xJmRNZVDDCY",
+      "restorer": "fastdvdnet",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "632b43ee1d7d4b30",
+      "source": "xJmRNZVDDCY",
+      "restorer": "spatial_nlm",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "e0f58a38fb240155",
+      "source": "xJmRNZVDDCY",
+      "restorer": "fastdvdnet",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 0
+    },
+    {
+      "case_id": "e0f58a38fb240155",
+      "source": "xJmRNZVDDCY",
+      "restorer": "spatial_nlm",
+      "eligible": 99,
+      "harm": 0,
+      "corrections": 3
+    }
+  ],
+  "blockers": [
+    "Correction examples in the measured audit cohort occur on fewer than two sources",
+    "3 source folds lack required training transitions after source separation",
+    "Evaluable folds contain no restoration-induced decision transitions",
+    "These development sources were previously inspected; they are not fresh confirmation",
+    "This report includes no human-preference validation",
+    "This run does not execute the frozen final calibration/test protocol"
+  ],
+  "retained_final_data": "Frozen AVA protocol has 5 train, 5 calibration, 15 test sources; no calibration/test inference executed here"
+}

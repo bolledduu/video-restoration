@@ -34,6 +34,14 @@ class RunnerTests(unittest.TestCase):
         self.assertEqual(result['agent_errors'],0)
         self.assertEqual(result['captured_errors_on_same_answered_frames'],1)
         self.assertEqual(result['answered'],2)
+    def test_agent_harm_and_correction_use_answered_indices(self):
+        result=score(case(),{'submission':{'decisions':['speaking','abstain','speaking']}})
+        self.assertEqual(result['agent_harm'],1)
+        self.assertEqual(result['agent_corrections'],1)
+        self.assertEqual(result['agent_errors'],1)
+        result=score(case(),{'submission':{'decisions':['abstain']*3}})
+        self.assertIsNone(result['agent_error_rate'])
+        self.assertEqual(result['answered'],0)
     def test_failure_preserves_status_not_fake_answer(self):
         class FailedProvider:
             def request(self,*args,**kwargs):raise RuntimeError('Provider HTTP 429')

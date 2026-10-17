@@ -1,0 +1,134 @@
+test_controller_forces_finalization_after_inspection (test_agent_runner.RunnerTests.test_controller_forces_finalization_after_inspection) ... ok
+test_failure_preserves_status_not_fake_answer (test_agent_runner.RunnerTests.test_failure_preserves_status_not_fake_answer) ... ok
+test_paired_harm_and_correction_not_net_only (test_agent_runner.RunnerTests.test_paired_harm_and_correction_not_net_only) ... ok
+test_reference_excluded (test_agent_runner.RunnerTests.test_reference_excluded) ... ok
+test_same_coverage_comparison (test_agent_runner.RunnerTests.test_same_coverage_comparison) ... ok
+test_alternatives_merge_without_losing_identity (test_audit_regressions.AuditRegressionTests.test_alternatives_merge_without_losing_identity) ... ok
+test_audio_resampling_rounding_does_not_pad_missing_audio (test_audit_regressions.AuditRegressionTests.test_audio_resampling_rounding_does_not_pad_missing_audio) ... ok
+test_backup_authorization_is_rebuilt (test_audit_regressions.AuditRegressionTests.test_backup_authorization_is_rebuilt) ... ok
+test_conflicting_capture_rejected (test_audit_regressions.AuditRegressionTests.test_conflicting_capture_rejected) ... ok
+test_empty_coverage_has_undefined_error (test_audit_regressions.AuditRegressionTests.test_empty_coverage_has_undefined_error) ... ok
+test_legacy_completed_status_and_abstention_are_rescored (test_audit_regressions.AuditRegressionTests.test_legacy_completed_status_and_abstention_are_rescored) ... ok
+test_person_state_and_degradation_remain_distinct (test_audit_regressions.AuditRegressionTests.test_person_state_and_degradation_remain_distinct) ... ok
+test_same_predictions_do_not_mean_same_evidence (test_audit_regressions.AuditRegressionTests.test_same_predictions_do_not_mean_same_evidence) ... ok
+test_short_submission_rejected (test_audit_regressions.AuditRegressionTests.test_short_submission_rejected) ... ok
+test_compact_scores_preserve_threshold (test_ava_environment.EnvironmentTests.test_compact_scores_preserve_threshold) ... ok
+test_grid_mismatch_rejected (test_ava_environment.EnvironmentTests.test_grid_mismatch_rejected) ... ok
+test_interval_submission_covers_grid_exactly (test_ava_environment.EnvironmentTests.test_interval_submission_covers_grid_exactly) ... ok
+test_interval_submission_rejects_gap (test_ava_environment.EnvironmentTests.test_interval_submission_rejects_gap) ... ok
+test_intervals_are_lossless_for_decisions (test_ava_environment.EnvironmentTests.test_intervals_are_lossless_for_decisions) ... ok
+test_invalid_calls_consume_budget (test_ava_environment.EnvironmentTests.test_invalid_calls_consume_budget) ... ok
+test_malformed_arguments_consume_budget (test_ava_environment.EnvironmentTests.test_malformed_arguments_consume_budget) ... ok
+test_no_ground_truth_leaks (test_ava_environment.EnvironmentTests.test_no_ground_truth_leaks) ... ok
+test_payload_is_detached_from_evaluator (test_ava_environment.EnvironmentTests.test_payload_is_detached_from_evaluator) ... ok
+test_proxy_verifier_cannot_claim_measured_provenance (test_ava_environment.EnvironmentTests.test_proxy_verifier_cannot_claim_measured_provenance) ... ok
+test_restored_selection_requires_comparison (test_ava_environment.EnvironmentTests.test_restored_selection_requires_comparison) ... ok
+test_all_four_transition_classes (test_captured_support.CapturedSupportTests.test_all_four_transition_classes) ... ok
+test_fixed_masks_and_rgb_exclusion (test_captured_support.CapturedSupportTests.test_fixed_masks_and_rgb_exclusion) ... ok
+test_no_temporal_wrap_or_off_region_changes (test_captured_support.CapturedSupportTests.test_no_temporal_wrap_or_off_region_changes) ... ok
+test_static_increment_has_zero_timing_contrast (test_captured_support.CapturedSupportTests.test_static_increment_has_zero_timing_contrast) ... ok
+test_withheld_values_do_not_affect_fill_or_audit_prediction (test_captured_support.CapturedSupportTests.test_withheld_values_do_not_affect_fill_or_audit_prediction) ... ok
+test_feature_extraction_does_not_read_labels (test_captured_support.SupportFeatureTests.test_feature_extraction_does_not_read_labels) ... ok
+test_missing_transition_classes_block_training (test_captured_support.SupportFeatureTests.test_missing_transition_classes_block_training) ... ok
+test_invalid_risk_rejected (test_captured_support.SupportToolTests.test_invalid_risk_rejected) ... ok
+test_tool_rejects_outcomes_and_returns_detached_copy (test_captured_support.SupportToolTests.test_tool_rejects_outcomes_and_returns_detached_copy) ... ok
+test_all_channels_masked_together (test_captured_temporal_support.TestCapturedTemporalSupport.test_all_channels_masked_together)
+Verify that all color channels at a withheld pixel site are masked together. ... ok
+test_attribution_influence_metrics (test_captured_temporal_support.TestCapturedTemporalSupport.test_attribution_influence_metrics)
+Verify attribution influence separation from correctness. ... ok
+test_calibrated_risk_assessor_fit_and_selection (test_captured_temporal_support.TestCapturedTemporalSupport.test_calibrated_risk_assessor_fit_and_selection)
+Verify low-capacity risk model fits and selects appropriately without label leakage. ... ok
+test_cts_support_diagnostics_structure (test_captured_temporal_support.TestCapturedTemporalSupport.test_cts_support_diagnostics_structure)
+Verify complete diagnostic dictionary without ground truth leakage. ... ok
+test_face_regions_are_disjoint (test_captured_temporal_support.TestCapturedTemporalSupport.test_face_regions_are_disjoint)
+Mouth and cheek control regions must be spatially disjoint. ... ok
+test_timing_disruptions_preserve_scale_and_have_no_circular_wraparound (test_captured_temporal_support.TestCapturedTemporalSupport.test_timing_disruptions_preserve_scale_and_have_no_circular_wraparound)
+Verify that temporal disruptions avoid circular wraparound boundary jumps and preserve scale. ... ok
+test_withheld_value_invariance_and_no_leakage (test_captured_temporal_support.TestCapturedTemporalSupport.test_withheld_value_invariance_and_no_leakage)
+Verify that modifying withheld pixels while keeping retained pixels fixed ... ok
+test_job_pairing_and_repeats (test_causal.CausalTests.test_job_pairing_and_repeats) ... ok
+test_matched_coverage_and_abstention (test_causal.CausalTests.test_matched_coverage_and_abstention) ... ok
+test_protocol_digest_is_order_independent (test_causal.CausalTests.test_protocol_digest_is_order_independent) ... ok
+test_provisional_labels_rejected (test_causal.CausalTests.test_provisional_labels_rejected) ... ok
+test_unknown_labels_not_scored (test_causal.CausalTests.test_unknown_labels_not_scored) ... ok
+test_valid_track_and_invalid_box (test_causal.CausalTests.test_valid_track_and_invalid_box) ... ok
+test_verified_empty_tracks_rejected (test_causal.CausalTests.test_verified_empty_tracks_rejected) ... ok
+test_harms_and_corrections_on_joint_coverage (test_gemini_av_pilot.GeminiPilotTests.test_harms_and_corrections_on_joint_coverage) ... ok
+test_incomplete_or_invalid_answers_fail (test_gemini_av_pilot.GeminiPilotTests.test_incomplete_or_invalid_answers_fail) ... ok
+test_labels_are_aggregated_on_the_full_100_frame_grid (test_gemini_av_pilot.GeminiPilotTests.test_labels_are_aggregated_on_the_full_100_frame_grid) ... ok
+test_request_has_no_labels_source_or_candidate_name (test_gemini_av_pilot.GeminiPilotTests.test_request_has_no_labels_source_or_candidate_name) ... ok
+test_zero_coverage_is_not_perfect_accuracy (test_gemini_av_pilot.GeminiPilotTests.test_zero_coverage_is_not_perfect_accuracy) ... ok
+test_bootstrap_identity_and_pairing (test_llbench.SelectionTests.test_bootstrap_identity_and_pairing) ... ok
+test_duplicate_and_corrupt_inputs_rejected (test_llbench.SelectionTests.test_duplicate_and_corrupt_inputs_rejected) ... ok
+test_group_assignment_is_stable (test_llbench.SelectionTests.test_group_assignment_is_stable) ... ok
+test_metadata_only_choice_and_tradeoff (test_llbench.SelectionTests.test_metadata_only_choice_and_tradeoff) ... ok
+test_round_trip_without_annotations (test_llbench.SelectionTests.test_round_trip_without_annotations) ... ok
+test_training_and_development_guards (test_llbench.SelectionTests.test_training_and_development_guards) ... ok
+test_unseen_models_have_deterministic_fallback (test_llbench.SelectionTests.test_unseen_models_have_deterministic_fallback) ... ok
+test_answers (test_manifest.PilotTests.test_answers) ... ok
+test_incomplete_predictions_rejected (test_manifest.PilotTests.test_incomplete_predictions_rejected) ... ok
+test_missing_files_remain_untested (test_manifest.PilotTests.test_missing_files_remain_untested) ... ok
+test_not_a_restoration_claim (test_manifest.PilotTests.test_not_a_restoration_claim) ... ok
+test_three_unique_records (test_manifest.PilotTests.test_three_unique_records) ... ok
+test_dataset_path_does_not_verify_annotations (test_media.MediaTests.test_dataset_path_does_not_verify_annotations) ... ok
+test_identical_full_clip (test_media.MediaTests.test_identical_full_clip) ... ok
+test_truncated_candidate_rejected (test_media.MediaTests.test_truncated_candidate_rejected) ... ok
+test_degradation_is_deterministic_and_keeps_fixed_geometry (test_unitalk_cpu.UnitalkCPUTests.test_degradation_is_deterministic_and_keeps_fixed_geometry) ... ok
+test_joint_event_requires_quality_error_and_causality (test_unitalk_cpu.UnitalkCPUTests.test_joint_event_requires_quality_error_and_causality) ... ok
+test_safeguards_have_equal_nonzero_coverage (test_unitalk_cpu.UnitalkCPUTests.test_safeguards_have_equal_nonzero_coverage) ... ok
+test_blind_choice_is_independent_of_labels_and_reference (test_wvaq_quality.QualitySelectionTests.test_blind_choice_is_independent_of_labels_and_reference) ... ok
+test_duplicate_inputs_cannot_create_budget_effect (test_wvaq_quality.QualitySelectionTests.test_duplicate_inputs_cannot_create_budget_effect) ... ok
+test_exact_subset_expectation_and_budget (test_wvaq_quality.QualitySelectionTests.test_exact_subset_expectation_and_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 74 tests in 4.946s
+
+OK
+{
+  "research_status": "UNTESTED",
+  "input_mode": "ENGINEERING_FIXTURES",
+  "annotation_valid": false,
+  "audio_conditioned_restorer_executed": false,
+  "speaker_detector_executed": false,
+  "clips": [
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "status": "NOT_DOWNLOADED",
+      "research_result": null
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "status": "NOT_DOWNLOADED",
+      "research_result": null
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "status": "NOT_DOWNLOADED",
+      "research_result": null
+    }
+  ]
+}
+{
+  "research_status": "UNTESTED",
+  "input_mode": "DATASET_SOURCE",
+  "annotation_valid": false,
+  "audio_conditioned_restorer_executed": false,
+  "speaker_detector_executed": false,
+  "clips": [
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "status": "NOT_DOWNLOADED",
+      "research_result": null
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "status": "NOT_DOWNLOADED",
+      "research_result": null
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "status": "NOT_DOWNLOADED",
+      "research_result": null
+    }
+  ]
+}
