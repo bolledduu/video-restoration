@@ -220,7 +220,8 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Local research inputs, derived media, tools and model weights
-data/
+data/*
+!data/download_manifest.json
 external/
 tools/
 *.pt

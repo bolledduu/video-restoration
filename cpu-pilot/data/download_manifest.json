@@ -1,0 +1,754 @@
+{
+  "generated": "2026-10-17T11:25:55Z",
+  "ava": {
+    "dev_sources": [
+      "4ZpjKfu6Cl8",
+      "IKdBLciu_-A",
+      "JNb4nWexD0I",
+      "a5mEmM6w_ks",
+      "xJmRNZVDDCY"
+    ],
+    "test_sources": [
+      "1j20qq1JyX4",
+      "2DUITARAsWQ",
+      "5milLu-6bWI",
+      "8nO5FFbIAog",
+      "HKjR70GCRPE",
+      "HV0H6oc4Kvs",
+      "IzvOYVMltkI",
+      "KHHgQ_Pe4cI",
+      "LgBQlW6OTr0",
+      "P60OxWahxBQ",
+      "PmElx9ZVByw",
+      "UrsCy6qIGoo",
+      "_7oWZq_s_Sk",
+      "ax3q-RkVIt4",
+      "j5jmjhGBW44",
+      "kMy-6RtoOVU",
+      "qrkff49p4E4",
+      "rJKeqfTlAeY",
+      "z-fsLpGHq6o",
+      "zC5Fh2tTS1U"
+    ],
+    "videos": {
+      "4ZpjKfu6Cl8": {
+        "filename": "4ZpjKfu6Cl8.f251.webm",
+        "size_bytes": 85607433,
+        "sha256": "96204c64994206b71750f66fd7f2d9383244baa534256e4dcde968e1f01f222b"
+      },
+      "IKdBLciu_-A": {
+        "filename": "IKdBLciu_-A.mp4",
+        "size_bytes": 551708510,
+        "sha256": "c1235a9927433a069fdaf8e46a992a11ef3bdb0c9326723fac7a471f8bd38678"
+      },
+      "JNb4nWexD0I": {
+        "filename": "JNb4nWexD0I.mkv",
+        "size_bytes": 302799293,
+        "sha256": "d404d96f9398ac2333efb33ea5468f5871ba10d527a9598436e58598f282d220"
+      },
+      "a5mEmM6w_ks": {
+        "filename": "a5mEmM6w_ks.f243.webm",
+        "size_bytes": 82609840,
+        "sha256": "e78046ecd5b4fdf19a65f5634410cf45fc9dea0a3f233efa47f11df99fa6060a"
+      },
+      "xJmRNZVDDCY": {
+        "filename": "xJmRNZVDDCY.mkv",
+        "size_bytes": 1586771513,
+        "sha256": "26cf103ec83a691d43d5097b7ebd0abdb737e568dc660d2b80a7a8f79c62e94c"
+      },
+      "P60OxWahxBQ": {
+        "filename": "P60OxWahxBQ.mkv",
+        "size_bytes": 846462318,
+        "sha256": "9fe0f28e492a7f6da612d20ad113ef57a2c94b015cac275c671f67b1ad62ed8f"
+      },
+      "rJKeqfTlAeY": {
+        "filename": "rJKeqfTlAeY.mkv",
+        "size_bytes": 1499835604,
+        "sha256": "120b8f51eac419922f31a4cb9cf8f0815612389e03bc012ad10a44aaced5f8b7"
+      },
+      "ax3q-RkVIt4": {
+        "filename": "ax3q-RkVIt4.f251.webm",
+        "size_bytes": 67840813,
+        "sha256": "76ee287fec249316b72e8322b7a371c3f8030485d114c819f9497e6067d06e78"
+      },
+      "8nO5FFbIAog": {
+        "filename": "8nO5FFbIAog.f251.webm",
+        "size_bytes": 42920833,
+        "sha256": "7a0c66b6a8fe29540fac302034dfbc3a2ac84786563ae68aa6f62059c7932352"
+      },
+      "HV0H6oc4Kvs": {
+        "filename": "HV0H6oc4Kvs.mkv",
+        "size_bytes": 331591448,
+        "sha256": "0cd4ac1e8b12b306426b46cf3037ac46bf058685f2a7cb0cee9d2064ca2c1085"
+      },
+      "2DUITARAsWQ": {
+        "filename": "2DUITARAsWQ.mp4",
+        "size_bytes": 182078258,
+        "sha256": "2ffe9f21b1966cc51c12883b7aeddc70f09b55ae43f441dabcf15270a926b740"
+      },
+      "PmElx9ZVByw": {
+        "filename": "PmElx9ZVByw.mp4",
+        "size_bytes": 452297489,
+        "sha256": "a87c0a3474f96ad6c4b103ee71eb3f688f3ce028c099d48fb2cd97a36567a253"
+      },
+      "zC5Fh2tTS1U": {
+        "filename": "zC5Fh2tTS1U.mp4",
+        "size_bytes": 187024972,
+        "sha256": "eb306ec26ec7c7c8452e030805ac6483f3895378d86fd8b2533515f070f580f7"
+      },
+      "_7oWZq_s_Sk": {
+        "filename": "_7oWZq_s_Sk.mkv",
+        "size_bytes": 388756569,
+        "sha256": "494b7247b84c24a60123296290ceb1ee6a516297ca7e550e6fb03fd51e65cd13"
+      },
+      "qrkff49p4E4": {
+        "filename": "qrkff49p4E4.mp4",
+        "size_bytes": 352943421,
+        "sha256": "e17032ec4a5f5c4051498ee644cb1c520f92be8f5a74623239749f93b323d611"
+      },
+      "kMy-6RtoOVU": {
+        "filename": "kMy-6RtoOVU.mp4",
+        "size_bytes": 163514647,
+        "sha256": "ea11eff6bce0e52fd1c4e4cae352c7507a813d19a4500e84b9f2945cd0ce0380"
+      },
+      "HKjR70GCRPE": {
+        "filename": "HKjR70GCRPE.mp4",
+        "size_bytes": 552997299,
+        "sha256": "1b5ad2c8b84194c804c55d387cc15acb7769d8ac89dc9cda5c1aa728b8a87e52"
+      },
+      "KHHgQ_Pe4cI": {
+        "filename": "KHHgQ_Pe4cI.mkv",
+        "size_bytes": 885690634,
+        "sha256": "f79bc64894ef48c820c4e4fe99c7aa720207c5744097d1bdf3db921763de689c"
+      },
+      "IzvOYVMltkI": {
+        "filename": "IzvOYVMltkI.mp4",
+        "size_bytes": 356569513,
+        "sha256": "94beb9fa82807124154cf8e5fbb1e622b42bb0bf3333a53ce06567369c126c78"
+      },
+      "1j20qq1JyX4": {
+        "filename": "1j20qq1JyX4.mp4",
+        "size_bytes": 252209059,
+        "sha256": "d19b3090434387799c96244be52fb1d0809f48cfc87dcf64df53ce03b4c2becb"
+      },
+      "UrsCy6qIGoo": {
+        "filename": "UrsCy6qIGoo.mkv",
+        "size_bytes": 322204716,
+        "sha256": "1103de7d63296f70b6de5a484392e1a9230ab4de89b49dd01f492958a13967c3"
+      },
+      "j5jmjhGBW44": {
+        "filename": "j5jmjhGBW44.mkv",
+        "size_bytes": 872299176,
+        "sha256": "11ca021c63c6e5ad238fa8e219f4588ee360004df7e26123412fe268a01abed8"
+      },
+      "5milLu-6bWI": {
+        "filename": "5milLu-6bWI.mp4",
+        "size_bytes": 235901323,
+        "sha256": "f4c8c10a51f8715b18bb795670b114c806a03b38925b5c1c28a642b6d27dfe8f"
+      },
+      "z-fsLpGHq6o": {
+        "filename": "z-fsLpGHq6o.mp4",
+        "size_bytes": 476429838,
+        "sha256": "d81688fb0dbe8005c4da17950f4fcbc7c4ecaca0d8c1a959c10f3243d362e524"
+      },
+      "LgBQlW6OTr0": {
+        "filename": "LgBQlW6OTr0.mp4",
+        "size_bytes": 414151933,
+        "sha256": "dc4f502aeca632a6dd29c328d04c9a3d1c6a20ba2de8b9df83314fc302bd31f9"
+      }
+    }
+  },
+  "ami": {
+    "dev_meetings": [
+      "ES2002a",
+      "IS1000a",
+      "TS3003a"
+    ],
+    "test_meetings": [
+      "ES2003a",
+      "ES2004a",
+      "ES2005a",
+      "ES2006a",
+      "ES2007a",
+      "ES2008a",
+      "IS1001a",
+      "IS1003a",
+      "IS1004a",
+      "TS3004a",
+      "TS3005a",
+      "TS3006a"
+    ],
+    "meetings": {
+      "ES2002a": {
+        "ES2002a.Closeup1.avi": {
+          "size_bytes": 60991090,
+          "sha256": "6c06fb51f16fffb266d08ba50220812dca898932c540da06014b8e94fade383b"
+        },
+        "ES2002a.Closeup2.avi": {
+          "size_bytes": 39783576,
+          "sha256": "aebf8e2d2e2d3de0d93cbf71af02d53fc35933712fd900f597af74ebc23d251b"
+        },
+        "ES2002a.Closeup3.avi": {
+          "size_bytes": 38992476,
+          "sha256": "757058b81ce87248f255217bdebee07e078be74ef90400c242367dbb3e36926f"
+        },
+        "ES2002a.Closeup4.avi": {
+          "size_bytes": 42274936,
+          "sha256": "4648d5b75adb48cc90c0bba1fd72304cfb6fcd896d8bdf4bcb0f0bd37f83c40f"
+        },
+        "ES2002a.Headset-0.wav": {
+          "size_bytes": 40727594,
+          "sha256": "3bf0627106d6b6f02e5cc8b69f283b70303275c6b354aef3bdc7a50762d3f25e"
+        },
+        "ES2002a.Headset-1.wav": {
+          "size_bytes": 40727594,
+          "sha256": "285ed5b5eaa4f871cc146900d0cf87487ca757aa57a7062def2eb49feaabc23d"
+        },
+        "ES2002a.Headset-2.wav": {
+          "size_bytes": 40727594,
+          "sha256": "f881505606c390b0826a525fec9ecc216e497196adefe7a70fe71522b82e2e92"
+        },
+        "ES2002a.Headset-3.wav": {
+          "size_bytes": 40727594,
+          "sha256": "fa65d53a97074e31bf83da4ab4cc6235f6e7625d6d40bd223158467d7df9f581"
+        },
+        "ES2002a.Mix-Headset.wav": {
+          "size_bytes": 40724524,
+          "sha256": "9c76866990fcc8b84006dc32d273ad99df439090b748ebe72103bb78c3216ee7"
+        }
+      },
+      "IS1000a": {
+        "IS1000a.Closeup1.avi": {
+          "size_bytes": 43448508,
+          "sha256": "14b89dec11c83504757476b0de5b2a53b5988bd784c087b17b95fdd315052728"
+        },
+        "IS1000a.Closeup2.avi": {
+          "size_bytes": 62087450,
+          "sha256": "20b3f201c6edbba519f3177ae4a7c6f75a786f1f01a6103a789c0fb9043371d8"
+        },
+        "IS1000a.Closeup3.avi": {
+          "size_bytes": 51965152,
+          "sha256": "7bc3f544eab01ef75a638172ccbade205a971d810b279e35d7c8b626310824ef"
+        },
+        "IS1000a.Closeup4.avi": {
+          "size_bytes": 54859014,
+          "sha256": "88259b6887f4e4748e00295b86daa1e45aa0ffa927e2795d0ab50b928a138ec9"
+        },
+        "IS1000a.Headset-0.wav": {
+          "size_bytes": 50643078,
+          "sha256": "76c820becae213410352ca2250247ddbf87780f396c149e39f2e9073279c7493"
+        },
+        "IS1000a.Headset-1.wav": {
+          "size_bytes": 50643078,
+          "sha256": "d8e8cbaad978b350c8defb0bfbf6d564522deef9ba29881878d8245b17360b8c"
+        },
+        "IS1000a.Headset-2.wav": {
+          "size_bytes": 50643078,
+          "sha256": "3986992604a364a79e1d6a51238138917cd938ad497aa786dc8e7306dbef9762"
+        },
+        "IS1000a.Headset-3.wav": {
+          "size_bytes": 50643078,
+          "sha256": "0893f297c518e22d0239b591e7d2806fffd62b283aa1da68a1bb5cff7fd9d85d"
+        },
+        "IS1000a.Mix-Headset.wav": {
+          "size_bytes": 50645452,
+          "sha256": "25c9a48237c1f23bc419702f89234467a1b9efedbac16d9673f52d6a8c1c6a57"
+        }
+      },
+      "TS3003a": {
+        "TS3003a.Closeup1.avi": {
+          "size_bytes": 67135068,
+          "sha256": "b29d6a8d972d40cee8c15e934207c0acd94adf9f04754854260b80a3c5ec7538"
+        },
+        "TS3003a.Closeup2.avi": {
+          "size_bytes": 49897724,
+          "sha256": "4ecc8597cdb01a193dfcbc0ef03da4ee2085eafc5eab1f198c6d64d2cecb1d45"
+        },
+        "TS3003a.Closeup3.avi": {
+          "size_bytes": 60668032,
+          "sha256": "a2df0b504106c278c2ab3f60c2cc2f651e624cc72131052e00e16ca150e354de"
+        },
+        "TS3003a.Closeup4.avi": {
+          "size_bytes": 56705506,
+          "sha256": "e06c6a70c662af21ad7590b1ac5becb47efc9bcc9da3ab26da33600a2a8feb7a"
+        },
+        "TS3003a.Headset-0.wav": {
+          "size_bytes": 48183678,
+          "sha256": "3c027c3cc99e439a9c0850b22c5148674f155f32ce178b43a69d4a39be28b173"
+        },
+        "TS3003a.Headset-1.wav": {
+          "size_bytes": 48183678,
+          "sha256": "8b3526ddbdbbafbd285d52c08322395e79e3b715ce90d6b749a5d712240cb51f"
+        },
+        "TS3003a.Headset-2.wav": {
+          "size_bytes": 48183678,
+          "sha256": "ec768ea3dd2ae1a28ce383fc35a5f64556993416dc28e4d2d87ea9116ee8a5c6"
+        },
+        "TS3003a.Headset-3.wav": {
+          "size_bytes": 48183678,
+          "sha256": "7055b7dda7ac2d5a5a336e7b5d7e7009277df21774d2a0633dd9772b08eaaacc"
+        },
+        "TS3003a.Mix-Headset.wav": {
+          "size_bytes": 48180608,
+          "sha256": "b6ce59ff735c234afdd94b13744aa26f6785af746170543fd03b33160e920a6d"
+        }
+      },
+      "ES2003a": {
+        "ES2003a.Closeup1.avi": {
+          "size_bytes": 25800036,
+          "sha256": "6bfdfea60102d931589babe9ceed76a1202b9700398c7cd6ad2c97e18ace6adc"
+        },
+        "ES2003a.Closeup2.avi": {
+          "size_bytes": 36996618,
+          "sha256": "0108b250355ba09b3c8308e04bbadb6ee776bc07366e9e3744cb62c657948e5b"
+        },
+        "ES2003a.Closeup3.avi": {
+          "size_bytes": 25344318,
+          "sha256": "63f4a7ac38c7a3402a481722de40de6429526b7076ac0d87d66ad9be31e8c399"
+        },
+        "ES2003a.Closeup4.avi": {
+          "size_bytes": 26572950,
+          "sha256": "91523a80a3439483bc3ae8091103a74d8dbbfb969646edf5260a22849f9ba62a"
+        },
+        "ES2003a.Headset-0.wav": {
+          "size_bytes": 36472536,
+          "sha256": "5a3b066d904bd15f9e8eb7469de8a6f4fe7724d6f746e3011e6e19ab5de2460a"
+        },
+        "ES2003a.Headset-1.wav": {
+          "size_bytes": 36472536,
+          "sha256": "1d8f565db1c441c5c4589f53e70056e1341bdea5d7ef4330e339cb8ff10230d7"
+        },
+        "ES2003a.Headset-2.wav": {
+          "size_bytes": 36472536,
+          "sha256": "953d8da19677ac3bc67f79bd0e6e292f155957f68040e814d07f0070cb8afdc9"
+        },
+        "ES2003a.Headset-3.wav": {
+          "size_bytes": 36472536,
+          "sha256": "ffe0d5dc5162c9d1b461a5ab1880c2507dfb9509a5bc124946ef2337e78a48e1"
+        },
+        "ES2003a.Mix-Headset.wav": {
+          "size_bytes": 36472536,
+          "sha256": "41cf861afafc20e70061c6cc82b2cb1c620d630be6d13361da928f04fc00beea"
+        }
+      },
+      "ES2004a": {
+        "ES2004a.Closeup1.avi": {
+          "size_bytes": 29234432,
+          "sha256": "68f4f3613c974f10fa8eb68282ec8ad3a9066bde975cd9fc4d843e2ea5153488"
+        },
+        "ES2004a.Closeup2.avi": {
+          "size_bytes": 41619828,
+          "sha256": "26d96878fe710c4a1d8f978a8aafaa64424d5e9739905325593eadfefa780b8a"
+        },
+        "ES2004a.Closeup3.avi": {
+          "size_bytes": 33606840,
+          "sha256": "64ddb7f1a196679404bbf2d32047e9917904ce439aee1fc771a68266cb80f8db"
+        },
+        "ES2004a.Closeup4.avi": {
+          "size_bytes": 32442176,
+          "sha256": "53f29b20f191f025bcfb350a6fe06ec70c425b1b508f12ceb7046abd61610d1c"
+        },
+        "ES2004a.Headset-0.wav": {
+          "size_bytes": 33579394,
+          "sha256": "abb4917719c6e033b066fbd400b6d37fe46ddd62c89b513f77016a51f54e2ad1"
+        },
+        "ES2004a.Headset-1.wav": {
+          "size_bytes": 33579394,
+          "sha256": "9be8e84e4ef93ea7eef669470cd6db017856f38f7321e0054199ad7393a1199c"
+        },
+        "ES2004a.Headset-2.wav": {
+          "size_bytes": 33579394,
+          "sha256": "a4f2f8ea7d965ede2c010e36bfc31c14c7792d07419bd5bc9519c8ddd1c8bc28"
+        },
+        "ES2004a.Headset-3.wav": {
+          "size_bytes": 33579394,
+          "sha256": "5b3cf59816d5160d77ff00315dc7f6db816c175edb65e0d61691679fae633572"
+        },
+        "ES2004a.Mix-Headset.wav": {
+          "size_bytes": 33579394,
+          "sha256": "3e2560b19bee6952c7c7ce041b0f1ea8a7ea9468044c4eea79d2a2c67e24ab0f"
+        }
+      },
+      "ES2005a": {
+        "ES2005a.Closeup1.avi": {
+          "size_bytes": 12361056,
+          "sha256": "edf92b67814a1e0e2f49ace47e51fca53d395268836a8587de73e9e9171bf1a3"
+        },
+        "ES2005a.Closeup2.avi": {
+          "size_bytes": 11289384,
+          "sha256": "3730ced7964c79ce05439602262ab3c68000452c7ee8fb5984092bc8ff67f9ec"
+        },
+        "ES2005a.Closeup3.avi": {
+          "size_bytes": 12014026,
+          "sha256": "70e3a6aca3e044af1a54942706fdc9ca81b5ef43c2408cff1a34d2ef98c15c00"
+        },
+        "ES2005a.Closeup4.avi": {
+          "size_bytes": 10778960,
+          "sha256": "2233f82d8633d0c64c84e34f9f744176d4a314d46e6e0c1f4b41f7e1c3f72ee1"
+        },
+        "ES2005a.Headset-0.wav": {
+          "size_bytes": 15292120,
+          "sha256": "ffe5eb825fcc0a9113173d828c1ce66e256e49c6e933987927c6353043ef4112"
+        },
+        "ES2005a.Headset-1.wav": {
+          "size_bytes": 15292120,
+          "sha256": "f552d00c6d55f389ef50b4dabbdb4fa6fe2e4bca04cc4b2459598c3614f10c1c"
+        },
+        "ES2005a.Headset-2.wav": {
+          "size_bytes": 15292120,
+          "sha256": "60c4d417f6893ec8ddff22494076b9182a012069349800249445e9331948c203"
+        },
+        "ES2005a.Headset-3.wav": {
+          "size_bytes": 15292120,
+          "sha256": "f707254ba4e3229725d05b0bfbb5c2689796d606c9360c8121d181fdc4878ffd"
+        },
+        "ES2005a.Mix-Headset.wav": {
+          "size_bytes": 15292120,
+          "sha256": "ac33e7b18ae72931e65dc279af4b129370ad62ca6ed64299b9e35f356e3f8ed8"
+        }
+      },
+      "ES2006a": {
+        "ES2006a.Closeup1.avi": {
+          "size_bytes": 46472604,
+          "sha256": "88e2a82d389ea5d76c583566a28ffd75266cc3f83b545b22ea7976f9014a83ba"
+        },
+        "ES2006a.Closeup2.avi": {
+          "size_bytes": 43092734,
+          "sha256": "58bf84b2c74719b05e7f6e6427ecb10f0c1cf3943c3c880f9bee96f9fa7aac2b"
+        },
+        "ES2006a.Closeup3.avi": {
+          "size_bytes": 34954266,
+          "sha256": "dc5e92f885e784ee93185ec211f0dc3e8b826606ffefe9af9a29d6a6f3065c49"
+        },
+        "ES2006a.Closeup4.avi": {
+          "size_bytes": 47454400,
+          "sha256": "badac1ebaab1cdd6503ca1c9ecf14f8b3f8d7040f35002310f01c2cc4e2d94a9"
+        },
+        "ES2006a.Headset-0.wav": {
+          "size_bytes": 41098968,
+          "sha256": "2ee7c31443367833a385d1bd8c56b6a516a56193b90892fb042e9ad681109b18"
+        },
+        "ES2006a.Headset-1.wav": {
+          "size_bytes": 41098968,
+          "sha256": "b4bf8cbdcffb706fd3d93922ac8957f7ad6a1523458be66ba9512085bf568b17"
+        },
+        "ES2006a.Headset-2.wav": {
+          "size_bytes": 41098968,
+          "sha256": "1ba97454c0eddd2c2464d2280d0256accc818da6966553d7fb92f6fb135fa71c"
+        },
+        "ES2006a.Headset-3.wav": {
+          "size_bytes": 41098968,
+          "sha256": "b95699680a30bec74507a31e2a29f8a717bfd099feaa69bc929df0a36926ce03"
+        },
+        "ES2006a.Mix-Headset.wav": {
+          "size_bytes": 41098968,
+          "sha256": "1b1a0b273f2f589abc8788b6f9a2ba5ae343c2aa71fc425f48c8b79ce1406eef"
+        }
+      },
+      "ES2007a": {
+        "ES2007a.Closeup1.avi": {
+          "size_bytes": 32883534,
+          "sha256": "89c993cfa0373a83ed86cc3034edddb56541a30cc7a186c8a467b05beed3a5d8"
+        },
+        "ES2007a.Closeup2.avi": {
+          "size_bytes": 29705458,
+          "sha256": "777f3df153235e6143a4b758093ee54959923b5400f3cd205cec548232b9862c"
+        },
+        "ES2007a.Closeup3.avi": {
+          "size_bytes": 32043046,
+          "sha256": "9b9ce0389956443aef451592bb3a8fb453c7ef866499ef881131649764723905"
+        },
+        "ES2007a.Closeup4.avi": {
+          "size_bytes": 31879722,
+          "sha256": "d59efa2e248dd5c9cfc95146bc360f5b516343aa1ac369f134ca15f44ebb2f56"
+        },
+        "ES2007a.Headset-0.wav": {
+          "size_bytes": 38601772,
+          "sha256": "869ffbca7c16ea0e8093388aaed0383d03480deddb0a1cdf4f9bb081bc4cfa61"
+        },
+        "ES2007a.Headset-1.wav": {
+          "size_bytes": 38601772,
+          "sha256": "45dc35f3e94221d997c9776bdbce2501e213d9ace3d34d4e51e51d063efbf29c"
+        },
+        "ES2007a.Headset-2.wav": {
+          "size_bytes": 38601772,
+          "sha256": "da1b9f47ccc0622da6997774b9d7866c6a49db68b5a18c3d7683a68522eb4338"
+        },
+        "ES2007a.Headset-3.wav": {
+          "size_bytes": 38601772,
+          "sha256": "7458b71dfef216c424de76cc002a5aa744a65c1a0f947759a5d23f2f9fd3684b"
+        },
+        "ES2007a.Mix-Headset.wav": {
+          "size_bytes": 38601772,
+          "sha256": "57a4e0015ca37f9d6fa5c7ce91e78538b772a80234ed774009e8c7c3e89908a1"
+        }
+      },
+      "ES2008a": {
+        "ES2008a.Closeup1.avi": {
+          "size_bytes": 36253102,
+          "sha256": "125f5e26933216c546749f12251ab955ea78e70804574439d2437ea484bc7b2a"
+        },
+        "ES2008a.Closeup2.avi": {
+          "size_bytes": 30521414,
+          "sha256": "a0007d8043779f6c7adc94e6cb5ff51ded515a5672f0b2c4b2ab9aaf894f4827"
+        },
+        "ES2008a.Closeup3.avi": {
+          "size_bytes": 28846722,
+          "sha256": "0e3a55ebb194805eb326af9a866cda5a3d038243ae55d94b8e1a1f9a91880db7"
+        },
+        "ES2008a.Closeup4.avi": {
+          "size_bytes": 37885098,
+          "sha256": "6c70adf847e527b47ffeeed10abf197a8429dfe4e4a50d13c62c637078b29305"
+        },
+        "ES2008a.Headset-0.wav": {
+          "size_bytes": 33387564,
+          "sha256": "9038704a0c2380b3abed17af3927e110a3783d3e8a0a7743af86275552f5588a"
+        },
+        "ES2008a.Headset-1.wav": {
+          "size_bytes": 33387564,
+          "sha256": "d53d0be8a8c8cf0dd10074a20c5994be14fef648824907e97054f01d0a8617d4"
+        },
+        "ES2008a.Headset-2.wav": {
+          "size_bytes": 33387564,
+          "sha256": "5f7bd7fcf88699a2ba0c79b79cf71449bce85a2d2e8fc7a07f8c3a49704d8a64"
+        },
+        "ES2008a.Headset-3.wav": {
+          "size_bytes": 33387564,
+          "sha256": "5f9bb2b4a829477b3d9bf944ff99fa3edcf37624c46653f15e87e9ca4783121b"
+        },
+        "ES2008a.Mix-Headset.wav": {
+          "size_bytes": 33387564,
+          "sha256": "65fcfc924e9bdb0388cbc3242a17bda88291ebc638f486e39a9ede78e92cb1e6"
+        }
+      },
+      "IS1001a": {
+        "IS1001a.Closeup1.avi": {
+          "size_bytes": 47033986,
+          "sha256": "c82d5b9782d7f70efbe7372807d90b941c0deb6e344824add6bbe326c10a6f43"
+        },
+        "IS1001a.Closeup2.avi": {
+          "size_bytes": 28628440,
+          "sha256": "6e48b4c766e8c2b3d7699f17b5476b49a255ece9a611fa2282b09b4701e0537e"
+        },
+        "IS1001a.Closeup3.avi": {
+          "size_bytes": 34781434,
+          "sha256": "fe0eaaebcb819fa5e117ff2ef13315fb36262c3fd89747bd46fe3bbd16f66462"
+        },
+        "IS1001a.Closeup4.avi": {
+          "size_bytes": 30344552,
+          "sha256": "d5753ff2667668e9d41590a133c120e61ba07e79ff8f6643a20e5f5cb3d72c80"
+        },
+        "IS1001a.Headset-0.wav": {
+          "size_bytes": 29091261,
+          "sha256": "f460bafa57daa45fe195caea937053a1b6a251067ace08dd149a397351c9105c"
+        },
+        "IS1001a.Headset-1.wav": {
+          "size_bytes": 29091261,
+          "sha256": "84d1cb1e12571445f430922bdde86211f3b3584c779fa8bed928255ce1ef3954"
+        },
+        "IS1001a.Headset-2.wav": {
+          "size_bytes": 29091261,
+          "sha256": "a00c8d843eaeb3bb036b597e653d4bd4b76553dab1d012e626fa3734782c482f"
+        },
+        "IS1001a.Headset-3.wav": {
+          "size_bytes": 29091261,
+          "sha256": "854e166be176e8d3ecd16ccc6b9272baada7d64786becc805e9c8685d720a775"
+        },
+        "IS1001a.Mix-Headset.wav": {
+          "size_bytes": 29089836,
+          "sha256": "3630cc7415931e4dc91e3cd022cd7b6123057a055e8ac4114bdf010398ed89f0"
+        }
+      },
+      "IS1003a": {
+        "IS1003a.Closeup1.avi": {
+          "size_bytes": 51633568,
+          "sha256": "c121f934f17ed6b4b1af30b992d2e0f301f4e90fb10948d6134db7ce55827a5f"
+        },
+        "IS1003a.Closeup2.avi": {
+          "size_bytes": 36318540,
+          "sha256": "89841adf99b5a2124143df149793fdc94048b6c2b08c170a7c5cd71e64b3521b"
+        },
+        "IS1003a.Closeup3.avi": {
+          "size_bytes": 46057278,
+          "sha256": "5d9e9e68a3c4beff33bc3d1b4e0626f1154639fa94c46f3c4fe000029c134d06"
+        },
+        "IS1003a.Closeup4.avi": {
+          "size_bytes": 29649128,
+          "sha256": "dd4285b9df3dd520e7a5136c343ddbcc82ba11253b92ff2ae8284e950a40554a"
+        },
+        "IS1003a.Headset-0.wav": {
+          "size_bytes": 29233255,
+          "sha256": "5a633e76470335e5e7d830980f00269f1dee28ceecf38a07257b1b7c1e5bd8d6"
+        },
+        "IS1003a.Headset-1.wav": {
+          "size_bytes": 29233255,
+          "sha256": "4f94700ba742144744f793444cd0908f56f6d569a40098b22f6eeeed9584b7c8"
+        },
+        "IS1003a.Headset-2.wav": {
+          "size_bytes": 29233255,
+          "sha256": "c9a2df4e91b92ee457bbc26222b91ee55946a764c09421d13642bc2a50eb6a08"
+        },
+        "IS1003a.Headset-3.wav": {
+          "size_bytes": 29233255,
+          "sha256": "f9e62fd70eaec13016096d89c1e383ca5a25047930b1916b1cfdfc6124c5bb41"
+        },
+        "IS1003a.Mix-Headset.wav": {
+          "size_bytes": 29231830,
+          "sha256": "10d768ad3cf53d02aff96057fb80631c1047e79221ee8f3edb3614dfa23507b5"
+        }
+      },
+      "IS1004a": {
+        "IS1004a.Closeup1.avi": {
+          "size_bytes": 51954196,
+          "sha256": "b2f8ff43996832af897bc6033ee71bc1eb809b323270c84bbdddc75f7a5b7a84"
+        },
+        "IS1004a.Closeup2.avi": {
+          "size_bytes": 30647598,
+          "sha256": "6afa12a403756d561b6aaa507e4c3298c4311681101e1b55369410fc297e557d"
+        },
+        "IS1004a.Closeup3.avi": {
+          "size_bytes": 25656630,
+          "sha256": "5ca8696347e4731722d978130d16af472ead587c2db1eecd5616aff08b58bee7"
+        },
+        "IS1004a.Closeup4.avi": {
+          "size_bytes": 24239378,
+          "sha256": "5310451295003ab933fea4972dcb23a9a937d4d3a6fbd5890c0c4e1c1754552c"
+        },
+        "IS1004a.Headset-0.wav": {
+          "size_bytes": 25494975,
+          "sha256": "71e76cde3cbb83c6f4a36c3c99e7310a00e1ec6c2d23f05f04b4a27a74b4b886"
+        },
+        "IS1004a.Headset-1.wav": {
+          "size_bytes": 25494975,
+          "sha256": "7cb1d2121310cb6498397c14365270164247cf8483b243416cbfc6634e07db35"
+        },
+        "IS1004a.Headset-2.wav": {
+          "size_bytes": 25494975,
+          "sha256": "9c327e1e26a3930618db6d41e6b4be36578d6d2332e1311b5d85ea03ea09f57e"
+        },
+        "IS1004a.Headset-3.wav": {
+          "size_bytes": 25494975,
+          "sha256": "10a4e3fbe831ef6b2f4b82809db8c9cbafdef8a2adc186ca4ad0f65cd8648375"
+        },
+        "IS1004a.Mix-Headset.wav": {
+          "size_bytes": 25500093,
+          "sha256": "c37050e46bf3d339e896cc75baf31b191f4a3c491109d6faa44d9d55cd79666b"
+        }
+      },
+      "TS3004a": {
+        "TS3004a.Closeup1.avi": {
+          "size_bytes": 59470384,
+          "sha256": "764cfb2175d4e50a2f273124a4a881e443b531775be8d885e41c058b64cb169d"
+        },
+        "TS3004a.Closeup2.avi": {
+          "size_bytes": 43548738,
+          "sha256": "151de6c00491f311470481d7937003d0d27306e48044a840679337807a749b16"
+        },
+        "TS3004a.Closeup3.avi": {
+          "size_bytes": 50395994,
+          "sha256": "214cad6c7120982afa23c781646933798b93536474fcc3db7af4039e4609134c"
+        },
+        "TS3004a.Closeup4.avi": {
+          "size_bytes": 53888502,
+          "sha256": "394adf4ba3a6e5fcc50b6fbed3a256fcc4cd776c8c5f9ca6cf52873a510eb891"
+        },
+        "TS3004a.Headset-0.wav": {
+          "size_bytes": 43051390,
+          "sha256": "bde78c71e744b535f860964160857b646c3052c1286a4fb2c015fccf8991dcf0"
+        },
+        "TS3004a.Headset-1.wav": {
+          "size_bytes": 43051390,
+          "sha256": "8c2d266d587bfb2b52972f86d7221295f5c106d0bab7339f4f216067aa84a1a8"
+        },
+        "TS3004a.Headset-2.wav": {
+          "size_bytes": 43051390,
+          "sha256": "afe656746486f1d823d38f45be9cef15bff7f049adc5bc23ec1f41a31c04cb6e"
+        },
+        "TS3004a.Headset-3.wav": {
+          "size_bytes": 43051390,
+          "sha256": "083154462be22fb5909fc5f30514a404ee7df136baf6111c2e35ff40f7caef0b"
+        },
+        "TS3004a.Mix-Headset.wav": {
+          "size_bytes": 43050368,
+          "sha256": "ca3bc00d6c85451918290b0a3dd137e322ad8b063fd26f71fe3bdaa42ad66719"
+        }
+      },
+      "TS3005a": {
+        "TS3005a.Closeup1.avi": {
+          "size_bytes": 54401540,
+          "sha256": "da3e3f106584dd895a23cbd4283eced2d9c4bcc66b792caae32584c9ccbebdff"
+        },
+        "TS3005a.Closeup2.avi": {
+          "size_bytes": 46098718,
+          "sha256": "f1fd7599252eba1de4818241af501df72c6657951868ecc51ff3c4173e62ad61"
+        },
+        "TS3005a.Closeup3.avi": {
+          "size_bytes": 44360644,
+          "sha256": "d77a6896ca61adb0e09b85848a6ee522a090365e7d60073e5c34a985bdb3559c"
+        },
+        "TS3005a.Closeup4.avi": {
+          "size_bytes": 60662486,
+          "sha256": "4aa9c3e095e8ec8449ff1bcf528471670906c1ec1e11caf21597b0408c7a4efc"
+        },
+        "TS3005a.Headset-0.wav": {
+          "size_bytes": 42206250,
+          "sha256": "7ca6fe56d9a8b2294ff69a13466ebce1c408434f2f457a245eec792b5fa266f9"
+        },
+        "TS3005a.Headset-1.wav": {
+          "size_bytes": 42206250,
+          "sha256": "f02bd63a14c57a4bf61fbe2fb372d60cdf831814d328d42f7f6907929836b0fd"
+        },
+        "TS3005a.Headset-2.wav": {
+          "size_bytes": 42206250,
+          "sha256": "dcb184522239609fd4096e1ca2f5947b98abce1f786c320b2637887ea0624c53"
+        },
+        "TS3005a.Headset-3.wav": {
+          "size_bytes": 42206250,
+          "sha256": "13eb0c82c2aa544b3c0e1e30db10de0572fd987c1416d2c4c5ef62604ca08976"
+        },
+        "TS3005a.Mix-Headset.wav": {
+          "size_bytes": 42203180,
+          "sha256": "431faf4e85eeeb4653256bc8e4f36aaf06dc71538a58b1b6c1a78f2df81276ea"
+        }
+      },
+      "TS3006a": {
+        "TS3006a.Closeup1.avi": {
+          "size_bytes": 51399310,
+          "sha256": "df7aca40d10d61558138e2fdfcc360a2ca1a55124a4712d14d7d109bbb257765"
+        },
+        "TS3006a.Closeup2.avi": {
+          "size_bytes": 42765996,
+          "sha256": "1dbfd594b2ba063ffca60d29afeb908db8a99a7f0dadf3091dd9b7b2c7ff3c57"
+        },
+        "TS3006a.Closeup3.avi": {
+          "size_bytes": 53902668,
+          "sha256": "5ddd694ef7719fb1505f58c3999b3d5c9521a9c2c12217218e560e1b7323e5f0"
+        },
+        "TS3006a.Closeup4.avi": {
+          "size_bytes": 48049468,
+          "sha256": "e25379147ab4a4393f13eb5c7a004306aa90dd6bcd67e093f477a797434b4812"
+        },
+        "TS3006a.Headset-0.wav": {
+          "size_bytes": 40092714,
+          "sha256": "b6b7fca1c5da918f832b2681c6714cc0f190ddf4de11f9a483f958408a35f3b0"
+        },
+        "TS3006a.Headset-1.wav": {
+          "size_bytes": 40092714,
+          "sha256": "a0d96b5235219033ac209129e11957739e013692e838918fb5e89be2f3a93fc9"
+        },
+        "TS3006a.Headset-2.wav": {
+          "size_bytes": 40092714,
+          "sha256": "e3913c65deda40cc713e7f9e2bbcd5244961be3eaa681c9dcd3917a029355c8f"
+        },
+        "TS3006a.Headset-3.wav": {
+          "size_bytes": 40092714,
+          "sha256": "6c8654bcb6ebed24e6b9cccc815a9c8fa796feea107baf24792f26d313144933"
+        },
+        "TS3006a.Mix-Headset.wav": {
+          "size_bytes": 40091692,
+          "sha256": "d3a14878e387563dd7f6cc4d9fa26e70cd1073f2b7f90102a076878cb29bb6f3"
+        }
+      }
+    }
+  }
+}

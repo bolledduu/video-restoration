@@ -5,7 +5,8 @@ import requests
 from ava_evidence_environment import EvidenceEnvironment, schemas
 
 PROVIDERS = {'groq': ('https://api.groq.com/openai/v1', 'GROQ_API_KEY'),
-             'gemini': ('https://generativelanguage.googleapis.com/v1beta/openai', 'GEMINI_API_KEY')}
+             'gemini': ('https://generativelanguage.googleapis.com/v1beta/openai', 'GEMINI_API_KEY'),
+             'openrouter': ('https://openrouter.ai/api/v1', 'OPENROUTER_API_KEY')}
 SYSTEM = """You select audiovisual evidence for a visible person's speaking-state decisions.
 You have NO direct access to pixels, audio, transcripts, identities or true labels.
 Use only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance
@@ -36,41 +37,62 @@ def credential(name):
 
 class Provider:
     def __init__(self, name):
+        self.name = name
         self.base,self.variable=PROVIDERS[name];self.key=credential(self.variable)
         self.backup=credential(self.variable+'_BACKUP');self.used_backup=False
         if not self.key:raise RuntimeError('Missing credential: '+self.variable)
         self.session=requests.Session()
 
     def request(self, method, path, **kwargs):
-        for attempt in range(3):
-            try: r=self.session.request(method,self.base+path,headers={'Authorization':'Bearer '+self.key},timeout=90,**kwargs)
+        headers = {'Authorization': 'Bearer ' + self.key}
+        if self.name == 'openrouter':
+            headers['HTTP-Referer'] = 'https://github.com/google-deepmind/antigravity'
+            headers['X-Title'] = 'Video Restoration Benchmark'
+        for attempt in range(10):
+            try: r=self.session.request(method,self.base+path,headers=headers,timeout=90,**kwargs)
             except requests.RequestException:raise RuntimeError('Provider transport failed; no response recorded') from None
             if r.status_code==401 and self.backup and not self.used_backup:
                 self.key=self.backup;self.used_backup=True;continue
-            if r.status_code in (429,500,502,503,504) and attempt<2:
-                try:delay=float(r.headers.get('retry-after','30'))
-                except ValueError:delay=30
-                time.sleep(min(30,max(5,delay)));continue
+            if r.status_code in (429,500,502,503,504) and attempt<9:
+                try:delay=float(r.headers.get('retry-after','6'))
+                except ValueError:delay=6
+                time.sleep(min(45,max(4,delay)+2));continue
             if not r.ok:raise RuntimeError('Provider HTTP '+str(r.status_code)+'; response body omitted to protect credentials')
             return r.json()
         raise RuntimeError('Provider retries exhausted')
+
 
 def blind_case(case):
     return {'candidates':{k:v for k,v in case['candidates'].items() if k in ('captured','fastdvdnet','spatial_nlm')}}
 
 def run_episode(provider, model, case, provider_name):
     env=EvidenceEnvironment(blind_case(case));usage=[];served=[];messages=[{'role':'system','content':SYSTEM},
-        {'role':'user','content':'Inspect the available evidence, select a candidate, and submit speaking-state decisions for every scored timestamp.'}]
-    for turn in range(8):
-        payload={'model':model,'messages':messages,'tools':schemas(),'tool_choice':'auto','temperature':0,'max_completion_tokens':768}
-        ready=set(env.data)<=env.inspected and (set(env.data)-{'captured'})<=env.compared
-        if (ready and turn>=4) or turn==7:
-            payload['tool_choice']={'type':'function','function':{'name':'submit_decisions'}}
-        if provider_name=='gemini':payload['reasoning_effort']='low'
-        try:data=provider.request('POST','/chat/completions',json=payload)
+        {'role':'user','content':f'The total number of scored timestamps for this clip is exactly {env.n}. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to {env.n} using submit_decisions.'}]
+
+    for turn in range(12):
+        has_inspected = set(env.data) <= env.inspected
+        has_compared = (set(env.data) - {'captured'}) <= env.compared
+        ready = has_inspected and has_compared
+        tools = schemas()
+        tool_choice = 'auto'
+        if has_inspected and not has_compared and turn >= 6:
+            messages.append({'role': 'user', 'content': 'Do not inspect local intervals. Call compare_with_capture for the restored candidates now.'})
+        elif ready and turn >= 8:
+            messages.append({'role': 'user', 'content': 'All candidate evidence has been inspected and compared. Please call submit_decisions now to submit the speaking decisions.'})
+        if turn == 11:
+            tools = [s for s in schemas() if s['function']['name'] == 'submit_decisions']
+            tool_choice = 'required'
+            if not ready:
+                messages.append({'role': 'user', 'content': 'Budget limit reached. You must submit decisions now using candidate="captured".'})
+        payload={'model':model,'messages':messages,'tools':tools,'tool_choice':tool_choice,'temperature':0,'max_completion_tokens':1024}
+
+
+        if provider_name == 'gemini': payload['reasoning_effort'] = 'low'
+        try:
+            data = provider.request('POST', '/chat/completions', json=payload)
         except RuntimeError as error:
-            return {'status':'PROVIDER_FAILED','submission':None,'error':str(error),'evidence_sha256':env.evidence_hash,
-                    'served_models':served,'usage':usage,'messages':messages,'tool_trace':env.trace}
+            return {'status': 'PROVIDER_FAILED', 'submission': None, 'error': str(error), 'evidence_sha256': env.evidence_hash,
+                    'served_models': served, 'usage': usage, 'messages': messages, 'tool_trace': env.trace}
         usage.append(data.get('usage',{}));served.append(data.get('model'))
         msg=data['choices'][0]['message'];messages.append(msg)
         calls=msg.get('tool_calls') or []
@@ -81,6 +103,7 @@ def run_episode(provider, model, case, provider_name):
         if env.submission:break
         if len(env.trace)>=env.budget:break
         if not calls:messages.append({'role':'user','content':'Submit using submit_decisions; plain text does not complete the episode.'})
+        time.sleep(1)
     return {'status':'COMPLETE' if env.submission else 'BUDGET_EXHAUSTED','submission':env.submission,
             'evidence_sha256':env.evidence_hash,'served_models':served,'usage':usage,'messages':messages,'tool_trace':env.trace}
 
@@ -111,8 +134,9 @@ def main():
     if not measured['cases']:raise RuntimeError('No eligible cases')
     identity={'measurements_sha256':sha(args.measurements),'runner_sha256':sha(__file__),
         'environment_sha256':sha(Path(__file__).with_name('ava_evidence_environment.py')),'provider':args.provider,'model':args.model,
-        'max_turns':8,'max_tools':24,'max_completion_tokens':768,'access':'tool_measurements_only','temperature':0,
-        'finalization_policy':'Force submission after required inspections from turn 5, or at turn 8','submission_format':'complete interval partition'}
+        'max_turns':12,'max_tools':24,'max_completion_tokens':1024,'access':'tool_measurements_only','temperature':0,
+        'finalization_policy':'Remind at turn 8, force submission when ready at turn 11','submission_format':'complete interval partition'}
+
     args.output.parent.mkdir(parents=True,exist_ok=True)
     report={'identity':identity,'status':'RUNNING','cases':[]}
     if args.output.exists():

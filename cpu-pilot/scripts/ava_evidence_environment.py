@@ -91,12 +91,16 @@ class EvidenceEnvironment:
             if 'captured' not in self.inspected or candidate not in self.inspected: raise ValueError('Inspect captured and selected speaking evidence first')
             if candidate!='captured' and candidate not in self.compared: raise ValueError('Compare restored evidence first')
             if 'intervals' in args:
+                if isinstance(args['intervals'], str):
+                    try: args['intervals'] = json.loads(args['intervals'])
+                    except Exception: pass
                 labels=[]
                 if not isinstance(args['intervals'],list):raise ValueError('Intervals must be an array')
                 for interval in args['intervals']:
                     if not isinstance(interval,dict) or set(interval)!={'start','end','decision'}:raise ValueError('Invalid interval fields')
                     a,b,decision=interval['start'],interval['end'],interval['decision']
-                    if type(a) is not int or type(b) is not int or a!=len(labels) or not a<b<=self.n:raise ValueError('Intervals must partition the complete grid without gaps or overlap')
+                    if type(a) is not int or type(b) is not int or a!=len(labels) or not a<b<=self.n:
+                        raise ValueError(f"Intervals must partition the complete grid without gaps or overlap from 0 to {self.n} (received interval [{a}, {b}) but expected start={len(labels)} and max end={self.n})")
                     if decision not in ('speaking','not_speaking','abstain'):raise ValueError('Invalid interval decision')
                     labels.extend([decision]*(b-a))
             else:labels=args['decisions']

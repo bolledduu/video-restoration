@@ -91,7 +91,9 @@ These commands require no Hugging Face login. The first downloads only the nine 
         for condition in ('reference', 'degraded', 'omnivr_author_output', 'fastdvdnet'):
             html.append('<video controls preload="metadata" src="' + stem + '__' + condition + '.mp4"></video>')
         html.append('<p><a href="../reference/' + record['sample'] + '">Full reference with original audio</a></p></section>')
-    (ROOT / 'data/omnivr/evaluation/index.html').write_text('\n'.join(html), encoding='utf-8')
+    eval_dir = ROOT / 'data/omnivr/evaluation'
+    eval_dir.mkdir(parents=True, exist_ok=True)
+    (eval_dir / 'index.html').write_text('\n'.join(html), encoding='utf-8')
     print(json.dumps(rows, indent=2))
 
 
