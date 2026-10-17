@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "case_id": "UniTalk-Pilot::qv3-HaaxGUc::qv3-HaaxGUc__label1__sigma25",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "spatial_nlm",
+      "answered": 24,
+      "agent_errors": 18,
+      "captured_errors": 6,
+      "harms": 12,
+      "corrections": 0,
+      "tool_calls": 10,
+      "rationale": "The 'spatial_nlm' candidate shows the highest quality improvement in BRISQUE (lowest value indicates best quality) and the most accurate speaking intervals when compared to the capture, with the least disagreement. Its speaking intervals align with the visual evidence better than the other candidates."
+    },
+    {
+      "case_id": "UniTalk-ASD::kgVz_AXYvn0::kgVz_AXYvn0__label0__sigma15",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "captured",
+      "answered": 24,
+      "agent_errors": 8,
+      "captured_errors": 8,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 10,
+      "rationale": "The 'captured' candidate has the highest MUSIQ score (14.71) and lowest BRISQUE score (36.28), indicating the best appearance quality. Comparisons show it has the least disagreement with the ground truth and the smallest mean absolute score change, making it the most reliable choice for speaking-state decisions."
+    },
+    {
+      "case_id": "UniTalk-ASD::kgVz_AXYvn0::kgVz_AXYvn0__label1__sigma40",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "captured",
+      "answered": 24,
+      "agent_errors": 0,
+      "captured_errors": 0,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 11,
+      "rationale": "The 'captured' candidate has the highest MUSIQ score (16.32) and the lowest BRISQUE score (60.57), indicating the best appearance quality. It also shows perfect agreement with the capture when compared, with no score changes. The speaking inspection confirms a speaking state across all timestamps with high confidence scores (mean 0.61). The other candidates have lower quality scores and disagree with the capture."
+    },
+    {
+      "case_id": "UniTalk-ASD::EEey6Pt0rqI::EEey6Pt0rqI__label0__sigma15",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "spatial_nlm",
+      "answered": 24,
+      "agent_errors": 2,
+      "captured_errors": 0,
+      "harms": 2,
+      "corrections": 0,
+      "tool_calls": 10,
+      "rationale": "The spatial_nlm candidate shows the highest MUSIQ score (17.82) and the lowest BRISQUE score (37.23), indicating the best appearance quality. It also has the most confident speaking intervals with a mean score of 0.3626, suggesting it is the most reliable for speaking-state decisions. The comparison with capture shows a small disagreement (0.0833), which is acceptable given the quality improvements."
+    }
+  ],
+  "total_answered": 96,
+  "total_errors": 28,
+  "total_captured_errors": 14,
+  "total_harms": 14,
+  "total_corrections": 0,
+  "selected_candidates": {
+    "spatial_nlm": 2,
+    "captured": 2
+  }
+}

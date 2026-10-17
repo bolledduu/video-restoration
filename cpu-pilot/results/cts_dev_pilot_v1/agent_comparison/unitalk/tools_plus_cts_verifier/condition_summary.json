@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "case_id": "UniTalk-Pilot::qv3-HaaxGUc::qv3-HaaxGUc__label1__sigma25",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "spatial_nlm",
+      "answered": 24,
+      "agent_errors": 7,
+      "captured_errors": 6,
+      "harms": 1,
+      "corrections": 0,
+      "tool_calls": 12,
+      "rationale": "The spatial_nlm candidate shows the highest BRISQUE score (lowest distortion) and the lowest attribution disagreement (0.5) compared to capture, indicating the most reliable restoration. Its temporal support metrics are also valid, and it aligns with the captured speaking intervals, making it the best choice for final decisions."
+    },
+    {
+      "case_id": "UniTalk-ASD::kgVz_AXYvn0::kgVz_AXYvn0__label0__sigma15",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "captured",
+      "answered": 24,
+      "agent_errors": 8,
+      "captured_errors": 8,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 12,
+      "rationale": "The captured candidate has the highest MUSIQ score (14.71) and lowest BRISQUE score (36.28), indicating the best appearance quality. Both restored candidates (fastdvdnet and spatial_nlm) were verified and found to have diagnostic validity issues, with recommendations to revert to captured. Therefore, the captured candidate is selected for all timestamps."
+    },
+    {
+      "case_id": "UniTalk-ASD::kgVz_AXYvn0::kgVz_AXYvn0__label1__sigma40",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "captured",
+      "answered": 24,
+      "agent_errors": 0,
+      "captured_errors": 0,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 12,
+      "rationale": "The captured candidate has the highest MUSIQ score (16.32) and lowest BRISQUE score (60.57), indicating the best appearance quality. Both fastdvdnet and spatial_nlm show significant degradation in quality metrics and temporal support diagnostics, with recommendations to revert to captured. The speaking decision from captured is consistent across all timestamps, with scores above the 0.5 threshold, making it the most reliable choice."
+    },
+    {
+      "case_id": "UniTalk-ASD::EEey6Pt0rqI::EEey6Pt0rqI__label0__sigma15",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "spatial_nlm",
+      "answered": 24,
+      "agent_errors": 2,
+      "captured_errors": 0,
+      "harms": 2,
+      "corrections": 0,
+      "tool_calls": 12,
+      "rationale": "spatial_nlm has the highest MUSIQ (17.82) and lowest BRISQUE (37.23) among candidates, indicating superior appearance quality. It also shows the most specific speaking intervals with minimal disagreement with capture (0.0833) and passes verification with SAFE_TO_RESTORE recommendation. The speaking interval [0, 2) is supported by both quality and temporal consistency metrics."
+    }
+  ],
+  "total_answered": 96,
+  "total_errors": 17,
+  "total_captured_errors": 14,
+  "total_harms": 3,
+  "total_corrections": 0,
+  "selected_candidates": {
+    "spatial_nlm": 2,
+    "captured": 2
+  }
+}

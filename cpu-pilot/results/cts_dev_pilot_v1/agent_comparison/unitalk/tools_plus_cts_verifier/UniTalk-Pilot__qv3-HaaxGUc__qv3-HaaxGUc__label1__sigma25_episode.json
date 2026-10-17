@@ -1,0 +1,937 @@
+{
+  "case": "UniTalk-Pilot::qv3-HaaxGUc::qv3-HaaxGUc__label1__sigma25",
+  "run": {
+    "status": "COMPLETE",
+    "submission": {
+      "candidate": "spatial_nlm",
+      "intervals": [
+        {
+          "start": 0,
+          "end": 1,
+          "decision": "not_speaking"
+        },
+        {
+          "start": 1,
+          "end": 5,
+          "decision": "not_speaking"
+        },
+        {
+          "start": 5,
+          "end": 12,
+          "decision": "speaking"
+        },
+        {
+          "start": 12,
+          "end": 14,
+          "decision": "not_speaking"
+        },
+        {
+          "start": 14,
+          "end": 24,
+          "decision": "speaking"
+        }
+      ],
+      "rationale": "The spatial_nlm candidate shows the highest BRISQUE score (lowest distortion) and the lowest attribution disagreement (0.5) compared to capture, indicating the most reliable restoration. Its temporal support metrics are also valid, and it aligns with the captured speaking intervals, making it the best choice for final decisions.",
+      "decisions": [
+        "not_speaking",
+        "not_speaking",
+        "not_speaking",
+        "not_speaking",
+        "not_speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "not_speaking",
+        "not_speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking",
+        "speaking"
+      ]
+    },
+    "evidence_sha256": "271c06061233935f186f03c29e496a4559bc17db48183cb9596e04e441c60bc2",
+    "served_models": [
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct"
+    ],
+    "usage": [
+      {
+        "prompt_tokens": 1086,
+        "completion_tokens": 17,
+        "total_tokens": 1103,
+        "cost": 0.00019689,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 672,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00019689,
+          "upstream_inference_prompt_cost": 0.00018414,
+          "upstream_inference_completions_cost": 1.275e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1229,
+        "completion_tokens": 21,
+        "total_tokens": 1250,
+        "cost": 0.00023564,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 672,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00023564,
+          "upstream_inference_prompt_cost": 0.00021989,
+          "upstream_inference_completions_cost": 1.575e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1325,
+        "completion_tokens": 23,
+        "total_tokens": 1348,
+        "cost": 0.00020706,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1088,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00020706,
+          "upstream_inference_prompt_cost": 0.00018981,
+          "upstream_inference_completions_cost": 1.725e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1423,
+        "completion_tokens": 23,
+        "total_tokens": 1446,
+        "cost": 0.00019828,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1344,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00019828,
+          "upstream_inference_prompt_cost": 0.00018103,
+          "upstream_inference_completions_cost": 1.725e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1521,
+        "completion_tokens": 23,
+        "total_tokens": 1544,
+        "cost": 0.00023526,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1248,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00023526,
+          "upstream_inference_prompt_cost": 0.00021801,
+          "upstream_inference_completions_cost": 1.725e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1715,
+        "completion_tokens": 25,
+        "total_tokens": 1740,
+        "cost": 0.0002603,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1440,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002603,
+          "upstream_inference_prompt_cost": 0.00024155,
+          "upstream_inference_completions_cost": 1.875e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1869,
+        "completion_tokens": 25,
+        "total_tokens": 1894,
+        "cost": 0.00028632,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00028632,
+          "upstream_inference_prompt_cost": 0.00026757,
+          "upstream_inference_completions_cost": 1.875e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2058,
+        "completion_tokens": 24,
+        "total_tokens": 2082,
+        "cost": 0.00028706,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1888,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00028706,
+          "upstream_inference_prompt_cost": 0.00026906,
+          "upstream_inference_completions_cost": 1.8e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2207,
+        "completion_tokens": 24,
+        "total_tokens": 2231,
+        "cost": 0.00034511,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1728,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00034511,
+          "upstream_inference_prompt_cost": 0.00032711,
+          "upstream_inference_completions_cost": 1.8e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2355,
+        "completion_tokens": 27,
+        "total_tokens": 2382,
+        "cost": 0.0003386,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2080,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003386,
+          "upstream_inference_prompt_cost": 0.00031835,
+          "upstream_inference_completions_cost": 2.025e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2581,
+        "completion_tokens": 27,
+        "total_tokens": 2608,
+        "cost": 0.00037638,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2224,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00037638,
+          "upstream_inference_prompt_cost": 0.00035613,
+          "upstream_inference_completions_cost": 2.025e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2263,
+        "completion_tokens": 204,
+        "total_tokens": 2467,
+        "cost": 0.00065011,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 528,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00065011,
+          "upstream_inference_prompt_cost": 0.00049711,
+          "upstream_inference_completions_cost": 0.000153
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "messages": [
+      {
+        "role": "system",
+        "content": "You select audiovisual evidence for a visible person's speaking-state decisions.\nYou have NO direct access to pixels, audio, transcripts, identities or true labels.\nUse only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance\nquality, not attribution correctness. TalkNet probabilities are uncalibrated.\nInspect captured and restored candidates before choosing. Compare restored evidence\nwith capture before selecting it. Disagreement alone does not establish an error.\nSpeaking inspections return [start, end_exclusive, speaking_0_or_1] intervals,\nwhich preserve every threshold decision. Request local scores only if needed.\nAfter inspecting the candidates and comparisons, submit without repeating inspections.\nSubmit consecutive intervals with start, exclusive end, and a speaking/not_speaking/abstain\ndecision using submit_decisions. Cover every timestamp from 0 to the total count.\nPrefer useful quality improvements only when evidence supports\nthem. Do not invent observations. Finish within 8 model turns and 24 tool calls."
+      },
+      {
+        "role": "user",
+        "content": "The total number of scored timestamps for this clip is exactly 24. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to 24 using submit_decisions. Always run verify_captured_temporal_support on restored candidates before deciding whether to select them or revert to captured."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-a6e5decca036f320",
+            "function": {
+              "name": "list_evidence",
+              "arguments": "{}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-a6e5decca036f320",
+        "content": "{\"candidates\": [\"captured\", \"fastdvdnet\", \"spatial_nlm\"], \"scored_timestamps\": 24, \"evidence_hash\": \"271c06061233935f186f03c29e496a4559bc17db48183cb9596e04e441c60bc2\", \"access\": \"tool_measurements_only\", \"scores_are_uncalibrated\": true}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-a45db1643e0f5c7b",
+            "function": {
+              "name": "inspect_quality",
+              "arguments": "{\"candidate\": \"captured\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-a45db1643e0f5c7b",
+        "content": "{\"musiq\": 14.385731061299643, \"brisque\": 46.28762181599935, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-940b9526d2c9e172",
+            "function": {
+              "name": "inspect_quality",
+              "arguments": "{\"candidate\": \"fastdvdnet\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-940b9526d2c9e172",
+        "content": "{\"musiq\": 20.194323857625324, \"brisque\": 46.24505869547526, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-8978b8b9f0f59f08",
+            "function": {
+              "name": "inspect_quality",
+              "arguments": "{\"candidate\": \"spatial_nlm\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-8978b8b9f0f59f08",
+        "content": "{\"musiq\": 16.415314038594563, \"brisque\": 1.409543553988139, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-9963ef6158ea8f04",
+            "function": {
+              "name": "inspect_speaking",
+              "arguments": "{\"candidate\": \"captured\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-9963ef6158ea8f04",
+        "content": "{\"intervals_start_endExclusive_speaking\": [[0, 1, 1], [1, 5, 0], [5, 12, 1], [12, 14, 0], [14, 24, 1]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.355549, \"score_max\": 0.650866, \"score_mean\": 0.543281, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-9664280fe40f7914",
+            "function": {
+              "name": "inspect_speaking",
+              "arguments": "{\"candidate\": \"fastdvdnet\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-9664280fe40f7914",
+        "content": "{\"intervals_start_endExclusive_speaking\": [[0, 24, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.092456, \"score_max\": 0.26278, \"score_mean\": 0.17303, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-8a6f52bfe6956c24",
+            "function": {
+              "name": "inspect_speaking",
+              "arguments": "{\"candidate\": \"spatial_nlm\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-8a6f52bfe6956c24",
+        "content": "{\"intervals_start_endExclusive_speaking\": [[0, 16, 0], [16, 20, 1], [20, 22, 0], [22, 24, 1]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.277078, \"score_max\": 0.604878, \"score_mean\": 0.436071, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-8111b8933f3b7a56",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\": \"fastdvdnet\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-8111b8933f3b7a56",
+        "content": "{\"disagreement\": 0.75, \"mean_absolute_score_change\": 0.370251124103864, \"delta_musiq\": 5.808592796325682, \"delta_brisque\": -0.04256312052409328}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-9427d464c1dfcd74",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\": \"spatial_nlm\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-9427d464c1dfcd74",
+        "content": "{\"disagreement\": 0.5, \"mean_absolute_score_change\": 0.10720943038662274, \"delta_musiq\": 2.02958297729492, \"delta_brisque\": -44.878078262011215}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-b57c866362025481",
+            "function": {
+              "name": "verify_captured_temporal_support",
+              "arguments": "{\"candidate\": \"fastdvdnet\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-b57c866362025481",
+        "content": "{\"candidate\": \"fastdvdnet\", \"cts_support\": 7.914674351612724, \"mouth_specificity\": 5.010377953449883, \"heldout_mse\": 10.085126241048187, \"cdi_consistency\": 23.5125562051932, \"mask_stability\": 15.0, \"attribution_disagreement\": 0.75, \"recommendation\": \"SAFE_TO_RESTORE\", \"diagnostic_validity\": \"VALID\", \"provenance\": \"withheld_pixel_temporal_audit\"}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-a6fb02d3529a56e6",
+            "function": {
+              "name": "verify_captured_temporal_support",
+              "arguments": "{\"candidate\": \"spatial_nlm\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-a6fb02d3529a56e6",
+        "content": "{\"candidate\": \"spatial_nlm\", \"cts_support\": 2.987071650723613, \"mouth_specificity\": 1.972280162076153, \"heldout_mse\": 99.75615652402243, \"cdi_consistency\": 10.360471519331137, \"mask_stability\": 15.0, \"attribution_disagreement\": 0.5, \"recommendation\": \"SAFE_TO_RESTORE\", \"diagnostic_validity\": \"VALID\", \"provenance\": \"withheld_pixel_temporal_audit\"}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-a95bab499941468d",
+            "function": {
+              "name": "submit_decisions",
+              "arguments": "{\"candidate\": \"spatial_nlm\", \"intervals\": [{\"start\": 0, \"end\": 1, \"decision\": \"not_speaking\"}, {\"start\": 1, \"end\": 5, \"decision\": \"not_speaking\"}, {\"start\": 5, \"end\": 12, \"decision\": \"speaking\"}, {\"start\": 12, \"end\": 14, \"decision\": \"not_speaking\"}, {\"start\": 14, \"end\": 24, \"decision\": \"speaking\"}], \"rationale\": \"The spatial_nlm candidate shows the highest BRISQUE score (lowest distortion) and the lowest attribution disagreement (0.5) compared to capture, indicating the most reliable restoration. Its temporal support metrics are also valid, and it aligns with the captured speaking intervals, making it the best choice for final decisions.\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-a95bab499941468d",
+        "content": "{\"accepted\": true, \"answered\": 24, \"eligible\": 24}"
+      }
+    ],
+    "tool_trace": [
+      {
+        "tool": "list_evidence",
+        "arguments": {},
+        "output": {
+          "candidates": [
+            "captured",
+            "fastdvdnet",
+            "spatial_nlm"
+          ],
+          "scored_timestamps": 24,
+          "evidence_hash": "271c06061233935f186f03c29e496a4559bc17db48183cb9596e04e441c60bc2",
+          "access": "tool_measurements_only",
+          "scores_are_uncalibrated": true
+        }
+      },
+      {
+        "tool": "inspect_quality",
+        "arguments": {
+          "candidate": "captured"
+        },
+        "output": {
+          "musiq": 14.385731061299643,
+          "brisque": 46.28762181599935,
+          "musiq_direction": "higher",
+          "brisque_direction": "lower"
+        }
+      },
+      {
+        "tool": "inspect_quality",
+        "arguments": {
+          "candidate": "fastdvdnet"
+        },
+        "output": {
+          "musiq": 20.194323857625324,
+          "brisque": 46.24505869547526,
+          "musiq_direction": "higher",
+          "brisque_direction": "lower"
+        }
+      },
+      {
+        "tool": "inspect_quality",
+        "arguments": {
+          "candidate": "spatial_nlm"
+        },
+        "output": {
+          "musiq": 16.415314038594563,
+          "brisque": 1.409543553988139,
+          "musiq_direction": "higher",
+          "brisque_direction": "lower"
+        }
+      },
+      {
+        "tool": "inspect_speaking",
+        "arguments": {
+          "candidate": "captured"
+        },
+        "output": {
+          "intervals_start_endExclusive_speaking": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              5,
+              0
+            ],
+            [
+              5,
+              12,
+              1
+            ],
+            [
+              12,
+              14,
+              0
+            ],
+            [
+              14,
+              24,
+              1
+            ]
+          ],
+          "threshold": 0.5,
+          "calibrated": false,
+          "score_min": 0.355549,
+          "score_max": 0.650866,
+          "score_mean": 0.543281,
+          "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+        }
+      },
+      {
+        "tool": "inspect_speaking",
+        "arguments": {
+          "candidate": "fastdvdnet"
+        },
+        "output": {
+          "intervals_start_endExclusive_speaking": [
+            [
+              0,
+              24,
+              0
+            ]
+          ],
+          "threshold": 0.5,
+          "calibrated": false,
+          "score_min": 0.092456,
+          "score_max": 0.26278,
+          "score_mean": 0.17303,
+          "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+        }
+      },
+      {
+        "tool": "inspect_speaking",
+        "arguments": {
+          "candidate": "spatial_nlm"
+        },
+        "output": {
+          "intervals_start_endExclusive_speaking": [
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              16,
+              20,
+              1
+            ],
+            [
+              20,
+              22,
+              0
+            ],
+            [
+              22,
+              24,
+              1
+            ]
+          ],
+          "threshold": 0.5,
+          "calibrated": false,
+          "score_min": 0.277078,
+          "score_max": 0.604878,
+          "score_mean": 0.436071,
+          "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+        }
+      },
+      {
+        "tool": "compare_with_capture",
+        "arguments": {
+          "candidate": "fastdvdnet"
+        },
+        "output": {
+          "disagreement": 0.75,
+          "mean_absolute_score_change": 0.370251124103864,
+          "delta_musiq": 5.808592796325682,
+          "delta_brisque": -0.04256312052409328
+        }
+      },
+      {
+        "tool": "compare_with_capture",
+        "arguments": {
+          "candidate": "spatial_nlm"
+        },
+        "output": {
+          "disagreement": 0.5,
+          "mean_absolute_score_change": 0.10720943038662274,
+          "delta_musiq": 2.02958297729492,
+          "delta_brisque": -44.878078262011215
+        }
+      },
+      {
+        "tool": "verify_captured_temporal_support",
+        "arguments": {
+          "candidate": "fastdvdnet"
+        },
+        "output": {
+          "candidate": "fastdvdnet",
+          "cts_support": 7.914674351612724,
+          "mouth_specificity": 5.010377953449883,
+          "heldout_mse": 10.085126241048187,
+          "cdi_consistency": 23.5125562051932,
+          "mask_stability": 15.0,
+          "attribution_disagreement": 0.75,
+          "recommendation": "SAFE_TO_RESTORE",
+          "diagnostic_validity": "VALID",
+          "provenance": "withheld_pixel_temporal_audit"
+        }
+      },
+      {
+        "tool": "verify_captured_temporal_support",
+        "arguments": {
+          "candidate": "spatial_nlm"
+        },
+        "output": {
+          "candidate": "spatial_nlm",
+          "cts_support": 2.987071650723613,
+          "mouth_specificity": 1.972280162076153,
+          "heldout_mse": 99.75615652402243,
+          "cdi_consistency": 10.360471519331137,
+          "mask_stability": 15.0,
+          "attribution_disagreement": 0.5,
+          "recommendation": "SAFE_TO_RESTORE",
+          "diagnostic_validity": "VALID",
+          "provenance": "withheld_pixel_temporal_audit"
+        }
+      },
+      {
+        "tool": "submit_decisions",
+        "arguments": {
+          "candidate": "spatial_nlm",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 1,
+              "decision": "not_speaking"
+            },
+            {
+              "start": 1,
+              "end": 5,
+              "decision": "not_speaking"
+            },
+            {
+              "start": 5,
+              "end": 12,
+              "decision": "speaking"
+            },
+            {
+              "start": 12,
+              "end": 14,
+              "decision": "not_speaking"
+            },
+            {
+              "start": 14,
+              "end": 24,
+              "decision": "speaking"
+            }
+          ],
+          "rationale": "The spatial_nlm candidate shows the highest BRISQUE score (lowest distortion) and the lowest attribution disagreement (0.5) compared to capture, indicating the most reliable restoration. Its temporal support metrics are also valid, and it aligns with the captured speaking intervals, making it the best choice for final decisions."
+        },
+        "output": {
+          "accepted": true,
+          "answered": 24,
+          "eligible": 24
+        }
+      }
+    ]
+  },
+  "evaluation": {
+    "eligible": 24,
+    "captured_errors": 6,
+    "restorers": {
+      "fastdvdnet": {
+        "errors": 24,
+        "harm": 18,
+        "corrections": 0
+      },
+      "spatial_nlm": {
+        "errors": 18,
+        "harm": 12,
+        "corrections": 0
+      }
+    },
+    "answered": 24,
+    "coverage": 1.0,
+    "agent_errors": 7,
+    "captured_errors_on_same_answered_frames": 6
+  },
+  "summary": {
+    "case_id": "UniTalk-Pilot::qv3-HaaxGUc::qv3-HaaxGUc__label1__sigma25",
+    "category": "unknown",
+    "status": "COMPLETE",
+    "selected_candidate": "spatial_nlm",
+    "answered": 24,
+    "agent_errors": 7,
+    "captured_errors": 6,
+    "harms": 1,
+    "corrections": 0,
+    "tool_calls": 12,
+    "rationale": "The spatial_nlm candidate shows the highest BRISQUE score (lowest distortion) and the lowest attribution disagreement (0.5) compared to capture, indicating the most reliable restoration. Its temporal support metrics are also valid, and it aligns with the captured speaking intervals, making it the best choice for final decisions."
+  }
+}

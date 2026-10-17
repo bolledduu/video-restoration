@@ -1,0 +1,158 @@
+{
+  "tools_baseline_no_verifier": {
+    "cases": [
+      {
+        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+        "category": "unknown",
+        "status": "COMPLETE",
+        "selected_candidate": "fastdvdnet",
+        "answered": 99,
+        "agent_errors": 62,
+        "captured_errors": 73,
+        "harms": 0,
+        "corrections": 11,
+        "tool_calls": 8,
+        "rationale": "FastDVDNet provides the best balance of quality (MUSIQ: 32.59, BRISQUE: 35.31) and speaking-state accuracy compared to captured (MUSIQ: 18.15, BRISQUE: 41.15) and spatial_nlm (MUSIQ: 16.44, BRISQUE: 7.75). Its speaking intervals are most consistent with the visual evidence and show the least deviation from the ground truth."
+      },
+      {
+        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
+        "category": "unknown",
+        "status": "COMPLETE",
+        "selected_candidate": "spatial_nlm",
+        "answered": 99,
+        "agent_errors": 0,
+        "captured_errors": 0,
+        "harms": 0,
+        "corrections": 0,
+        "tool_calls": 8,
+        "rationale": "Spatial_NLM has the highest MUSIQ score (16.17) and lowest BRISQUE score (40.22), indicating the best appearance quality among the candidates. All speaking inspections for all candidates indicate 'not_speaking' for the entire duration, so the decision is consistent across all candidates."
+      },
+      {
+        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+        "category": "unknown",
+        "status": "COMPLETE",
+        "selected_candidate": "spatial_nlm",
+        "answered": 99,
+        "agent_errors": 45,
+        "captured_errors": 45,
+        "harms": 0,
+        "corrections": 0,
+        "tool_calls": 8,
+        "rationale": "Spatial_NLM has the lowest BRISQUE score (18.64), indicating the highest appearance quality among the candidates. All speaking inspections for all candidates indicate no speaking activity across the entire clip. Therefore, selecting Spatial_NLM as the best candidate for submission with a 'not_speaking' decision for all timestamps is justified."
+      }
+    ],
+    "total_answered": 297,
+    "total_errors": 107,
+    "total_captured_errors": 118,
+    "total_harms": 0,
+    "total_corrections": 11,
+    "selected_candidates": {
+      "fastdvdnet": 1,
+      "spatial_nlm": 2
+    }
+  },
+  "tools_plus_consistency": {
+    "cases": [
+      {
+        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+        "category": "unknown",
+        "status": "COMPLETE",
+        "selected_candidate": "fastdvdnet",
+        "answered": 99,
+        "agent_errors": 62,
+        "captured_errors": 73,
+        "harms": 0,
+        "corrections": 11,
+        "tool_calls": 10,
+        "rationale": "fastdvdnet shows the highest MUSIQ (32.59) and lowest BRISQUE (35.31) among the candidates, indicating the best appearance quality. It also has the lowest disagreement (0.111) with the capture, suggesting it is the most reliable for speaking-state decisions. The speaking intervals align well with the capture's decisions, with only minor differences that are within acceptable thresholds."
+      },
+      {
+        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
+        "category": "unknown",
+        "status": "COMPLETE",
+        "selected_candidate": "spatial_nlm",
+        "answered": 99,
+        "agent_errors": 0,
+        "captured_errors": 0,
+        "harms": 0,
+        "corrections": 0,
+        "tool_calls": 10,
+        "rationale": "spatial_nlm has the highest MUSIQ (16.17) and lowest BRISQUE (40.22) scores, indicating the best appearance quality among the candidates. Comparisons show it has the smallest mean absolute score change and the largest positive delta in MUSIQ, suggesting it provides the most useful quality improvement. All candidates agree on the same speaking intervals, so the decision is consistent across all evidence."
+      },
+      {
+        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+        "category": "unknown",
+        "status": "COMPLETE",
+        "selected_candidate": "spatial_nlm",
+        "answered": 99,
+        "agent_errors": 45,
+        "captured_errors": 45,
+        "harms": 0,
+        "corrections": 0,
+        "tool_calls": 10,
+        "rationale": "spatial_nlm shows the highest BRISQUE improvement (lowest distortion) and the smallest disagreement with capture, indicating the best quality restoration. All candidates agree on 'not_speaking' for the entire duration."
+      }
+    ],
+    "total_answered": 297,
+    "total_errors": 107,
+    "total_captured_errors": 118,
+    "total_harms": 0,
+    "total_corrections": 11,
+    "selected_candidates": {
+      "fastdvdnet": 1,
+      "spatial_nlm": 2
+    }
+  },
+  "tools_plus_cts_verifier": {
+    "cases": [
+      {
+        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+        "category": "unknown",
+        "status": "COMPLETE",
+        "selected_candidate": "fastdvdnet",
+        "answered": 99,
+        "agent_errors": 62,
+        "captured_errors": 73,
+        "harms": 0,
+        "corrections": 11,
+        "tool_calls": 12,
+        "rationale": "fastdvdnet provides the best quality improvement (highest MUSIQ, lowest BRISQUE) and passed temporal support verification. It shows minimal disagreement with capture and offers the most reliable speaking-state decisions."
+      },
+      {
+        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
+        "category": "unknown",
+        "status": "COMPLETE",
+        "selected_candidate": "spatial_nlm",
+        "answered": 99,
+        "agent_errors": 0,
+        "captured_errors": 0,
+        "harms": 0,
+        "corrections": 0,
+        "tool_calls": 12,
+        "rationale": "spatial_nlm has the highest MUSIQ (16.17) and lowest BRISQUE (40.22) scores, indicating the best appearance quality. The verify_captured_temporal_support confirms it is SAFE_TO_RESTORE with valid diagnostics. All speaking inspections for all candidates indicate no speaking activity (0) across the entire clip. Therefore, the decision is to label all timestamps as not_speaking."
+      },
+      {
+        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+        "category": "unknown",
+        "status": "COMPLETE",
+        "selected_candidate": "fastdvdnet",
+        "answered": 99,
+        "agent_errors": 45,
+        "captured_errors": 45,
+        "harms": 0,
+        "corrections": 0,
+        "tool_calls": 12,
+        "rationale": "fastdvdnet shows the highest MUSIQ (31.10) and lowest BRISQUE (35.67) among candidates, indicating superior appearance quality. It also demonstrates perfect temporal support and no disagreement with capture, making it the most reliable choice for speaking-state decisions."
+      }
+    ],
+    "total_answered": 297,
+    "total_errors": 107,
+    "total_captured_errors": 118,
+    "total_harms": 0,
+    "total_corrections": 11,
+    "selected_candidates": {
+      "fastdvdnet": 2,
+      "spatial_nlm": 1
+    }
+  }
+}

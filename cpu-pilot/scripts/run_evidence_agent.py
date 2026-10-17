@@ -6,7 +6,8 @@ from ava_evidence_environment import EvidenceEnvironment, schemas
 
 PROVIDERS = {'groq': ('https://api.groq.com/openai/v1', 'GROQ_API_KEY'),
              'gemini': ('https://generativelanguage.googleapis.com/v1beta/openai', 'GEMINI_API_KEY'),
-             'openrouter': ('https://openrouter.ai/api/v1', 'OPENROUTER_API_KEY')}
+             'openrouter': ('https://openrouter.ai/api/v1', 'OPENROUTER_API_KEY'),
+             'huggingface': ('https://router.huggingface.co/hf-inference/v1', 'HF_TOKEN')}
 SYSTEM = """You select audiovisual evidence for a visible person's speaking-state decisions.
 You have NO direct access to pixels, audio, transcripts, identities or true labels.
 Use only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance
@@ -52,7 +53,7 @@ class Provider:
             except requests.RequestException:raise RuntimeError('Provider transport failed; no response recorded') from None
             if r.status_code==401 and self.backup and not self.used_backup:
                 self.key=self.backup;self.used_backup=True;continue
-            if r.status_code in (429,500,502,503,504) and attempt<9:
+            if r.status_code in (402,429,500,502,503,504) and attempt<9:
                 try:delay=float(r.headers.get('retry-after','6'))
                 except ValueError:delay=6
                 time.sleep(min(45,max(4,delay)+2));continue
@@ -62,16 +63,21 @@ class Provider:
 
 
 def blind_case(case):
-    return {'candidates':{k:v for k,v in case['candidates'].items() if k in ('captured','fastdvdnet','spatial_nlm')}}
+    return {'candidates':{k:v for k,v in case['candidates'].items() if k in ('captured','fastdvdnet','spatial_nlm','omnivr')}}
 
 def run_episode(provider, model, case, provider_name, allowed_tools=None, max_turns=12):
-    env=EvidenceEnvironment(blind_case(case), allowed_tools=allowed_tools);usage=[];served=[];messages=[{'role':'system','content':SYSTEM},
-        {'role':'user','content':f'The total number of scored timestamps for this clip is exactly {env.n}. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to {env.n} using submit_decisions.'}]
+    env=EvidenceEnvironment(blind_case(case), allowed_tools=allowed_tools);usage=[];served=[];messages=[{'role':'system','content':SYSTEM}]
+    has_verifier = (allowed_tools is not None and 'verify_captured_temporal_support' in allowed_tools)
+    initial_user_msg = f'The total number of scored timestamps for this clip is exactly {env.n}. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to {env.n} using submit_decisions.'
+    if has_verifier:
+        initial_user_msg += ' Always run verify_captured_temporal_support on restored candidates before deciding whether to select them or revert to captured.'
+    messages.append({'role':'user','content':initial_user_msg})
 
     for turn in range(max_turns):
         has_compare = (allowed_tools is None or 'compare_with_capture' in allowed_tools)
         ready = (set(env.data) <= env.inspected and
-                 ((set(env.data) - {'captured'}) <= env.compared if has_compare else True))
+                 ((set(env.data) - {'captured'}) <= env.compared if has_compare else True) and
+                 ((set(env.data) - {'captured'}) <= env.verified if has_verifier else True))
         all_s = schemas()
         if allowed_tools is not None:
             tools = [s for s in all_s if s['function']['name'] in allowed_tools or s['function']['name'] == 'submit_decisions']
@@ -83,8 +89,8 @@ def run_episode(provider, model, case, provider_name, allowed_tools=None, max_tu
             tool_choice = {'type':'function', 'function':{'name':'submit_decisions'}}
         elif turn >= 5:
             messages.append({'role':'user', 'content':
-                'Complete missing candidate inspections and comparisons, then submit. Do not repeat completed inspections.'})
-        payload={'model':model,'messages':messages,'tools':tools,'tool_choice':tool_choice,'temperature':0,'max_completion_tokens':1024}
+                'Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections.'})
+        payload={'model':model,'messages':messages,'tools':tools,'tool_choice':tool_choice,'temperature':0,'max_completion_tokens':512}
 
 
         if provider_name == 'gemini': payload['reasoning_effort'] = 'low'

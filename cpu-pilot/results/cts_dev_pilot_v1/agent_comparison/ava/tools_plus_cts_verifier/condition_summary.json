@@ -1,0 +1,52 @@
+{
+  "cases": [
+    {
+      "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "fastdvdnet",
+      "answered": 99,
+      "agent_errors": 62,
+      "captured_errors": 73,
+      "harms": 0,
+      "corrections": 11,
+      "tool_calls": 12,
+      "rationale": "fastdvdnet provides the best quality improvement (highest MUSIQ, lowest BRISQUE) and passed temporal support verification. It shows minimal disagreement with capture and offers the most reliable speaking-state decisions."
+    },
+    {
+      "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "spatial_nlm",
+      "answered": 99,
+      "agent_errors": 0,
+      "captured_errors": 0,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 12,
+      "rationale": "spatial_nlm has the highest MUSIQ (16.17) and lowest BRISQUE (40.22) scores, indicating the best appearance quality. The verify_captured_temporal_support confirms it is SAFE_TO_RESTORE with valid diagnostics. All speaking inspections for all candidates indicate no speaking activity (0) across the entire clip. Therefore, the decision is to label all timestamps as not_speaking."
+    },
+    {
+      "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "fastdvdnet",
+      "answered": 99,
+      "agent_errors": 45,
+      "captured_errors": 45,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 12,
+      "rationale": "fastdvdnet shows the highest MUSIQ (31.10) and lowest BRISQUE (35.67) among candidates, indicating superior appearance quality. It also demonstrates perfect temporal support and no disagreement with capture, making it the most reliable choice for speaking-state decisions."
+    }
+  ],
+  "total_answered": 297,
+  "total_errors": 107,
+  "total_captured_errors": 118,
+  "total_harms": 0,
+  "total_corrections": 11,
+  "selected_candidates": {
+    "fastdvdnet": 2,
+    "spatial_nlm": 1
+  }
+}

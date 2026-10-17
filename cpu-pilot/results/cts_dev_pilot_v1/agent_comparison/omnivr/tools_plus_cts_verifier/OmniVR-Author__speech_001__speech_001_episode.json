@@ -1,0 +1,917 @@
+{
+  "case": "OmniVR-Author::speech_001::speech_001",
+  "run": {
+    "status": "COMPLETE",
+    "submission": {
+      "candidate": "fastdvdnet",
+      "intervals": [
+        {
+          "start": 0,
+          "end": 49,
+          "decision": "abstain"
+        }
+      ],
+      "rationale": "fastdvdnet was verified to have CTS support below threshold and recommendation to revert to captured. omnivr, while having higher quality scores, showed disagreement with capture and was not selected. Captured evidence is the most reliable basis for decisions.",
+      "decisions": [
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain",
+        "abstain"
+      ]
+    },
+    "evidence_sha256": "1d5c5de09ed55cf9dc39d1e401a66dd85ef606b9cddbf2b97d1929b55c53b281",
+    "served_models": [
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct",
+      "qwen/qwen3-vl-8b-instruct"
+    ],
+    "usage": [
+      {
+        "prompt_tokens": 1086,
+        "completion_tokens": 17,
+        "total_tokens": 1103,
+        "cost": 0.00014489,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1072,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014489,
+          "upstream_inference_prompt_cost": 0.00013214,
+          "upstream_inference_completions_cost": 1.275e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1224,
+        "completion_tokens": 21,
+        "total_tokens": 1245,
+        "cost": 0.00017407,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1136,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00017407,
+          "upstream_inference_prompt_cost": 0.00015832,
+          "upstream_inference_completions_cost": 1.575e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1320,
+        "completion_tokens": 23,
+        "total_tokens": 1343,
+        "cost": 0.00018709,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1232,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00018709,
+          "upstream_inference_prompt_cost": 0.00016984,
+          "upstream_inference_completions_cost": 1.725e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1419,
+        "completion_tokens": 22,
+        "total_tokens": 1441,
+        "cost": 0.00019861,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1328,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00019861,
+          "upstream_inference_prompt_cost": 0.00018211,
+          "upstream_inference_completions_cost": 1.65e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1516,
+        "completion_tokens": 23,
+        "total_tokens": 1539,
+        "cost": 0.00020905,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1440,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00020905,
+          "upstream_inference_prompt_cost": 0.0001918,
+          "upstream_inference_completions_cost": 1.725e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1689,
+        "completion_tokens": 25,
+        "total_tokens": 1714,
+        "cost": 0.00024132,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00024132,
+          "upstream_inference_prompt_cost": 0.00022257,
+          "upstream_inference_completions_cost": 1.875e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1865,
+        "completion_tokens": 24,
+        "total_tokens": 1889,
+        "cost": 0.00026169,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1712,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00026169,
+          "upstream_inference_prompt_cost": 0.00024369,
+          "upstream_inference_completions_cost": 1.8e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2042,
+        "completion_tokens": 24,
+        "total_tokens": 2066,
+        "cost": 0.00028306,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1888,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00028306,
+          "upstream_inference_prompt_cost": 0.00026506,
+          "upstream_inference_completions_cost": 1.8e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2193,
+        "completion_tokens": 23,
+        "total_tokens": 2216,
+        "cost": 0.00041782,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1136,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00041782,
+          "upstream_inference_prompt_cost": 0.00040057,
+          "upstream_inference_completions_cost": 1.725e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2354,
+        "completion_tokens": 27,
+        "total_tokens": 2381,
+        "cost": 0.00032171,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2208,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00032171,
+          "upstream_inference_prompt_cost": 0.00030146,
+          "upstream_inference_completions_cost": 2.025e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2584,
+        "completion_tokens": 26,
+        "total_tokens": 2610,
+        "cost": 0.00035766,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2368,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00035766,
+          "upstream_inference_prompt_cost": 0.00033816,
+          "upstream_inference_completions_cost": 1.95e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2278,
+        "completion_tokens": 105,
+        "total_tokens": 2383,
+        "cost": 0.00056713,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 624,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00056713,
+          "upstream_inference_prompt_cost": 0.00048838,
+          "upstream_inference_completions_cost": 7.875e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "messages": [
+      {
+        "role": "system",
+        "content": "You select audiovisual evidence for a visible person's speaking-state decisions.\nYou have NO direct access to pixels, audio, transcripts, identities or true labels.\nUse only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance\nquality, not attribution correctness. TalkNet probabilities are uncalibrated.\nInspect captured and restored candidates before choosing. Compare restored evidence\nwith capture before selecting it. Disagreement alone does not establish an error.\nSpeaking inspections return [start, end_exclusive, speaking_0_or_1] intervals,\nwhich preserve every threshold decision. Request local scores only if needed.\nAfter inspecting the candidates and comparisons, submit without repeating inspections.\nSubmit consecutive intervals with start, exclusive end, and a speaking/not_speaking/abstain\ndecision using submit_decisions. Cover every timestamp from 0 to the total count.\nPrefer useful quality improvements only when evidence supports\nthem. Do not invent observations. Finish within 8 model turns and 24 tool calls."
+      },
+      {
+        "role": "user",
+        "content": "The total number of scored timestamps for this clip is exactly 49. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to 49 using submit_decisions. Always run verify_captured_temporal_support on restored candidates before deciding whether to select them or revert to captured."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-8d0520840970b6ae",
+            "function": {
+              "name": "list_evidence",
+              "arguments": "{}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-8d0520840970b6ae",
+        "content": "{\"candidates\": [\"captured\", \"fastdvdnet\", \"omnivr\"], \"scored_timestamps\": 49, \"evidence_hash\": \"1d5c5de09ed55cf9dc39d1e401a66dd85ef606b9cddbf2b97d1929b55c53b281\", \"access\": \"tool_measurements_only\", \"scores_are_uncalibrated\": true}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-bfa50f48e4932d6b",
+            "function": {
+              "name": "inspect_quality",
+              "arguments": "{\"candidate\": \"captured\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-bfa50f48e4932d6b",
+        "content": "{\"musiq\": 20.96887810068597, \"brisque\": 20.518724630272946, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-b4329ac122fbb326",
+            "function": {
+              "name": "inspect_quality",
+              "arguments": "{\"candidate\": \"fastdvdnet\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-b4329ac122fbb326",
+        "content": "{\"musiq\": 21.017573069692684, \"brisque\": 20.593026833325023, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-9c5ca78c52c3d2e7",
+            "function": {
+              "name": "inspect_quality",
+              "arguments": "{\"candidate\": \"omnivr\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-9c5ca78c52c3d2e7",
+        "content": "{\"musiq\": 22.331428114813082, \"brisque\": 15.17156407828798, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-91f881ec40aa9f9b",
+            "function": {
+              "name": "inspect_speaking",
+              "arguments": "{\"candidate\": \"captured\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-91f881ec40aa9f9b",
+        "content": "{\"intervals_start_endExclusive_speaking\": [[0, 7, 1], [7, 18, 0], [18, 49, 1]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.319932, \"score_max\": 0.753478, \"score_mean\": 0.58117, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-ab8db665fbbf7802",
+            "function": {
+              "name": "inspect_speaking",
+              "arguments": "{\"candidate\": \"fastdvdnet\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-ab8db665fbbf7802",
+        "content": "{\"intervals_start_endExclusive_speaking\": [[0, 7, 1], [7, 18, 0], [18, 49, 1]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.304223, \"score_max\": 0.742241, \"score_mean\": 0.568995, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-81c0b427de0a0ed6",
+            "function": {
+              "name": "inspect_speaking",
+              "arguments": "{\"candidate\": \"omnivr\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-81c0b427de0a0ed6",
+        "content": "{\"intervals_start_endExclusive_speaking\": [[0, 14, 1], [14, 16, 0], [16, 49, 1]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.449611, \"score_max\": 0.794467, \"score_mean\": 0.645005, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-a985ced3678d7241",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\": \"fastdvdnet\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-a985ced3678d7241",
+        "content": "{\"disagreement\": 0.0, \"mean_absolute_score_change\": 0.0171723760452646, \"delta_musiq\": 0.04869496900671422, \"delta_brisque\": 0.07430220305207769}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-a434a5f77170f028",
+            "function": {
+              "name": "compare_with_capture",
+              "arguments": "{\"candidate\": \"omnivr\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-a434a5f77170f028",
+        "content": "{\"disagreement\": 0.1836734693877551, \"mean_absolute_score_change\": 0.096915313407671, \"delta_musiq\": 1.3625500141271125, \"delta_brisque\": -5.347160551984965}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-83efba4b6e1b06d4",
+            "function": {
+              "name": "verify_captured_temporal_support",
+              "arguments": "{\"candidate\": \"fastdvdnet\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-83efba4b6e1b06d4",
+        "content": "{\"candidate\": \"fastdvdnet\", \"cts_support\": -0.14863602549129526, \"mouth_specificity\": -0.17298350999465237, \"heldout_mse\": 10.148604406104155, \"cdi_consistency\": 5.85861880226323, \"mask_stability\": 15.0, \"attribution_disagreement\": 0.0, \"recommendation\": \"REVERT_TO_CAPTURED\", \"diagnostic_validity\": \"VALID\", \"provenance\": \"withheld_pixel_temporal_audit\"}"
+      },
+      {
+        "role": "user",
+        "content": "Complete missing candidate inspections, comparisons, and verifications, then submit. Do not repeat completed inspections."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-9e1373d005a2d807",
+            "function": {
+              "name": "verify_captured_temporal_support",
+              "arguments": "{\"candidate\": \"omnivr\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-9e1373d005a2d807",
+        "content": "{\"candidate\": \"omnivr\", \"cts_support\": 1.7559468941775151, \"mouth_specificity\": 1.074671887113959, \"heldout_mse\": 20.69432110396993, \"cdi_consistency\": 9.84576567038355, \"mask_stability\": 15.0, \"attribution_disagreement\": 0.1836734693877551, \"recommendation\": \"SAFE_TO_RESTORE\", \"diagnostic_validity\": \"VALID\", \"provenance\": \"withheld_pixel_temporal_audit\"}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "chatcmpl-tool-9baba0582c2adb9c",
+            "function": {
+              "name": "submit_decisions",
+              "arguments": "{\"candidate\": \"fastdvdnet\", \"intervals\": [{\"start\": 0, \"end\": 49, \"decision\": \"abstain\"}], \"rationale\": \"fastdvdnet was verified to have CTS support below threshold and recommendation to revert to captured. omnivr, while having higher quality scores, showed disagreement with capture and was not selected. Captured evidence is the most reliable basis for decisions.\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "chatcmpl-tool-9baba0582c2adb9c",
+        "content": "{\"accepted\": true, \"answered\": 0, \"eligible\": 49}"
+      }
+    ],
+    "tool_trace": [
+      {
+        "tool": "list_evidence",
+        "arguments": {},
+        "output": {
+          "candidates": [
+            "captured",
+            "fastdvdnet",
+            "omnivr"
+          ],
+          "scored_timestamps": 49,
+          "evidence_hash": "1d5c5de09ed55cf9dc39d1e401a66dd85ef606b9cddbf2b97d1929b55c53b281",
+          "access": "tool_measurements_only",
+          "scores_are_uncalibrated": true
+        }
+      },
+      {
+        "tool": "inspect_quality",
+        "arguments": {
+          "candidate": "captured"
+        },
+        "output": {
+          "musiq": 20.96887810068597,
+          "brisque": 20.518724630272946,
+          "musiq_direction": "higher",
+          "brisque_direction": "lower"
+        }
+      },
+      {
+        "tool": "inspect_quality",
+        "arguments": {
+          "candidate": "fastdvdnet"
+        },
+        "output": {
+          "musiq": 21.017573069692684,
+          "brisque": 20.593026833325023,
+          "musiq_direction": "higher",
+          "brisque_direction": "lower"
+        }
+      },
+      {
+        "tool": "inspect_quality",
+        "arguments": {
+          "candidate": "omnivr"
+        },
+        "output": {
+          "musiq": 22.331428114813082,
+          "brisque": 15.17156407828798,
+          "musiq_direction": "higher",
+          "brisque_direction": "lower"
+        }
+      },
+      {
+        "tool": "inspect_speaking",
+        "arguments": {
+          "candidate": "captured"
+        },
+        "output": {
+          "intervals_start_endExclusive_speaking": [
+            [
+              0,
+              7,
+              1
+            ],
+            [
+              7,
+              18,
+              0
+            ],
+            [
+              18,
+              49,
+              1
+            ]
+          ],
+          "threshold": 0.5,
+          "calibrated": false,
+          "score_min": 0.319932,
+          "score_max": 0.753478,
+          "score_mean": 0.58117,
+          "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+        }
+      },
+      {
+        "tool": "inspect_speaking",
+        "arguments": {
+          "candidate": "fastdvdnet"
+        },
+        "output": {
+          "intervals_start_endExclusive_speaking": [
+            [
+              0,
+              7,
+              1
+            ],
+            [
+              7,
+              18,
+              0
+            ],
+            [
+              18,
+              49,
+              1
+            ]
+          ],
+          "threshold": 0.5,
+          "calibrated": false,
+          "score_min": 0.304223,
+          "score_max": 0.742241,
+          "score_mean": 0.568995,
+          "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+        }
+      },
+      {
+        "tool": "inspect_speaking",
+        "arguments": {
+          "candidate": "omnivr"
+        },
+        "output": {
+          "intervals_start_endExclusive_speaking": [
+            [
+              0,
+              14,
+              1
+            ],
+            [
+              14,
+              16,
+              0
+            ],
+            [
+              16,
+              49,
+              1
+            ]
+          ],
+          "threshold": 0.5,
+          "calibrated": false,
+          "score_min": 0.449611,
+          "score_max": 0.794467,
+          "score_mean": 0.645005,
+          "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+        }
+      },
+      {
+        "tool": "compare_with_capture",
+        "arguments": {
+          "candidate": "fastdvdnet"
+        },
+        "output": {
+          "disagreement": 0.0,
+          "mean_absolute_score_change": 0.0171723760452646,
+          "delta_musiq": 0.04869496900671422,
+          "delta_brisque": 0.07430220305207769
+        }
+      },
+      {
+        "tool": "compare_with_capture",
+        "arguments": {
+          "candidate": "omnivr"
+        },
+        "output": {
+          "disagreement": 0.1836734693877551,
+          "mean_absolute_score_change": 0.096915313407671,
+          "delta_musiq": 1.3625500141271125,
+          "delta_brisque": -5.347160551984965
+        }
+      },
+      {
+        "tool": "verify_captured_temporal_support",
+        "arguments": {
+          "candidate": "fastdvdnet"
+        },
+        "output": {
+          "candidate": "fastdvdnet",
+          "cts_support": -0.14863602549129526,
+          "mouth_specificity": -0.17298350999465237,
+          "heldout_mse": 10.148604406104155,
+          "cdi_consistency": 5.85861880226323,
+          "mask_stability": 15.0,
+          "attribution_disagreement": 0.0,
+          "recommendation": "REVERT_TO_CAPTURED",
+          "diagnostic_validity": "VALID",
+          "provenance": "withheld_pixel_temporal_audit"
+        }
+      },
+      {
+        "tool": "verify_captured_temporal_support",
+        "arguments": {
+          "candidate": "omnivr"
+        },
+        "output": {
+          "candidate": "omnivr",
+          "cts_support": 1.7559468941775151,
+          "mouth_specificity": 1.074671887113959,
+          "heldout_mse": 20.69432110396993,
+          "cdi_consistency": 9.84576567038355,
+          "mask_stability": 15.0,
+          "attribution_disagreement": 0.1836734693877551,
+          "recommendation": "SAFE_TO_RESTORE",
+          "diagnostic_validity": "VALID",
+          "provenance": "withheld_pixel_temporal_audit"
+        }
+      },
+      {
+        "tool": "submit_decisions",
+        "arguments": {
+          "candidate": "fastdvdnet",
+          "intervals": [
+            {
+              "start": 0,
+              "end": 49,
+              "decision": "abstain"
+            }
+          ],
+          "rationale": "fastdvdnet was verified to have CTS support below threshold and recommendation to revert to captured. omnivr, while having higher quality scores, showed disagreement with capture and was not selected. Captured evidence is the most reliable basis for decisions."
+        },
+        "output": {
+          "accepted": true,
+          "answered": 0,
+          "eligible": 49
+        }
+      }
+    ]
+  },
+  "evaluation": {
+    "eligible": 49,
+    "captured_errors": 11,
+    "restorers": {
+      "fastdvdnet": {
+        "errors": 11,
+        "harm": 0,
+        "corrections": 0
+      },
+      "omnivr": {
+        "errors": 2,
+        "harm": 0,
+        "corrections": 9
+      }
+    },
+    "answered": 0,
+    "coverage": 0.0,
+    "agent_errors": 0,
+    "captured_errors_on_same_answered_frames": 0
+  },
+  "summary": {
+    "case_id": "OmniVR-Author::speech_001::speech_001",
+    "category": "speaking",
+    "status": "COMPLETE",
+    "selected_candidate": "fastdvdnet",
+    "answered": 0,
+    "agent_errors": 0,
+    "captured_errors": 0,
+    "harms": 0,
+    "corrections": 0,
+    "tool_calls": 12,
+    "rationale": "fastdvdnet was verified to have CTS support below threshold and recommendation to revert to captured. omnivr, while having higher quality scores, showed disagreement with capture and was not selected. Captured evidence is the most reliable basis for decisions."
+  }
+}

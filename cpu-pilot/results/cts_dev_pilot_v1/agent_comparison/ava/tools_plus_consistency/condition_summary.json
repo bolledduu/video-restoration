@@ -1,0 +1,52 @@
+{
+  "cases": [
+    {
+      "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "fastdvdnet",
+      "answered": 99,
+      "agent_errors": 62,
+      "captured_errors": 73,
+      "harms": 0,
+      "corrections": 11,
+      "tool_calls": 10,
+      "rationale": "fastdvdnet shows the highest MUSIQ (32.59) and lowest BRISQUE (35.31) among the candidates, indicating the best appearance quality. It also has the lowest disagreement (0.111) with the capture, suggesting it is the most reliable for speaking-state decisions. The speaking intervals align well with the capture's decisions, with only minor differences that are within acceptable thresholds."
+    },
+    {
+      "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "spatial_nlm",
+      "answered": 99,
+      "agent_errors": 0,
+      "captured_errors": 0,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 10,
+      "rationale": "spatial_nlm has the highest MUSIQ (16.17) and lowest BRISQUE (40.22) scores, indicating the best appearance quality among the candidates. Comparisons show it has the smallest mean absolute score change and the largest positive delta in MUSIQ, suggesting it provides the most useful quality improvement. All candidates agree on the same speaking intervals, so the decision is consistent across all evidence."
+    },
+    {
+      "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "spatial_nlm",
+      "answered": 99,
+      "agent_errors": 45,
+      "captured_errors": 45,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 10,
+      "rationale": "spatial_nlm shows the highest BRISQUE improvement (lowest distortion) and the smallest disagreement with capture, indicating the best quality restoration. All candidates agree on 'not_speaking' for the entire duration."
+    }
+  ],
+  "total_answered": 297,
+  "total_errors": 107,
+  "total_captured_errors": 118,
+  "total_harms": 0,
+  "total_corrections": 11,
+  "selected_candidates": {
+    "fastdvdnet": 1,
+    "spatial_nlm": 2
+  }
+}

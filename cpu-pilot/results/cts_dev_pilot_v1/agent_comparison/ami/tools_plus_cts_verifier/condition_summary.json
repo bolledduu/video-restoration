@@ -1,0 +1,38 @@
+{
+  "cases": [
+    {
+      "case_id": "AMI-Meeting::ES2002a::ES2002a__targetA__label1",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "fastdvdnet",
+      "answered": 24,
+      "agent_errors": 24,
+      "captured_errors": 24,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 8,
+      "rationale": "fastdvdnet has superior quality metrics (higher MUSIQ, lower BRISQUE) and passed all verifications. It also shows no disagreement with capture and provides the most reliable evidence for speaking-state decisions."
+    },
+    {
+      "case_id": "AMI-Meeting::ES2002a::ES2002a__targetA__label0",
+      "category": "unknown",
+      "status": "COMPLETE",
+      "selected_candidate": "fastdvdnet",
+      "answered": 24,
+      "agent_errors": 0,
+      "captured_errors": 0,
+      "harms": 0,
+      "corrections": 0,
+      "tool_calls": 8,
+      "rationale": "fastdvdnet has superior quality metrics (higher MUSIQ, lower BRISQUE) and passes all verification checks. It also shows no disagreement with the captured evidence and provides a more consistent restoration. The speaking inspection confirms the decision to label the entire clip as not_speaking."
+    }
+  ],
+  "total_answered": 48,
+  "total_errors": 24,
+  "total_captured_errors": 24,
+  "total_harms": 0,
+  "total_corrections": 0,
+  "selected_candidates": {
+    "fastdvdnet": 2
+  }
+}

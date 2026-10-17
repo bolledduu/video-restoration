@@ -81,21 +81,24 @@ def main():
         'Independent arithmetic verification: results/unitalk_result_audit.json (separate standard-library calculation of saved scores; no independent relabeling).', '',
         'Machine-readable results: results/unitalk_cpu_evaluation.json. Full frame scores: results/unitalk_cpu_frame_scores.json. Selection/label provenance: results/unitalk_cpu_inputs.json and results/unitalk_input_audit.json.', '']
     (ROOT / 'FINAL_CPU_RESEARCH_DECISION.md').write_text('\n'.join(lines), encoding='utf-8')
-    # Show every selected case, not an outcome-selected success illustration.
-    sheet = Image.new('RGB', (5 * 160, 36 + len(report['cases']) * 166), 'white')
-    draw = ImageDraw.Draw(sheet)
-    for col, title in enumerate(('Reference', 'Degraded', 'Visual-only', 'Matched audio', 'Swapped audio')):
-        draw.text((col * 160 + 4, 8), title, fill='black')
-    for i, c in enumerate(report['cases']):
-        record = next(r for r in manifest['records'] if c['id'] == f"{r['id']}__r{c['resolution']}")
-        with np.load(directory / record['path']) as data:
-            images = [data['reference'][12]]
-        with np.load(directory / 'outputs' / (c['id'] + '.npz')) as data:
-            images += [data[k][12] for k in ('degraded', 'visual_only', 'matching', 'swapped')]
-        for col, image in enumerate(images):
-            sheet.paste(Image.fromarray(image), (col * 160, 36 + i * 166))
-        draw.text((4, 166 + i * 166), c['id'] + ' | label=' + str(c['label']), fill='black')
-    sheet.save(directory / 'all_case_comparison.png')
+    # Show every selected case if raw array artifacts are present locally.
+    if (directory / 'outputs').is_dir() and any((directory / 'outputs').glob('*.npz')):
+        sheet = Image.new('RGB', (5 * 160, 36 + len(report['cases']) * 166), 'white')
+        draw = ImageDraw.Draw(sheet)
+        for col, title in enumerate(('Reference', 'Degraded', 'Visual-only', 'Matched audio', 'Swapped audio')):
+            draw.text((col * 160 + 4, 8), title, fill='black')
+        for i, c in enumerate(report['cases']):
+            record = next(r for r in manifest['records'] if c['id'] == f"{r['id']}__r{c['resolution']}")
+            if not (directory / record['path']).exists():
+                continue
+            with np.load(directory / record['path']) as data:
+                images = [data['reference'][12]]
+            with np.load(directory / 'outputs' / (c['id'] + '.npz')) as data:
+                images += [data[k][12] for k in ('degraded', 'visual_only', 'matching', 'swapped')]
+            for col, image in enumerate(images):
+                sheet.paste(Image.fromarray(image), (col * 160, 36 + i * 166))
+            draw.text((4, 166 + i * 166), c['id'] + ' | label=' + str(c['label']), fill='black')
+        sheet.save(directory / 'all_case_comparison.png')
     print(decision)
 
 

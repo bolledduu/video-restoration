@@ -25,7 +25,7 @@ class EvidenceEnvironment:
         self.data = {}
         self.allowed_tools = set(allowed_tools) if allowed_tools is not None else None
         for name, value in measured['candidates'].items():
-            if name not in {'captured', 'fastdvdnet', 'spatial_nlm'}:
+            if name not in {'captured', 'fastdvdnet', 'spatial_nlm', 'omnivr'}:
                 raise ValueError('Unsupported candidate')
             # Explicit allowlist prevents label, error, reference, and source leakage.
             self.data[name] = {k:copy.deepcopy(value[k]) for k in ('musiq','brisque','probability')}
@@ -43,7 +43,7 @@ class EvidenceEnvironment:
         self.n=len(self.data['captured']['probability'])
         if any(len(v['probability'])!=self.n for v in self.data.values()):
             raise ValueError('Scoring grids differ')
-        self.budget=budget; self.trace=[]; self.inspected=set(); self.compared=set(); self.submission=None
+        self.budget=budget; self.trace=[]; self.inspected=set(); self.compared=set(); self.verified=set(); self.submission=None
         self.evidence_hash=hashlib.sha256(json.dumps(self.data,sort_keys=True,allow_nan=False).encode()).hexdigest()
 
     def call(self, name, args):
@@ -93,6 +93,7 @@ class EvidenceEnvironment:
                     'delta_musiq':value['musiq']-base['musiq'],'delta_brisque':value['brisque']-base['brisque']}
         if name=='verify_captured_temporal_support':
             if set(args)!={'candidate'}: raise ValueError('Unexpected arguments')
+            self.verified.add(candidate)
             cts=value.get('cts',{})
             s=cts.get('cts_support',0.0)
             validity=cts.get('diagnostic_validity','VALID')

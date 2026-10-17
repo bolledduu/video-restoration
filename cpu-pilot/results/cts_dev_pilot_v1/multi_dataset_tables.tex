@@ -1,0 +1,53 @@
+% =================================================================
+% Table 1: Multi-Dataset 3-Condition CTS Verifier Comparison
+% =================================================================
+\begin{table*}[t]
+\centering\small
+\caption{Multimodal agent evaluation under three tool conditions across all four datasets (Qwen3-VL-8B). Matched budget (12 turns max, 24 tool calls max). Reports answered timestamps, error counts (rate), primary harms, and useful corrections.}
+\label{tab:toolconditions_alldatasets}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+Condition & Dataset & Answered & Errors (Rate) & Harms / Corrs & Net Impact \\
+\midrule
+1. Baseline (No Verifier)      & AVA      & 297 & 107 ( 36.0\%) &  0 / 11 &  +11 \\
+                               & AMI      &  48 & 24 ( 50.0\%) &  0 /  0 &    0 \\
+                               & UniTalk  &  96 & 28 ( 29.2\%) & 14 /  0 &  -14 \\
+                               & OmniVR   & 147 & 11 (  7.5\%) &  0 /  0 &    0 \\
+\midrule
+2. Baseline + Consistency      & AVA      & 297 & 107 ( 36.0\%) &  0 / 11 &  +11 \\
+                               & AMI      &  48 & 24 ( 50.0\%) &  0 /  0 &    0 \\
+                               & UniTalk  &  96 & 28 ( 29.2\%) & 14 /  0 &  -14 \\
+                               & OmniVR   & 147 &  0 (  0.0\%) &  0 / 11 &  +11 \\
+\midrule
+3. Baseline + CTS Verifier     & AVA      & 297 & 107 ( 36.0\%) &  0 / 11 &  +11 \\
+                               & AMI      &  48 & 24 ( 50.0\%) &  0 /  0 &    0 \\
+                               & UniTalk  &  96 & 17 ( 17.7\%) &  3 /  0 &   -3 \\
+                               & OmniVR   &  98 &  0 (  0.0\%) &  0 /  0 &    0 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+
+% =================================================================
+% Table 2: Multi-Dataset Decision & Safeguard Framework Comparison
+% =================================================================
+\begin{table*}[t]
+\centering\small
+\caption{Decision and Safeguard Framework comparison across all four datasets (588 timestamps). Evaluates error rates, harm suppression, and correction retention.}
+\label{tab:framework_comparison}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcccc|cccc@{}}
+\toprule
+ & \multicolumn{4}{c}{Error Rate (\%) Across Datasets} & \multicolumn{4}{c}{Total Harms / Total Corrections} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+Decision Framework & AVA & AMI & UniTalk & OmniVR & AVA & AMI & UniTalk & OmniVR \\
+\midrule
+Direct Restoration (Raw)         &  36.0\% &  50.0\% &  53.1\% &   2.0\% & 0/11 & 0/0 & 42/5 & 1/9 \\
+Quality-Driven IQA (MUSIQ)       &  36.0\% &  50.0\% &  30.2\% &   1.4\% & 0/11 & 0/0 & 20/5 & 0/9 \\
+ReAct Agent (No Verifier)        &  36.0\% &  50.0\% &  29.2\% &   7.5\% & 0/11 & 0/0 & 14/0 & 0/0 \\
+Consistency Diagnostic (CDI)     &  36.0\% &  50.0\% &  29.2\% &   0.0\% & 0/11 & 0/0 & 14/0 & 0/11 \\
+Proposed CTS Safeguard           &  36.0\% &  50.0\% &  17.7\% &   0.0\% & 0/11 & 0/0 & 3/0 & 0/0 \\
+\bottomrule
+\end{tabular}
+\end{table*}

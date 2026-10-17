@@ -1,7 +1,11 @@
 import json
 from pathlib import Path
 
-# Files
+# Paths
+REPO_ROOT = Path(__file__).resolve().parents[1]
+RESULTS_DIR = REPO_ROOT / "results" / "cts_dev_pilot_v1"
+
+# Model evaluation files (AVA & AMI)
 ava_files = {
     "Qwen3.8-27B": "cpu-pilot/results/ava_smoke_v1/agent_groq_qwen_qwen3_8-27b_interval_v1.json",
     "GPT-OSS-20B": "cpu-pilot/results/ava_smoke_v1/agent_groq_gpt_oss_20b_interval_v6.json",
@@ -72,39 +76,102 @@ print(r"\end{tabular}")
 print(r"\end{table}")
 print("\n")
 
-print("% =================================================================")
-print("% Table 2: 3-Condition CTS Verifier Comparison (LaTeX formatted)")
-print("% =================================================================")
-print(r"\begin{table}[t]")
-print(r"\centering\small")
-print(r"\caption{Multimodal agent evaluation under three tool conditions (Qwen3-VL-8B). Evaluates error reduction, harm prevention, and correction preservation across datasets.}")
-print(r"\label{tab:toolconditions}")
-print(r"\setlength{\tabcolsep}{4pt}")
-print(r"\begin{tabular}{@{}lcccc@{}}")
-print(r"\toprule")
-print(r"Condition & Dataset & Answered & Errors (Rate) & Harms / Corrs \\")
-print(r"\midrule")
-
-ava_cond = json.load(open("cpu-pilot/results/cts_dev_pilot_v1/agent_comparison/agent_comparison_summary.json"))
-ami_cond = json.load(open("cpu-pilot/results/cts_dev_pilot_v1/agent_comparison_ami/agent_comparison_summary.json"))
-
-labels = {
-    "tools_baseline_no_verifier": "1. Baseline (no verifier)",
-    "tools_plus_consistency": "2. Baseline + Consistency",
-    "tools_plus_cts_verifier": "3. Baseline + CTS Verifier",
+# Load 3-condition summaries across all 4 datasets
+summaries = {
+    "AVA-ActiveSpeaker": json.load(open("cpu-pilot/results/cts_dev_pilot_v1/agent_comparison/ava/ava_agent_comparison_summary.json")),
+    "AMI-Meeting": json.load(open("cpu-pilot/results/cts_dev_pilot_v1/agent_comparison/ami/ami_agent_comparison_summary.json")),
+    "UniTalk-ASD": json.load(open("cpu-pilot/results/cts_dev_pilot_v1/agent_comparison/unitalk/unitalk_agent_comparison_summary.json")),
+    "OmniVR-Benchmark": json.load(open("cpu-pilot/results/cts_dev_pilot_v1/agent_comparison/omnivr/omnivr_agent_comparison_summary.json")),
 }
 
-for c_key in ["tools_baseline_no_verifier", "tools_plus_consistency", "tools_plus_cts_verifier"]:
-    # AVA
-    a = ava_cond[c_key]
-    a_rate = (a["total_errors"] / a["total_answered"]) * 100
-    print(f"{labels[c_key]:28s} & AVA & {a['total_answered']} & {a['total_errors']} ({a_rate:.1f}\\%) & {a['total_harms']} / {a['total_corrections']} \\\\")
-    # AMI
-    m = ami_cond[c_key]
-    m_rate = (m["total_errors"] / m["total_answered"]) * 100
-    print(f"{'':28s} & AMI & {m['total_answered']} & {m['total_errors']} ({m_rate:.1f}\\%) & {m['total_harms']} / {m['total_corrections']} \\\\")
-    print(r"\midrule")
+print("% =================================================================")
+print("% Table 2: 3-Condition CTS Verifier Comparison (All 4 Datasets)")
+print("% =================================================================")
+print(r"\begin{table*}[t]")
+print(r"\centering\small")
+print(r"\caption{Multimodal agent evaluation under three tool conditions across all four datasets (Qwen3-VL-8B). Evaluates error reduction, harm prevention, and correction preservation under matched turn budget.}")
+print(r"\label{tab:toolconditions_alldatasets}")
+print(r"\setlength{\tabcolsep}{5pt}")
+print(r"\begin{tabular}{@{}llcccc@{}}")
+print(r"\toprule")
+print(r"Condition & Dataset & Answered & Errors (Rate) & Harms / Corrs & Net Impact \\")
+print(r"\midrule")
+
+c_labels = [
+    ("tools_baseline_no_verifier", "1. Baseline (No Verifier)"),
+    ("tools_plus_consistency", "2. Baseline + Consistency"),
+    ("tools_plus_cts_verifier", "3. Baseline + CTS Verifier"),
+]
+
+ds_order = ["AVA-ActiveSpeaker", "AMI-Meeting", "UniTalk-ASD", "OmniVR-Benchmark"]
+ds_short = {
+    "AVA-ActiveSpeaker": "AVA",
+    "AMI-Meeting": "AMI",
+    "UniTalk-ASD": "UniTalk",
+    "OmniVR-Benchmark": "OmniVR",
+}
+
+for c_idx, (c_key, c_name) in enumerate(c_labels):
+    for d_idx, ds in enumerate(ds_order):
+        s = summaries[ds][c_key]
+        ans = s["total_answered"]
+        err = s["total_errors"]
+        rate = (err / ans * 100) if ans > 0 else 0.0
+        harms = s["total_harms"]
+        corrs = s["total_corrections"]
+        net = corrs - harms
+        net_str = f"+{net}" if net > 0 else f"{net}"
+        
+        c_col = c_name if d_idx == 0 else ""
+        print(f"{c_col:30s} & {ds_short[ds]:8s} & {ans:3d} & {err:2d} ({rate:5.1f}\\%) & {harms:2d} / {corrs:2d} & {net_str:>4s} \\\\")
+    if c_idx < len(c_labels) - 1:
+        print(r"\midrule")
 
 print(r"\bottomrule")
 print(r"\end{tabular}")
-print(r"\end{table}")
+print(r"\end{table*}")
+print("\n")
+
+# Load Framework comparison
+fw_path = "cpu-pilot/results/cts_dev_pilot_v1/framework_comparison_summary.json"
+if Path(fw_path).exists():
+    all_results = json.load(open(fw_path))
+    print("% =================================================================")
+    print("% Table 3: Decision & Safeguard Framework Comparison (All 4 Datasets)")
+    print("% =================================================================")
+    print(r"\begin{table*}[t]")
+    print(r"\centering\small")
+    print(r"\caption{Decision and Safeguard Framework comparison across all four datasets (588 timestamps). Evaluates error rates, harm suppression, and correction retention.}")
+    print(r"\label{tab:framework_comparison}")
+    print(r"\setlength{\tabcolsep}{4pt}")
+    print(r"\begin{tabular}{@{}lcccc|cccc@{}}")
+    print(r"\toprule")
+    print(r" & \multicolumn{4}{c}{Error Rate (\%) Across Datasets} & \multicolumn{4}{c}{Total Harms / Total Corrections} \\")
+    print(r"\cmidrule(lr){2-5} \cmidrule(lr){6-9}")
+    print(r"Decision Framework & AVA & AMI & UniTalk & OmniVR & AVA & AMI & UniTalk & OmniVR \\")
+    print(r"\midrule")
+    
+    f_names = [
+        "Direct Restoration (Raw)",
+        "Quality-Driven IQA (MUSIQ)",
+        "ReAct Agent (No Verifier)",
+        "Consistency Diagnostic (CDI)",
+        "Proposed CTS Safeguard",
+    ]
+    
+    for fn in f_names:
+        rates = []
+        hc = []
+        for ds in ds_order:
+            d = all_results[ds][fn]
+            ans = d["answered"]
+            err = d["errors"]
+            r = (err / ans * 100) if ans > 0 else 0.0
+            rates.append(f"{r:5.1f}\\%")
+            hc.append(f"{d['harms']}/{d['corrections']}")
+            
+        print(f"{fn:32s} & " + " & ".join(rates) + " & " + " & ".join(hc) + r" \\")
+        
+    print(r"\bottomrule")
+    print(r"\end{tabular}")
+    print(r"\end{table*}")

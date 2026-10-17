@@ -2,157 +2,154 @@
   "tools_baseline_no_verifier": {
     "cases": [
       {
-        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+        "case_id": "UniTalk-Pilot::ABqo634gI5s::ABqo634gI5s__label0__sigma25",
         "category": "unknown",
-        "status": "COMPLETE",
-        "selected_candidate": "fastdvdnet",
-        "answered": 99,
-        "agent_errors": 62,
-        "captured_errors": 73,
-        "harms": 0,
-        "corrections": 11,
-        "tool_calls": 8,
-        "rationale": "FastDVDNet provides the best balance of appearance quality (highest MUSIQ, lowest BRISQUE) and speaking-state accuracy compared to the other candidates. Its restored evidence is most consistent with the captured evidence, and its speaking intervals are most aligned with the ground truth."
-      },
-      {
-        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
-        "category": "unknown",
-        "status": "COMPLETE",
-        "selected_candidate": "spatial_nlm",
-        "answered": 99,
+        "status": "PROVIDER_FAILED",
+        "selected_candidate": "captured",
+        "answered": 0,
         "agent_errors": 0,
         "captured_errors": 0,
         "harms": 0,
         "corrections": 0,
-        "tool_calls": 8,
-        "rationale": "The spatial_nlm candidate has the highest MUSIQ score (16.17) and lowest BRISQUE score (40.22), indicating the best appearance quality among the three. All speaking inspections for all candidates returned [0, 99, 0], meaning no speaking was detected. Therefore, the best decision is to classify all timestamps as 'not_speaking'."
+        "tool_calls": 4,
+        "rationale": null
       },
       {
-        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+        "case_id": "UniTalk-Pilot::ABqo634gI5s::ABqo634gI5s__label1__sigma25",
         "category": "unknown",
-        "status": "COMPLETE",
-        "selected_candidate": "spatial_nlm",
-        "answered": 99,
-        "agent_errors": 45,
-        "captured_errors": 45,
+        "status": "PROVIDER_FAILED",
+        "selected_candidate": "captured",
+        "answered": 0,
+        "agent_errors": 0,
+        "captured_errors": 0,
         "harms": 0,
         "corrections": 0,
-        "tool_calls": 8,
-        "rationale": "Spatial_NLM has the lowest BRISQUE score (18.64), indicating the best appearance quality among the candidates. All speaking inspections for all candidates indicate no speaking activity (0) across the entire duration. Therefore, selecting Spatial_NLM as the best candidate for decision-making, with a 'not_speaking' decision for all timestamps."
+        "tool_calls": 4,
+        "rationale": null
+      },
+      {
+        "case_id": "UniTalk-Pilot::qv3-HaaxGUc::qv3-HaaxGUc__label0__sigma25",
+        "category": "unknown",
+        "status": "PROVIDER_FAILED",
+        "selected_candidate": "captured",
+        "answered": 0,
+        "agent_errors": 0,
+        "captured_errors": 0,
+        "harms": 0,
+        "corrections": 0,
+        "tool_calls": 4,
+        "rationale": null
       }
     ],
-    "total_answered": 297,
-    "total_errors": 107,
-    "total_captured_errors": 118,
+    "total_answered": 0,
+    "total_errors": 0,
+    "total_captured_errors": 0,
     "total_harms": 0,
-    "total_corrections": 11,
+    "total_corrections": 0,
     "selected_candidates": {
-      "fastdvdnet": 1,
-      "spatial_nlm": 2
+      "captured": 3
     }
   },
   "tools_plus_consistency": {
     "cases": [
       {
-        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+        "case_id": "UniTalk-Pilot::ABqo634gI5s::ABqo634gI5s__label0__sigma25",
         "category": "unknown",
-        "status": "COMPLETE",
-        "selected_candidate": "fastdvdnet",
-        "answered": 99,
-        "agent_errors": 62,
-        "captured_errors": 73,
-        "harms": 0,
-        "corrections": 11,
-        "tool_calls": 10,
-        "rationale": "fastdvdnet shows the highest MUSIQ (32.59) and lowest BRISQUE (35.31) among candidates, indicating the best appearance quality. It also has the lowest disagreement (0.111) with the capture, suggesting the most reliable speaking-state decisions. The comparison with capture shows a positive delta in both MUSIQ and BRISQUE, indicating quality improvement."
-      },
-      {
-        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
-        "category": "unknown",
-        "status": "COMPLETE",
-        "selected_candidate": "spatial_nlm",
-        "answered": 99,
+        "status": "PROVIDER_FAILED",
+        "selected_candidate": "captured",
+        "answered": 0,
         "agent_errors": 0,
         "captured_errors": 0,
         "harms": 0,
         "corrections": 0,
-        "tool_calls": 10,
-        "rationale": "spatial_nlm has the highest MUSIQ (16.17) and lowest BRISQUE (40.22) scores, indicating the best appearance quality. Comparisons show it has the smallest mean absolute score change and highest delta_MUSIQ improvement over capture, suggesting it is the most reliable candidate for decision-making. All candidates agree on not_speaking for the entire duration."
+        "tool_calls": 0,
+        "rationale": null
       },
       {
-        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+        "case_id": "UniTalk-Pilot::ABqo634gI5s::ABqo634gI5s__label1__sigma25",
         "category": "unknown",
-        "status": "COMPLETE",
-        "selected_candidate": "spatial_nlm",
-        "answered": 99,
-        "agent_errors": 45,
-        "captured_errors": 45,
+        "status": "PROVIDER_FAILED",
+        "selected_candidate": "captured",
+        "answered": 0,
+        "agent_errors": 0,
+        "captured_errors": 0,
         "harms": 0,
         "corrections": 0,
-        "tool_calls": 10,
-        "rationale": "spatial_nlm has the highest MUSIQ (23.33) and lowest BRISQUE (18.64) among the candidates, indicating the best appearance quality. Comparisons show minimal disagreement with capture and the smallest mean absolute score change, suggesting it is the most reliable candidate for decision-making. All candidates agree on 'not_speaking' for the entire duration."
+        "tool_calls": 1,
+        "rationale": null
+      },
+      {
+        "case_id": "UniTalk-Pilot::qv3-HaaxGUc::qv3-HaaxGUc__label0__sigma25",
+        "category": "unknown",
+        "status": "PROVIDER_FAILED",
+        "selected_candidate": "captured",
+        "answered": 0,
+        "agent_errors": 0,
+        "captured_errors": 0,
+        "harms": 0,
+        "corrections": 0,
+        "tool_calls": 4,
+        "rationale": null
       }
     ],
-    "total_answered": 297,
-    "total_errors": 107,
-    "total_captured_errors": 118,
+    "total_answered": 0,
+    "total_errors": 0,
+    "total_captured_errors": 0,
     "total_harms": 0,
-    "total_corrections": 11,
+    "total_corrections": 0,
     "selected_candidates": {
-      "fastdvdnet": 1,
-      "spatial_nlm": 2
+      "captured": 3
     }
   },
   "tools_plus_cts_verifier": {
     "cases": [
       {
-        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::aca7e0ed106b9ca1",
+        "case_id": "UniTalk-Pilot::ABqo634gI5s::ABqo634gI5s__label0__sigma25",
         "category": "unknown",
-        "status": "COMPLETE",
-        "selected_candidate": "fastdvdnet",
-        "answered": 99,
-        "agent_errors": 62,
-        "captured_errors": 73,
-        "harms": 0,
-        "corrections": 11,
-        "tool_calls": 10,
-        "rationale": "fastdvdnet shows the highest MUSIQ (32.59) and lowest BRISQUE (35.31) among candidates, indicating the best appearance quality. It also has the lowest disagreement (0.111) with the capture, suggesting the most reliable speaking-state decisions. The comparison with capture shows a positive delta in both MUSIQ and BRISQUE, indicating quality improvement."
-      },
-      {
-        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::b5e7d06dbd1cfb8a",
-        "category": "unknown",
-        "status": "COMPLETE",
-        "selected_candidate": "spatial_nlm",
-        "answered": 99,
+        "status": "PROVIDER_FAILED",
+        "selected_candidate": "captured",
+        "answered": 0,
         "agent_errors": 0,
         "captured_errors": 0,
         "harms": 0,
         "corrections": 0,
-        "tool_calls": 10,
-        "rationale": "The spatial_nlm candidate demonstrates the highest MUSIQ score (16.17) and lowest BRISQUE score (40.22), indicating the best appearance quality among the three. Comparisons with the capture show no disagreement and a significant improvement in quality metrics. All speaking inspections for spatial_nlm indicate 'not_speaking' across the entire duration, which is consistent with the visual evidence and quality metrics."
+        "tool_calls": 0,
+        "rationale": null
       },
       {
-        "case_id": "AVA-ActiveSpeaker::4ZpjKfu6Cl8::eaa58bfe0ca84011",
+        "case_id": "UniTalk-Pilot::ABqo634gI5s::ABqo634gI5s__label1__sigma25",
         "category": "unknown",
-        "status": "COMPLETE",
-        "selected_candidate": "fastdvdnet",
-        "answered": 99,
-        "agent_errors": 45,
-        "captured_errors": 45,
+        "status": "PROVIDER_FAILED",
+        "selected_candidate": "captured",
+        "answered": 0,
+        "agent_errors": 0,
+        "captured_errors": 0,
         "harms": 0,
         "corrections": 0,
-        "tool_calls": 10,
-        "rationale": "fastdvdnet provides the highest MUSIQ (31.10) and lowest BRISQUE (35.67) scores, indicating the best appearance quality among the candidates. Comparisons with capture show no disagreement and a significant improvement in quality metrics. All speaking inspections for fastdvdnet indicate 'not_speaking' for the entire duration, which is consistent across all candidates."
+        "tool_calls": 0,
+        "rationale": null
+      },
+      {
+        "case_id": "UniTalk-Pilot::qv3-HaaxGUc::qv3-HaaxGUc__label0__sigma25",
+        "category": "unknown",
+        "status": "PROVIDER_FAILED",
+        "selected_candidate": "captured",
+        "answered": 0,
+        "agent_errors": 0,
+        "captured_errors": 0,
+        "harms": 0,
+        "corrections": 0,
+        "tool_calls": 4,
+        "rationale": null
       }
     ],
-    "total_answered": 297,
-    "total_errors": 107,
-    "total_captured_errors": 118,
+    "total_answered": 0,
+    "total_errors": 0,
+    "total_captured_errors": 0,
     "total_harms": 0,
-    "total_corrections": 11,
+    "total_corrections": 0,
     "selected_candidates": {
-      "fastdvdnet": 2,
-      "spatial_nlm": 1
+      "captured": 3
     }
   }
 }
