@@ -4,7 +4,7 @@ The primary CPU study is running. Final-test results are not available yet. No L
 
 ## Repairs completed
 
-- Proxy CTS scores, pseudo-label OmniVR import and unsupported table generation are blocked. Historical files are retained and marked in EXPERIMENT_VALIDITY.json.
+- Proxy CTS scores, pseudo-label OmniVR import and unsupported table generation are blocked. Invalid packages have been removed from the active tree; their audit and historical commit are recorded in ACTIVE_TREE_CLEANUP.md and EXPERIMENT_VALIDITY.json.
 - The actual verifier runs masked FastDVDnet restorations, temporal controls and unchanged-audio TalkNet predictions. The trained-assessor interface is separate from the retired sign-of-proxy tool.
 - Agent harm/correction scoring now uses the same answered timestamps; empty coverage has no defined error rate.
 - The uploaded results were merged without dropping either history.

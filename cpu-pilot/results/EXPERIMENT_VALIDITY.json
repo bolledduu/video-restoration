@@ -1,11 +1,15 @@
 {
   "full_held_out_test_measurements.json": {
-    "status": "INVALID_PAIRING",
-    "reason": "Truncated identities mixed different states and degradation levels; replaced for exploratory use by corrected_audit_v2/measurements.json"
+    "status": "REMOVED_FROM_ACTIVE_TREE",
+    "reason": "Truncated identities mixed different states and degradation levels; replaced for exploratory use by corrected_audit_v2/measurements.json",
+    "previous_status": "INVALID_PAIRING",
+    "recoverable_at_commit": "235a60eeb5e078ab376df6810e12821e6bd7fbb9"
   },
   "final_experiment_results.json": {
-    "status": "NOT_VALID_FOR_METHOD_CLAIMS",
-    "reason": "Aggregate Ridge selector mislabeled CTS, synthetic audio features, in-sample thresholds, misleading mixed-output quality"
+    "status": "REMOVED_FROM_ACTIVE_TREE",
+    "reason": "Aggregate Ridge selector mislabeled CTS, synthetic audio features, in-sample thresholds, misleading mixed-output quality",
+    "previous_status": "NOT_VALID_FOR_METHOD_CLAIMS",
+    "recoverable_at_commit": "235a60eeb5e078ab376df6810e12821e6bd7fbb9"
   },
   "corrected_audit_v2/policies.json": {
     "status": "EXPLORATORY_BASELINES_ONLY",
@@ -16,12 +20,16 @@
     "reason": "Different protocols and attempts retained separately; not a fair model ranking"
   },
   "cts_dev_pilot_v1": {
-    "status": "INVALID_FOR_MASKED_FRAMEWORK_CLAIMS",
-    "reason": "44 proxy scores instead of real masked measurements; pooled partitions; legacy tool bypasses learned assessor; coverage differs"
+    "status": "REMOVED_FROM_ACTIVE_TREE",
+    "reason": "44 proxy scores instead of real masked measurements; pooled partitions; legacy tool bypasses learned assessor; coverage differs",
+    "previous_status": "INVALID_FOR_MASKED_FRAMEWORK_CLAIMS",
+    "recoverable_at_commit": "235a60eeb5e078ab376df6810e12821e6bd7fbb9"
   },
   "omnivr_v1/measurements.json": {
-    "status": "REFERENCE_DETECTOR_AGREEMENT_ONLY",
-    "reason": "Detector-derived pseudo-labels; PSNR/SSIM values mislabeled as MUSIQ/BRISQUE; constructed CTS"
+    "status": "REMOVED_FROM_ACTIVE_TREE",
+    "reason": "Detector-derived pseudo-labels; PSNR/SSIM values mislabeled as MUSIQ/BRISQUE; constructed CTS",
+    "previous_status": "REFERENCE_DETECTOR_AGREEMENT_ONLY",
+    "recoverable_at_commit": "235a60eeb5e078ab376df6810e12821e6bd7fbb9"
   },
   "captured_support_dev_v1": {
     "status": "ACTUAL_AUDITS_DEVELOPMENT_ONLY",
@@ -30,5 +38,10 @@
   "cts_train_JNb_v1": {
     "status": "TRAINING_MEASUREMENTS_COMPLETE",
     "reason": "Three new-source clips; no observed captured/restored decision transitions"
+  },
+  "unitalk_v1/measurements.json": {
+    "status": "REMOVED_FROM_ACTIVE_TREE",
+    "reason": "Constructed CTS proxy fields and constant mask stability; not measured masked restoration evidence",
+    "recoverable_at_commit": "235a60eeb5e078ab376df6810e12821e6bd7fbb9"
   }
 }
