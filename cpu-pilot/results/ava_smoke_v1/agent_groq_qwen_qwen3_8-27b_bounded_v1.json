@@ -1,0 +1,798 @@
+{
+  "identity": {
+    "measurements_sha256": "37108cc49ec3aacafc0735b1b8ba1c1f458ff2bc0c6645b20fd9e0a8cce061f0",
+    "runner_sha256": "283f442c4b130b55195e87845c8f6b0505a25abfe04eabf244b6d75862620e5e",
+    "environment_sha256": "93adfb1bfa9f1a16d3e980bb230ea640e973d9ae0e5a66ed6398d81503ca7449",
+    "provider": "groq",
+    "model": "qwen/qwen3.8-27b",
+    "max_turns": 8,
+    "max_tools": 24,
+    "max_completion_tokens": 768,
+    "access": "tool_measurements_only",
+    "temperature": 0,
+    "finalization_policy": "Force submission after required inspections from turn 5, or at turn 8"
+  },
+  "status": "INCOMPLETE",
+  "cases": [
+    {
+      "id": "aca7e0ed106b9ca1",
+      "run": {
+        "status": "BUDGET_EXHAUSTED",
+        "submission": null,
+        "evidence_sha256": "b1abf3bc0d081735e9f264cd03ae4271bf4e6b293ca13eed35e78bdb6918f63b",
+        "served_models": [
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b"
+        ],
+        "usage": [
+          {
+            "queue_time": 0.095598373,
+            "prompt_tokens": 992,
+            "prompt_time": 0.084847564,
+            "completion_tokens": 15,
+            "completion_time": 0.030258984,
+            "total_tokens": 1007,
+            "total_time": 0.115106548
+          },
+          {
+            "queue_time": 0.022354017,
+            "prompt_tokens": 1132,
+            "prompt_time": 0.078491586,
+            "completion_tokens": 88,
+            "completion_time": 0.170528299,
+            "total_tokens": 1220,
+            "total_time": 0.249019885
+          },
+          {
+            "queue_time": 0.030911964,
+            "prompt_tokens": 1431,
+            "prompt_time": 0.101426493,
+            "completion_tokens": 94,
+            "completion_time": 0.180929363,
+            "total_tokens": 1525,
+            "total_time": 0.282355856
+          },
+          {
+            "queue_time": 0.023237319,
+            "prompt_tokens": 2151,
+            "prompt_time": 0.148620618,
+            "completion_tokens": 62,
+            "completion_time": 0.119620834,
+            "total_tokens": 2213,
+            "total_time": 0.268241452
+          },
+          {
+            "queue_time": 0.028758224,
+            "prompt_tokens": 2443,
+            "prompt_time": 0.169019326,
+            "completion_tokens": 290,
+            "completion_time": 0.751124854,
+            "total_tokens": 2733,
+            "total_time": 0.92014418
+          },
+          {
+            "queue_time": 0.041887659,
+            "prompt_tokens": 2763,
+            "prompt_time": 0.196844218,
+            "completion_tokens": 290,
+            "completion_time": 0.758081121,
+            "total_tokens": 3053,
+            "total_time": 0.954925339
+          },
+          {
+            "queue_time": 0.024313771,
+            "prompt_tokens": 3083,
+            "prompt_time": 0.211693396,
+            "completion_tokens": 290,
+            "completion_time": 0.750480548,
+            "total_tokens": 3373,
+            "total_time": 0.962173944
+          },
+          {
+            "queue_time": 0.025926698,
+            "prompt_tokens": 3403,
+            "prompt_time": 0.234065577,
+            "completion_tokens": 290,
+            "completion_time": 0.756986355,
+            "total_tokens": 3693,
+            "total_time": 0.991051932
+          }
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "You select audiovisual evidence for a visible person's speaking-state decisions.\nYou have NO direct access to pixels, audio, transcripts, identities or true labels.\nUse only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance\nquality, not attribution correctness. TalkNet probabilities are uncalibrated.\nInspect captured and restored candidates before choosing. Compare restored evidence\nwith capture before selecting it. Disagreement alone does not establish an error.\nSpeaking inspections return [start, end_exclusive, speaking_0_or_1] intervals,\nwhich preserve every threshold decision. Request local scores only if needed.\nAfter inspecting the candidates and comparisons, submit without repeating inspections.\nReturn one speaking/not_speaking/abstain decision per scored timestamp using\nsubmit_decisions. Prefer useful quality improvements only when evidence supports\nthem. Do not invent observations. Finish within 8 model turns and 24 tool calls."
+          },
+          {
+            "role": "user",
+            "content": "Inspect the available evidence, select a candidate, and submit speaking-state decisions for every scored timestamp."
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "4ebvzccj8",
+                "type": "function",
+                "function": {
+                  "name": "list_evidence",
+                  "arguments": "{}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "4ebvzccj8",
+            "content": "{\"candidates\": [\"captured\", \"fastdvdnet\", \"spatial_nlm\"], \"scored_timestamps\": 99, \"evidence_hash\": \"b1abf3bc0d081735e9f264cd03ae4271bf4e6b293ca13eed35e78bdb6918f63b\", \"access\": \"tool_measurements_only\", \"scores_are_uncalibrated\": true}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "tsgxd0qbk",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"captured\"}"
+                }
+              },
+              {
+                "id": "3hqgc9r53",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "cyv592xgp",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "tsgxd0qbk",
+            "content": "{\"musiq\": 18.14721171061198, \"brisque\": 41.14602915445963, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "3hqgc9r53",
+            "content": "{\"musiq\": 32.5880978902181, \"brisque\": 35.3070182800293, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "cyv592xgp",
+            "content": "{\"musiq\": 16.44109312693278, \"brisque\": 7.745859240492185, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "aew8az6aa",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"captured\"}"
+                }
+              },
+              {
+                "id": "rtxfaqt08",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "gd5tb9gs6",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "aew8az6aa",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 12, 1], [12, 41, 0], [41, 43, 1], [43, 48, 0], [48, 50, 1], [50, 51, 0], [51, 52, 1], [52, 79, 0], [79, 86, 1], [86, 89, 0], [89, 91, 1], [91, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.09773, \"score_max\": 0.869541, \"score_mean\": 0.36627, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "rtxfaqt08",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 12, 1], [12, 38, 0], [38, 44, 1], [44, 46, 0], [46, 54, 1], [54, 79, 0], [79, 86, 1], [86, 88, 0], [88, 92, 1], [92, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.124712, \"score_max\": 0.903874, \"score_mean\": 0.456506, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "gd5tb9gs6",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 12, 1], [12, 41, 0], [41, 45, 1], [45, 46, 0], [46, 47, 1], [47, 48, 0], [48, 53, 1], [53, 78, 0], [78, 91, 1], [91, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.125846, \"score_max\": 0.903586, \"score_mean\": 0.443444, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "p5yq4gx59",
+                "type": "function",
+                "function": {
+                  "name": "compare_with_capture",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "j25g68gx7",
+                "type": "function",
+                "function": {
+                  "name": "compare_with_capture",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "p5yq4gx59",
+            "content": "{\"disagreement\": 0.1111111111111111, \"mean_absolute_score_change\": 0.09053075238309725, \"delta_musiq\": 14.440886179606121, \"delta_brisque\": -5.839010874430336}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "j25g68gx7",
+            "content": "{\"disagreement\": 0.09090909090909091, \"mean_absolute_score_change\": 0.07717410392231411, \"delta_musiq\": -1.7061185836791992, \"delta_brisque\": -33.400169913967446}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "0myzhewb0",
+                "type": "function",
+                "function": {
+                  "name": "submit_decisions",
+                  "arguments": "{\"candidate\":\"fastdvdnet\",\"decisions\":[\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\"],\"rationale\":\"fastdvdnet shows the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and a moderate, consistent disagreement (0.111) with captured evidence, supporting a useful quality improvement. Its threshold intervals are used for the first 32 scored timestamps.\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "0myzhewb0",
+            "content": "{\"error\": \"One valid decision per scored timestamp is required\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "h89ynkdn8",
+                "type": "function",
+                "function": {
+                  "name": "submit_decisions",
+                  "arguments": "{\"candidate\":\"fastdvdnet\",\"decisions\":[\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\"],\"rationale\":\"fastdvdnet shows the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and a moderate, consistent disagreement (0.111) with captured evidence, supporting a useful quality improvement. Its threshold intervals are used for the first 32 scored timestamps.\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "h89ynkdn8",
+            "content": "{\"error\": \"One valid decision per scored timestamp is required\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "y6tzc4qan",
+                "type": "function",
+                "function": {
+                  "name": "submit_decisions",
+                  "arguments": "{\"candidate\":\"fastdvdnet\",\"decisions\":[\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\"],\"rationale\":\"fastdvdnet shows the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and a moderate, consistent disagreement (0.111) with captured evidence, supporting a useful quality improvement. Its threshold intervals are used for the first 32 scored timestamps.\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "y6tzc4qan",
+            "content": "{\"error\": \"One valid decision per scored timestamp is required\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "q5j7y94vj",
+                "type": "function",
+                "function": {
+                  "name": "submit_decisions",
+                  "arguments": "{\"candidate\":\"fastdvdnet\",\"decisions\":[\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\",\"not_speaking\"],\"rationale\":\"fastdvdnet shows the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and a moderate, consistent disagreement (0.111) with captured evidence, supporting a useful quality improvement. Its threshold intervals are used for the first 32 scored timestamps.\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "q5j7y94vj",
+            "content": "{\"error\": \"One valid decision per scored timestamp is required\"}"
+          }
+        ],
+        "tool_trace": [
+          {
+            "tool": "list_evidence",
+            "arguments": {},
+            "output": {
+              "candidates": [
+                "captured",
+                "fastdvdnet",
+                "spatial_nlm"
+              ],
+              "scored_timestamps": 99,
+              "evidence_hash": "b1abf3bc0d081735e9f264cd03ae4271bf4e6b293ca13eed35e78bdb6918f63b",
+              "access": "tool_measurements_only",
+              "scores_are_uncalibrated": true
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "captured"
+            },
+            "output": {
+              "musiq": 18.14721171061198,
+              "brisque": 41.14602915445963,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "musiq": 32.5880978902181,
+              "brisque": 35.3070182800293,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "musiq": 16.44109312693278,
+              "brisque": 7.745859240492185,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "captured"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  12,
+                  1
+                ],
+                [
+                  12,
+                  41,
+                  0
+                ],
+                [
+                  41,
+                  43,
+                  1
+                ],
+                [
+                  43,
+                  48,
+                  0
+                ],
+                [
+                  48,
+                  50,
+                  1
+                ],
+                [
+                  50,
+                  51,
+                  0
+                ],
+                [
+                  51,
+                  52,
+                  1
+                ],
+                [
+                  52,
+                  79,
+                  0
+                ],
+                [
+                  79,
+                  86,
+                  1
+                ],
+                [
+                  86,
+                  89,
+                  0
+                ],
+                [
+                  89,
+                  91,
+                  1
+                ],
+                [
+                  91,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.09773,
+              "score_max": 0.869541,
+              "score_mean": 0.36627,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  12,
+                  1
+                ],
+                [
+                  12,
+                  38,
+                  0
+                ],
+                [
+                  38,
+                  44,
+                  1
+                ],
+                [
+                  44,
+                  46,
+                  0
+                ],
+                [
+                  46,
+                  54,
+                  1
+                ],
+                [
+                  54,
+                  79,
+                  0
+                ],
+                [
+                  79,
+                  86,
+                  1
+                ],
+                [
+                  86,
+                  88,
+                  0
+                ],
+                [
+                  88,
+                  92,
+                  1
+                ],
+                [
+                  92,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.124712,
+              "score_max": 0.903874,
+              "score_mean": 0.456506,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  12,
+                  1
+                ],
+                [
+                  12,
+                  41,
+                  0
+                ],
+                [
+                  41,
+                  45,
+                  1
+                ],
+                [
+                  45,
+                  46,
+                  0
+                ],
+                [
+                  46,
+                  47,
+                  1
+                ],
+                [
+                  47,
+                  48,
+                  0
+                ],
+                [
+                  48,
+                  53,
+                  1
+                ],
+                [
+                  53,
+                  78,
+                  0
+                ],
+                [
+                  78,
+                  91,
+                  1
+                ],
+                [
+                  91,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.125846,
+              "score_max": 0.903586,
+              "score_mean": 0.443444,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "compare_with_capture",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "disagreement": 0.1111111111111111,
+              "mean_absolute_score_change": 0.09053075238309725,
+              "delta_musiq": 14.440886179606121,
+              "delta_brisque": -5.839010874430336
+            }
+          },
+          {
+            "tool": "compare_with_capture",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "disagreement": 0.09090909090909091,
+              "mean_absolute_score_change": 0.07717410392231411,
+              "delta_musiq": -1.7061185836791992,
+              "delta_brisque": -33.400169913967446
+            }
+          },
+          {
+            "tool": "submit_decisions",
+            "arguments": {
+              "candidate": "fastdvdnet",
+              "decisions": [
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking"
+              ],
+              "rationale": "fastdvdnet shows the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and a moderate, consistent disagreement (0.111) with captured evidence, supporting a useful quality improvement. Its threshold intervals are used for the first 32 scored timestamps."
+            },
+            "error": "One valid decision per scored timestamp is required"
+          },
+          {
+            "tool": "submit_decisions",
+            "arguments": {
+              "candidate": "fastdvdnet",
+              "decisions": [
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking"
+              ],
+              "rationale": "fastdvdnet shows the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and a moderate, consistent disagreement (0.111) with captured evidence, supporting a useful quality improvement. Its threshold intervals are used for the first 32 scored timestamps."
+            },
+            "error": "One valid decision per scored timestamp is required"
+          },
+          {
+            "tool": "submit_decisions",
+            "arguments": {
+              "candidate": "fastdvdnet",
+              "decisions": [
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking"
+              ],
+              "rationale": "fastdvdnet shows the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and a moderate, consistent disagreement (0.111) with captured evidence, supporting a useful quality improvement. Its threshold intervals are used for the first 32 scored timestamps."
+            },
+            "error": "One valid decision per scored timestamp is required"
+          },
+          {
+            "tool": "submit_decisions",
+            "arguments": {
+              "candidate": "fastdvdnet",
+              "decisions": [
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking",
+                "not_speaking"
+              ],
+              "rationale": "fastdvdnet shows the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and a moderate, consistent disagreement (0.111) with captured evidence, supporting a useful quality improvement. Its threshold intervals are used for the first 32 scored timestamps."
+            },
+            "error": "One valid decision per scored timestamp is required"
+          }
+        ]
+      },
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 73,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 62,
+            "harm": 0,
+            "corrections": 11
+          },
+          "spatial_nlm": {
+            "errors": 64,
+            "harm": 0,
+            "corrections": 9
+          }
+        }
+      }
+    }
+  ]
+}

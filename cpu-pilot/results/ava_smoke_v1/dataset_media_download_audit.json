@@ -1,0 +1,34 @@
+[
+  {
+    "source": "4ZpjKfu6Cl8",
+    "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\ava_agent\\4ZpjKfu6Cl8.mkv",
+    "url": "https://s3.amazonaws.com/ava-dataset/trainval/4ZpjKfu6Cl8.mkv",
+    "bytes": 1037398704,
+    "sha256": "f69395565cf421c862b19b4200fcd56a6b06d966cda9acf585c93057ed262d80",
+    "status": "downloaded_not_alignment_validated"
+  },
+  {
+    "source": "IKdBLciu_-A",
+    "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\ava_agent\\IKdBLciu_-A.mp4",
+    "url": "https://s3.amazonaws.com/ava-dataset/trainval/IKdBLciu_-A.mp4",
+    "bytes": 551708510,
+    "sha256": "c1235a9927433a069fdaf8e46a992a11ef3bdb0c9326723fac7a471f8bd38678",
+    "status": "downloaded_not_alignment_validated"
+  },
+  {
+    "source": "JNb4nWexD0I",
+    "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\ava_agent\\JNb4nWexD0I.mkv",
+    "url": "https://s3.amazonaws.com/ava-dataset/trainval/JNb4nWexD0I.mkv",
+    "bytes": 302799293,
+    "sha256": "d404d96f9398ac2333efb33ea5468f5871ba10d527a9598436e58598f282d220",
+    "status": "downloaded_not_alignment_validated"
+  },
+  {
+    "source": "a5mEmM6w_ks",
+    "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\ava_agent\\a5mEmM6w_ks.mkv",
+    "url": "https://s3.amazonaws.com/ava-dataset/trainval/a5mEmM6w_ks.mkv",
+    "bytes": 163197470,
+    "sha256": "260d76e695d48b19f23ebc586aa146120ee36f4fdfee807a22d9a406f21d9cb6",
+    "status": "downloaded_not_alignment_validated"
+  }
+]

@@ -1,0 +1,867 @@
+{
+  "identity": {
+    "measurements_sha256": "37108cc49ec3aacafc0735b1b8ba1c1f458ff2bc0c6645b20fd9e0a8cce061f0",
+    "runner_sha256": "e5b6355d71647bb9e9b11b5c8a4cd81208d8a1afbb593f21d50f6887a3211fd7",
+    "environment_sha256": "93adfb1bfa9f1a16d3e980bb230ea640e973d9ae0e5a66ed6398d81503ca7449",
+    "provider": "groq",
+    "model": "qwen/qwen3.8-27b",
+    "max_turns": 8,
+    "max_tools": 24,
+    "max_completion_tokens": 768,
+    "access": "tool_measurements_only",
+    "temperature": 0
+  },
+  "status": "INCOMPLETE",
+  "cases": [
+    {
+      "id": "aca7e0ed106b9ca1",
+      "run": {
+        "status": "BUDGET_EXHAUSTED",
+        "submission": null,
+        "evidence_sha256": "b1abf3bc0d081735e9f264cd03ae4271bf4e6b293ca13eed35e78bdb6918f63b",
+        "served_models": [
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b"
+        ],
+        "usage": [
+          {
+            "queue_time": 0.022710219,
+            "prompt_tokens": 992,
+            "prompt_time": 0.067888344,
+            "completion_tokens": 15,
+            "completion_time": 0.029386371,
+            "total_tokens": 1007,
+            "total_time": 0.097274715
+          },
+          {
+            "queue_time": 0.022754253,
+            "prompt_tokens": 1132,
+            "prompt_time": 0.078581496,
+            "completion_tokens": 88,
+            "completion_time": 0.173453873,
+            "total_tokens": 1220,
+            "total_time": 0.252035369
+          },
+          {
+            "queue_time": 0.024805106,
+            "prompt_tokens": 1431,
+            "prompt_time": 0.098333632,
+            "completion_tokens": 94,
+            "completion_time": 0.183244459,
+            "total_tokens": 1525,
+            "total_time": 0.281578091
+          },
+          {
+            "queue_time": 0.024271035,
+            "prompt_tokens": 2151,
+            "prompt_time": 0.147668822,
+            "completion_tokens": 62,
+            "completion_time": 0.121010132,
+            "total_tokens": 2213,
+            "total_time": 0.268678954
+          },
+          {
+            "queue_time": 0.023604747,
+            "prompt_tokens": 2443,
+            "prompt_time": 0.167806504,
+            "completion_tokens": 106,
+            "completion_time": 0.205176922,
+            "total_tokens": 2549,
+            "total_time": 0.372983426
+          },
+          {
+            "queue_time": 0.024122174,
+            "prompt_tokens": 2935,
+            "prompt_time": 0.201752714,
+            "completion_tokens": 106,
+            "completion_time": 0.206286781,
+            "total_tokens": 3041,
+            "total_time": 0.408039495
+          },
+          {
+            "queue_time": 0.026492798,
+            "prompt_tokens": 3099,
+            "prompt_time": 0.213230984,
+            "completion_tokens": 106,
+            "completion_time": 0.207101883,
+            "total_tokens": 3205,
+            "total_time": 0.420332867
+          },
+          {
+            "queue_time": 0.006370011,
+            "prompt_tokens": 3548,
+            "prompt_time": 0.245939142,
+            "completion_tokens": 104,
+            "completion_time": 0.201158354,
+            "total_tokens": 3652,
+            "total_time": 0.447097496
+          }
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "You select audiovisual evidence for a visible person's speaking-state decisions.\nYou have NO direct access to pixels, audio, transcripts, identities or true labels.\nUse only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance\nquality, not attribution correctness. TalkNet probabilities are uncalibrated.\nInspect captured and restored candidates before choosing. Compare restored evidence\nwith capture before selecting it. Disagreement alone does not establish an error.\nSpeaking inspections return [start, end_exclusive, speaking_0_or_1] intervals,\nwhich preserve every threshold decision. Request local scores only if needed.\nAfter inspecting the candidates and comparisons, submit without repeating inspections.\nReturn one speaking/not_speaking/abstain decision per scored timestamp using\nsubmit_decisions. Prefer useful quality improvements only when evidence supports\nthem. Do not invent observations. Finish within 8 model turns and 24 tool calls."
+          },
+          {
+            "role": "user",
+            "content": "Inspect the available evidence, select a candidate, and submit speaking-state decisions for every scored timestamp."
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "4v0xrfmjb",
+                "type": "function",
+                "function": {
+                  "name": "list_evidence",
+                  "arguments": "{}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "4v0xrfmjb",
+            "content": "{\"candidates\": [\"captured\", \"fastdvdnet\", \"spatial_nlm\"], \"scored_timestamps\": 99, \"evidence_hash\": \"b1abf3bc0d081735e9f264cd03ae4271bf4e6b293ca13eed35e78bdb6918f63b\", \"access\": \"tool_measurements_only\", \"scores_are_uncalibrated\": true}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "pehk57y8b",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"captured\"}"
+                }
+              },
+              {
+                "id": "kfyhz40sm",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "hwg4shkpv",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "pehk57y8b",
+            "content": "{\"musiq\": 18.14721171061198, \"brisque\": 41.14602915445963, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "kfyhz40sm",
+            "content": "{\"musiq\": 32.5880978902181, \"brisque\": 35.3070182800293, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "hwg4shkpv",
+            "content": "{\"musiq\": 16.44109312693278, \"brisque\": 7.745859240492185, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "dd0jxtcvq",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"captured\"}"
+                }
+              },
+              {
+                "id": "abnjgvphh",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "apshqbwg4",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "dd0jxtcvq",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 12, 1], [12, 41, 0], [41, 43, 1], [43, 48, 0], [48, 50, 1], [50, 51, 0], [51, 52, 1], [52, 79, 0], [79, 86, 1], [86, 89, 0], [89, 91, 1], [91, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.09773, \"score_max\": 0.869541, \"score_mean\": 0.36627, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "abnjgvphh",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 12, 1], [12, 38, 0], [38, 44, 1], [44, 46, 0], [46, 54, 1], [54, 79, 0], [79, 86, 1], [86, 88, 0], [88, 92, 1], [92, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.124712, \"score_max\": 0.903874, \"score_mean\": 0.456506, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "apshqbwg4",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 12, 1], [12, 41, 0], [41, 45, 1], [45, 46, 0], [46, 47, 1], [47, 48, 0], [48, 53, 1], [53, 78, 0], [78, 91, 1], [91, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.125846, \"score_max\": 0.903586, \"score_mean\": 0.443444, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "2gfkv3wbr",
+                "type": "function",
+                "function": {
+                  "name": "compare_with_capture",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "0ydf18cky",
+                "type": "function",
+                "function": {
+                  "name": "compare_with_capture",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "2gfkv3wbr",
+            "content": "{\"disagreement\": 0.1111111111111111, \"mean_absolute_score_change\": 0.09053075238309725, \"delta_musiq\": 14.440886179606121, \"delta_brisque\": -5.839010874430336}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "0ydf18cky",
+            "content": "{\"disagreement\": 0.09090909090909091, \"mean_absolute_score_change\": 0.07717410392231411, \"delta_musiq\": -1.7061185836791992, \"delta_brisque\": -33.400169913967446}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "pbnm008cv",
+                "type": "function",
+                "function": {
+                  "name": "inspect_interval",
+                  "arguments": "{\"candidate\":\"captured\",\"end\":54,\"start\":38}"
+                }
+              },
+              {
+                "id": "dtcztce3a",
+                "type": "function",
+                "function": {
+                  "name": "inspect_interval",
+                  "arguments": "{\"candidate\":\"fastdvdnet\",\"end\":54,\"start\":38}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "pbnm008cv",
+            "content": "{\"start\": 38, \"end_exclusive\": 54, \"probability\": [0.345057, 0.364083, 0.371649, 0.539054, 0.607867, 0.477531, 0.413103, 0.310803, 0.471069, 0.352357, 0.55015, 0.512535, 0.479958, 0.588752, 0.450077, 0.378353]}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "dtcztce3a",
+            "content": "{\"start\": 38, \"end_exclusive\": 54, \"probability\": [0.578845, 0.522296, 0.52988, 0.724291, 0.728223, 0.612409, 0.431791, 0.356751, 0.578294, 0.525625, 0.716255, 0.703332, 0.654032, 0.724523, 0.632303, 0.530526]}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "1gkw265sy",
+                "type": "function",
+                "function": {
+                  "name": "inspect_interval",
+                  "arguments": "{\"candidate\":\"captured\",\"end\":99,\"start\":78}"
+                }
+              },
+              {
+                "id": "phejpzgtq",
+                "type": "function",
+                "function": {
+                  "name": "inspect_interval",
+                  "arguments": "{\"candidate\":\"fastdvdnet\",\"end\":99,\"start\":78}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "1gkw265sy",
+            "content": "{\"error\": \"Inspect at most 20 timestamps per interval\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "phejpzgtq",
+            "content": "{\"error\": \"Inspect at most 20 timestamps per interval\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "hv64e5b1q",
+                "type": "function",
+                "function": {
+                  "name": "inspect_interval",
+                  "arguments": "{\"candidate\":\"captured\",\"end\":92,\"start\":78}"
+                }
+              },
+              {
+                "id": "yt2svqm6x",
+                "type": "function",
+                "function": {
+                  "name": "inspect_interval",
+                  "arguments": "{\"candidate\":\"fastdvdnet\",\"end\":92,\"start\":78}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "hv64e5b1q",
+            "content": "{\"start\": 78, \"end_exclusive\": 92, \"probability\": [0.466338, 0.557501, 0.631973, 0.628518, 0.571014, 0.589, 0.662013, 0.643217, 0.455597, 0.424777, 0.430321, 0.690723, 0.54656, 0.387122]}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "yt2svqm6x",
+            "content": "{\"start\": 78, \"end_exclusive\": 92, \"probability\": [0.499138, 0.640606, 0.71324, 0.738287, 0.670504, 0.643739, 0.688699, 0.628618, 0.477448, 0.460738, 0.517957, 0.753953, 0.638172, 0.506723]}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "zwseegrr3",
+                "type": "function",
+                "function": {
+                  "name": "inspect_interval",
+                  "arguments": "{\"candidate\":\"captured\",\"end\":12,\"start\":0}"
+                }
+              },
+              {
+                "id": "z6qaqbxxt",
+                "type": "function",
+                "function": {
+                  "name": "inspect_interval",
+                  "arguments": "{\"candidate\":\"fastdvdnet\",\"end\":12,\"start\":0}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "zwseegrr3",
+            "content": "{\"start\": 0, \"end_exclusive\": 12, \"probability\": [0.748127, 0.669398, 0.742352, 0.838053, 0.863874, 0.869541, 0.844954, 0.746204, 0.751302, 0.762869, 0.615154, 0.536033]}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "z6qaqbxxt",
+            "content": "{\"start\": 0, \"end_exclusive\": 12, \"probability\": [0.794949, 0.712832, 0.778631, 0.881333, 0.903874, 0.880512, 0.866512, 0.807842, 0.823832, 0.86043, 0.788709, 0.708003]}"
+          }
+        ],
+        "tool_trace": [
+          {
+            "tool": "list_evidence",
+            "arguments": {},
+            "output": {
+              "candidates": [
+                "captured",
+                "fastdvdnet",
+                "spatial_nlm"
+              ],
+              "scored_timestamps": 99,
+              "evidence_hash": "b1abf3bc0d081735e9f264cd03ae4271bf4e6b293ca13eed35e78bdb6918f63b",
+              "access": "tool_measurements_only",
+              "scores_are_uncalibrated": true
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "captured"
+            },
+            "output": {
+              "musiq": 18.14721171061198,
+              "brisque": 41.14602915445963,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "musiq": 32.5880978902181,
+              "brisque": 35.3070182800293,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "musiq": 16.44109312693278,
+              "brisque": 7.745859240492185,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "captured"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  12,
+                  1
+                ],
+                [
+                  12,
+                  41,
+                  0
+                ],
+                [
+                  41,
+                  43,
+                  1
+                ],
+                [
+                  43,
+                  48,
+                  0
+                ],
+                [
+                  48,
+                  50,
+                  1
+                ],
+                [
+                  50,
+                  51,
+                  0
+                ],
+                [
+                  51,
+                  52,
+                  1
+                ],
+                [
+                  52,
+                  79,
+                  0
+                ],
+                [
+                  79,
+                  86,
+                  1
+                ],
+                [
+                  86,
+                  89,
+                  0
+                ],
+                [
+                  89,
+                  91,
+                  1
+                ],
+                [
+                  91,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.09773,
+              "score_max": 0.869541,
+              "score_mean": 0.36627,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  12,
+                  1
+                ],
+                [
+                  12,
+                  38,
+                  0
+                ],
+                [
+                  38,
+                  44,
+                  1
+                ],
+                [
+                  44,
+                  46,
+                  0
+                ],
+                [
+                  46,
+                  54,
+                  1
+                ],
+                [
+                  54,
+                  79,
+                  0
+                ],
+                [
+                  79,
+                  86,
+                  1
+                ],
+                [
+                  86,
+                  88,
+                  0
+                ],
+                [
+                  88,
+                  92,
+                  1
+                ],
+                [
+                  92,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.124712,
+              "score_max": 0.903874,
+              "score_mean": 0.456506,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  12,
+                  1
+                ],
+                [
+                  12,
+                  41,
+                  0
+                ],
+                [
+                  41,
+                  45,
+                  1
+                ],
+                [
+                  45,
+                  46,
+                  0
+                ],
+                [
+                  46,
+                  47,
+                  1
+                ],
+                [
+                  47,
+                  48,
+                  0
+                ],
+                [
+                  48,
+                  53,
+                  1
+                ],
+                [
+                  53,
+                  78,
+                  0
+                ],
+                [
+                  78,
+                  91,
+                  1
+                ],
+                [
+                  91,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.125846,
+              "score_max": 0.903586,
+              "score_mean": 0.443444,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "compare_with_capture",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "disagreement": 0.1111111111111111,
+              "mean_absolute_score_change": 0.09053075238309725,
+              "delta_musiq": 14.440886179606121,
+              "delta_brisque": -5.839010874430336
+            }
+          },
+          {
+            "tool": "compare_with_capture",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "disagreement": 0.09090909090909091,
+              "mean_absolute_score_change": 0.07717410392231411,
+              "delta_musiq": -1.7061185836791992,
+              "delta_brisque": -33.400169913967446
+            }
+          },
+          {
+            "tool": "inspect_interval",
+            "arguments": {
+              "candidate": "captured",
+              "end": 54,
+              "start": 38
+            },
+            "output": {
+              "start": 38,
+              "end_exclusive": 54,
+              "probability": [
+                0.345057,
+                0.364083,
+                0.371649,
+                0.539054,
+                0.607867,
+                0.477531,
+                0.413103,
+                0.310803,
+                0.471069,
+                0.352357,
+                0.55015,
+                0.512535,
+                0.479958,
+                0.588752,
+                0.450077,
+                0.378353
+              ]
+            }
+          },
+          {
+            "tool": "inspect_interval",
+            "arguments": {
+              "candidate": "fastdvdnet",
+              "end": 54,
+              "start": 38
+            },
+            "output": {
+              "start": 38,
+              "end_exclusive": 54,
+              "probability": [
+                0.578845,
+                0.522296,
+                0.52988,
+                0.724291,
+                0.728223,
+                0.612409,
+                0.431791,
+                0.356751,
+                0.578294,
+                0.525625,
+                0.716255,
+                0.703332,
+                0.654032,
+                0.724523,
+                0.632303,
+                0.530526
+              ]
+            }
+          },
+          {
+            "tool": "inspect_interval",
+            "arguments": {
+              "candidate": "captured",
+              "end": 99,
+              "start": 78
+            },
+            "error": "Inspect at most 20 timestamps per interval"
+          },
+          {
+            "tool": "inspect_interval",
+            "arguments": {
+              "candidate": "fastdvdnet",
+              "end": 99,
+              "start": 78
+            },
+            "error": "Inspect at most 20 timestamps per interval"
+          },
+          {
+            "tool": "inspect_interval",
+            "arguments": {
+              "candidate": "captured",
+              "end": 92,
+              "start": 78
+            },
+            "output": {
+              "start": 78,
+              "end_exclusive": 92,
+              "probability": [
+                0.466338,
+                0.557501,
+                0.631973,
+                0.628518,
+                0.571014,
+                0.589,
+                0.662013,
+                0.643217,
+                0.455597,
+                0.424777,
+                0.430321,
+                0.690723,
+                0.54656,
+                0.387122
+              ]
+            }
+          },
+          {
+            "tool": "inspect_interval",
+            "arguments": {
+              "candidate": "fastdvdnet",
+              "end": 92,
+              "start": 78
+            },
+            "output": {
+              "start": 78,
+              "end_exclusive": 92,
+              "probability": [
+                0.499138,
+                0.640606,
+                0.71324,
+                0.738287,
+                0.670504,
+                0.643739,
+                0.688699,
+                0.628618,
+                0.477448,
+                0.460738,
+                0.517957,
+                0.753953,
+                0.638172,
+                0.506723
+              ]
+            }
+          },
+          {
+            "tool": "inspect_interval",
+            "arguments": {
+              "candidate": "captured",
+              "end": 12,
+              "start": 0
+            },
+            "output": {
+              "start": 0,
+              "end_exclusive": 12,
+              "probability": [
+                0.748127,
+                0.669398,
+                0.742352,
+                0.838053,
+                0.863874,
+                0.869541,
+                0.844954,
+                0.746204,
+                0.751302,
+                0.762869,
+                0.615154,
+                0.536033
+              ]
+            }
+          },
+          {
+            "tool": "inspect_interval",
+            "arguments": {
+              "candidate": "fastdvdnet",
+              "end": 12,
+              "start": 0
+            },
+            "output": {
+              "start": 0,
+              "end_exclusive": 12,
+              "probability": [
+                0.794949,
+                0.712832,
+                0.778631,
+                0.881333,
+                0.903874,
+                0.880512,
+                0.866512,
+                0.807842,
+                0.823832,
+                0.86043,
+                0.788709,
+                0.708003
+              ]
+            }
+          }
+        ]
+      },
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 73,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 62,
+            "harm": 0,
+            "corrections": 11
+          },
+          "spatial_nlm": {
+            "errors": 64,
+            "harm": 0,
+            "corrections": 9
+          }
+        }
+      }
+    }
+  ]
+}

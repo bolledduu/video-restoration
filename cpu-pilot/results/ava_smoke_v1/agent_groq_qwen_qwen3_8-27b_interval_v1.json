@@ -1,0 +1,1805 @@
+{
+  "identity": {
+    "measurements_sha256": "37108cc49ec3aacafc0735b1b8ba1c1f458ff2bc0c6645b20fd9e0a8cce061f0",
+    "runner_sha256": "b6b10e71058934d3fe452dcbc14003c65ad69b68cae94631224d06909aee3456",
+    "environment_sha256": "16d290442d377f5b5894118826500e401609c0a67fb24a81b7b360aa061af040",
+    "provider": "groq",
+    "model": "qwen/qwen3.8-27b",
+    "max_turns": 8,
+    "max_tools": 24,
+    "max_completion_tokens": 768,
+    "access": "tool_measurements_only",
+    "temperature": 0,
+    "finalization_policy": "Force submission after required inspections from turn 5, or at turn 8",
+    "submission_format": "complete interval partition"
+  },
+  "status": "COMPLETE",
+  "cases": [
+    {
+      "id": "aca7e0ed106b9ca1",
+      "run": {
+        "status": "COMPLETE",
+        "submission": {
+          "candidate": "fastdvdnet",
+          "intervals": [
+            {
+              "decision": "speaking",
+              "end": 12,
+              "start": 0
+            },
+            {
+              "decision": "not_speaking",
+              "end": 38,
+              "start": 12
+            },
+            {
+              "decision": "speaking",
+              "end": 44,
+              "start": 38
+            },
+            {
+              "decision": "not_speaking",
+              "end": 46,
+              "start": 44
+            },
+            {
+              "decision": "speaking",
+              "end": 54,
+              "start": 46
+            },
+            {
+              "decision": "not_speaking",
+              "end": 79,
+              "start": 54
+            },
+            {
+              "decision": "speaking",
+              "end": 86,
+              "start": 79
+            },
+            {
+              "decision": "not_speaking",
+              "end": 88,
+              "start": 86
+            },
+            {
+              "decision": "speaking",
+              "end": 92,
+              "start": 88
+            },
+            {
+              "decision": "not_speaking",
+              "end": 99,
+              "start": 92
+            }
+          ],
+          "rationale": "fastdvdnet has the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and the lowest disagreement with captured evidence (0.111) among the restorations, with a moderate mean score change (0.091). Its threshold-decision intervals are used as the speaking-state decisions across all 99 timestamps.",
+          "decisions": [
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "not_speaking",
+            "not_speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "not_speaking",
+            "not_speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking"
+          ]
+        },
+        "evidence_sha256": "b1abf3bc0d081735e9f264cd03ae4271bf4e6b293ca13eed35e78bdb6918f63b",
+        "served_models": [
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b"
+        ],
+        "usage": [
+          {
+            "queue_time": 0.034156213,
+            "prompt_tokens": 1069,
+            "prompt_time": 0.089058108,
+            "completion_tokens": 15,
+            "completion_time": 0.030638629,
+            "total_tokens": 1084,
+            "total_time": 0.119696737
+          },
+          {
+            "queue_time": 0.033690154,
+            "prompt_tokens": 1209,
+            "prompt_time": 0.086336914,
+            "completion_tokens": 88,
+            "completion_time": 0.185382429,
+            "total_tokens": 1297,
+            "total_time": 0.271719343
+          },
+          {
+            "queue_time": 0.033550663,
+            "prompt_tokens": 1508,
+            "prompt_time": 0.121329805,
+            "completion_tokens": 94,
+            "completion_time": 0.188439001,
+            "total_tokens": 1602,
+            "total_time": 0.309768806
+          },
+          {
+            "queue_time": 0.024065471,
+            "prompt_tokens": 2228,
+            "prompt_time": 0.163521436,
+            "completion_tokens": 62,
+            "completion_time": 0.12041638,
+            "total_tokens": 2290,
+            "total_time": 0.283937816
+          },
+          {
+            "queue_time": 0.037765267,
+            "prompt_tokens": 2520,
+            "prompt_time": 0.20295532,
+            "completion_tokens": 356,
+            "completion_time": 0.958530009,
+            "total_tokens": 2876,
+            "total_time": 1.161485329
+          }
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "You select audiovisual evidence for a visible person's speaking-state decisions.\nYou have NO direct access to pixels, audio, transcripts, identities or true labels.\nUse only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance\nquality, not attribution correctness. TalkNet probabilities are uncalibrated.\nInspect captured and restored candidates before choosing. Compare restored evidence\nwith capture before selecting it. Disagreement alone does not establish an error.\nSpeaking inspections return [start, end_exclusive, speaking_0_or_1] intervals,\nwhich preserve every threshold decision. Request local scores only if needed.\nAfter inspecting the candidates and comparisons, submit without repeating inspections.\nSubmit consecutive intervals with start, exclusive end, and a speaking/not_speaking/abstain\ndecision using submit_decisions. Cover every timestamp from 0 to the total count.\nPrefer useful quality improvements only when evidence supports\nthem. Do not invent observations. Finish within 8 model turns and 24 tool calls."
+          },
+          {
+            "role": "user",
+            "content": "Inspect the available evidence, select a candidate, and submit speaking-state decisions for every scored timestamp."
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "zscyeyfxz",
+                "type": "function",
+                "function": {
+                  "name": "list_evidence",
+                  "arguments": "{}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "zscyeyfxz",
+            "content": "{\"candidates\": [\"captured\", \"fastdvdnet\", \"spatial_nlm\"], \"scored_timestamps\": 99, \"evidence_hash\": \"b1abf3bc0d081735e9f264cd03ae4271bf4e6b293ca13eed35e78bdb6918f63b\", \"access\": \"tool_measurements_only\", \"scores_are_uncalibrated\": true}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "eeveq7css",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"captured\"}"
+                }
+              },
+              {
+                "id": "n9w0k5fyz",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "m9nb780ff",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "eeveq7css",
+            "content": "{\"musiq\": 18.14721171061198, \"brisque\": 41.14602915445963, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "n9w0k5fyz",
+            "content": "{\"musiq\": 32.5880978902181, \"brisque\": 35.3070182800293, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "m9nb780ff",
+            "content": "{\"musiq\": 16.44109312693278, \"brisque\": 7.745859240492185, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "p9n50xq43",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"captured\"}"
+                }
+              },
+              {
+                "id": "f8zescbra",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "gwr1vqykp",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "p9n50xq43",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 12, 1], [12, 41, 0], [41, 43, 1], [43, 48, 0], [48, 50, 1], [50, 51, 0], [51, 52, 1], [52, 79, 0], [79, 86, 1], [86, 89, 0], [89, 91, 1], [91, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.09773, \"score_max\": 0.869541, \"score_mean\": 0.36627, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "f8zescbra",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 12, 1], [12, 38, 0], [38, 44, 1], [44, 46, 0], [46, 54, 1], [54, 79, 0], [79, 86, 1], [86, 88, 0], [88, 92, 1], [92, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.124712, \"score_max\": 0.903874, \"score_mean\": 0.456506, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "gwr1vqykp",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 12, 1], [12, 41, 0], [41, 45, 1], [45, 46, 0], [46, 47, 1], [47, 48, 0], [48, 53, 1], [53, 78, 0], [78, 91, 1], [91, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.125846, \"score_max\": 0.903586, \"score_mean\": 0.443444, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "fb1v6g0t2",
+                "type": "function",
+                "function": {
+                  "name": "compare_with_capture",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "s1asqeg4v",
+                "type": "function",
+                "function": {
+                  "name": "compare_with_capture",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "fb1v6g0t2",
+            "content": "{\"disagreement\": 0.1111111111111111, \"mean_absolute_score_change\": 0.09053075238309725, \"delta_musiq\": 14.440886179606121, \"delta_brisque\": -5.839010874430336}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "s1asqeg4v",
+            "content": "{\"disagreement\": 0.09090909090909091, \"mean_absolute_score_change\": 0.07717410392231411, \"delta_musiq\": -1.7061185836791992, \"delta_brisque\": -33.400169913967446}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "ks5kjr47y",
+                "type": "function",
+                "function": {
+                  "name": "submit_decisions",
+                  "arguments": "{\"candidate\":\"fastdvdnet\",\"intervals\":[{\"decision\":\"speaking\",\"end\":12,\"start\":0},{\"decision\":\"not_speaking\",\"end\":38,\"start\":12},{\"decision\":\"speaking\",\"end\":44,\"start\":38},{\"decision\":\"not_speaking\",\"end\":46,\"start\":44},{\"decision\":\"speaking\",\"end\":54,\"start\":46},{\"decision\":\"not_speaking\",\"end\":79,\"start\":54},{\"decision\":\"speaking\",\"end\":86,\"start\":79},{\"decision\":\"not_speaking\",\"end\":88,\"start\":86},{\"decision\":\"speaking\",\"end\":92,\"start\":88},{\"decision\":\"not_speaking\",\"end\":99,\"start\":92}],\"rationale\":\"fastdvdnet has the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and the lowest disagreement with captured evidence (0.111) among the restorations, with a moderate mean score change (0.091). Its threshold-decision intervals are used as the speaking-state decisions across all 99 timestamps.\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "ks5kjr47y",
+            "content": "{\"accepted\": true, \"answered\": 99, \"eligible\": 99}"
+          }
+        ],
+        "tool_trace": [
+          {
+            "tool": "list_evidence",
+            "arguments": {},
+            "output": {
+              "candidates": [
+                "captured",
+                "fastdvdnet",
+                "spatial_nlm"
+              ],
+              "scored_timestamps": 99,
+              "evidence_hash": "b1abf3bc0d081735e9f264cd03ae4271bf4e6b293ca13eed35e78bdb6918f63b",
+              "access": "tool_measurements_only",
+              "scores_are_uncalibrated": true
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "captured"
+            },
+            "output": {
+              "musiq": 18.14721171061198,
+              "brisque": 41.14602915445963,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "musiq": 32.5880978902181,
+              "brisque": 35.3070182800293,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "musiq": 16.44109312693278,
+              "brisque": 7.745859240492185,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "captured"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  12,
+                  1
+                ],
+                [
+                  12,
+                  41,
+                  0
+                ],
+                [
+                  41,
+                  43,
+                  1
+                ],
+                [
+                  43,
+                  48,
+                  0
+                ],
+                [
+                  48,
+                  50,
+                  1
+                ],
+                [
+                  50,
+                  51,
+                  0
+                ],
+                [
+                  51,
+                  52,
+                  1
+                ],
+                [
+                  52,
+                  79,
+                  0
+                ],
+                [
+                  79,
+                  86,
+                  1
+                ],
+                [
+                  86,
+                  89,
+                  0
+                ],
+                [
+                  89,
+                  91,
+                  1
+                ],
+                [
+                  91,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.09773,
+              "score_max": 0.869541,
+              "score_mean": 0.36627,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  12,
+                  1
+                ],
+                [
+                  12,
+                  38,
+                  0
+                ],
+                [
+                  38,
+                  44,
+                  1
+                ],
+                [
+                  44,
+                  46,
+                  0
+                ],
+                [
+                  46,
+                  54,
+                  1
+                ],
+                [
+                  54,
+                  79,
+                  0
+                ],
+                [
+                  79,
+                  86,
+                  1
+                ],
+                [
+                  86,
+                  88,
+                  0
+                ],
+                [
+                  88,
+                  92,
+                  1
+                ],
+                [
+                  92,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.124712,
+              "score_max": 0.903874,
+              "score_mean": 0.456506,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  12,
+                  1
+                ],
+                [
+                  12,
+                  41,
+                  0
+                ],
+                [
+                  41,
+                  45,
+                  1
+                ],
+                [
+                  45,
+                  46,
+                  0
+                ],
+                [
+                  46,
+                  47,
+                  1
+                ],
+                [
+                  47,
+                  48,
+                  0
+                ],
+                [
+                  48,
+                  53,
+                  1
+                ],
+                [
+                  53,
+                  78,
+                  0
+                ],
+                [
+                  78,
+                  91,
+                  1
+                ],
+                [
+                  91,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.125846,
+              "score_max": 0.903586,
+              "score_mean": 0.443444,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "compare_with_capture",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "disagreement": 0.1111111111111111,
+              "mean_absolute_score_change": 0.09053075238309725,
+              "delta_musiq": 14.440886179606121,
+              "delta_brisque": -5.839010874430336
+            }
+          },
+          {
+            "tool": "compare_with_capture",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "disagreement": 0.09090909090909091,
+              "mean_absolute_score_change": 0.07717410392231411,
+              "delta_musiq": -1.7061185836791992,
+              "delta_brisque": -33.400169913967446
+            }
+          },
+          {
+            "tool": "submit_decisions",
+            "arguments": {
+              "candidate": "fastdvdnet",
+              "intervals": [
+                {
+                  "decision": "speaking",
+                  "end": 12,
+                  "start": 0
+                },
+                {
+                  "decision": "not_speaking",
+                  "end": 38,
+                  "start": 12
+                },
+                {
+                  "decision": "speaking",
+                  "end": 44,
+                  "start": 38
+                },
+                {
+                  "decision": "not_speaking",
+                  "end": 46,
+                  "start": 44
+                },
+                {
+                  "decision": "speaking",
+                  "end": 54,
+                  "start": 46
+                },
+                {
+                  "decision": "not_speaking",
+                  "end": 79,
+                  "start": 54
+                },
+                {
+                  "decision": "speaking",
+                  "end": 86,
+                  "start": 79
+                },
+                {
+                  "decision": "not_speaking",
+                  "end": 88,
+                  "start": 86
+                },
+                {
+                  "decision": "speaking",
+                  "end": 92,
+                  "start": 88
+                },
+                {
+                  "decision": "not_speaking",
+                  "end": 99,
+                  "start": 92
+                }
+              ],
+              "rationale": "fastdvdnet has the best appearance quality (MUSIQ 32.59, BRISQUE 35.31) and the lowest disagreement with captured evidence (0.111) among the restorations, with a moderate mean score change (0.091). Its threshold-decision intervals are used as the speaking-state decisions across all 99 timestamps."
+            },
+            "output": {
+              "accepted": true,
+              "answered": 99,
+              "eligible": 99
+            }
+          }
+        ]
+      },
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 73,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 62,
+            "harm": 0,
+            "corrections": 11
+          },
+          "spatial_nlm": {
+            "errors": 64,
+            "harm": 0,
+            "corrections": 9
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 62,
+        "captured_errors_on_same_answered_frames": 73
+      }
+    },
+    {
+      "id": "b5e7d06dbd1cfb8a",
+      "run": {
+        "status": "COMPLETE",
+        "submission": {
+          "candidate": "spatial_nlm",
+          "intervals": [
+            {
+              "decision": "not_speaking",
+              "end": 99,
+              "start": 0
+            }
+          ],
+          "rationale": "All three candidates agree on a single [0,99) not_speaking interval at threshold 0.5 (max scores ~0.08, well below threshold). spatial_nlm is selected because it has the best appearance quality (highest MUSIQ 16.17, lowest BRISQUE 40.22) and zero disagreement with the captured evidence, with the smallest mean absolute score change (0.0011).",
+          "decisions": [
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking"
+          ]
+        },
+        "evidence_sha256": "b731563a752367d9b956f8de38076d6a4c8773b80c34fb952caac56ce5bd8ccf",
+        "served_models": [
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b"
+        ],
+        "usage": [
+          {
+            "queue_time": 0.021084399,
+            "prompt_tokens": 1069,
+            "prompt_time": 0.088479629,
+            "completion_tokens": 15,
+            "completion_time": 0.030539761,
+            "total_tokens": 1084,
+            "total_time": 0.11901939
+          },
+          {
+            "queue_time": 0.02409358,
+            "prompt_tokens": 1212,
+            "prompt_time": 0.083017331,
+            "completion_tokens": 88,
+            "completion_time": 0.171684193,
+            "total_tokens": 1300,
+            "total_time": 0.254701524
+          },
+          {
+            "queue_time": 0.024658416,
+            "prompt_tokens": 1515,
+            "prompt_time": 0.121925491,
+            "completion_tokens": 94,
+            "completion_time": 0.188554328,
+            "total_tokens": 1609,
+            "total_time": 0.310479819
+          },
+          {
+            "queue_time": 0.041753255,
+            "prompt_tokens": 1916,
+            "prompt_time": 0.131679162,
+            "completion_tokens": 62,
+            "completion_time": 0.121733564,
+            "total_tokens": 1978,
+            "total_time": 0.253412726
+          },
+          {
+            "queue_time": 0.021789337,
+            "prompt_tokens": 2181,
+            "prompt_time": 0.175620374,
+            "completion_tokens": 171,
+            "completion_time": 0.60935614,
+            "total_tokens": 2352,
+            "total_time": 0.784976514
+          }
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "You select audiovisual evidence for a visible person's speaking-state decisions.\nYou have NO direct access to pixels, audio, transcripts, identities or true labels.\nUse only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance\nquality, not attribution correctness. TalkNet probabilities are uncalibrated.\nInspect captured and restored candidates before choosing. Compare restored evidence\nwith capture before selecting it. Disagreement alone does not establish an error.\nSpeaking inspections return [start, end_exclusive, speaking_0_or_1] intervals,\nwhich preserve every threshold decision. Request local scores only if needed.\nAfter inspecting the candidates and comparisons, submit without repeating inspections.\nSubmit consecutive intervals with start, exclusive end, and a speaking/not_speaking/abstain\ndecision using submit_decisions. Cover every timestamp from 0 to the total count.\nPrefer useful quality improvements only when evidence supports\nthem. Do not invent observations. Finish within 8 model turns and 24 tool calls."
+          },
+          {
+            "role": "user",
+            "content": "Inspect the available evidence, select a candidate, and submit speaking-state decisions for every scored timestamp."
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "c8qck680p",
+                "type": "function",
+                "function": {
+                  "name": "list_evidence",
+                  "arguments": "{}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "c8qck680p",
+            "content": "{\"candidates\": [\"captured\", \"fastdvdnet\", \"spatial_nlm\"], \"scored_timestamps\": 99, \"evidence_hash\": \"b731563a752367d9b956f8de38076d6a4c8773b80c34fb952caac56ce5bd8ccf\", \"access\": \"tool_measurements_only\", \"scores_are_uncalibrated\": true}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "axr922vrx",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"captured\"}"
+                }
+              },
+              {
+                "id": "0gjpmbnax",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "wrg63s9vs",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "axr922vrx",
+            "content": "{\"musiq\": 15.8765287399292, \"brisque\": 49.42034149169922, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "0gjpmbnax",
+            "content": "{\"musiq\": 15.766924540201822, \"brisque\": 48.053941090901695, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "wrg63s9vs",
+            "content": "{\"musiq\": 16.169124603271484, \"brisque\": 40.21800549825033, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "5vzj25b0t",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"captured\"}"
+                }
+              },
+              {
+                "id": "hfb8fhh80",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "9peyeaqby",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "5vzj25b0t",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.002888, \"score_max\": 0.077078, \"score_mean\": 0.013093, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "hfb8fhh80",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.002488, \"score_max\": 0.072338, \"score_mean\": 0.01396, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "9peyeaqby",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.00311, \"score_max\": 0.083511, \"score_mean\": 0.014147, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "agb81f6y5",
+                "type": "function",
+                "function": {
+                  "name": "compare_with_capture",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              },
+              {
+                "id": "4qh48mvct",
+                "type": "function",
+                "function": {
+                  "name": "compare_with_capture",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "agb81f6y5",
+            "content": "{\"disagreement\": 0.0, \"mean_absolute_score_change\": 0.0010566479018466039, \"delta_musiq\": 0.29259586334228516, \"delta_brisque\": -9.20233599344889}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "4qh48mvct",
+            "content": "{\"disagreement\": 0.0, \"mean_absolute_score_change\": 0.0020461363430991017, \"delta_musiq\": -0.1096041997273769, \"delta_brisque\": -1.3664004007975237}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "jcna5jvm0",
+                "type": "function",
+                "function": {
+                  "name": "submit_decisions",
+                  "arguments": "{\"candidate\":\"spatial_nlm\",\"intervals\":[{\"decision\":\"not_speaking\",\"end\":99,\"start\":0}],\"rationale\":\"All three candidates agree on a single [0,99) not_speaking interval at threshold 0.5 (max scores ~0.08, well below threshold). spatial_nlm is selected because it has the best appearance quality (highest MUSIQ 16.17, lowest BRISQUE 40.22) and zero disagreement with the captured evidence, with the smallest mean absolute score change (0.0011).\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "jcna5jvm0",
+            "content": "{\"accepted\": true, \"answered\": 99, \"eligible\": 99}"
+          }
+        ],
+        "tool_trace": [
+          {
+            "tool": "list_evidence",
+            "arguments": {},
+            "output": {
+              "candidates": [
+                "captured",
+                "fastdvdnet",
+                "spatial_nlm"
+              ],
+              "scored_timestamps": 99,
+              "evidence_hash": "b731563a752367d9b956f8de38076d6a4c8773b80c34fb952caac56ce5bd8ccf",
+              "access": "tool_measurements_only",
+              "scores_are_uncalibrated": true
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "captured"
+            },
+            "output": {
+              "musiq": 15.8765287399292,
+              "brisque": 49.42034149169922,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "musiq": 15.766924540201822,
+              "brisque": 48.053941090901695,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "musiq": 16.169124603271484,
+              "brisque": 40.21800549825033,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "captured"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.002888,
+              "score_max": 0.077078,
+              "score_mean": 0.013093,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.002488,
+              "score_max": 0.072338,
+              "score_mean": 0.01396,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.00311,
+              "score_max": 0.083511,
+              "score_mean": 0.014147,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "compare_with_capture",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "disagreement": 0.0,
+              "mean_absolute_score_change": 0.0010566479018466039,
+              "delta_musiq": 0.29259586334228516,
+              "delta_brisque": -9.20233599344889
+            }
+          },
+          {
+            "tool": "compare_with_capture",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "disagreement": 0.0,
+              "mean_absolute_score_change": 0.0020461363430991017,
+              "delta_musiq": -0.1096041997273769,
+              "delta_brisque": -1.3664004007975237
+            }
+          },
+          {
+            "tool": "submit_decisions",
+            "arguments": {
+              "candidate": "spatial_nlm",
+              "intervals": [
+                {
+                  "decision": "not_speaking",
+                  "end": 99,
+                  "start": 0
+                }
+              ],
+              "rationale": "All three candidates agree on a single [0,99) not_speaking interval at threshold 0.5 (max scores ~0.08, well below threshold). spatial_nlm is selected because it has the best appearance quality (highest MUSIQ 16.17, lowest BRISQUE 40.22) and zero disagreement with the captured evidence, with the smallest mean absolute score change (0.0011)."
+            },
+            "output": {
+              "accepted": true,
+              "answered": 99,
+              "eligible": 99
+            }
+          }
+        ]
+      },
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "id": "eaa58bfe0ca84011",
+      "run": {
+        "status": "COMPLETE",
+        "submission": {
+          "candidate": "fastdvdnet",
+          "intervals": [
+            {
+              "decision": "not_speaking",
+              "end": 99,
+              "start": 0
+            }
+          ],
+          "rationale": "All three candidates (captured, fastdvdnet, spatial_nlm) agree with zero disagreement against capture, and every threshold decision across all 99 scored timestamps is not_speaking (max scores ~0.09-0.12, well below the 0.5 threshold). fastdvdnet is selected because it offers the strongest appearance-quality improvement over capture (MUSIQ +8.13, BRISQUE -7.33) while preserving identical threshold decisions.",
+          "decisions": [
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking",
+            "not_speaking"
+          ]
+        },
+        "evidence_sha256": "b818fad44008fcd792b4662778a6c6c863950de2aa47683972e79abd7089ce32",
+        "served_models": [
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b",
+          "qwen/qwen3.8-27b"
+        ],
+        "usage": [
+          {
+            "queue_time": 0.021566658,
+            "prompt_tokens": 1069,
+            "prompt_time": 0.085962644,
+            "completion_tokens": 15,
+            "completion_time": 0.030569751,
+            "total_tokens": 1084,
+            "total_time": 0.116532395
+          },
+          {
+            "queue_time": 0.025155861,
+            "prompt_tokens": 1211,
+            "prompt_time": 0.083240277,
+            "completion_tokens": 88,
+            "completion_time": 0.171764248,
+            "total_tokens": 1299,
+            "total_time": 0.255004525
+          },
+          {
+            "queue_time": 0.024029352,
+            "prompt_tokens": 1514,
+            "prompt_time": 0.104483016,
+            "completion_tokens": 94,
+            "completion_time": 0.182101206,
+            "total_tokens": 1608,
+            "total_time": 0.286584222
+          },
+          {
+            "queue_time": 0.021445507,
+            "prompt_tokens": 1917,
+            "prompt_time": 0.15422776,
+            "completion_tokens": 62,
+            "completion_time": 0.135461471,
+            "total_tokens": 1979,
+            "total_time": 0.289689231
+          },
+          {
+            "queue_time": 0.04525825,
+            "prompt_tokens": 2182,
+            "prompt_time": 0.160232554,
+            "completion_tokens": 180,
+            "completion_time": 0.637438353,
+            "total_tokens": 2362,
+            "total_time": 0.797670907
+          }
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "You select audiovisual evidence for a visible person's speaking-state decisions.\nYou have NO direct access to pixels, audio, transcripts, identities or true labels.\nUse only the measurement tools. Higher MUSIQ and lower BRISQUE indicate appearance\nquality, not attribution correctness. TalkNet probabilities are uncalibrated.\nInspect captured and restored candidates before choosing. Compare restored evidence\nwith capture before selecting it. Disagreement alone does not establish an error.\nSpeaking inspections return [start, end_exclusive, speaking_0_or_1] intervals,\nwhich preserve every threshold decision. Request local scores only if needed.\nAfter inspecting the candidates and comparisons, submit without repeating inspections.\nSubmit consecutive intervals with start, exclusive end, and a speaking/not_speaking/abstain\ndecision using submit_decisions. Cover every timestamp from 0 to the total count.\nPrefer useful quality improvements only when evidence supports\nthem. Do not invent observations. Finish within 8 model turns and 24 tool calls."
+          },
+          {
+            "role": "user",
+            "content": "Inspect the available evidence, select a candidate, and submit speaking-state decisions for every scored timestamp."
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "8ttm6jma3",
+                "type": "function",
+                "function": {
+                  "name": "list_evidence",
+                  "arguments": "{}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "8ttm6jma3",
+            "content": "{\"candidates\": [\"captured\", \"fastdvdnet\", \"spatial_nlm\"], \"scored_timestamps\": 99, \"evidence_hash\": \"b818fad44008fcd792b4662778a6c6c863950de2aa47683972e79abd7089ce32\", \"access\": \"tool_measurements_only\", \"scores_are_uncalibrated\": true}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "d39rg7kq9",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"captured\"}"
+                }
+              },
+              {
+                "id": "datscncgd",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "sqvy1jzd2",
+                "type": "function",
+                "function": {
+                  "name": "inspect_quality",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "d39rg7kq9",
+            "content": "{\"musiq\": 22.969134012858074, \"brisque\": 43.00470860799154, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "datscncgd",
+            "content": "{\"musiq\": 31.10271708170573, \"brisque\": 35.67409642537435, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "sqvy1jzd2",
+            "content": "{\"musiq\": 23.330874760945637, \"brisque\": 18.64259910583496, \"musiq_direction\": \"higher\", \"brisque_direction\": \"lower\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "xcgzkpy6z",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"captured\"}"
+                }
+              },
+              {
+                "id": "6p34t73ds",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "n5kt2nese",
+                "type": "function",
+                "function": {
+                  "name": "inspect_speaking",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "xcgzkpy6z",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.008376, \"score_max\": 0.115152, \"score_mean\": 0.024211, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "6p34t73ds",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.008067, \"score_max\": 0.090669, \"score_mean\": 0.019794, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "n5kt2nese",
+            "content": "{\"intervals_start_endExclusive_speaking\": [[0, 99, 0]], \"threshold\": 0.5, \"calibrated\": false, \"score_min\": 0.009161, \"score_max\": 0.109269, \"score_mean\": 0.023762, \"detail\": \"Intervals preserve every threshold decision. inspect_interval provides local scores.\"}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "gnx6fekcz",
+                "type": "function",
+                "function": {
+                  "name": "compare_with_capture",
+                  "arguments": "{\"candidate\":\"fastdvdnet\"}"
+                }
+              },
+              {
+                "id": "9jcegk0av",
+                "type": "function",
+                "function": {
+                  "name": "compare_with_capture",
+                  "arguments": "{\"candidate\":\"spatial_nlm\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "gnx6fekcz",
+            "content": "{\"disagreement\": 0.0, \"mean_absolute_score_change\": 0.004567600692612956, \"delta_musiq\": 8.133583068847656, \"delta_brisque\": -7.3306121826171875}"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "9jcegk0av",
+            "content": "{\"disagreement\": 0.0, \"mean_absolute_score_change\": 0.0011322878470475023, \"delta_musiq\": 0.36174074808756274, \"delta_brisque\": -24.362109502156578}"
+          },
+          {
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "d9pyr8n2n",
+                "type": "function",
+                "function": {
+                  "name": "submit_decisions",
+                  "arguments": "{\"candidate\":\"fastdvdnet\",\"intervals\":[{\"decision\":\"not_speaking\",\"end\":99,\"start\":0}],\"rationale\":\"All three candidates (captured, fastdvdnet, spatial_nlm) agree with zero disagreement against capture, and every threshold decision across all 99 scored timestamps is not_speaking (max scores ~0.09-0.12, well below the 0.5 threshold). fastdvdnet is selected because it offers the strongest appearance-quality improvement over capture (MUSIQ +8.13, BRISQUE -7.33) while preserving identical threshold decisions.\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "d9pyr8n2n",
+            "content": "{\"accepted\": true, \"answered\": 99, \"eligible\": 99}"
+          }
+        ],
+        "tool_trace": [
+          {
+            "tool": "list_evidence",
+            "arguments": {},
+            "output": {
+              "candidates": [
+                "captured",
+                "fastdvdnet",
+                "spatial_nlm"
+              ],
+              "scored_timestamps": 99,
+              "evidence_hash": "b818fad44008fcd792b4662778a6c6c863950de2aa47683972e79abd7089ce32",
+              "access": "tool_measurements_only",
+              "scores_are_uncalibrated": true
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "captured"
+            },
+            "output": {
+              "musiq": 22.969134012858074,
+              "brisque": 43.00470860799154,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "musiq": 31.10271708170573,
+              "brisque": 35.67409642537435,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_quality",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "musiq": 23.330874760945637,
+              "brisque": 18.64259910583496,
+              "musiq_direction": "higher",
+              "brisque_direction": "lower"
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "captured"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.008376,
+              "score_max": 0.115152,
+              "score_mean": 0.024211,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.008067,
+              "score_max": 0.090669,
+              "score_mean": 0.019794,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "inspect_speaking",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "intervals_start_endExclusive_speaking": [
+                [
+                  0,
+                  99,
+                  0
+                ]
+              ],
+              "threshold": 0.5,
+              "calibrated": false,
+              "score_min": 0.009161,
+              "score_max": 0.109269,
+              "score_mean": 0.023762,
+              "detail": "Intervals preserve every threshold decision. inspect_interval provides local scores."
+            }
+          },
+          {
+            "tool": "compare_with_capture",
+            "arguments": {
+              "candidate": "fastdvdnet"
+            },
+            "output": {
+              "disagreement": 0.0,
+              "mean_absolute_score_change": 0.004567600692612956,
+              "delta_musiq": 8.133583068847656,
+              "delta_brisque": -7.3306121826171875
+            }
+          },
+          {
+            "tool": "compare_with_capture",
+            "arguments": {
+              "candidate": "spatial_nlm"
+            },
+            "output": {
+              "disagreement": 0.0,
+              "mean_absolute_score_change": 0.0011322878470475023,
+              "delta_musiq": 0.36174074808756274,
+              "delta_brisque": -24.362109502156578
+            }
+          },
+          {
+            "tool": "submit_decisions",
+            "arguments": {
+              "candidate": "fastdvdnet",
+              "intervals": [
+                {
+                  "decision": "not_speaking",
+                  "end": 99,
+                  "start": 0
+                }
+              ],
+              "rationale": "All three candidates (captured, fastdvdnet, spatial_nlm) agree with zero disagreement against capture, and every threshold decision across all 99 scored timestamps is not_speaking (max scores ~0.09-0.12, well below the 0.5 threshold). fastdvdnet is selected because it offers the strongest appearance-quality improvement over capture (MUSIQ +8.13, BRISQUE -7.33) while preserving identical threshold decisions."
+            },
+            "output": {
+              "accepted": true,
+              "answered": 99,
+              "eligible": 99
+            }
+          }
+        ]
+      },
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 45,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 45,
+        "captured_errors_on_same_answered_frames": 45
+      }
+    }
+  ]
+}

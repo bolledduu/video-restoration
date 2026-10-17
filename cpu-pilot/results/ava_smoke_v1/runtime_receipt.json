@@ -1,0 +1,1605 @@
+{
+  "runtime_root": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual",
+  "git_revision": "1b508427d267a1026472550bab4c8a0de1820c8a",
+  "python": "3.13.0",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "source_files": [
+    {
+      "path": "scripts/evaluate_causal.py",
+      "sha256": "9bb499cf0346493538770bbc8fdcd3f63a71b00bb550399a689a976b7ef34d84"
+    },
+    {
+      "path": "scripts/prepare_causal.py",
+      "sha256": "d5977f8b52f554f1fc534289c1f2ad07d7ce5dc52d1a3b92dc76266acda18bc5"
+    },
+    {
+      "path": "scripts/run_causal_omnivr.py",
+      "sha256": "c0feb9027b8cbc35139e397f33af8d94f3678ddab35696f5fa4c3dcb45a5698a"
+    },
+    {
+      "path": "external/fastdvdnet/dataloaders.py",
+      "sha256": "151ac0377f3ebcee4915aaf01ed7c9e10db5c66b381bbee3b0265dbfb99fc323"
+    },
+    {
+      "path": "external/fastdvdnet/dataset.py",
+      "sha256": "496c509b22c06cdaaced8fbe1536d1b86919541a2af7024a95086675ef191da0"
+    },
+    {
+      "path": "external/fastdvdnet/fastdvdnet.py",
+      "sha256": "1a2d3d7ccbf7c440aee2c912549cfe6c1edceca9446946c806ac76872c47f85d"
+    },
+    {
+      "path": "external/fastdvdnet/models.py",
+      "sha256": "ddc0a9173168167475e75300d35cee9aee787008a9e58a5e7c78e7e3520cc78e"
+    },
+    {
+      "path": "external/fastdvdnet/test_fastdvdnet.py",
+      "sha256": "679686920231587133c6d15342e12644be15e9b8390cc019abcbe00dd878a9db"
+    },
+    {
+      "path": "external/fastdvdnet/train_common.py",
+      "sha256": "521c4a677294bb4d57e583a0f3c009726fd8433799b7d6b8b3ec55a8ee393fcf"
+    },
+    {
+      "path": "external/fastdvdnet/train_fastdvdnet.py",
+      "sha256": "9e1345649ea06b1c4b24e101aab30e784cda23917e1e7d3c4edefa19096e2ef3"
+    },
+    {
+      "path": "external/fastdvdnet/utils.py",
+      "sha256": "c471b0d41a0875a832cd8d1433d2e24f45a8545ea6a96a3588b23daeed69937c"
+    },
+    {
+      "path": "external/TalkNet-ASD/model/attentionLayer.py",
+      "sha256": "5c0451f2dfd5a52c086ba3e5957d57987962ea979ccfae42360be2b2668aeaa7"
+    },
+    {
+      "path": "external/TalkNet-ASD/model/audioEncoder.py",
+      "sha256": "d4334100ba4e3921dc2011eb56e4d0eb1fd8b69cce16235cb14c47a05d89c6c3"
+    },
+    {
+      "path": "external/TalkNet-ASD/model/faceDetector/__init__.py",
+      "sha256": "1f3f1baac2c3ce57d4190ea351da93648abfd8e4f6e361b21201d8f31686bf18"
+    },
+    {
+      "path": "external/TalkNet-ASD/model/faceDetector/s3fd/__init__.py",
+      "sha256": "ab9d619da685ab1bbf3748109b8ebeada2ca521e86865714bac360b4fd17fc57"
+    },
+    {
+      "path": "external/TalkNet-ASD/model/faceDetector/s3fd/box_utils.py",
+      "sha256": "3db177cdec5607cee5eea645a0aa7507b67807e2e8c82e4ee198e9552dece60b"
+    },
+    {
+      "path": "external/TalkNet-ASD/model/faceDetector/s3fd/nets.py",
+      "sha256": "63c751494bbd0343ca547c94f965c6b88ccc31bc9bb208842bdbc22268f39724"
+    },
+    {
+      "path": "external/TalkNet-ASD/model/talkNetModel.py",
+      "sha256": "df788d96833f67178821f31abdb789fd3aa2a5144fd258d5437c7fbc43a69611"
+    },
+    {
+      "path": "external/TalkNet-ASD/model/visualEncoder.py",
+      "sha256": "5a33ee41194666eeccb48590f72ea1e59b52f40e19dca31390dd7b67d9f22d15"
+    }
+  ],
+  "packages": {
+    "Brotli": [
+      "1.1.0"
+    ],
+    "Deprecated": [
+      "1.2.18"
+    ],
+    "Distance": [
+      "0.1.3"
+    ],
+    "Farama-Notifications": [
+      "0.0.4"
+    ],
+    "Flask": [
+      "3.1.2"
+    ],
+    "GitPython": [
+      "3.1.45"
+    ],
+    "Jinja2": [
+      "3.1.6"
+    ],
+    "Mako": [
+      "1.3.10"
+    ],
+    "Markdown": [
+      "3.10.1"
+    ],
+    "MarkupSafe": [
+      "3.0.3"
+    ],
+    "POT": [
+      "0.9.6.post1"
+    ],
+    "PyGithub": [
+      "2.8.1"
+    ],
+    "PyJWT": [
+      "2.10.1"
+    ],
+    "PyNaCl": [
+      "1.6.1"
+    ],
+    "PyPika": [
+      "0.48.9"
+    ],
+    "PySocks": [
+      "1.7.1"
+    ],
+    "PyYAML": [
+      "6.0.2"
+    ],
+    "Pygments": [
+      "2.19.2"
+    ],
+    "RestrictedPython": [
+      "8.1"
+    ],
+    "SQLAlchemy": [
+      "2.0.43"
+    ],
+    "Send2Trash": [
+      "1.8.3"
+    ],
+    "Sphinx": [
+      "8.2.3"
+    ],
+    "Werkzeug": [
+      "3.1.4"
+    ],
+    "absl-py": [
+      "2.3.1"
+    ],
+    "accelerate": [
+      "1.12.0"
+    ],
+    "addict": [
+      "2.4.0"
+    ],
+    "ai2thor": [
+      "3.3.4"
+    ],
+    "aiofiles": [
+      "24.1.0"
+    ],
+    "aiohappyeyeballs": [
+      "2.6.1"
+    ],
+    "aiohttp": [
+      "3.12.15"
+    ],
+    "aiosignal": [
+      "1.4.0"
+    ],
+    "alabaster": [
+      "1.0.0"
+    ],
+    "albucore": [
+      "0.0.24"
+    ],
+    "albumentations": [
+      "2.0.8"
+    ],
+    "alembic": [
+      "1.17.2"
+    ],
+    "altair": [
+      "6.0.0"
+    ],
+    "anls": [
+      "0.0.2"
+    ],
+    "annotated-types": [
+      "0.7.0"
+    ],
+    "anthropic": [
+      "0.68.1"
+    ],
+    "antlr4-python3-runtime": [
+      "4.11.1"
+    ],
+    "anyio": [
+      "4.11.0"
+    ],
+    "apify_client": [
+      "2.3.0"
+    ],
+    "apify_shared": [
+      "2.1.0"
+    ],
+    "apted": [
+      "1.0.3"
+    ],
+    "argcomplete": [
+      "3.5.1"
+    ],
+    "argon2-cffi": [
+      "25.1.0"
+    ],
+    "argon2-cffi-bindings": [
+      "25.1.0"
+    ],
+    "arrow": [
+      "1.3.0"
+    ],
+    "asn1crypto": [
+      "1.5.1"
+    ],
+    "asttokens": [
+      "3.0.0"
+    ],
+    "async-lru": [
+      "2.0.5"
+    ],
+    "asyncer": [
+      "0.0.8"
+    ],
+    "attrs": [
+      "25.3.0"
+    ],
+    "audioop-lts": [
+      "0.2.2"
+    ],
+    "audioread": [
+      "3.1.0"
+    ],
+    "av": [
+      "16.0.1"
+    ],
+    "aws-requests-auth": [
+      "0.4.3"
+    ],
+    "babel": [
+      "2.17.0"
+    ],
+    "backoff": [
+      "2.2.1"
+    ],
+    "bcrypt": [
+      "5.0.0"
+    ],
+    "beautifulsoup4": [
+      "4.13.5"
+    ],
+    "bert-score": [
+      "0.3.13"
+    ],
+    "bibtexparser": [
+      "1.4.3"
+    ],
+    "biopython": [
+      "1.85"
+    ],
+    "bitarray": [
+      "3.7.1"
+    ],
+    "bitsandbytes": [
+      "0.48.2"
+    ],
+    "bleach": [
+      "6.2.0"
+    ],
+    "blinker": [
+      "1.9.0"
+    ],
+    "borb": [
+      "2.1.25"
+    ],
+    "boto3": [
+      "1.42.21"
+    ],
+    "botocore": [
+      "1.42.21"
+    ],
+    "boxsdk": [
+      "10.0.1"
+    ],
+    "build": [
+      "1.3.0"
+    ],
+    "cachetools": [
+      "5.5.0"
+    ],
+    "call-graph-policy-v2": [
+      "0.1.0"
+    ],
+    "cerebras_cloud_sdk": [
+      "1.64.1"
+    ],
+    "certifi": [
+      "2025.10.5"
+    ],
+    "cffi": [
+      "2.0.0"
+    ],
+    "charset-normalizer": [
+      "3.4.0"
+    ],
+    "choreographer": [
+      "1.2.1"
+    ],
+    "chromadb": [
+      "1.3.5"
+    ],
+    "cli_exit_tools": [
+      "1.2.7"
+    ],
+    "click": [
+      "8.1.7"
+    ],
+    "cloud-sql-python-connector": [
+      "1.18.4"
+    ],
+    "cloudpickle": [
+      "3.1.1"
+    ],
+    "colorama": [
+      "0.4.6"
+    ],
+    "coloredlogs": [
+      "15.0.1"
+    ],
+    "colorlog": [
+      "6.10.1"
+    ],
+    "comm": [
+      "0.2.3"
+    ],
+    "commonmark": [
+      "0.9.2"
+    ],
+    "contourpy": [
+      "1.3.3"
+    ],
+    "croniter": [
+      "6.0.0"
+    ],
+    "cryptography": [
+      "44.0.3"
+    ],
+    "cssselect": [
+      "1.2.0"
+    ],
+    "cssselect2": [
+      "0.10.1"
+    ],
+    "cssutils": [
+      "2.11.1"
+    ],
+    "curlify": [
+      "2.2.1"
+    ],
+    "cut-cross-entropy": [
+      "25.1.1"
+    ],
+    "cycler": [
+      "0.12.1"
+    ],
+    "dataclasses-json": [
+      "0.6.7"
+    ],
+    "datasets": [
+      "4.4.1"
+    ],
+    "debugpy": [
+      "1.8.17"
+    ],
+    "decorator": [
+      "5.2.1"
+    ],
+    "decord": [
+      "0.6.0"
+    ],
+    "defusedxml": [
+      "0.7.1"
+    ],
+    "diffusers": [
+      "0.35.1"
+    ],
+    "dill": [
+      "0.4.0"
+    ],
+    "diskcache": [
+      "5.6.3"
+    ],
+    "distro": [
+      "1.9.0"
+    ],
+    "dnspython": [
+      "2.7.0"
+    ],
+    "docstring_parser": [
+      "0.17.0"
+    ],
+    "docutils": [
+      "0.21.2"
+    ],
+    "dspy": [
+      "3.0.4"
+    ],
+    "dspy-ai": [
+      "3.0.4"
+    ],
+    "dunamai": [
+      "1.25.0"
+    ],
+    "durationpy": [
+      "0.10"
+    ],
+    "einops": [
+      "0.8.1"
+    ],
+    "einops-exts": [
+      "0.0.4"
+    ],
+    "et_xmlfile": [
+      "2.0.0"
+    ],
+    "evaluate": [
+      "0.4.6"
+    ],
+    "executing": [
+      "2.2.1"
+    ],
+    "fake-useragent": [
+      "2.2.0"
+    ],
+    "fastapi": [
+      "0.118.0"
+    ],
+    "fastjsonschema": [
+      "2.21.2"
+    ],
+    "fastuuid": [
+      "0.14.0"
+    ],
+    "ffmpy": [
+      "0.6.1"
+    ],
+    "filelock": [
+      "3.20.3"
+    ],
+    "flatbuffers": [
+      "25.9.23"
+    ],
+    "fonttools": [
+      "4.60.0"
+    ],
+    "fpdf2": [
+      "2.8.9"
+    ],
+    "fqdn": [
+      "1.5.1"
+    ],
+    "free_proxy": [
+      "1.1.3"
+    ],
+    "frozenlist": [
+      "1.7.0"
+    ],
+    "fsspec": [
+      "2025.10.0"
+    ],
+    "ftfy": [
+      "6.3.1"
+    ],
+    "func_timeout": [
+      "4.3.5"
+    ],
+    "gdcm": [
+      "1.1"
+    ],
+    "gdown": [
+      "5.2.0"
+    ],
+    "gepa": [
+      "0.0.17"
+    ],
+    "gitdb": [
+      "4.0.12"
+    ],
+    "google-ai-generativelanguage": [
+      "0.6.15"
+    ],
+    "google-api-core": [
+      "2.26.0"
+    ],
+    "google-api-python-client": [
+      "2.184.0"
+    ],
+    "google-auth": [
+      "2.56.3"
+    ],
+    "google-auth-httplib2": [
+      "0.2.0"
+    ],
+    "google-genai": [
+      "2.18.1"
+    ],
+    "google-generativeai": [
+      "0.8.5"
+    ],
+    "googleapis-common-protos": [
+      "1.70.0"
+    ],
+    "gradio": [
+      "5.47.2"
+    ],
+    "gradio_client": [
+      "1.13.3"
+    ],
+    "greenlet": [
+      "3.2.4"
+    ],
+    "groovy": [
+      "0.1.2"
+    ],
+    "groq": [
+      "0.37.1"
+    ],
+    "groundingdino-py": [
+      "0.4.0"
+    ],
+    "grpcio": [
+      "1.67.1"
+    ],
+    "grpcio-status": [
+      "1.71.2"
+    ],
+    "gymnasium": [
+      "1.2.1"
+    ],
+    "h11": [
+      "0.16.0"
+    ],
+    "hf-xet": [
+      "1.2.0"
+    ],
+    "hf_transfer": [
+      "0.1.9"
+    ],
+    "httpcore": [
+      "1.0.9"
+    ],
+    "httplib2": [
+      "0.31.0"
+    ],
+    "httptools": [
+      "0.7.1"
+    ],
+    "httpx": [
+      "0.28.1"
+    ],
+    "httpx-sse": [
+      "0.4.1"
+    ],
+    "huggingface-hub": [
+      "0.35.3"
+    ],
+    "humanfriendly": [
+      "10.0"
+    ],
+    "idna": [
+      "3.10"
+    ],
+    "imageio": [
+      "2.37.0"
+    ],
+    "imageio-ffmpeg": [
+      "0.6.0"
+    ],
+    "imagesize": [
+      "1.4.1"
+    ],
+    "imbalanced-learn": [
+      "0.14.0"
+    ],
+    "impit": [
+      "0.9.3"
+    ],
+    "importlib_metadata": [
+      "8.7.0"
+    ],
+    "importlib_resources": [
+      "6.5.2"
+    ],
+    "iniconfig": [
+      "2.3.0"
+    ],
+    "inquirerpy": [
+      "0.3.4"
+    ],
+    "ipdb": [
+      "0.13.13"
+    ],
+    "ipykernel": [
+      "6.30.1"
+    ],
+    "ipython": [
+      "9.5.0"
+    ],
+    "ipython_pygments_lexers": [
+      "1.1.1"
+    ],
+    "ipywidgets": [
+      "8.1.7"
+    ],
+    "isoduration": [
+      "20.11.0"
+    ],
+    "itsdangerous": [
+      "2.2.0"
+    ],
+    "jedi": [
+      "0.19.2"
+    ],
+    "jieba": [
+      "0.42.1"
+    ],
+    "jiter": [
+      "0.11.0"
+    ],
+    "jmespath": [
+      "1.0.1"
+    ],
+    "joblib": [
+      "1.5.2"
+    ],
+    "json5": [
+      "0.12.1"
+    ],
+    "json_repair": [
+      "0.54.2"
+    ],
+    "jsonpatch": [
+      "1.33"
+    ],
+    "jsonpointer": [
+      "3.0.0"
+    ],
+    "jsonschema": [
+      "4.25.1"
+    ],
+    "jsonschema-specifications": [
+      "2025.9.1"
+    ],
+    "jupyter": [
+      "1.1.1"
+    ],
+    "jupyter-console": [
+      "6.6.3"
+    ],
+    "jupyter-events": [
+      "0.12.0"
+    ],
+    "jupyter-lsp": [
+      "2.3.0"
+    ],
+    "jupyter_client": [
+      "8.6.3"
+    ],
+    "jupyter_core": [
+      "5.8.1"
+    ],
+    "jupyter_server": [
+      "2.17.0"
+    ],
+    "jupyter_server_terminals": [
+      "0.5.3"
+    ],
+    "jupyterlab": [
+      "4.4.9"
+    ],
+    "jupyterlab_pygments": [
+      "0.3.0"
+    ],
+    "jupyterlab_server": [
+      "2.27.3"
+    ],
+    "jupyterlab_widgets": [
+      "3.0.15"
+    ],
+    "kaggle": [
+      "1.7.4.5"
+    ],
+    "kaleido": [
+      "1.2.0"
+    ],
+    "kiwisolver": [
+      "1.4.9"
+    ],
+    "kubernetes": [
+      "34.1.0"
+    ],
+    "langchain": [
+      "0.3.27"
+    ],
+    "langchain-anthropic": [
+      "0.3.20"
+    ],
+    "langchain-community": [
+      "0.3.30"
+    ],
+    "langchain-core": [
+      "0.3.76"
+    ],
+    "langchain-openai": [
+      "0.3.33"
+    ],
+    "langchain-text-splitters": [
+      "0.3.11"
+    ],
+    "langgraph": [
+      "0.6.7"
+    ],
+    "langgraph-checkpoint": [
+      "2.1.1"
+    ],
+    "langgraph-prebuilt": [
+      "0.6.4"
+    ],
+    "langgraph-sdk": [
+      "0.2.9"
+    ],
+    "langsmith": [
+      "0.4.31"
+    ],
+    "lark": [
+      "1.3.0"
+    ],
+    "latex2mathml": [
+      "3.78.1"
+    ],
+    "latex2sympy2_extended": [
+      "1.10.2"
+    ],
+    "lazy_loader": [
+      "0.4"
+    ],
+    "lib_detect_testenv": [
+      "3.0.1"
+    ],
+    "librosa": [
+      "0.11.0"
+    ],
+    "lightgbm": [
+      "4.6.0"
+    ],
+    "lightning-utilities": [
+      "0.15.2"
+    ],
+    "litellm": [
+      "1.80.7"
+    ],
+    "llmrouter-lib": [
+      "0.2.0"
+    ],
+    "llvmlite": [
+      "0.46.0"
+    ],
+    "logistro": [
+      "2.0.1"
+    ],
+    "lpips": [
+      "0.1.4"
+    ],
+    "lxml": [
+      "5.3.0"
+    ],
+    "magicattr": [
+      "0.1.6"
+    ],
+    "markdown-it-py": [
+      "4.0.0"
+    ],
+    "markdown2": [
+      "2.5.4"
+    ],
+    "marshmallow": [
+      "3.26.1"
+    ],
+    "math-verify": [
+      "0.8.0"
+    ],
+    "matplotlib": [
+      "3.10.6"
+    ],
+    "matplotlib-inline": [
+      "0.1.7"
+    ],
+    "mdpdf": [
+      "0.0.18"
+    ],
+    "mdurl": [
+      "0.1.2"
+    ],
+    "medrax": [
+      "0.1.0"
+    ],
+    "mistune": [
+      "3.1.4"
+    ],
+    "mmh3": [
+      "5.2.0"
+    ],
+    "more-itertools": [
+      "10.5.0"
+    ],
+    "mpmath": [
+      "1.3.0"
+    ],
+    "msgpack": [
+      "1.1.2"
+    ],
+    "msgspec": [
+      "0.19.0"
+    ],
+    "multidict": [
+      "6.6.4"
+    ],
+    "multiprocess": [
+      "0.70.16"
+    ],
+    "mypy_extensions": [
+      "1.1.0"
+    ],
+    "narwhals": [
+      "2.11.0"
+    ],
+    "nbclient": [
+      "0.10.2"
+    ],
+    "nbconvert": [
+      "7.16.6"
+    ],
+    "nbformat": [
+      "5.10.4"
+    ],
+    "nest-asyncio": [
+      "1.6.0"
+    ],
+    "networkx": [
+      "3.6.1"
+    ],
+    "nltk": [
+      "3.9.2"
+    ],
+    "notebook": [
+      "7.4.7"
+    ],
+    "notebook_shim": [
+      "0.2.4"
+    ],
+    "numba": [
+      "0.63.1"
+    ],
+    "numpy": [
+      "2.2.6"
+    ],
+    "oauthlib": [
+      "3.3.1"
+    ],
+    "ollama": [
+      "0.6.1"
+    ],
+    "omegaconf": [
+      "2.0.0"
+    ],
+    "onnxruntime": [
+      "1.23.2"
+    ],
+    "openai": [
+      "2.8.1"
+    ],
+    "openai-clip": [
+      "1.0.1"
+    ],
+    "opencv-contrib-python-headless": [
+      "4.12.0.88"
+    ],
+    "opencv-python": [
+      "4.12.0.88"
+    ],
+    "opencv-python-headless": [
+      "4.12.0.88"
+    ],
+    "openpyxl": [
+      "3.1.5"
+    ],
+    "opentelemetry-api": [
+      "1.39.0"
+    ],
+    "opentelemetry-exporter-otlp-proto-common": [
+      "1.39.0"
+    ],
+    "opentelemetry-exporter-otlp-proto-grpc": [
+      "1.39.0"
+    ],
+    "opentelemetry-proto": [
+      "1.39.0"
+    ],
+    "opentelemetry-sdk": [
+      "1.39.0"
+    ],
+    "opentelemetry-semantic-conventions": [
+      "0.60b0"
+    ],
+    "optuna": [
+      "4.6.0"
+    ],
+    "orjson": [
+      "3.11.3"
+    ],
+    "ormsgpack": [
+      "1.10.0"
+    ],
+    "outcome": [
+      "1.3.0.post0"
+    ],
+    "overrides": [
+      "7.7.0"
+    ],
+    "packaging": [
+      "24.2"
+    ],
+    "pandas": [
+      "2.3.2"
+    ],
+    "pandocfilters": [
+      "1.5.1"
+    ],
+    "parso": [
+      "0.8.5"
+    ],
+    "pdfkit": [
+      "1.0.0"
+    ],
+    "peft": [
+      "0.18.0"
+    ],
+    "pfzy": [
+      "0.3.4"
+    ],
+    "pg8000": [
+      "1.31.2"
+    ],
+    "pillow": [
+      "12.1.0"
+    ],
+    "pinecone": [
+      "8.0.0"
+    ],
+    "pinecone-plugin-assistant": [
+      "3.0.1"
+    ],
+    "pinecone-plugin-interface": [
+      "0.0.7"
+    ],
+    "pip": [
+      "25.3"
+    ],
+    "platformdirs": [
+      "4.4.0"
+    ],
+    "playwright": [
+      "1.55.0"
+    ],
+    "plotly": [
+      "6.5.2"
+    ],
+    "pluggy": [
+      "1.6.0"
+    ],
+    "poetry-dynamic-versioning": [
+      "1.9.1"
+    ],
+    "pooch": [
+      "1.8.2"
+    ],
+    "portalocker": [
+      "3.2.0"
+    ],
+    "posthog": [
+      "5.4.0"
+    ],
+    "praw": [
+      "7.8.1"
+    ],
+    "prawcore": [
+      "2.4.0"
+    ],
+    "premailer": [
+      "3.10.0"
+    ],
+    "prior": [
+      "1.0.3"
+    ],
+    "progressbar2": [
+      "4.5.0"
+    ],
+    "prometheus_client": [
+      "0.23.1"
+    ],
+    "prompt_toolkit": [
+      "3.0.52"
+    ],
+    "propcache": [
+      "0.3.2"
+    ],
+    "proto-plus": [
+      "1.26.1"
+    ],
+    "protobuf": [
+      "5.29.5"
+    ],
+    "psutil": [
+      "7.1.0"
+    ],
+    "psycopg2-binary": [
+      "2.9.11"
+    ],
+    "pure_eval": [
+      "0.2.3"
+    ],
+    "py4j": [
+      "0.10.9.7"
+    ],
+    "pyarrow": [
+      "21.0.0"
+    ],
+    "pyasn1": [
+      "0.6.1"
+    ],
+    "pyasn1_modules": [
+      "0.4.2"
+    ],
+    "pybase64": [
+      "1.4.3"
+    ],
+    "pycocotools": [
+      "2.0.10"
+    ],
+    "pycparser": [
+      "2.22"
+    ],
+    "pydantic": [
+      "2.13.4"
+    ],
+    "pydantic-settings": [
+      "2.11.0"
+    ],
+    "pydantic_core": [
+      "2.46.4"
+    ],
+    "pydicom": [
+      "3.0.1"
+    ],
+    "pydub": [
+      "0.25.1"
+    ],
+    "pydyf": [
+      "0.13.0"
+    ],
+    "pyee": [
+      "13.0.0"
+    ],
+    "pyiqa": [
+      "0.1.14.1"
+    ],
+    "pylatexenc": [
+      "2.10"
+    ],
+    "pylibjpeg": [
+      "2.1.0"
+    ],
+    "pymupdf": [
+      "1.28.2"
+    ],
+    "pynndescent": [
+      "0.6.0"
+    ],
+    "pyparsing": [
+      "3.2.5"
+    ],
+    "pyphen": [
+      "0.18.1"
+    ],
+    "pyproject_hooks": [
+      "1.2.0"
+    ],
+    "pyreadline3": [
+      "3.5.4"
+    ],
+    "pyspark": [
+      "3.5.3"
+    ],
+    "pytest": [
+      "9.0.2"
+    ],
+    "pytest-timeout": [
+      "2.4.0"
+    ],
+    "python-barcode": [
+      "0.16.1"
+    ],
+    "python-dateutil": [
+      "2.9.0.post0"
+    ],
+    "python-dotenv": [
+      "1.1.1"
+    ],
+    "python-json-logger": [
+      "3.3.0"
+    ],
+    "python-louvain": [
+      "0.16"
+    ],
+    "python-multipart": [
+      "0.0.20"
+    ],
+    "python-slugify": [
+      "8.0.4"
+    ],
+    "python-utils": [
+      "3.9.1"
+    ],
+    "python-xlib": [
+      "0.33"
+    ],
+    "python_speech_features": [
+      "0.6"
+    ],
+    "pytz": [
+      "2025.2"
+    ],
+    "pywin32": [
+      "311"
+    ],
+    "pywinpty": [
+      "3.0.0"
+    ],
+    "pyzmq": [
+      "27.1.0"
+    ],
+    "qrcode": [
+      "8.2"
+    ],
+    "qwen-vl-utils": [
+      "0.0.14"
+    ],
+    "reactor-sdk": [
+      "1.0.1"
+    ],
+    "referencing": [
+      "0.36.2"
+    ],
+    "regex": [
+      "2025.9.18"
+    ],
+    "replicate": [
+      "1.0.7"
+    ],
+    "reportlab": [
+      "5.0.1"
+    ],
+    "requests": [
+      "2.32.5"
+    ],
+    "requests-oauthlib": [
+      "2.0.0"
+    ],
+    "requests-toolbelt": [
+      "1.0.0"
+    ],
+    "rfc3339-validator": [
+      "0.1.4"
+    ],
+    "rfc3986-validator": [
+      "0.1.1"
+    ],
+    "rfc3987-syntax": [
+      "1.1.0"
+    ],
+    "rich": [
+      "14.1.0"
+    ],
+    "rich-click": [
+      "1.9.5"
+    ],
+    "roman-numerals-py": [
+      "3.1.0"
+    ],
+    "rouge_score": [
+      "0.1.2"
+    ],
+    "rpds-py": [
+      "0.27.1"
+    ],
+    "rsa": [
+      "4.7.2"
+    ],
+    "ruff": [
+      "0.13.2"
+    ],
+    "s3transfer": [
+      "0.16.0"
+    ],
+    "safehttpx": [
+      "0.1.6"
+    ],
+    "safetensors": [
+      "0.6.2"
+    ],
+    "scholarly": [
+      "1.7.11"
+    ],
+    "scikit-image": [
+      "0.25.2"
+    ],
+    "scikit-learn": [
+      "1.7.2"
+    ],
+    "scipy": [
+      "1.16.2"
+    ],
+    "scramp": [
+      "1.4.6"
+    ],
+    "seaborn": [
+      "0.13.2"
+    ],
+    "segment-anything-py": [
+      "1.0.1"
+    ],
+    "selenium": [
+      "4.37.0"
+    ],
+    "semantic-version": [
+      "2.10.0"
+    ],
+    "sentence-transformers": [
+      "5.1.1"
+    ],
+    "sentencepiece": [
+      "0.2.1"
+    ],
+    "sentry-sdk": [
+      "2.41.0"
+    ],
+    "setuptools": [
+      "80.10.1"
+    ],
+    "shellingham": [
+      "1.5.4"
+    ],
+    "shortuuid": [
+      "1.0.13"
+    ],
+    "shtab": [
+      "1.7.2"
+    ],
+    "simplejson": [
+      "3.20.2"
+    ],
+    "simsimd": [
+      "6.5.3"
+    ],
+    "six": [
+      "1.17.0"
+    ],
+    "smmap": [
+      "5.0.2"
+    ],
+    "sniffio": [
+      "1.3.1"
+    ],
+    "snowballstemmer": [
+      "3.0.1"
+    ],
+    "sortedcontainers": [
+      "2.4.0"
+    ],
+    "soundfile": [
+      "0.13.1"
+    ],
+    "soupsieve": [
+      "2.8"
+    ],
+    "soxr": [
+      "1.0.0"
+    ],
+    "sphinx-rtd-theme": [
+      "3.0.2"
+    ],
+    "sphinxcontrib-applehelp": [
+      "2.0.0"
+    ],
+    "sphinxcontrib-devhelp": [
+      "2.0.0"
+    ],
+    "sphinxcontrib-htmlhelp": [
+      "2.1.0"
+    ],
+    "sphinxcontrib-jquery": [
+      "4.1"
+    ],
+    "sphinxcontrib-jsmath": [
+      "1.0.1"
+    ],
+    "sphinxcontrib-qthelp": [
+      "2.0.0"
+    ],
+    "sphinxcontrib-serializinghtml": [
+      "2.0.0"
+    ],
+    "stable_baselines3": [
+      "2.7.0"
+    ],
+    "stack-data": [
+      "0.6.3"
+    ],
+    "standard-aifc": [
+      "3.13.0"
+    ],
+    "standard-chunk": [
+      "3.13.0"
+    ],
+    "standard-sunau": [
+      "3.13.0"
+    ],
+    "starlette": [
+      "0.48.0"
+    ],
+    "stream-eval-bench": [
+      "0.2.0"
+    ],
+    "stringzilla": [
+      "4.0.14"
+    ],
+    "structlog": [
+      "25.5.0"
+    ],
+    "sty": [
+      "1.0.6"
+    ],
+    "supervision": [
+      "0.6.0"
+    ],
+    "svgwrite": [
+      "1.4.3"
+    ],
+    "sympy": [
+      "1.14.0"
+    ],
+    "tabulate": [
+      "0.9.0"
+    ],
+    "tenacity": [
+      "9.1.2"
+    ],
+    "tensorboard": [
+      "2.20.0"
+    ],
+    "tensorboard-data-server": [
+      "0.7.2"
+    ],
+    "terminado": [
+      "0.18.1"
+    ],
+    "text-unidecode": [
+      "1.3"
+    ],
+    "threadpoolctl": [
+      "3.6.0"
+    ],
+    "tifffile": [
+      "2025.9.20"
+    ],
+    "tiktoken": [
+      "0.11.0"
+    ],
+    "timeout-decorator": [
+      "0.5.0"
+    ],
+    "timm": [
+      "1.0.20"
+    ],
+    "tinycss2": [
+      "1.5.1"
+    ],
+    "tinyhtml5": [
+      "2.1.0"
+    ],
+    "tokenizers": [
+      "0.22.1"
+    ],
+    "toml": [
+      "0.10.2"
+    ],
+    "tomlkit": [
+      "0.13.3"
+    ],
+    "torch": [
+      "2.8.0"
+    ],
+    "torch-geometric": [
+      "2.7.0"
+    ],
+    "torchao": [
+      "0.13.0"
+    ],
+    "torchaudio": [
+      "2.8.0"
+    ],
+    "torchmetrics": [
+      "1.8.2"
+    ],
+    "torchvision": [
+      "0.23.0"
+    ],
+    "torchxrayvision": [
+      "1.4.0"
+    ],
+    "tornado": [
+      "6.5.2"
+    ],
+    "tqdm": [
+      "4.67.1"
+    ],
+    "traitlets": [
+      "5.14.3"
+    ],
+    "transformers": [
+      "4.57.3"
+    ],
+    "trio": [
+      "0.31.0"
+    ],
+    "trio-websocket": [
+      "0.12.2"
+    ],
+    "triton-windows": [
+      "3.4.0.post20"
+    ],
+    "trl": [
+      "0.25.1"
+    ],
+    "typeguard": [
+      "4.4.4"
+    ],
+    "typer": [
+      "0.19.2"
+    ],
+    "types-python-dateutil": [
+      "2.9.0.20250822"
+    ],
+    "typing-inspect": [
+      "0.9.0"
+    ],
+    "typing-inspection": [
+      "0.4.4"
+    ],
+    "typing_extensions": [
+      "4.15.0"
+    ],
+    "tyro": [
+      "0.9.32"
+    ],
+    "tzdata": [
+      "2025.2"
+    ],
+    "umap-learn": [
+      "0.5.11"
+    ],
+    "unsloth": [
+      "2025.10.1"
+    ],
+    "unsloth_zoo": [
+      "2025.10.1"
+    ],
+    "update-checker": [
+      "0.18.0"
+    ],
+    "uri-template": [
+      "1.3.0"
+    ],
+    "uritemplate": [
+      "4.2.0"
+    ],
+    "urllib3": [
+      "2.3.0"
+    ],
+    "uvicorn": [
+      "0.37.0"
+    ],
+    "validators": [
+      "0.35.0"
+    ],
+    "vastai": [
+      "0.5.0"
+    ],
+    "wandb": [
+      "0.24.0"
+    ],
+    "watchfiles": [
+      "1.1.1"
+    ],
+    "wavedrom": [
+      "2.0.3.post3"
+    ],
+    "wcwidth": [
+      "0.2.14"
+    ],
+    "weasyprint": [
+      "70.0"
+    ],
+    "webcolors": [
+      "24.11.1"
+    ],
+    "webencodings": [
+      "0.5.1"
+    ],
+    "websocket-client": [
+      "1.8.0"
+    ],
+    "websockets": [
+      "15.0.1"
+    ],
+    "wheel": [
+      "0.45.1"
+    ],
+    "widgetsnbextension": [
+      "4.0.14"
+    ],
+    "wrapt": [
+      "1.17.3"
+    ],
+    "wrapt_timeout_decorator": [
+      "1.5.1"
+    ],
+    "wsproto": [
+      "1.2.0"
+    ],
+    "xdg": [
+      "6.0.0"
+    ],
+    "xgboost": [
+      "3.1.2"
+    ],
+    "xlsxwriter": [
+      "3.2.9"
+    ],
+    "xxhash": [
+      "3.5.0"
+    ],
+    "yagmail": [
+      "0.15.293"
+    ],
+    "yapf": [
+      "0.43.0"
+    ],
+    "yarl": [
+      "1.20.1"
+    ],
+    "youtube-transcript-api": [
+      "0.6.2"
+    ],
+    "zipp": [
+      "3.23.0"
+    ],
+    "zopfli": [
+      "0.4.3"
+    ],
+    "zss": [
+      "1.2.0"
+    ],
+    "zstandard": [
+      "0.25.0"
+    ]
+  },
+  "note": "Inventory of existing local runtime; distribution versions may coexist in vendored paths. Media and weights remain local."
+}

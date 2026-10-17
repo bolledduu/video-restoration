@@ -1,0 +1,6 @@
+# Preserve bytes of hashed experiment code and receipts across Windows checkouts.
+cpu-pilot/scripts/prepare_ava_agent.py -text
+cpu-pilot/scripts/ava_evidence_environment.py -text
+cpu-pilot/scripts/run_ava_local.py -text
+cpu-pilot/scripts/run_evidence_agent.py -text
+cpu-pilot/results/ava_smoke_v1/*.json -text whitespace=cr-at-eol
