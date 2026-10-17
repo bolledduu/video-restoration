@@ -1,0 +1,43 @@
+{
+  "scope": "Exploratory engineering on all 17 previously observed pairs; not held-out validation. Independent 12-source queue remains untouched.",
+  "created_utc": "2026-10-16T22:34:36.839746+00:00",
+  "input_hashes": {
+    "transfer_rq_measurements": "d6f62331531ce2436b4406c8cf0f49bbdced7fa4085c0256ce4a6e9f12d761a3",
+    "benefit_measurements": "8eabff06a66aadb85ed3b3f8cfc334d50ae855d6ad542ea0d735ae2b514ae637"
+  },
+  "ids": [
+    "ABqo634gI5s__label0__sigma25__fastdvdnet",
+    "ABqo634gI5s__label0__sigma25__spatial_nlm",
+    "ABqo634gI5s__label1__sigma25__fastdvdnet",
+    "ABqo634gI5s__label1__sigma25__spatial_nlm",
+    "qv3-HaaxGUc__label0__sigma25__fastdvdnet",
+    "qv3-HaaxGUc__label0__sigma25__spatial_nlm",
+    "qv3-HaaxGUc__label1__sigma25__fastdvdnet",
+    "qv3-HaaxGUc__label1__sigma25__spatial_nlm",
+    "Pc5iQdNpDX0__noise25__restored",
+    "Pc5iQdNpDX0__lowres4__restored",
+    "Pc5iQdNpDX0__jpeg10__restored",
+    "QRXbRSq8p4s__noise25__restored",
+    "QRXbRSq8p4s__lowres4__restored",
+    "QRXbRSq8p4s__jpeg10__restored",
+    "ho_oK12hY6M__noise25__restored",
+    "ho_oK12hY6M__lowres4__restored",
+    "ho_oK12hY6M__jpeg10__restored"
+  ],
+  "prototypes": {
+    "static_residual": "captured + temporal mean(restored-captured): preserves captured frame differences before clipping/rounding",
+    "dynamic_residual": "captured + restored-captured - temporal mean(restored-captured): keeps restored frame differences before clipping/rounding",
+    "half_blend": "0.5*captured+0.5*restored; ordinary blending control"
+  },
+  "audio_probe": "Original versus circular +/-0.32 second shifts, same samples and duration. Synthetic mismatch control, not a physical synchronization estimate; wrap boundary and short-context confounds.",
+  "risk": "Mean absolute difference between restored and captured response contrasts, where contrast=original-audio AV score minus average shifted-audio AV score. No fitted threshold or inversion after results.",
+  "quality_frames": "First, midpoint, last; MUSIQ and BRISQUE. Reference SSIM diagnostic. No human-perception claim.",
+  "decision": "A prototype merits independent solution testing only if it has fewer errors than captured-only in aggregate, no source has more errors than captured-only, and both mean MUSIQ and mean BRISQUE improve over captured. All conditions at full coverage. Operational exploratory criterion, not statistical significance.",
+  "limits": [
+    "No motion compensation; pixel temporal mean is not semantic appearance/motion disentanglement",
+    "Clipping can alter nominal temporal preservation",
+    "Single detector, no Qwen calls",
+    "Prototypes and audio-shift controls are not claimed individually novel",
+    "Candidate-harm discrimination is easy when no original restorations correct errors"
+  ]
+}

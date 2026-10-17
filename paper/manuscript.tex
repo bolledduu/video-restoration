@@ -1,0 +1,934 @@
+% Official WACV 2027 author kit, downloaded 16 October 2026.
+% https://wacv.thecvf.com/static/wacv-2027-author-kit-template.zip
+% Embedded verbatim for the editor's single-file compiler.
+\begin{filecontents*}{wacv.sty}
+%----------------------------------------------------------------
+% This template was adapted for WACV 2027 by making the following changes to the ICCV 2025 template (iccv.sty from https://media.eventhosts.cc/Conferences/ICCV2025/ICCV2025-Author-Kit-Feb.zip) and updated for 2027
+%   (1) renaming "iccv/ICCV" to "wacv/WACV" thoughout, renaming "paperID" to "wacvPaperId" throughout, and
+%   (2) adding the two tracks (algorithms/applications) from the WACV 2025 template (wacv.sty from https://www.dropbox.com/scl/fi/su44zgdhrzik26p2xu37k/WACV-2025-Author-Kit-Template.zip?rlkey=5qcfimjhxnmx3wlyk7yhk8wg7&dl=0)
+%
+% ---------------------------------------------------------------
+%
+% No guarantee is given that the format corresponds perfectly to
+% IEEE 8.5" x 11" Proceedings, but most features should be ok.
+%
+% ---------------------------------------------------------------
+% with LaTeX2e:
+% =============
+%
+% use as
+%   \documentclass[times,10pt,twocolumn]{article}
+%   \usepackage[options]{WACV}
+%   \usepackage{times}
+%
+% "options" should be replaced by
+%  * "review" for submitting a paper for review,
+%  * "final" for the camera ready, and
+%  * "rebuttal" for the author rebuttal.
+%
+% specify references as
+%   {\small
+%   \bibliographystyle{ieee}
+%   \bibliography{...your files...}
+%   }
+% ---------------------------------------------------------------
+
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{wacv}[2027 LaTeX class for IEEE WACV]
+
+\RequirePackage{times}    % Integrate Times for here
+\RequirePackage{xspace}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{booktabs}
+\RequirePackage[numbers,sort&compress]{natbib}
+\setlength{\bibsep}{1pt plus 1pt minus 1pt}
+
+\RequirePackage{silence}  % Suppress unwanted warnings
+\hbadness=10000 \vbadness=10000 \vfuzz=30pt \hfuzz=30pt
+\WarningFilter{latexfont}{Font shape declaration}
+\WarningFilter{latex}{Font shape}
+\WarningFilter[rebuttal]{latex}{No \author given}
+\RequirePackage{etoolbox}
+
+% Use modern caption package to allow for sub-figures etc.
+% Reproduces the original CVPR/ICCV/WACV style as closely as possible.
+\RequirePackage[format=plain,labelformat=simple,labelsep=period,font=small,compatibility=false]{caption}
+\RequirePackage[font=footnotesize,skip=3pt,subrefformat=parens]{subcaption}
+
+
+\newtoggle{wacvfinal}        % Camera-ready version
+\newtoggle{wacvrebuttal}     % Rebuttal
+\newtoggle{wacvpagenumbers}  % Force page numbers (in camera ready)
+\newtoggle{wacvalgorithms}
+\newtoggle{wacvapplications}
+\newtoggle{wacvdatasets}
+\toggletrue{wacvfinal}
+\togglefalse{wacvrebuttal}
+\togglefalse{wacvpagenumbers}
+\togglefalse{wacvalgorithms}
+\togglefalse{wacvapplications}
+\togglefalse{wacvdatasets}
+\DeclareOption{review}{\togglefalse{wacvfinal}\toggletrue{wacvpagenumbers}}
+\DeclareOption{rebuttal}{\togglefalse{wacvfinal}\toggletrue{wacvrebuttal}}
+\DeclareOption{pagenumbers}{\toggletrue{wacvpagenumbers}}
+\DeclareOption{applications}{\toggletrue{wacvapplications}}
+\DeclareOption{algorithms}{\toggletrue{wacvalgorithms}}
+\DeclareOption{datasets}{\toggletrue{wacvdatasets}}
+\DeclareOption*{\PackageWarning{wacv}{Unkown option `\CurrentOption'}}
+
+\ProcessOptions\relax
+
+% Don't warn about missing author for rebuttal
+\iftoggle{wacvrebuttal}{%
+  \ActivateWarningFilters[rebuttal]
+}{}
+
+% Breaking lines for URLs in the bib
+\RequirePackage[hyphens]{url}
+\Urlmuskip=0mu plus 1mu\relax
+
+
+% ---------------------------------------------------------------
+% Inlined version of the obsolete "everyshi-2001-05-15" package.
+\newcommand{\@EveryShipout@Hook}{}
+\newcommand{\@EveryShipout@AtNextHook}{}
+\newcommand*{\EveryShipout}[1]
+   {\g@addto@macro\@EveryShipout@Hook{#1}}
+\newcommand*{\AtNextShipout}[1]
+   {\g@addto@macro\@EveryShipout@AtNextHook{#1}}
+\newcommand{\@EveryShipout@Shipout}{%
+   \afterassignment\@EveryShipout@Test
+   \global\setbox\@cclv= %
+   }
+\newcommand{\@EveryShipout@Test}{%
+   \ifvoid\@cclv\relax
+      \aftergroup\@EveryShipout@Output
+   \else
+      \@EveryShipout@Output
+   \fi%
+   }
+\newcommand{\@EveryShipout@Output}{%
+   \@EveryShipout@Hook%
+   \@EveryShipout@AtNextHook%
+      \gdef\@EveryShipout@AtNextHook{}%
+   \@EveryShipout@Org@Shipout\box\@cclv%
+   }
+\newcommand{\@EveryShipout@Org@Shipout}{}
+\newcommand*{\@EveryShipout@Init}{%
+   \message{ABD: EveryShipout initializing macros}%
+   \let\@EveryShipout@Org@Shipout\shipout
+   \let\shipout\@EveryShipout@Shipout
+   }
+\AtBeginDocument{\@EveryShipout@Init}
+% ---------------------------------------------------------------
+
+
+% ---------------------------------------------------------------
+% Inlined simplified version of the "eso-pic" package.
+\newcommand\LenToUnit[1]{#1\@gobble}
+\newcommand\AtPageUpperLeft[1]{%
+  \begingroup
+    \@tempdima=0pt\relax\@tempdimb=\ESO@yoffsetI\relax
+    \put(\LenToUnit{\@tempdima},\LenToUnit{\@tempdimb}){#1}%
+  \endgroup
+}
+\newcommand\AtPageLowerLeft[1]{\AtPageUpperLeft{%
+  \put(0,\LenToUnit{-\paperheight}){#1}}}
+\newcommand\AtPageCenter[1]{\AtPageUpperLeft{%
+  \put(\LenToUnit{.5\paperwidth},\LenToUnit{-.5\paperheight}){#1}}%
+}
+\newcommand\AtTextUpperLeft[1]{%
+  \begingroup
+    \setlength\@tempdima{1in}%
+    \ifodd\c@page%
+      \advance\@tempdima\oddsidemargin%
+    \else%
+      \advance\@tempdima\evensidemargin%
+    \fi%
+    \@tempdimb=\ESO@yoffsetI\relax\advance\@tempdimb-1in\relax%
+    \advance\@tempdimb-\topmargin%
+    \advance\@tempdimb-\headheight\advance\@tempdimb-\headsep%
+    \put(\LenToUnit{\@tempdima},\LenToUnit{\@tempdimb}){#1}%
+  \endgroup
+}
+\newcommand\AtTextLowerLeft[1]{\AtTextUpperLeft{%
+  \put(0,\LenToUnit{-\textheight}){#1}}}
+\newcommand\AtTextCenter[1]{\AtTextUpperLeft{%
+  \put(\LenToUnit{.5\textwidth},\LenToUnit{-.5\textheight}){#1}}}
+\newcommand{\ESO@HookI}{} \newcommand{\ESO@HookII}{}
+\newcommand{\ESO@HookIII}{}
+\newcommand{\AddToShipoutPicture}{%
+  \@ifstar{\g@addto@macro\ESO@HookII}{\g@addto@macro\ESO@HookI}}
+\newcommand{\ClearShipoutPicture}{\global\let\ESO@HookI\@empty}
+\newcommand\ESO@isMEMOIR[1]{}
+\@ifclassloaded{memoir}{\renewcommand\ESO@isMEMOIR[1]{#1}}{}
+\newcommand{\@ShipoutPicture}{%
+  \bgroup
+    \@tempswafalse%
+    \ifx\ESO@HookI\@empty\else\@tempswatrue\fi%
+    \ifx\ESO@HookII\@empty\else\@tempswatrue\fi%
+    \ifx\ESO@HookIII\@empty\else\@tempswatrue\fi%
+    \if@tempswa%
+      \@tempdima=1in\@tempdimb=-\@tempdima%
+      \advance\@tempdimb\ESO@yoffsetI%
+      \ESO@isMEMOIR{%
+        \advance\@tempdima\trimedge%
+        \advance\@tempdima\paperwidth%
+        \advance\@tempdima-\stockwidth%
+        \if@twoside\ifodd\c@page\else%
+          \advance\@tempdima-2\trimedge%
+          \advance\@tempdima-\paperwidth%
+          \advance\@tempdima\stockwidth%
+        \fi\fi%
+        \advance\@tempdimb\trimtop}%
+      \unitlength=1pt%
+      \global\setbox\@cclv\vbox{%
+        \vbox{\let\protect\relax
+          \pictur@(0,0)(\strip@pt\@tempdima,\strip@pt\@tempdimb)%
+            \ESO@HookIII\ESO@HookI\ESO@HookII%
+            \global\let\ESO@HookII\@empty%
+          \endpicture}%
+          \nointerlineskip%
+        \box\@cclv}%
+    \fi
+  \egroup
+}
+\EveryShipout{\@ShipoutPicture}
+\RequirePackage{keyval}
+\newif\ifESO@dvips\ESO@dvipsfalse
+\newif\ifESO@texcoord\ESO@texcoordfalse
+
+\AtBeginDocument{%
+  \IfFileExists{color.sty}
+  {%
+    \RequirePackage{color}
+    \let\ESO@color=\color\let\ESO@colorbox=\colorbox
+    \let\ESO@fcolorbox=\fcolorbox
+  }{}
+  \@ifundefined{Gin@driver}{}%
+  {%
+    \ifx\Gin@driver\@empty\else%
+      \filename@parse{\Gin@driver}\def\reserved@a{dvips}%
+      \ifx\filename@base\reserved@a\ESO@dvipstrue\fi%
+    \fi
+  }%
+  \ifx\pdfoutput\undefined\else
+    \ifx\pdfoutput\relax\else
+      \ifcase\pdfoutput\else
+        \ESO@dvipsfalse%
+      \fi
+    \fi
+  \fi
+}
+\ifESO@texcoord
+  \def\ESO@yoffsetI{0pt}\def\ESO@yoffsetII{-\paperheight}
+\else
+  \def\ESO@yoffsetI{\paperheight}\def\ESO@yoffsetII{0pt}
+\fi
+% ---------------------------------------------------------------
+
+
+\typeout{WACV 8.5 x 11-Inch Proceedings Style `wacv.sty'.}
+
+% ten point helvetica bold required for captions
+% eleven point times bold required for second-order headings
+% in some sites the name of the fonts may differ,
+% change the name here:
+\font\wacvtenhv  = phvb at 8pt % *** IF THIS FAILS, SEE wacv.sty ***
+\font\elvbf  = ptmb scaled 1100
+\font\tenbf  = ptmb scaled 1000
+
+% If the above lines give an error message, try to comment them and
+% uncomment these:
+%\font\wacvtenhv  = phvb7t at 8pt
+%\font\elvbf  = ptmb7t scaled 1100
+%\font\tenbf  = ptmb7t scaled 1000
+
+% set dimensions of columns, gap between columns, and paragraph indent
+\setlength{\textheight}{8.875in}
+\setlength{\textwidth}{6.875in}
+\setlength{\columnsep}{0.3125in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\parindent}{1pc}
+\setlength{\oddsidemargin}{-0.1875in}
+\setlength{\evensidemargin}{-0.1875in}
+
+
+% Suppress page numbers when the appropriate option is given
+\iftoggle{wacvpagenumbers}{}{%
+  \pagestyle{empty}
+}
+
+\AtBeginDocument{%
+  % Print an error if document class other than article is used
+  \@ifclassloaded{article}{}{%
+    \PackageError{wacv}{Package only meant to be used with document class `article'}{Change document class to `article'.}
+  }
+  % Print a warning if incorrect options for article are specified
+  \@ifclasswith{article}{10pt}{}{%
+    \PackageWarningNoLine{wacv}{Incorrect font size specified - WACV requires 10-point fonts. Please load document class `article' with `10pt' option}
+  }
+  \@ifclasswith{article}{twocolumn}{}{%
+    \PackageWarningNoLine{wacv}{Single column document - WACV requires papers to have two-column layout. Please load document class `article' with `twocolumn' option}
+  }
+  \@ifclasswith{article}{letterpaper}{}{%
+    \PackageWarningNoLine{wacv}{Incorrect paper size - WACV uses paper size `letter'. Please load document class `article' with `letterpaper' option}
+  }
+  % Print a warning if hyperref is not loaded and/or if the pagebackref option is missing
+  \iftoggle{wacvfinal}{%
+    \@ifpackageloaded{hyperref}{}{%
+      \PackageWarningNoLine{wacv}{Package `hyperref' is not loaded, but highly recommended for camera-ready version}
+    }
+  }{%
+    \@ifpackageloaded{hyperref}{
+      \@ifpackagewith{hyperref}{pagebackref}{}{
+        \PackageWarningNoLine{wacv}{Package `hyperref' is not loaded with option `pagebackref', which is strongly recommended for review version}
+      }
+    }{%
+      \PackageWarningNoLine{wacv}{Package `hyperref' is not loaded, but strongly recommended for review version}
+    }
+  }
+}
+
+\def\@maketitle{
+   \newpage
+   \null
+   \iftoggle{wacvrebuttal}{\vspace*{-.3in}}{\vskip .375in}
+   \begin{center}
+      % smaller title font only for rebuttal
+      \iftoggle{wacvrebuttal}{{\large \bf \@title \par}}{{\Large \bf \@title \par}}
+      % additional two empty lines at the end of the title
+      \iftoggle{wacvrebuttal}{\vspace*{-22pt}}{\vspace*{24pt}}{
+        \large
+        \lineskip .5em
+        \begin{tabular}[t]{c}
+          \iftoggle{wacvfinal}{
+            \@author
+          }{
+            \iftoggle{wacvrebuttal}{}{
+              \iftoggle{wacvalgorithms}{ Anonymous \confName {\color[rgb]{.9,.1,0.1} \fbox{Algorithms Track}} submission }{ \iftoggle{wacvapplications}{ Anonymous \confName {\color[rgb]{.3,0.6,.3}\fbox{Applications Track}} submission }{ \iftoggle{wacvdatasets}{ Anonymous \confName {\color[rgb]{.3,0.3,0.6}\fbox{Datasets Track}} submission }{  {\Huge :-(} \\[24pt]
+                                   {\textbf{ERROR:}} YOU HAVE NOT YET SET THE DATASETS, APPLICATIONS, OR ALGORITHMS TRACK \\
+        OPTION AT THE TOP OF YOUR LATEX FILE. \\
+        YOU MUST DO THIS BEFORE SUBMITTING THE PAPER!!! \errmessage{You haven't yet set the applications or algorithms track option at the top of your Latex file} \\
+        } } }
+            \\
+            \vspace*{1pt}\\
+              Paper ID \wacvPaperID
+            }
+          }
+        \end{tabular}
+        \par
+      }
+      % additional small space at the end of the author name
+      \vskip .5em
+      % additional empty line at the end of the title block
+      \vspace*{12pt}
+   \end{center}
+}
+
+\def\abstract{%
+   % Suppress page numbers when the appropriate option is given
+   \iftoggle{wacvpagenumbers}{}{%
+     \thispagestyle{empty}
+   }
+   \centerline{\large\bf Abstract}%
+   \vspace*{12pt}\noindent%
+   \it\ignorespaces%
+}
+
+\def\endabstract{%
+   % additional empty line at the end of the abstract
+   \vspace*{12pt}
+   }
+
+\def\affiliation#1{\gdef\@affiliation{#1}} \gdef\@affiliation{}
+
+% correct heading spacing and type
+\def\wacvsection{\@startsection {section}{1}{\z@}
+   {-10pt plus -2pt minus -2pt}{7pt} {\large\bf}}
+\def\wacvssect#1{\wacvsection*{#1}}
+\def\wacvsect#1{\wacvsection{\texorpdfstring{\hskip -1em.~}{}#1}}
+\def\section{\@ifstar\wacvssect\wacvsect}
+
+\def\wacvsubsection{\@startsection {subsection}{2}{\z@}
+   {-8pt plus -2pt minus -2pt}{5pt} {\elvbf}}
+\def\wacvssubsect#1{\wacvsubsection*{#1}}
+\def\wacvsubsect#1{\wacvsubsection{\texorpdfstring{\hskip -1em.~}{}#1}}
+\def\subsection{\@ifstar\wacvssubsect\wacvsubsect}
+
+\def\wacvsubsubsection{\@startsection {subsubsection}{3}{\z@}
+   {-6pt plus -2pt minus -2pt}{3pt} {\tenbf}}
+\def\wacvssubsubsect#1{\wacvsubsubsection*{#1}}
+\def\wacvsubsubsect#1{\wacvsubsubsection{\texorpdfstring{\hskip -1em.~}{}#1}}
+\def\subsubsection{\@ifstar\wacvssubsubsect\wacvsubsubsect}
+
+%% --------- Page background marks: Ruler and confidentiality (only for review and rebuttal)
+\iftoggle{wacvfinal}{
+  % In review and rebuttal mode, we use the "lineno" package for numbering lines.
+  % When switching to a different mode, the "\@LN" macro may remain in cached .aux files,
+  % leading to build errors (https://github.com/cvpr-org/author-kit/issues/49).
+  % Defining the macro as empty fixes that (https://tex.stackexchange.com/a/125779).
+  \makeatletter
+  \providecommand{\@LN}[2]{}
+  \makeatother
+}{
+  % ----- define vruler
+  \makeatletter
+  \newbox\wacvrulerbox
+  \newcount\wacvrulercount
+  \newdimen\wacvruleroffset
+  \newdimen\cv@lineheight
+  \newdimen\cv@boxheight
+  \newbox\cv@tmpbox
+  \newcount\cv@refno
+  \newcount\cv@tot
+  % NUMBER with left flushed zeros  \fillzeros[<WIDTH>]<NUMBER>
+  \newcount\cv@tmpc@ \newcount\cv@tmpc
+  \def\fillzeros[#1]#2{\cv@tmpc@=#2\relax\ifnum\cv@tmpc@<0\cv@tmpc@=-\cv@tmpc@\fi
+  \cv@tmpc=1 %
+  \loop\ifnum\cv@tmpc@<10 \else \divide\cv@tmpc@ by 10 \advance\cv@tmpc by 1 \fi
+    \ifnum\cv@tmpc@=10\relax\cv@tmpc@=11\relax\fi \ifnum\cv@tmpc@>10 \repeat
+  \ifnum#2<0\advance\cv@tmpc1\relax-\fi
+  \loop\ifnum\cv@tmpc<#1\relax0\advance\cv@tmpc1\relax\fi \ifnum\cv@tmpc<#1 \repeat
+  \cv@tmpc@=#2\relax\ifnum\cv@tmpc@<0\cv@tmpc@=-\cv@tmpc@\fi \relax\the\cv@tmpc@}%
+  \makeatother
+  % ----- end of vruler
+
+  %% Define linenumber setup
+  \RequirePackage[switch,mathlines]{lineno}
+
+  % Line numbers in WACV blue using font from \wacvtenhv
+  %\renewcommand\linenumberfont{\wacvtenhv\color[rgb]{.5,.5,1}}
+  \renewcommand\linenumberfont{\wacvtenhv\iftoggle{wacvalgorithms}{\color[rgb]{.9,.1,0.1}}{\iftoggle{wacvdatasets}{\color[rgb]{0.3,0.3,0.6}}{\color[rgb]{.3,0.6,.3}}}}
+
+  \renewcommand\thelinenumber{\fillzeros[3]{\arabic{linenumber}}}
+
+  \setlength{\linenumbersep}{.75cm}
+
+  % Bug: An equation with $$ ... $$ isn't numbered, nor is the previous line.
+
+  % Patch amsmath commands so that the previous line and the equation itself
+  % are numbered. Bug: multiline has an extra line number.
+  % https://tex.stackexchange.com/questions/461186/how-to-use-lineno-with-amsmath-align
+  \RequirePackage{etoolbox} %% <- for \pretocmd, \apptocmd and \patchcmd
+
+  \newcommand*\linenomathpatch[1]{%
+    \expandafter\pretocmd\csname #1\endcsname {\linenomath}{}{}%
+    \expandafter\pretocmd\csname #1*\endcsname {\linenomath}{}{}%
+    \expandafter\apptocmd\csname end#1\endcsname {\endlinenomath}{}{}%
+    \expandafter\apptocmd\csname end#1*\endcsname {\endlinenomath}{}{}%
+  }
+  \newcommand*\linenomathpatchAMS[1]{%
+    \expandafter\pretocmd\csname #1\endcsname {\linenomathAMS}{}{}%
+    \expandafter\pretocmd\csname #1*\endcsname {\linenomathAMS}{}{}%
+    \expandafter\apptocmd\csname end#1\endcsname {\endlinenomath}{}{}%
+    \expandafter\apptocmd\csname end#1*\endcsname {\endlinenomath}{}{}%
+  }
+
+  %% Definition of \linenomathAMS depends on whether the mathlines option is provided
+  \expandafter\ifx\linenomath\linenomathWithnumbers
+  \let\linenomathAMS\linenomathWithnumbers
+  %% The following line gets rid of an extra line numbers at the bottom:
+  \patchcmd\linenomathAMS{\advance\postdisplaypenalty\linenopenalty}{}{}{}
+  \else
+  \let\linenomathAMS\linenomathNonumbers
+  \fi
+
+  % Add the numbers
+  \linenumbers
+  \AtBeginDocument{%
+    \linenomathpatch{equation}%
+    \linenomathpatchAMS{gather}%
+    \linenomathpatchAMS{multline}%
+    \linenomathpatchAMS{align}%
+    \linenomathpatchAMS{alignat}%
+    \linenomathpatchAMS{flalign}%
+  }
+
+  % \makevruler[<SCALE>][<INITIAL_COUNT>][<STEP>][<DIGITS>][<HEIGHT>]
+  \def\wacvruler#1{\makevruler[12pt][#1][1][3][0.993\textheight]\usebox{\wacvrulerbox}}
+  \AddToShipoutPicture{%
+    \iftoggle{wacvalgorithms}{\color[rgb]{.9,.1,0.1}}{\iftoggle{wacvdatasets}{\color[rgb]{0.3,0.3,0.6}}{\color[rgb]{.3,0.6,.3}}}
+    %\color[rgb]{.5,.5,1}
+
+    \def\pid{\parbox{1in}{\begin{center}\bf\sf{\small \confName}\\\small \#\wacvPaperID\end{center}}}
+    \AtTextUpperLeft{%wacvPaperID in corners
+      \put(\LenToUnit{-65pt},\LenToUnit{45pt}){\pid}
+      \put(\LenToUnit{\textwidth-12pt},\LenToUnit{45pt}){\pid}
+    }
+    \AtTextUpperLeft{%confidential
+      \put(0,\LenToUnit{1cm}){\parbox{\textwidth}{\centering\wacvtenhv
+      \confName~\confYear~Submission \#\wacvPaperID. \iftoggle{wacvalgorithms}{ \fbox{Algorithms Track.} }{ \iftoggle{wacvapplications}{ \fbox{Applications Track.} }{ \iftoggle{wacvdatasets}{ \fbox{Datasets Track.} }{  \\
+        YOU HAVE NOT SET DATRASETS/ALGORITHMS/APPLICATIONS FLAG AT TOP OF YOUR LATEX FILE! YOU MUST DO THIS BEFORE SUBMITTING! } } CONFIDENTIAL REVIEW COPY.  DO NOT DISTRIBUTE.}}}
+    }
+  }
+} % end of not wacvfinal
+
+%%% Make figure placement a little more predictable.
+% We trust the user to move figures if this results
+% in ugliness.
+% Minimize bad page breaks at figures
+\renewcommand{\textfraction}{0.01}
+\renewcommand{\floatpagefraction}{0.99}
+\renewcommand{\topfraction}{0.99}
+\renewcommand{\bottomfraction}{0.99}
+\renewcommand{\dblfloatpagefraction}{0.99}
+\renewcommand{\dbltopfraction}{0.99}
+\setcounter{totalnumber}{99}
+\setcounter{topnumber}{99}
+\setcounter{bottomnumber}{99}
+
+% Add a period to the end of an abbreviation unless there's one
+% already, then \xspace.
+\makeatletter
+\DeclareRobustCommand\onedot{\futurelet\@let@token\@onedot}
+\def\@onedot{\ifx\@let@token.\else.\null\fi\xspace}
+
+\def\eg{\emph{e.g}\onedot} \def\Eg{\emph{E.g}\onedot}
+\def\ie{\emph{i.e}\onedot} \def\Ie{\emph{I.e}\onedot}
+\def\cf{\emph{cf}\onedot} \def\Cf{\emph{Cf}\onedot}
+\def\etc{\emph{etc}\onedot} \def\vs{\emph{vs}\onedot}
+\def\wrt{w.r.t\onedot} \def\dof{d.o.f\onedot}
+\def\iid{i.i.d\onedot} \def\wolog{w.l.o.g\onedot}
+\def\etal{\emph{et al}\onedot}
+\makeatother
+
+% ---------------------------------------------------------------
+
+%% redefine the \title command so that a variable name is saved in \thetitle, and provides the \maketitlesupplementary command
+\let\titleold\title
+\renewcommand{\title}[1]{\titleold{#1}\newcommand{\thetitle}{#1}}
+\def\maketitlesupplementary
+   {
+   \newpage
+       \twocolumn[
+        \centering
+        \Large
+        \textbf{\thetitle}\\
+        \vspace{0.5em}Supplementary Material \\
+        \vspace{1.0em}
+       ] %< twocolumn
+   }
+
+% ---------------------------------------------------------------
+
+%% Support for easy cross-referencing (e.g. \cref{sec:intro}
+% configured with \AtEndPreamble as it needs to be called after hyperref
+\AtEndPreamble{
+    \usepackage[capitalize]{cleveref}
+    \crefname{section}{Sec.}{Secs.}
+    \Crefname{section}{Section}{Sections}
+    \Crefname{table}{Table}{Tables}
+    \crefname{table}{Tab.}{Tabs.}
+}
+
+% ---------------------------------------------------------------
+
+%% More compact compact itemize/enumeration (e.g. list contributions)
+\RequirePackage[shortlabels,inline]{enumitem}
+\setlist[itemize]{noitemsep,leftmargin=*,topsep=0em}
+\setlist[enumerate]{noitemsep,leftmargin=*,topsep=0em}
+
+\end{filecontents*}
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[review,algorithms]{wacv}
+\usepackage{array,tabularx,microtype}
+\usepackage[pagebackref,breaklinks,hidelinks]{hyperref}
+\def\confName{WVAQ}
+\def\confYear{2027}
+\def\wacvPaperID{TBD}
+% WVAQ is a single-blind workshop, not a main-conference track.
+% Retain the author-kit geometry, fonts, page numbers, and line ruler;
+% replace only its main-conference track/anonymous review branding.
+\ClearShipoutPicture
+\AddToShipoutPicture{%
+  \AtTextUpperLeft{%
+    \put(0,\LenToUnit{1cm}){\parbox{\textwidth}{\centering\normalfont\fontsize{8}{9}\selectfont
+      \ifnum\value{page}=1
+        6th Workshop on Image/Video/Audio Quality Assessment\\
+        in Computer Vision, VLM and Diffusion Model\\
+        at the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2027
+      \else
+        WVAQ 2027 Workshop at IEEE/CVF WACV 2027 --- Submission draft
+      \fi
+    }}%
+  }%
+}
+
+% WVAQ explicitly requires visible authors: show authors at title construction
+% while retaining the official review page numbers and line ruler.
+% Replace TBD with the actual OpenReview submission ID before submission.
+\newcommand{\todoexp}[1]{\textcolor{red}{[\textbf{To complete:} #1]}}
+\newcommand{\pending}{\textcolor{red}{Pending}}
+\newcommand{\method}{Evidence-Preserving Repair}
+\newcommand{\placeholder}[2]{\fbox{\parbox[c][#1][c]{0.94\linewidth}{\centering\small #2}}}
+\title{Assessing and Repairing Speaker Evidence in Restored Video for Multimodal Agents}
+\author{Pradeep Bolleddu\\University of Massachusetts\\{\small\texttt{bpradeep@umassd.edu}}
+\and Senthil Palaniswamy\\\todoexp{Affiliation}\\{\small\texttt{senthillihtnes1994@gmail.com}}
+\and Sanjaikumar Balasubramaniyan\\Indiana University Bloomington\\{\small\texttt{bsan@iu.edu}}}
+\date{}
+\begin{document}
+\toggletrue{wacvfinal}\maketitle\togglefalse{wacvfinal}
+\begin{abstract}
+Multimodal agents use visual evidence to decide who is speaking, connect statements to people, and produce reports or actions. Video restoration changes that evidence before the agent receives it. A higher visual-quality score therefore answers only part of the relevant question: does the restored video still support the same speaker attribution? We study this problem through paired comparisons of captured and restored video, with the soundtrack held fixed. Our evaluation separates errors introduced by restoration from errors it corrects, and distinguishes perception errors from their propagation into an agent's answer. We propose \method, an assessment-and-repair framework that measures changes in audiovisual support and selectively retains restoration changes rather than accepting or rejecting an entire output. Its evaluation tests whether any attribution benefit survives controls for quality scores, confidence, disagreement, blending, and whole-output selection, at matched answer coverage. \todoexp{Implement and validate the complete assessor and repair method; insert independent-test effect sizes and uncertainty for attribution, perceptual quality, and agent decisions.} The central objective is to assess restoration by both the quality it adds and the speaker evidence it preserves.
+\end{abstract}
+
+\section{Introduction}
+Active-speaker detection links audible speech to a visible person, providing evidence for diarization, speaker tracking, and video analysis~\cite{ava,talknet,lightasd}. Real conversational recordings expose this task to different viewing and acoustic conditions: AMI provides synchronized meeting recordings, while EasyCom captures egocentric conversations with participant-linked audiovisual annotations~\cite{ami,easycom}. In a tool-mediated agent pipeline, these perception outputs become the evidence from which a language model answers a question about who is speaking. Our study examines whether restoration changes the reliability of that evidence.
+
+Restoration methods improve noisy, low-resolution, or damaged video, but they optimize different objectives from speaker detection~\cite{fastdvd,fsrcnn,realbasic,codeformer}. The distinction matters because perceptual quality, fidelity to the input, and downstream utility are separate targets~\cite{cdi,hs,hallugen,taskguard}. In our measured UniTalk-ASD comparison, FastDVDnet increases MUSIQ from 14.386 to 20.194 while the detector's errors increase from 6 to 24 out of 24 scored timestamps (Section~\ref{sec:results}). This is a measured missed-speaker case, rather than an assumed visual artifact or an invented agent scenario.
+
+Existing quality assessors quantify image appearance or video quality~\cite{musiq,brisque,dover}; fidelity assessors test whether reconstruction remains supported by the input~\cite{cdi,hs}. Neither objective directly specifies whether a restoration change preserves the association between a face and its soundtrack. Task-aware restoration utility is already studied for object detection~\cite{taskguard}. Here, the assessment target is the direction of an audiovisual decision change: did restoration introduce an attribution error, correct one, or preserve the decision?
+
+A useful solution must separate detection of risk from intervention. Detector confidence requires calibration~\cite{calibration}, and abstention must be evaluated at matched coverage~\cite{selective}. Prediction disagreement identifies a change but cannot, by itself, determine which branch is correct. We therefore assess captured and restored evidence jointly and examine whether selective repair retains quality gains while reducing newly introduced errors. The study keeps the quality-assessment objective central and uses downstream agent decisions to measure its practical consequences.
+
+The study targets four contributions; validation placeholders identify the work still in progress:
+\begin{enumerate}
+\item \textbf{A benchmark for restoration-induced attribution failures.} Paired captured and restored inputs support separate measurements of quality, introduced errors, corrections, and agent decisions, with controlled audio and source-disjoint evaluation. \todoexp{Complete the independent evaluation set and release audit.}
+\item \textbf{An audiovisual evidence-preservation assessor.} The assessor estimates changes in the support connecting a visible person to the soundtrack. Its contribution must be demonstrated beyond quality, synchronization, confidence, and disagreement baselines. \todoexp{Train, calibrate, and validate the assessor.}
+\item \textbf{A selective restoration-repair framework.} The framework modifies candidate restoration changes to retain useful enhancement while limiting attribution errors. \todoexp{Validate against blending, selection, and task-aware controls.}
+\item \textbf{A controlled study of agent error propagation and transfer.} Evaluation distinguishes repeated, corrected, and newly introduced agent errors, and tests transfer across sources, restoration methods, perception models, and agents. \todoexp{Complete the transfer experiments.}
+\end{enumerate}
+
+
+\begin{figure}[t]
+\centering
+\placeholder{1.35in}{Figure to insert: the same speaking track before restoration, after restoration, and after a validated repair. Show synchronized frame strips, ground truth, detector decisions, and quality scores.}
+\caption{Paired comparison at identical timestamps with an unchanged soundtrack. The measured FastDVDnet example has 6/24 captured errors and 24/24 restored errors; \todoexp{Insert the measured repair output.}}
+\label{fig:example}
+\end{figure}
+
+\section{Related work}
+\paragraph{Restoration quality and fidelity.}
+FastDVDnet addresses video denoising without explicit optical-flow estimation~\cite{fastdvd}; FSRCNN addresses image super-resolution~\cite{fsrcnn}. Neither is designed to preserve the decisions of a particular audiovisual detector. MUSIQ~\cite{musiq} and BRISQUE~\cite{brisque} assess image quality, but their scores do not certify speaker evidence. CDI evaluates consistency with a degraded input~\cite{cdi}. Hallucination Score~\cite{hs} and HalluGen~\cite{hallugen} study hallucination-sensitive restoration assessment. These studies establish the importance of separating appearance from fidelity. We ask whether audiovisual decision support can be assessed and repaired with measurable benefits beyond these existing signals.
+
+\paragraph{Task-aware restoration.}
+TaskGuard studies task-conditioned restoration utility and risk-aware decisions for object detection~\cite{taskguard}. Its use of task information and regional interventions makes it a close conceptual baseline. Our comparison therefore includes task-aware gating and regional replacement rather than treating these operations as new. Our proposed distinction is the treatment of temporally aligned audiovisual evidence and the direction of restoration-induced attribution changes. We test this distinction through incremental predictive value and intervention outcomes. \todoexp{Implement a faithful, documented TaskGuard adaptation or explicitly delimit any comparison that cannot be reproduced.}
+
+\paragraph{Audiovisual speaker detection.}
+TalkNet models temporal audiovisual features for active-speaker detection~\cite{talknet}. SyncNet provides an established route to audiovisual synchronization assessment~\cite{syncnet}; LASER studies robustness using lip landmarks~\cite{laser}. Audio offsets, mouth motion, and synchronization scores are therefore existing tools, not new mechanisms introduced here. Our hypothesis concerns their ability to assess changes caused by restoration, including whether they add information beyond simple prediction disagreement.
+
+\paragraph{Agents and evidence access.}
+A language model reading detector outputs is different from a model directly processing audio and video. We label these settings separately throughout the study. A tool-only agent experiment can establish propagation of a tool error. It cannot establish that the language model visually perceived a restoration artifact. Likewise, experiments with video-only restorers cannot establish that conditioning audio caused invented visual details.
+
+\section{Speaker evidence and restoration risk}
+Let $x$ denote a captured video track, $a$ its synchronized soundtrack, and $y=R(x)$ a restored candidate. For the current video-only restorers, $a$ is unchanged and is not an input to $R$. Let $D(v,a)$ be a frozen active-speaker detector applied to video $v$. At timestamp $t$, the label $b_t\in\{0,1\}$ states whether the visible track is speaking. A fixed threshold gives prediction $\hat b_t(v)$.
+
+This is a visible-track speaking-state task. Identifying the speaker of a particular utterance across several people requires additional identity, overlap, and utterance-level annotations. The current diagnostics do not provide that complete evaluation.
+
+Write $e_t(v)=\mathbb{1}[\hat b_t(v)\ne b_t]$. Relative to captured video, an introduced error and a correction are
+\begin{align}
+h_t(v)&=(1-e_t(x))e_t(v),\\
+f_t(v)&=e_t(x)(1-e_t(v)).
+\end{align}
+Thus $\sum_t e_t(v)-\sum_t e_t(x)=\sum_t h_t(v)-\sum_t f_t(v)$. Reporting both terms prevents a net average from concealing simultaneous improvements and regressions. The all-timestamp introduced-error rate is $H/N$ and correction rate is $F/N$. Conditional rates use the number of captured-correct and captured-incorrect timestamps, respectively; these denominators must be stated and zero-denominator cases reported as undefined.
+
+\noindent\textbf{Research questions.}
+\textbf{RQ1:} Under which degradation and restoration conditions do improvements in visual-quality scores coincide with newly introduced speaker-attribution errors?
+\textbf{RQ2:} How reliably can captured and restored audiovisual evidence distinguish harmful restoration changes from useful corrections, beyond quality scores, detector confidence and prediction disagreement?
+\textbf{RQ3:} Can selective modification of restoration changes reduce speaker-attribution errors while retaining perceptual-quality gains, compared with captured-only, restored-only, blending and restoration-selection baselines at matched answer coverage?
+\textbf{RQ4:} How do restoration-induced attribution errors propagate into multimodal agents' decisions, and how consistently does the assessment-and-repair approach reduce them across unseen sources, restoration methods, perception models and agents?
+
+\section{Evidence-preserving repair}
+\label{sec:method}
+\noindent\todoexp{This section specifies the proposed method, not a completed implementation. Freeze the representation, training objective, calibration procedure, and optimization settings before independent testing.}
+
+\subsection{Paired evidence representation}
+The pipeline retains $x$, $a$, timestamps, crop coordinates, restoration settings, and the candidate $y$. All branches use the same track and scoring grid. This record makes every decision traceable to a captured input and prevents a restored output from silently replacing the only available evidence. A practical agent receives provenance identifying which branch supplied each prediction.
+
+\subsection{Audiovisual support assessment}
+Let $s(v,a)$ be a sequence of detector scores. Following synchronization-based audiovisual comparison~\cite{syncnet}, for a predefined audio offset $\delta$, define an alignment contrast
+\begin{equation}
+c_\delta(v)=s(v,a)-s(v,T_\delta a),
+\end{equation}
+where $T_\delta$ shifts the soundtrack. The candidate representation includes the change $c_\delta(y)-c_\delta(x)$, the original score change, and the shifted scores themselves. The last terms matter because a common shift in both aligned and offset scores can disappear in the contrast. Several offsets are needed to check sensitivity to the intervention; boundary regions must be excluded in the main evaluation.
+
+An assessor $g_\theta$ uses these paired features and localized restoration changes to estimate introduced-error and correction risk. Training targets are defined by $h_t$ and $f_t$ on development data only. This is a proposed supervised assessment problem, not a claim that stability implies correctness. A stable prediction can be wrong in both branches. The assessor must distinguish harmful, helpful, and decision-preserving changes; an evaluation containing only harmful and unchanged candidates is insufficient to validate this objective.
+
+\todoexp{Specify feature aggregation, supervision granularity, loss, class balancing, calibration, and confidence intervals. Compare the alignment representation with an equal-capacity model using only quality, confidence, and disagreement.}
+
+\subsection{Residual repair}
+Write the restoration residual as $r=y-x$. With fixed nonnegative spatiotemporal masks $M_k$ summing to one at each pixel, define candidate repairs
+\begin{equation}
+z(\boldsymbol\lambda)=x+\sum_{k=1}^{K}\lambda_k M_k\odot r,
+\qquad 0\leq\lambda_k\leq1.
+\end{equation}
+The endpoints recover captured and restored video. A uniform weight is ordinary blending; only evidence-guided nonuniform choices could establish a benefit beyond that baseline. The masks must be fixed without inspecting test labels. Clipping, color conversion, and temporal smoothing are part of the implementation and must be reported.
+
+The intended objective is to maximize a development-selected quality score subject to an estimated introduced-error budget. Calibration~\cite{calibration} is required before interpreting the estimated risk; it is not a statistical guarantee. Independent quality measures and human comparisons must evaluate the selected outputs to avoid treating improvement in the optimized score as proof of perceptual improvement. The framework may return captured video when no candidate is acceptable, or use a selective decision rule~\cite{selective} when neither branch supplies adequate evidence.
+
+\todoexp{Fix the mask basis, candidate budget, optimizer, and risk threshold on development sources. Evaluate a conservative selection or risk-control baseline with the same calibration data and candidate budget. Do not claim a guarantee under untested distribution shift.}
+
+\subsection{Evidence selection and agent decisions}
+The agent receives the selected evidence, its provenance, and an explicit abstention option. Tool-only and direct audiovisual agents use separate protocols. For tool-only agents, all conditions expose the same fields and instructions so that a formatting difference cannot explain an apparent restoration effect. Direct audiovisual agents receive the same temporal content and soundtrack at their supported sampling rate. \todoexp{Freeze prompts, tool schemas, model versions, sampling settings, and evidence budgets; execute repaired-video agent comparisons.}
+
+\begin{figure}[t]
+\centering
+\placeholder{1.3in}{Architecture placeholder:\\captured video + fixed audio $\rightarrow$ paired assessment\\restored candidate $\rightarrow$ residual repair\\selected evidence + provenance $\rightarrow$ agent answer or abstention}
+\caption{Proposed framework. Show development-only labels outside the inference path. The risk assessor and selective optimizer remain to be implemented; static residual and blending controls are not substitutes for these components.}
+\end{figure}
+
+\section{Experimental setup}
+\subsection{Datasets and evaluation units}
+Table~\ref{tab:data} records the dataset shortlist and its evaluation roles. AVA-ActiveSpeaker supplies face-linked speaking labels~\cite{ava}; AMI supplies meeting recordings with synchronized signals and transcripts~\cite{ami}; EasyCom supplies egocentric video, voice activity, and participant-linked annotations~\cite{easycom}. VoxConverse remains an external extension because its RTTM speaker clusters require a verified mapping to visible people~\cite{voxconverse}. The completed UniTalk-ASD diagnostics are reported under their actual distribution~\cite{unitalk}, not relabeled as an official AVA benchmark.
+
+\begin{table}[t]
+\centering\small
+\caption{Dataset roles. Shortlisted datasets are not completed benchmark runs. Sizes below describe evaluated material only; final split sizes remain pending.}
+\label{tab:data}
+\begin{tabularx}{\columnwidth}{@{}p{0.30\columnwidth}X@{}}
+\toprule
+Dataset & Evidence and evaluation role\\
+\midrule
+AVA-Active-\newline Speaker~\cite{ava} & Face-linked speaking labels; core attribution benchmark. Preserve audible, inaudible, and non-speaking classes. \pending.\\
+AMI~\cite{ami} & Synchronized meetings, transcripts, participant mapping; multi-person transfer. One meeting diagnostic completed; full split \pending.\\
+EasyCom~\cite{easycom} & Egocentric audio/video, voice activity and participant IDs; conversational-domain transfer. \pending.\\
+VoxConverse~\cite{voxconverse} & Multi-speaker diarization; external extension after visual identity mapping. \pending.\\
+UniTalk-ASD~\cite{unitalk} & Current diagnostic distribution: seven tracks, five sources, 17 restoration comparisons.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+For the completed comparison, four tracks contain 25 frames with 24 scored timestamps, and three contain 50 frames with 49 scored timestamps, at 25 frames per second. The 17 comparisons yield 633 paired timestamp opportunities from 243 unique source-track timestamps. Labels come from the dataset release; independent adjudication is pending. The separate AMI check uses transcript-derived activity proxies and is not pooled with dense speaking-state labels.
+
+Real recordings form the evaluation material. The completed controlled tests add Gaussian noise, downsample frames, or apply JPEG compression to those recordings; these interventions are not naturally occurring capture defects. The full evaluation distinguishes these controlled pairs from recordings evaluated with their existing capture conditions. \todoexp{Complete the natural-capture comparison on the shortlisted datasets and report source-disjoint split sizes.} The existing confirmation queue contains 32 annotated windows from 12 new sources, with inference pending. Splits group original sources and reused participants before calibration; overlap between distributions is checked using source identities and time intervals.
+
+\subsection{Models and evidence access}
+The recorded model shortlist separates restoration, perception, quality assessment, and agent reasoning. Learned restorers comprise FastDVDnet~\cite{fastdvd}, FSRCNN~\cite{fsrcnn}, RealBasicVSR~\cite{realbasic}, and CodeFormer~\cite{codeformer}; only the first two have results in the current 17-pair screen. Non-local means, bilateral filtering, bicubic resizing, and sharpening provide task-appropriate conventional controls. CodeFormer is evaluated as framewise restoration, not a temporal model. TalkNet~\cite{talknet} is the measured speaker detector; Light-ASD~\cite{lightasd} is the shortlisted transfer detector. MUSIQ, BRISQUE, and DOVER provide image and video quality measurements~\cite{musiq,brisque,dover}; DOVER's technical and overall scores remain separate.
+
+The controller comparison includes Qwen3.8-27B (recorded service identifier \texttt{qwen/qwen3.8-27b}), GPT-OSS-20B~\cite{gptoss}, and Llama-3.3-70B-Instruct~\cite{llama}. These controllers read identical tool outputs. The optional direct audiovisual track uses Qwen3-Omni-30B-A3B-Instruct~\cite{qwenomni}, with raw-media access reported separately. Table~\ref{tab:modeltransfer} reserves comparable results across datasets and detectors; pending entries are not model outcomes. Qwen3.8-27B is the tool-only controller in the saved runs; Qwen3-Omni-30B-A3B-Instruct is a separate, pending direct audiovisual evaluation. The two versions are not pooled.
+
+The current TalkNet CPU implementation uses grayscale face crops and a fixed 0.5 threshold. Its short-clip results are not a reproduction of the published benchmark. Checkpoint identifiers, crop settings, and implementation versions belong in the release manifest rather than the main narrative. \todoexp{Freeze remaining model checkpoints, availability, tool budgets, and development-set thresholds.}
+
+\begin{table}[t]
+\centering\small
+\caption{Cross-model evaluation on the shortlisted core datasets. Each pending cell will report captured/restored/repaired selective error (\%) at a common 75\% coverage, where attainable. The completed UniTalk cohort is reported separately in Table~\ref{tab:agent}.}
+\label{tab:modeltransfer}
+\setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{\begin{tabular}{@{}llccc@{}}
+\toprule
+Controller & Detector & AVA & AMI & EasyCom\\
+\midrule
+Qwen3.8-27B & TalkNet &\pending&\pending&\pending\\
+GPT-OSS-20B & TalkNet &\pending&\pending&\pending\\
+Llama-3.3-70B & TalkNet &\pending&\pending&\pending\\
+Qwen3.8-27B & Light-ASD &\pending&\pending&\pending\\
+GPT-OSS-20B & Light-ASD &\pending&\pending&\pending\\
+Llama-3.3-70B & Light-ASD &\pending&\pending&\pending\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\subsection{Metrics and their purpose}
+\paragraph{Attribution.} Report error rate, introduced-error rate, correction rate, and their conditional versions. Show speaking and non-speaking strata to expose class imbalance. Source-macro estimates are primary for independent testing; pooled timestamp counts remain useful descriptive quantities. Ground-truth identities and utterance boundaries are required before adding quote-to-person accuracy.
+
+\paragraph{Visual quality.} Report paired changes in MUSIQ~\cite{musiq} (higher is better) and BRISQUE~\cite{brisque} (lower is better) separately, not a weighted average with arbitrary units. The current diagnostic averages three sampled frames per clip; it does not measure temporal perceptual quality. The full study requires blinded human comparisons with a tie option and separate appearance and temporal-artifact judgments. Reference-based measures are secondary and valid only where a suitable reference exists. The undegraded source is not automatically a pristine reference.
+
+\paragraph{Assessment.} Evaluate introduced-error detection using AUROC and AUPRC, reporting positive prevalence and the number of independent sources. Evaluate harmful versus helpful changes separately when both classes exist. Report calibration with Brier score and reliability plots only for a genuine probability output calibrated on held-out development data~\cite{calibration}. Incremental performance over matched-capacity baselines, rather than an isolated AUROC, tests RQ2.
+
+\paragraph{Selective decisions.} Following selective prediction~\cite{selective}, coverage is the fraction of eligible decisions answered. Selective error is the fraction of answered decisions that are wrong; it is undefined when no answer is produced. Compare risk at prespecified common coverage levels and report risk--coverage curves. Count abstentions separately rather than treating them as correct answers. Quality--error Pareto curves assess whether a method preserves a useful benefit instead of merely reverting to captured video.
+
+\paragraph{Agent propagation.} Conditioned on an incorrect tool prediction, count repetition, correction, and abstention. Separately count errors introduced by the agent when its tool prediction was correct. Report invalid or missing responses explicitly. These categories distinguish a successful intervention from a system that answers less often.
+
+\subsection{Baselines, controls, and uncertainty}
+All comparisons include captured-only, restored-only, fixed blending, quality-only selection, confidence selection, and disagreement selection. Add synchronization~\cite{syncnet}, degraded-input consistency~\cite{cdi}, and hallucination-sensitive assessment~\cite{hs,hallugen}, documenting domain restrictions. TaskGuard-style utility selection~\cite{taskguard} is a close-method comparison. An oracle using labels may define an upper bound but must never be an executable baseline.
+
+For repair, compare spatial masks with equal-area controls, temporally constant residuals, dynamic residuals, uniform blending, and randomized masks under the same candidate budget. Remove each proposed feature group in an equal-capacity ablation. Evaluate audio offsets without circular wraparound in the main study, and include both shifted and unchanged audio controls. None of these offsets demonstrates audio-conditioned generation because restoration itself does not receive audio.
+
+Use paired source-level bootstrap intervals, with 10,000 resamples and a fixed recorded seed, for the independent study. Agent repetitions remain nested within source. Report effect sizes and intervals, and distinguish a primary comparison from exploratory subgroup tests. The present five-source diagnostics are not a basis for precise population claims. \todoexp{Run the registered independent tests and supply uncertainty; no intervals have been fabricated for the current exploratory tables.}
+
+\begin{table*}[t]
+\centering\small
+\caption{Independent-test comparison. Unrun experiments are marked pending. Report source-macro estimates with 95\% source-level intervals. Error, introduced errors, and corrections use all eligible timestamps; agent risk is evaluated at common 75\% answer coverage, if supported by every compared policy. $\Delta$ scores are relative to captured video.}
+\label{tab:main}
+\setlength{\tabcolsep}{4pt}
+\resizebox{\textwidth}{!}{\begin{tabular}{lrrrrrrrr}
+\toprule
+&\multicolumn{3}{c}{Attribution at full coverage}&\multicolumn{3}{c}{Quality}&\multicolumn{2}{c}{Agent at matched coverage}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-9}
+Policy & Error $\downarrow$ & New $\downarrow$ & Fixed $\uparrow$ & $\Delta$MUSIQ $\uparrow$ & $\Delta$BRISQUE $\downarrow$ & Human pref. $\uparrow$ & Error $\downarrow$ & Coverage\\
+\midrule
+Captured only &\pending&0&0&0&0&---&\pending&\pending\\
+Restored only &\pending&\pending&\pending&\pending&\pending&\pending&\pending&\pending\\
+Uniform blend &\pending&\pending&\pending&\pending&\pending&\pending&\pending&\pending\\
+Quality selection &\pending&\pending&\pending&\pending&\pending&\pending&\pending&\pending\\
+Disagreement selection &\pending&\pending&\pending&\pending&\pending&\pending&\pending&\pending\\
+Task-aware selection &\pending&\pending&\pending&\pending&\pending&\pending&\pending&\pending\\
+Evidence-preserving repair &\pending&\pending&\pending&\pending&\pending&\pending&\pending&\pending\\
+\bottomrule
+\end{tabular}}
+\end{table*}
+
+\section{Results and analysis}\label{sec:results}
+\subsection{Quality gains and attribution errors}
+Table~\ref{tab:diagnostic} summarizes the completed 17 comparisons. Captured video has 236 errors across 633 paired timestamp opportunities. Restoration raises this count to 269: 33 errors are introduced and none are corrected. Mean MUSIQ increases by 4.003 and mean BRISQUE decreases by 9.305. Both scores improve in 12 of the 17 comparisons. These aggregates demonstrate coexistence of quality-score improvements and worse attribution within the evaluated material, not that all restored videos become harmful.
+
+A concrete speaking-track example makes the failure easier to interpret. On source \texttt{qv3-HaaxGUc}, entity 6, beginning at 14.84 seconds, captured video produces 6 errors over 24 scored timestamps. FastDVDnet produces 24 errors. MUSIQ increases from 14.386 to 20.194; BRISQUE changes only slightly, from 46.288 to 46.245. The visible person is annotated as speaking, so this example is a missed-speaker failure. It must not be presented as a silent person falsely claiming an utterance.
+
+The increased error count is concentrated in two of five sources. Several sources are unchanged, including one with many errors in both branches. This variation motivates source-level analysis and reference-performance checks. It does not justify selecting only difficult clips for a confirmatory test.
+
+\begin{table}[t]
+\centering\small
+\caption{Completed exploratory controls on the same 17 comparisons. Counts are over 633 paired opportunities, not independent samples. New/fixed are relative to captured video. Quality changes are comparison-macro averages.}
+\label{tab:diagnostic}
+\setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrr}
+\toprule
+Variant & Errors & New/fixed & $\Delta$MUSIQ & $\Delta$BRISQUE\\
+\midrule
+Captured &236&0/0&0&0\\
+Restored &269&33/0&4.003&$-9.305$\\
+Static residual &236&2/2&0.019&$-2.343$\\
+Dynamic residual &272&37/1&2.411&$-30.607$\\
+Half blend &257&21/0&0.689&$-14.101$\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\subsection{Discriminating harmful changes}
+The completed audio-offset diagnostic compares original audio with circular shifts of $\pm0.32$ seconds. Its alignment-response-change score reaches AUROC 0.750 for identifying harmful comparisons; binary prediction disagreement reaches 1.000 on the same 17 comparisons (Table~\ref{tab:assess}). There are four harmful comparisons and thirteen non-harmful comparisons, with no useful original-restoration correction cases. This restricted class composition makes disagreement a particularly strong control.
+
+These are exploratory, in-sample discrimination statistics. They do not validate calibration, transfer, or discrimination between harmful and useful changes. The alignment score has not demonstrated incremental value. Circular shifts on short clips also introduce boundary artifacts; the independent protocol must eliminate that confound.
+
+\begin{table}[t]
+\centering\small
+\caption{Exploratory harmful-comparison detection on 17 comparisons: four positive and thirteen negative. No independent-test inference is implied.}
+\label{tab:assess}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lr}
+\toprule
+Signal & AUROC $\uparrow$\\
+\midrule
+Binary prediction disagreement &1.000\\
+Alignment-response change &0.750\\
+Absolute detector-score change &0.692\\
+Evidence assessor (held-out test) &\pending\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\subsection{Spatial and temporal repair controls}
+The static-residual control adds the temporal mean of $y-x$ to each captured frame. Before clipping and rounding, it preserves captured frame differences. The dynamic-residual control removes that mean from the restoration residual; this is an algebraic decomposition, not a separation of semantic appearance and motion.
+
+Static residuals return the aggregate error count to 236 but introduce two errors and correct two others. Their mean MUSIQ gain is only 0.019. One source improves while another worsens. Dynamic residuals yield 272 errors, and half blending yields 257. None passes the frozen diagnostic gate: fewer errors than captured video, no source worse, and positive mean MUSIQ change with negative mean BRISQUE change. The static control's 1.21\% mean clipping fraction also limits exact claims about preserved temporal differences.
+
+A separate spatial control retains either the lower or upper captured half within restored video, using equal-area regions and feathered boundaries. Lower-half replacement removes 20 of the 33 introduced errors but still has 253 total errors; upper-half replacement removes 13 and has 274 total errors. The lower-half advantage does not reproduce across two independent sources. These controls show that intervention location matters in some clips, but do not establish a general mouth-specific mechanism.
+
+\begin{figure}[t]
+\centering
+\placeholder{1.25in}{Plot to insert after independent testing:\\x-axis: human preference or held-out quality change\\y-axis: attribution error at fixed coverage\\curves: captured, restored, blend, selection, repair\\source-level confidence intervals; label all endpoints}
+\caption{Quality--attribution trade-off. A useful repair must offer more than a return to captured-video accuracy with negligible quality improvement. Plotting a single optimized quality score is insufficient.}
+\end{figure}
+
+\subsection{Propagation into agent answers}
+The completed 24-session Qwen3.8-27B agent cohort uses four tracks from two sources, three input conditions, and two repeated runs. There are 192 timestamp opportunities per condition, including repetitions. Table~\ref{tab:agent} reports the agent's handling of tool errors. No new Qwen calls were made during the temporal-control experiment, and repaired candidates have not been evaluated with the agent.
+
+For captured inputs, the agent repeats 12 of 60 tool errors and abstains on the other 48. For FastDVDnet inputs, it repeats 48 of 96 tool errors and abstains on 48. Both conditions answer 144 of 192 opportunities. For non-local means, it repeats 15 errors, corrects two, and abstains on 67, while answering only 77 opportunities overall. Its smaller error count cannot be compared directly with the other conditions without controlling coverage. The two corrections are corrections of tool predictions, not evidence that restoration corrected the captured-video agent's answers.
+
+\begin{table}[t]
+\centering\small
+\caption{Completed tool-only Qwen3.8-27B cohort. Repeated, corrected, and abstained counts partition tool errors. No agent errors were introduced on tool-correct opportunities in this cohort.}
+\label{tab:agent}
+\setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrr}
+\toprule
+Input & Answered & Tool errors & Repeated & Fixed & Abstained\\
+\midrule
+Captured &144/192&60&12&0&48\\
+FastDVDnet &144/192&96&48&0&48\\
+Non-local means &77/192&84&15&2&67\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Other saved cohorts use different prompts or are incomplete and are not pooled into this table. An unfinished 25-of-36-session cohort is excluded from complete-cohort comparisons. Missing calls are not model errors or negative scientific results. \todoexp{Complete independent agent comparisons, including direct audiovisual models if claimed, and evaluate the proposed repairs at matched coverage.}
+
+\subsection{Cross-dataset and cross-model evaluation}
+Table~\ref{tab:modeltransfer} separates controller transfer from detector transfer on the shortlisted datasets. Every comparison uses the same eligible clips, evidence budget, and coverage target. Evaluation on a second controller with the same detector tests error propagation; evaluation on a second detector tests whether the assessor exploits one perception model. \todoexp{Populate the table with paired estimates and source-level intervals, and report exclusions and unattainable coverage targets.}
+
+\section{Scope and limitations}
+Current results concern short clips and tool-mediated speaking-state decisions. They do not establish utterance-to-person accuracy, audio-conditioned generation artifacts, or a validated repair advantage. Table~\ref{tab:validation} records the remaining validation boundaries concisely. Recordings and identity-linked annotations require license-compliant use; external actions remain simulated, with provenance and abstention retained in the output.
+
+\begin{table}[t]
+\centering\small
+\caption{Validation boundaries to update after full experimentation.}
+\label{tab:validation}
+\begin{tabularx}{\columnwidth}{@{}p{0.28\columnwidth}X@{}}
+\toprule
+Boundary & Required evidence\\
+\midrule
+Labels and sampling & Independent label review; source- and participant-disjoint splits.\\
+Natural capture & Existing capture defects evaluated separately from controlled added degradations.\\
+Perceived quality & Blinded appearance and temporal-quality judgments, alongside IQA/VQA.\\
+Method transfer & Held-out restorers and detectors; calibrated assessment and matched-coverage repair.\\
+Agent scope & Multiple controllers; separate native audiovisual and tool-only evaluation.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Conclusion}
+Restoration quality and audiovisual decision reliability are distinct evaluation targets. In the measured diagnostics, restored candidates improve average image-quality scores while introducing speaking-state errors, and some tool errors propagate into a language-model agent's answers. Simple spatial and temporal controls do not yet provide a repair that improves on captured video while retaining a useful quality gain. We define an assessment-and-repair framework and an evaluation that separates these requirements. \todoexp{Replace this final sentence with the independently validated method outcome, including negative findings and limits; do not claim successful repair before those experiments exist.}
+
+% Allow references to follow the conclusion without an artificial page break.
+% Recheck the main-text page limit after replacing experimental placeholders.
+{\small
+\begin{thebibliography}{99}
+
+\bibitem{fastdvd} M. Tassano, J. Delon, and T. Veit. FastDVDnet: Towards Real-Time Deep Video Denoising Without Flow Estimation. CVPR, 2020. \url{https://arxiv.org/abs/1907.01361}.
+
+\bibitem{fsrcnn} C. Dong, C. C. Loy, and X. Tang. Accelerating the Super-Resolution Convolutional Neural Network. ECCV, 2016. \url{https://arxiv.org/abs/1608.00367}.
+
+\bibitem{musiq} J. Ke, Q. Wang, Y. Wang, P. Milanfar, and F. Yang. MUSIQ: Multi-scale Image Quality Transformer. ICCV, 2021. \url{https://arxiv.org/abs/2108.05997}.
+
+\bibitem{brisque} A. Mittal, A. K. Moorthy, and A. C. Bovik. No-reference image quality assessment in the spatial domain. IEEE Transactions on Image Processing, 21(12):4695--4708, 2012. doi:10.1109/TIP.2012.2214050.
+
+\bibitem{cdi} X. Tang et al. CDI: Blind Image Restoration Fidelity Evaluation based on Consistency with Degraded Image. arXiv:2501.14264, 2025. \url{https://arxiv.org/abs/2501.14264}.
+
+\bibitem{hs} W. Ren et al. Hallucination Score: Towards Mitigating Hallucinations in Generative Image Super-Resolution. arXiv:2507.14367, 2025. \url{https://arxiv.org/abs/2507.14367}.
+
+\bibitem{hallugen} S. Kim, H. F. J. Tregidgo, C. Jin, M. Figini, and D. C. Alexander. HalluGen: Synthesizing Realistic and Controllable Hallucinations for Evaluating Image Restoration. arXiv:2512.03345, 2025. \url{https://arxiv.org/abs/2512.03345}.
+
+\bibitem{taskguard} V. V. Pham. TaskGuard: Task-Conditioned Restoration Utility for Risk-Aware Object Detection. arXiv:2609.08011, 2026. \url{https://arxiv.org/abs/2609.08011}.
+
+\bibitem{talknet} R. Tao, Z. Pan, R. K. Das, X. Qian, M. Z. Shou, and H. Li. Is Someone Speaking? Exploring Long-term Temporal Features for Audio-visual Active Speaker Detection. ACM Multimedia, 2021. \url{https://arxiv.org/abs/2107.06592}.
+
+\bibitem{syncnet} J. S. Chung and A. Zisserman. Out of time: automated lip sync in the wild. ACCV Workshop on Multi-view Lip-reading, 2016. Implementation: \url{https://github.com/joonson/syncnet_python}.
+
+\bibitem{laser} L. T. P. Nguyen, Z. Yu, and Y. J. Lee. LASER: Lip Landmark Assisted Speaker Detection for Robustness. arXiv:2501.11899, 2025. \url{https://arxiv.org/abs/2501.11899}.
+
+\bibitem{unitalk} UniTalk-ASD dataset release. \url{https://huggingface.co/datasets/plnguyen2908/UniTalk-ASD}. Dataset release; accessed October 16, 2026.
+
+\bibitem{ava} J. Roth et al. AVA-ActiveSpeaker: An Audio-Visual Dataset for Active Speaker Detection. arXiv:1901.01342, 2019. \url{https://arxiv.org/abs/1901.01342}.
+
+\bibitem{ami} AMI Consortium. The AMI Meeting Corpus: recordings, annotations, and documentation. \url{https://groups.inf.ed.ac.uk/ami/corpus/}.
+
+\bibitem{easycom} J. Donley et al. EasyCom: An Augmented Reality Dataset to Support Algorithms for Easy Communication in Noisy Environments. arXiv:2107.04174, 2021. \url{https://arxiv.org/abs/2107.04174}.
+
+\bibitem{voxconverse} J. S. Chung, J. Huh, A. Nagrani, T. Afouras, and A. Zisserman. Spot the conversation: speaker diarisation in the wild. Interspeech, 2020. \url{https://github.com/joonson/voxconverse}.
+
+\bibitem{lightasd} J. Liao, H. Duan, K. Feng, W. Zhao, Y. Yang, and L. Chen. A Light Weight Model for Active Speaker Detection. arXiv:2303.04439, 2023.
+
+\bibitem{realbasic} K. C. K. Chan, S. Zhou, X. Xu, and C. C. Loy. Investigating Tradeoffs in Real-World Video Super-Resolution. CVPR, 2022.
+
+\bibitem{codeformer} S. Zhou, K. C. K. Chan, C. Li, and C. C. Loy. Towards Robust Blind Face Restoration with Codebook Lookup Transformer. NeurIPS, 2022.
+
+\bibitem{dover} H. Wu et al. Exploring Video Quality Assessment on User Generated Contents from Aesthetic and Technical Perspectives. ICCV, 2023.
+
+\bibitem{calibration} C. Guo, G. Pleiss, Y. Sun, and K. Q. Weinberger. On Calibration of Modern Neural Networks. ICML, 2017.
+
+\bibitem{selective} Y. Geifman and R. El-Yaniv. Selective Classification for Deep Neural Networks. NeurIPS, 2017.
+
+\bibitem{gptoss} OpenAI. GPT-OSS-20B model card. \url{https://huggingface.co/openai/gpt-oss-20b}.
+
+\bibitem{llama} Meta. Llama-3.3-70B-Instruct model card. \url{https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct}.
+
+\bibitem{qwenomni} Qwen Team. Qwen3-Omni: official models and implementation. \url{https://github.com/QwenLM/Qwen3-Omni}.
+
+\end{thebibliography}}
+
+\end{document}

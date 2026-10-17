@@ -1,0 +1,73 @@
+{
+  "model": "qwen/qwen3.8-27b",
+  "temperature": 0,
+  "max_completion_tokens": 800,
+  "repetitions": 2,
+  "system_prompt": "You are a tool-using audiovisual assistant deciding whether one visible person is speaking. You cannot see or hear media directly. Inspect current evidence before answering. The audio-visual detector estimates whether THIS visible person speaks. The audio-only head measures activity in the audio and CANNOT identify the visible speaker: another person or offscreen person may be speaking. Neither head is ground truth; scores are uncalibrated. Image-quality scores measure appearance, not speaker correctness. You may disagree with the detector. Do not invent identities, words, visual observations, or ground truth. Give a best binary majority-speaking answer and separate timestamped tags, using -1 for uncertain timestamps. Confidence is self-reported, not calibrated. Submit through submit_answer within six model calls.",
+  "user_prompt": "For this one-second clip, is the visible person speaking for the majority of the 24 scored timestamps? Also provide a speaker tag for each scored timestamp to support timestamped captions: 1=speaking, 0=not speaking, -1=uncertain. Explain your evidence briefly. Do not attribute words to anyone.",
+  "measurement_sha256": "d6f62331531ce2436b4406c8cf0f49bbdced7fa4085c0256ce4a6e9f12d761a3",
+  "selection_protocol": {
+    "sources": [
+      "ABqo634gI5s",
+      "qv3-HaaxGUc"
+    ],
+    "labels": [
+      0,
+      1
+    ],
+    "selection": "Earliest valid one-second constant-label track per source and label; ties by entity. No inference-based selection.",
+    "sigma": 25,
+    "seed": 20261016,
+    "candidates": [
+      "captured",
+      "fastdvdnet",
+      "spatial_nlm"
+    ],
+    "quality_frames": [
+      0,
+      12,
+      24
+    ],
+    "model": "qwen/qwen3.8-27b",
+    "repetitions": 2,
+    "primary_rq1": "Repeated new Qwen timestamp errors on jointly answered timestamps while both MUSIQ and BRISQUE improve.",
+    "secondary": "Majority answers, single-metric improvement, coverage gains/losses and detector errors.",
+    "rq2": "Compare fixed quality, confidence and disagreement risk rankings; AUROC undefined without both harmful and non-harmful candidates. No learned assessor claimed.",
+    "rq3": "Frozen deterministic guards vs captured-only and restored-only: errors, coverage, and common-answered comparisons. No novel framework claimed.",
+    "rq4": "Source transfer and two restoration families, same Qwen model and one synthetic degradation severity; not full generalization validation.",
+    "investment_screen": "Support focused method development only if at least one new source shows repeatable primary harm and at least one track shows repeatable correction of a captured Qwen error. Otherwise do not launch full framework experiments from this pilot.",
+    "scope": "New to paired Qwen test, not untouched sources in the broader project. Same dataset. Preserve all selected cases and negative outcomes."
+  },
+  "frame_times_relative": [
+    0.0,
+    0.04,
+    0.08,
+    0.12,
+    0.16,
+    0.2,
+    0.24,
+    0.28,
+    0.32,
+    0.36,
+    0.4,
+    0.44,
+    0.48,
+    0.52,
+    0.56,
+    0.6,
+    0.64,
+    0.68,
+    0.72,
+    0.76,
+    0.8,
+    0.84,
+    0.88,
+    0.92
+  ],
+  "conditions": [
+    "captured",
+    "fastdvdnet",
+    "spatial_nlm"
+  ],
+  "prompt_source_sha256": "b1d6805edc80e3c7e75c94421bcf7076106a0144aa56af53b5b023b243885349"
+}

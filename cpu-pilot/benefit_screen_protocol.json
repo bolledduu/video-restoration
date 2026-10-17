@@ -1,0 +1,36 @@
+{
+  "selection": [
+    {
+      "source": "Pc5iQdNpDX0",
+      "kind": "speaking"
+    },
+    {
+      "source": "QRXbRSq8p4s",
+      "kind": "listening"
+    },
+    {
+      "source": "ho_oK12hY6M",
+      "kind": "transition"
+    }
+  ],
+  "frames": 50,
+  "fps": 25,
+  "selection_rule": "Earliest available contiguous track per assigned category, ties by entity; transition has 10..40 speaking frames. No outcome selection.",
+  "conditions": {
+    "noise25": "Gaussian sigma25; FastDVDnet supplied sigma25",
+    "lowres4": "128 to32 bicubic; captured bicubic128, restored pretrained FSRCNN x4",
+    "jpeg10": "JPEG quality10; restored bilateral filter diameter5 color25 space3 (classical baseline, not learned JPEG model)"
+  },
+  "seed": 20261017,
+  "quality_frames": [
+    0,
+    24,
+    49
+  ],
+  "repetitions": 2,
+  "model": "qwen/qwen3.8-27b",
+  "investment_screen": "At least one source with repeated captured-error corrections, at least one with repeated new errors, and fixed-capture-coverage timestamp oracle reduces error by at least 5 percentage points in BOTH repeats.",
+  "scope": "Small purposive CPU pilot; source/category confounded, synthetic degradations, same dataset and Qwen model. No claim of representative prevalence or exhaustive restorers.",
+  "oracle": "Evaluation labels only; oracle is not deployable. Fixed captured answered timestamps; choose restored only if it corrects a captured error.",
+  "fsrcnn_source": "https://github.com/Saafke/FSRCNN_Tensorflow"
+}

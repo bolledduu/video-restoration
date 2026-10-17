@@ -1,0 +1,11 @@
+case_id,source,repeat,captured_correct,restored_correct,correct_to_wrong,wrong_to_correct,captured_wrong_tags,restored_wrong_tags,captured_abstentions,restored_abstentions
+kgVz_AXYvn0__label0__sigma40,kgVz_AXYvn0,0,True,True,False,False,0,0,24,24
+kgVz_AXYvn0__label0__sigma40,kgVz_AXYvn0,1,True,True,False,False,0,0,24,24
+kgVz_AXYvn0__label1__sigma40,kgVz_AXYvn0,0,True,False,True,False,0,0,0,24
+kgVz_AXYvn0__label1__sigma40,kgVz_AXYvn0,1,True,False,True,False,0,0,0,24
+EEey6Pt0rqI__label0__sigma40,EEey6Pt0rqI,0,True,True,False,False,0,5,0,0
+EEey6Pt0rqI__label0__sigma40,EEey6Pt0rqI,1,True,True,False,False,0,5,0,0
+EEey6Pt0rqI__label1__sigma40,EEey6Pt0rqI,0,True,True,False,False,0,0,0,0
+EEey6Pt0rqI__label1__sigma40,EEey6Pt0rqI,1,True,True,False,False,0,0,0,0
+9Zja_cIAwY8,9Zja_cIAwY8,0,True,True,False,False,0,0,0,24
+9Zja_cIAwY8,9Zja_cIAwY8,1,True,True,False,False,0,0,0,24

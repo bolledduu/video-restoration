@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-16T22:20:28.056090+00:00",
+  "scope": "Exploratory reuse of all 17 cached comparisons, 7 tracks, 5 sources. Prior outcomes were known; not independent confirmation.",
+  "input_hashes": {
+    "transfer_rq_measurements": "d6f62331531ce2436b4406c8cf0f49bbdced7fa4085c0256ce4a6e9f12d761a3",
+    "benefit_measurements": "8eabff06a66aadb85ed3b3f8cfc334d50ae855d6ad542ea0d735ae2b514ae637"
+  },
+  "case_ids": [
+    "ABqo634gI5s__label0__sigma25__fastdvdnet",
+    "ABqo634gI5s__label0__sigma25__spatial_nlm",
+    "ABqo634gI5s__label1__sigma25__fastdvdnet",
+    "ABqo634gI5s__label1__sigma25__spatial_nlm",
+    "qv3-HaaxGUc__label0__sigma25__fastdvdnet",
+    "qv3-HaaxGUc__label0__sigma25__spatial_nlm",
+    "qv3-HaaxGUc__label1__sigma25__fastdvdnet",
+    "qv3-HaaxGUc__label1__sigma25__spatial_nlm",
+    "Pc5iQdNpDX0__noise25__restored",
+    "Pc5iQdNpDX0__lowres4__restored",
+    "Pc5iQdNpDX0__jpeg10__restored",
+    "QRXbRSq8p4s__noise25__restored",
+    "QRXbRSq8p4s__lowres4__restored",
+    "QRXbRSq8p4s__jpeg10__restored",
+    "ho_oK12hY6M__noise25__restored",
+    "ho_oK12hY6M__lowres4__restored",
+    "ho_oK12hY6M__jpeg10__restored"
+  ],
+  "intervention": "Replace lower half of restored face crop with captured pixels; complementary upper-half equal-area control. Fixed horizontal split, 8 pixel feather. Coarse regions, not anatomical mouth landmarks.",
+  "primary": "Among captured-correct/restored-wrong timestamps, compare errors rescued by lower versus upper replacement. Report per source, not independent-frame significance.",
+  "secondary": "All-case errors, introduced errors from each hybrid, score movement, and fixed temporal residual scores vs MUSIQ, BRISQUE, confidence and disagreement.",
+  "confounds": "Hybrid images can be out of distribution; regions have equal area but not equal change energy. Static crop position and head motion confound anatomical interpretation. Audio held fixed.",
+  "decision": "Only advance the lower-face mechanism to independent confirmation if lower replacement rescues more harmful timestamps than upper replacement on at least two distinct sources; exploratory operational gate, not statistical significance.",
+  "not_tested": [
+    "Qwen response to hybrids",
+    "anatomically localized mouth causality",
+    "new risk estimator",
+    "full research novelty",
+    "human perceptual preference"
+  ]
+}

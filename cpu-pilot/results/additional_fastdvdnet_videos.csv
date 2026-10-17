@@ -1,0 +1,4 @@
+source,label,frames,new_errors,corrections,captured_wrong_frames,captured_ssim,fastdvdnet_wrong_frames,fastdvdnet_ssim,reference_wrong_frames,reference_ssim
+9Zja_cIAwY8,0,24,0,0,0,0.2444338042575189,0,0.9700742788357946,0,1.0
+ABqo634gI5s,0,24,0,0,0,0.20941430264481212,0,0.9709319131517922,0,1.0
+qv3-HaaxGUc,0,24,0,0,0,0.2783609771823237,0,0.9610397455332368,0,1.0

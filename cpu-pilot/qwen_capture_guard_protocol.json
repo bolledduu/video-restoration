@@ -1,0 +1,19 @@
+{
+  "scope": "Deterministic post-answer guards on completed real Qwen calls.\n\nThis is a retrospective baseline evaluation on known cases, not new Qwen\ninference, an independent confirmation set, or a trained novel method.\n",
+  "source_sha256": "c87394c792824087431d582a7658694155b42de1381a7fb8d9118f27ded656fd",
+  "script_sha256": "4c3fb6838ede4a1cba443f282890d9663ddfc38aca93627c16093d8ad5092b71",
+  "created_utc": "2026-10-16T09:43:22.490429+00:00",
+  "policies": [
+    "captured_only",
+    "restored_only",
+    "detector_disagreement_abstain",
+    "detector_disagreement_capture",
+    "captured_answer_priority"
+  ],
+  "detector_threshold": 0.5,
+  "primary": "Timestamp errors and answered timestamp count, with captured-only as the essential baseline.",
+  "success_for_guard_utility": "Fewer errors than restored-only without fewer answered timestamps.",
+  "not_sufficient_for_method_research": "Matching captured-only is not incremental task benefit or novelty.",
+  "independence": "Same known five tracks, two repeats; no held-out validation, no new API calls, no tuned thresholds.",
+  "audio_claim": "Check actual restorer interface and runtime calls; do not mistake downstream audio fusion for audio-conditioned pixel generation."
+}

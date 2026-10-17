@@ -1,0 +1,17 @@
+case_id,source,label,start,restorer,repeat,captured_wrong,restored_wrong,captured_answered,restored_answered,common_answered,new_errors_common,corrections_common,majority_correct_to_wrong,both_quality_improve,musiq_delta,brisque_delta
+ABqo634gI5s__label0__sigma25,ABqo634gI5s,0,55.32,fastdvdnet,0,0,0,24,24,24,0,0,False,False,3.248552004496256,0.11317316691080492
+ABqo634gI5s__label0__sigma25,ABqo634gI5s,0,55.32,spatial_nlm,0,0,0,24,0,0,0,0,False,False,-1.7778832117716465,-5.4160143534342495
+ABqo634gI5s__label0__sigma25,ABqo634gI5s,0,55.32,fastdvdnet,1,0,0,24,24,24,0,0,False,False,3.248552004496256,0.11317316691080492
+ABqo634gI5s__label0__sigma25,ABqo634gI5s,0,55.32,spatial_nlm,1,0,0,24,0,0,0,0,False,False,-1.7778832117716465,-5.4160143534342495
+ABqo634gI5s__label1__sigma25,ABqo634gI5s,1,71.24,fastdvdnet,0,0,0,0,0,0,0,0,False,True,2.1949386596679688,-4.261940002441406
+ABqo634gI5s__label1__sigma25,ABqo634gI5s,1,71.24,spatial_nlm,0,0,0,0,0,0,0,0,False,False,-0.31618626912434955,-10.199193318684898
+ABqo634gI5s__label1__sigma25,ABqo634gI5s,1,71.24,fastdvdnet,1,0,0,0,0,0,0,0,False,True,2.1949386596679688,-4.261940002441406
+ABqo634gI5s__label1__sigma25,ABqo634gI5s,1,71.24,spatial_nlm,1,0,0,0,0,0,0,0,False,False,-0.31618626912434955,-10.199193318684898
+qv3-HaaxGUc__label0__sigma25,qv3-HaaxGUc,0,14.52,fastdvdnet,0,0,0,24,24,24,0,0,False,True,12.853564262390138,-0.9005279541015625
+qv3-HaaxGUc__label0__sigma25,qv3-HaaxGUc,0,14.52,spatial_nlm,0,0,0,24,24,24,0,0,False,True,6.249093055725099,-43.30228090286255
+qv3-HaaxGUc__label0__sigma25,qv3-HaaxGUc,0,14.52,fastdvdnet,1,0,0,24,24,24,0,0,False,True,12.853564262390138,-0.9005279541015625
+qv3-HaaxGUc__label0__sigma25,qv3-HaaxGUc,0,14.52,spatial_nlm,1,0,0,24,24,24,0,0,False,True,6.249093055725099,-43.30228090286255
+qv3-HaaxGUc__label1__sigma25,qv3-HaaxGUc,1,14.84,fastdvdnet,0,6,24,24,24,24,18,0,True,True,5.808592796325682,-0.04256312052409328
+qv3-HaaxGUc__label1__sigma25,qv3-HaaxGUc,1,14.84,spatial_nlm,0,6,15,24,21,21,9,0,True,True,2.02958297729492,-44.878078262011215
+qv3-HaaxGUc__label1__sigma25,qv3-HaaxGUc,1,14.84,fastdvdnet,1,6,24,24,24,24,18,0,True,True,5.808592796325682,-0.04256312052409328
+qv3-HaaxGUc__label1__sigma25,qv3-HaaxGUc,1,14.84,spatial_nlm,1,6,0,24,8,8,0,0,True,True,2.02958297729492,-44.878078262011215

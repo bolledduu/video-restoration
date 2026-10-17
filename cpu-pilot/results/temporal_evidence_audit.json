@@ -1,0 +1,235 @@
+{
+  "status": "COMPLETE",
+  "measurement_sha256": "71e30d3603429ed97a250c8e949252524a55878e95ed913104ad504b5d233426",
+  "pairs": 17,
+  "sources": 5,
+  "detector_calls": 153,
+  "new_qwen_calls": 0,
+  "totals": {
+    "captured": {
+      "n": 633,
+      "captured_errors": 236,
+      "restored_errors": 236,
+      "harm": 0,
+      "corrections": 0,
+      "joint_quality_gain": 0,
+      "musiq_delta": 0.0,
+      "brisque_delta": 0.0,
+      "ssim_delta": 0.0,
+      "clipped_fraction": 0.0,
+      "sources_worse_than_captured": [],
+      "solution_screen_passed": false
+    },
+    "restored": {
+      "n": 633,
+      "captured_errors": 236,
+      "restored_errors": 269,
+      "harm": 33,
+      "corrections": 0,
+      "joint_quality_gain": 12,
+      "musiq_delta": 4.002546908808689,
+      "brisque_delta": -9.305105188313654,
+      "ssim_delta": 0.4317785993728638,
+      "clipped_fraction": 0.0,
+      "sources_worse_than_captured": [
+        "qv3-HaaxGUc",
+        "ho_oK12hY6M"
+      ],
+      "solution_screen_passed": false
+    },
+    "static_residual": {
+      "n": 633,
+      "captured_errors": 236,
+      "restored_errors": 236,
+      "harm": 2,
+      "corrections": 2,
+      "joint_quality_gain": 5,
+      "musiq_delta": 0.018939410938936224,
+      "brisque_delta": -2.342710532394111,
+      "ssim_delta": 0.0006327075303284776,
+      "clipped_fraction": 0.012124717562806375,
+      "sources_worse_than_captured": [
+        "ho_oK12hY6M"
+      ],
+      "solution_screen_passed": false
+    },
+    "dynamic_residual": {
+      "n": 633,
+      "captured_errors": 236,
+      "restored_errors": 272,
+      "harm": 37,
+      "corrections": 1,
+      "joint_quality_gain": 12,
+      "musiq_delta": 2.4109322791006056,
+      "brisque_delta": -30.60715999322779,
+      "ssim_delta": 0.35086052134447804,
+      "clipped_fraction": 0.0011315678615196078,
+      "sources_worse_than_captured": [
+        "qv3-HaaxGUc",
+        "ho_oK12hY6M"
+      ],
+      "solution_screen_passed": false
+    },
+    "half_blend": {
+      "n": 633,
+      "captured_errors": 236,
+      "restored_errors": 257,
+      "harm": 21,
+      "corrections": 0,
+      "joint_quality_gain": 10,
+      "musiq_delta": 0.6894744424258957,
+      "brisque_delta": -14.101411108877144,
+      "ssim_delta": 0.14797569583849768,
+      "clipped_fraction": 0.0,
+      "sources_worse_than_captured": [
+        "qv3-HaaxGUc",
+        "ho_oK12hY6M"
+      ],
+      "solution_screen_passed": false
+    }
+  },
+  "by_source": {
+    "captured": {
+      "ABqo634gI5s": {
+        "errors": 48,
+        "captured_errors": 48,
+        "n": 96
+      },
+      "qv3-HaaxGUc": {
+        "errors": 12,
+        "captured_errors": 12,
+        "n": 96
+      },
+      "Pc5iQdNpDX0": {
+        "errors": 147,
+        "captured_errors": 147,
+        "n": 147
+      },
+      "QRXbRSq8p4s": {
+        "errors": 0,
+        "captured_errors": 0,
+        "n": 147
+      },
+      "ho_oK12hY6M": {
+        "errors": 29,
+        "captured_errors": 29,
+        "n": 147
+      }
+    },
+    "restored": {
+      "ABqo634gI5s": {
+        "errors": 48,
+        "captured_errors": 48,
+        "n": 96
+      },
+      "qv3-HaaxGUc": {
+        "errors": 42,
+        "captured_errors": 12,
+        "n": 96
+      },
+      "Pc5iQdNpDX0": {
+        "errors": 147,
+        "captured_errors": 147,
+        "n": 147
+      },
+      "QRXbRSq8p4s": {
+        "errors": 0,
+        "captured_errors": 0,
+        "n": 147
+      },
+      "ho_oK12hY6M": {
+        "errors": 32,
+        "captured_errors": 29,
+        "n": 147
+      }
+    },
+    "static_residual": {
+      "ABqo634gI5s": {
+        "errors": 48,
+        "captured_errors": 48,
+        "n": 96
+      },
+      "qv3-HaaxGUc": {
+        "errors": 11,
+        "captured_errors": 12,
+        "n": 96
+      },
+      "Pc5iQdNpDX0": {
+        "errors": 147,
+        "captured_errors": 147,
+        "n": 147
+      },
+      "QRXbRSq8p4s": {
+        "errors": 0,
+        "captured_errors": 0,
+        "n": 147
+      },
+      "ho_oK12hY6M": {
+        "errors": 30,
+        "captured_errors": 29,
+        "n": 147
+      }
+    },
+    "dynamic_residual": {
+      "ABqo634gI5s": {
+        "errors": 47,
+        "captured_errors": 48,
+        "n": 96
+      },
+      "qv3-HaaxGUc": {
+        "errors": 44,
+        "captured_errors": 12,
+        "n": 96
+      },
+      "Pc5iQdNpDX0": {
+        "errors": 147,
+        "captured_errors": 147,
+        "n": 147
+      },
+      "QRXbRSq8p4s": {
+        "errors": 0,
+        "captured_errors": 0,
+        "n": 147
+      },
+      "ho_oK12hY6M": {
+        "errors": 34,
+        "captured_errors": 29,
+        "n": 147
+      }
+    },
+    "half_blend": {
+      "ABqo634gI5s": {
+        "errors": 48,
+        "captured_errors": 48,
+        "n": 96
+      },
+      "qv3-HaaxGUc": {
+        "errors": 31,
+        "captured_errors": 12,
+        "n": 96
+      },
+      "Pc5iQdNpDX0": {
+        "errors": 147,
+        "captured_errors": 147,
+        "n": 147
+      },
+      "QRXbRSq8p4s": {
+        "errors": 0,
+        "captured_errors": 0,
+        "n": 147
+      },
+      "ho_oK12hY6M": {
+        "errors": 31,
+        "captured_errors": 29,
+        "n": 147
+      }
+    }
+  },
+  "solution_screen_passed": [],
+  "descriptive_harm_auroc": {
+    "alignment_response_change": 0.75,
+    "binary_disagreement": 1.0,
+    "absolute_score_change": 0.6923076923076923
+  },
+  "warning": "Exploratory reused inputs, three fixed prototypes, no held-out advantage. Audio shifts are synthetic mismatch probes and do not certify true synchronization. Quality metrics are not human judgments."
+}

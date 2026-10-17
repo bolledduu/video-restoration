@@ -1,0 +1,75 @@
+{
+  "created_utc": "2026-10-16T22:24:12.080244+00:00",
+  "dataset": "plnguyen2908/UniTalk-ASD",
+  "revision": "0c0f80331c91b57ce772bc674f81d40a24247383",
+  "split": "val",
+  "selection": "First 12 sources in SHA256(seed+source) order excluding all nine locally cached pilot sources. Fixed source list; no replacement for outcomes or missing eligibility.",
+  "seed": "quality-attribution-confirmation-v1",
+  "excluded_sources": [
+    "9Zja_cIAwY8",
+    "ABqo634gI5s",
+    "EEey6Pt0rqI",
+    "Pc5iQdNpDX0",
+    "QRXbRSq8p4s",
+    "ho_oK12hY6M",
+    "kgVz_AXYvn0",
+    "lnAa1N5ynyI",
+    "qv3-HaaxGUc"
+  ],
+  "selected_sources": [
+    "wh3-1DUTb3Q",
+    "ZOVijL7huc8",
+    "wgKtyUgka0o",
+    "A72icPv2ZS8",
+    "AkkEnGdG0a0",
+    "W7Qdjv8gcBY",
+    "Hyk-WhQBIq0",
+    "tMqqI5R9baU",
+    "jKqR-ahl8po",
+    "6w-qM52nnWk",
+    "zgPkoFf3OCw",
+    "SudOQF76xvE"
+  ],
+  "listing_sha256": "8e09025d4bb989d449a14bcba01b0619f43b30ff5aed91e47be1aba8fbab8337",
+  "context_frames": 100,
+  "fps": 25,
+  "track_selection": "Earliest contiguous 100-frame track per category, tie by entity. Speaking: all100 label1; non-speaking: all100 label0; transition:20..80 label1. Same-track windows may not overlap. Select by published annotations; then verify all images/audio/minimum native crop64 before inference. Record exclusions; do not change sources.",
+  "primary_matrix": {
+    "noise_sigma": [
+      10,
+      25
+    ],
+    "restorers": [
+      "fastdvdnet_matched_sigma",
+      "spatial_nlm_fixed_h10_template7_search21"
+    ],
+    "perception": "TalkNet TalkSet checkpoint, frozen CPU interface, 0.5 threshold",
+    "audio": "unaltered, identical across candidates"
+  },
+  "primary_outcome": "Per-source rate of captured-correct/restored-wrong timestamps jointly with MUSIQ increase and BRISQUE decrease. Denominator all captured-correct scored timestamps; report conditional and joint rates separately.",
+  "secondary": [
+    "All introduced errors",
+    "Captured-error corrections",
+    "Per-source net error change",
+    "Both quality deltas individually",
+    "Equal-area upper/lower interventions",
+    "Temporal residual risk scores vs confidence/disagreement"
+  ],
+  "statistics": "Report all source results plus source-cluster bootstrap 95% intervals, 10000 resamples, seed20261016. Frames, conditions and agent repetitions are not independent subjects. No threshold tuning on confirmation data.",
+  "quality": "MUSIQ and BRISQUE on five equally spaced frames per100-frame clip. SSIM to imperfect source crops diagnostic only. No human preference claim.",
+  "agent_phase": "After local measurements finish, run Qwen on every eligible captured/restored condition with frozen two-repeat tool-only prompt; record abstention and API failure rate. Do not select only harmful cases. No claim until responses complete.",
+  "scope": "Independent source confirmation of current interface, not new-dataset or unseen-restorer generalization. No learned method or mouth-specific framework is assumed.",
+  "capacity_max": {
+    "tracks": 36,
+    "degraded_inputs": 72,
+    "restored_outputs": 144,
+    "qwen_sessions_two_repeats": 432
+  },
+  "expansion_rule": "After this fixed batch, assess effect size and uncertainty once. Do not keep adding samples until positive. Method work requires additional development sources and a separately untouched test set.",
+  "preflight_required": [
+    "Verify archives and audio/label alignment",
+    "Verify crop eligibility before model calls",
+    "Audit checkpoint and reference-input performance",
+    "Freeze expanded agent prompt and tool payload hash before agent calls"
+  ]
+}

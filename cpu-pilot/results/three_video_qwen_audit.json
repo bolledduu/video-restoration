@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "sessions": 20,
+  "source_videos": 3,
+  "person_tracks": 5,
+  "paired_comparisons": 10,
+  "correct_to_wrong": 2,
+  "wrong_to_correct": 0,
+  "repeated_harm_sources": [
+    "kgVz_AXYvn0"
+  ],
+  "expansion_gate_passed": false,
+  "api_calls": 40
+}

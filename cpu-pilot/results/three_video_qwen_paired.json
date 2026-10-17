@@ -1,0 +1,3348 @@
+{
+  "status": "COMPLETE",
+  "protocol": {
+    "date_local": "2026-10-16",
+    "model": "qwen/qwen3.8-27b",
+    "temperature": 0,
+    "max_completion_tokens": 800,
+    "repetitions": 2,
+    "case_ids": [
+      "kgVz_AXYvn0__label0__sigma40",
+      "kgVz_AXYvn0__label1__sigma40",
+      "EEey6Pt0rqI__label0__sigma40",
+      "EEey6Pt0rqI__label1__sigma40",
+      "9Zja_cIAwY8"
+    ],
+    "selection": "Purposeful fixed existing tracks across three sources, including known detector failures; not an unbiased population sample.",
+    "primary": "Captured-correct to restored-wrong majority speaking answer, repeated in both runs.",
+    "expansion_gate": "Proceed to larger restoration-induced Qwen majority-error study only if repeated primary harm occurs on at least two distinct source videos.",
+    "secondary": "Wrong timestamp tags and abstention coverage; never substitute for primary gate.",
+    "scope": "Qwen tool-agent using cached real FastDVDnet/TalkNet measurements, not direct video perception. Synthetic Gaussian noise, dataset annotations.",
+    "interface_change": "Explicit audio-only scope; uniform audio-visual and audio-only heads, no visual-only head. Fixed for every case and condition.",
+    "system_prompt": "You are a tool-using audiovisual assistant deciding whether one visible person is speaking. You cannot see or hear media directly. Inspect current evidence before answering. The audio-visual detector estimates whether THIS visible person speaks. The audio-only head measures activity in the audio and CANNOT identify the visible speaker: another person or offscreen person may be speaking. Neither head is ground truth; scores are uncalibrated. Image-quality scores measure appearance, not speaker correctness. You may disagree with the detector. Do not invent identities, words, visual observations, or ground truth. Give a best binary majority-speaking answer and separate timestamped tags, using -1 for uncertain timestamps. Confidence is self-reported, not calibrated. Submit through submit_answer within six model calls.",
+    "user_prompt": "For this one-second clip, is the visible person speaking for the majority of the 24 scored timestamps? Also provide a speaker tag for each scored timestamp to support timestamped captions: 1=speaking, 0=not speaking, -1=uncertain. Explain your evidence briefly. Do not attribute words to anyone.",
+    "frame_times_relative": [
+      0.0,
+      0.04,
+      0.08,
+      0.12,
+      0.16,
+      0.2,
+      0.24,
+      0.28,
+      0.32,
+      0.36,
+      0.4,
+      0.44,
+      0.48,
+      0.52,
+      0.56,
+      0.6,
+      0.64,
+      0.68,
+      0.72,
+      0.76,
+      0.8,
+      0.84,
+      0.88,
+      0.92
+    ]
+  },
+  "protocol_sha256": "85ab9bbc216b92b33bca27ccab874c4aba898856b756d11d6997641aa97af4e7",
+  "script_sha256": "b1d6805edc80e3c7e75c94421bcf7076106a0144aa56af53b5b023b243885349",
+  "cases": [
+    {
+      "id": "kgVz_AXYvn0__label0__sigma40",
+      "source": "kgVz_AXYvn0",
+      "start": 1.0,
+      "entity": "kgVz_AXYvn0:3",
+      "label": 0,
+      "candidates": {
+        "captured": {
+          "probability": [
+            0.3748609721660614,
+            0.37836435437202454,
+            0.32636573910713196,
+            0.3550179600715637,
+            0.3358962833881378,
+            0.3270438611507416,
+            0.31960251927375793,
+            0.3217109143733978,
+            0.32902100682258606,
+            0.3513236343860626,
+            0.3583148419857025,
+            0.41205358505249023,
+            0.38786643743515015,
+            0.35887789726257324,
+            0.37306228280067444,
+            0.4104023873806,
+            0.41043949127197266,
+            0.46499472856521606,
+            0.4139919877052307,
+            0.526252806186676,
+            0.5031706690788269,
+            0.5367921590805054,
+            0.39630386233329773,
+            0.4294692277908325
+          ],
+          "audio_probability": [
+            0.6789063215255737,
+            0.6624888181686401,
+            0.7220118045806885,
+            0.7273311018943787,
+            0.7141607403755188,
+            0.6897080540657043,
+            0.6557124257087708,
+            0.6817003488540649,
+            0.6186364889144897,
+            0.6575987935066223,
+            0.6300896406173706,
+            0.5761513113975525,
+            0.5839248895645142,
+            0.5902925133705139,
+            0.5854036808013916,
+            0.6657516956329346,
+            0.7028402090072632,
+            0.7221939563751221,
+            0.6968244314193726,
+            0.7346373796463013,
+            0.70867919921875,
+            0.7084864377975464,
+            0.6222425699234009,
+            0.753983736038208
+          ],
+          "musiq": 14.743904113769531,
+          "brisque": 62.56959533691406
+        },
+        "fastdvdnet": {
+          "probability": [
+            0.40848010778427124,
+            0.4119929075241089,
+            0.34469011425971985,
+            0.38427430391311646,
+            0.36145880818367004,
+            0.35565078258514404,
+            0.35464516282081604,
+            0.3407360315322876,
+            0.3280125856399536,
+            0.29569071531295776,
+            0.30527693033218384,
+            0.32305172085762024,
+            0.3142673373222351,
+            0.27007415890693665,
+            0.28183066844940186,
+            0.32266858220100403,
+            0.36124852299690247,
+            0.39672014117240906,
+            0.3867650330066681,
+            0.45238497853279114,
+            0.4598802626132965,
+            0.48265236616134644,
+            0.37502560019493103,
+            0.37557902932167053
+          ],
+          "audio_probability": [
+            0.6789063215255737,
+            0.6624888181686401,
+            0.7220118045806885,
+            0.7273311018943787,
+            0.7141607403755188,
+            0.6897080540657043,
+            0.6557124257087708,
+            0.6817003488540649,
+            0.6186364889144897,
+            0.6575987935066223,
+            0.6300896406173706,
+            0.5761513113975525,
+            0.5839248895645142,
+            0.5902925133705139,
+            0.5854036808013916,
+            0.6657516956329346,
+            0.7028402090072632,
+            0.7221939563751221,
+            0.6968244314193726,
+            0.7346373796463013,
+            0.70867919921875,
+            0.7084864377975464,
+            0.6222425699234009,
+            0.753983736038208
+          ],
+          "musiq": 16.02107302347819,
+          "brisque": 57.25148137410482
+        }
+      },
+      "arrays_sha256": "dede76bb91fa4c9b8fa59fbf13f0e1fabf3b3a9c28cfe3739e5d36adc38e17d3",
+      "bundle_sha256": "066dfb9481e24e9cf2e6ea0ea86a2ab29eeb0a9519745e3478df0d98a063bccd",
+      "annotation_sha256": "e088f44b9a8c12015a60fbb2db4e7874bcd3fe0b331669b5678d08f4cf5319a1",
+      "audio_sha256": "80f608eb4be9ebf616117e3b83282c5017369ee62eba6c273caaea61923b9a92",
+      "reference_wrong": 3
+    },
+    {
+      "id": "kgVz_AXYvn0__label1__sigma40",
+      "source": "kgVz_AXYvn0",
+      "start": 9.32,
+      "entity": "kgVz_AXYvn0:18",
+      "label": 1,
+      "candidates": {
+        "captured": {
+          "probability": [
+            0.6348747611045837,
+            0.6725611686706543,
+            0.617480993270874,
+            0.6456953287124634,
+            0.6622706055641174,
+            0.5976917743682861,
+            0.5926759243011475,
+            0.5487524271011353,
+            0.5146256685256958,
+            0.5379837155342102,
+            0.5880075097084045,
+            0.574225902557373,
+            0.6371808052062988,
+            0.6336846947669983,
+            0.5922544002532959,
+            0.6141613721847534,
+            0.636358916759491,
+            0.6362226009368896,
+            0.6357669830322266,
+            0.5992396473884583,
+            0.6366768479347229,
+            0.6321308612823486,
+            0.6370435357093811,
+            0.5835379362106323
+          ],
+          "audio_probability": [
+            0.7270359992980957,
+            0.7094970941543579,
+            0.6873804330825806,
+            0.626554548740387,
+            0.6589117646217346,
+            0.5977405905723572,
+            0.5624558329582214,
+            0.5649905204772949,
+            0.5858774781227112,
+            0.6382023692131042,
+            0.6521713733673096,
+            0.6768981218338013,
+            0.7408323884010315,
+            0.7804744243621826,
+            0.7806280255317688,
+            0.7274803519248962,
+            0.6445454359054565,
+            0.5839965343475342,
+            0.6390935778617859,
+            0.6277229189872742,
+            0.6855310797691345,
+            0.6545032262802124,
+            0.6836100220680237,
+            0.6325027942657471
+          ],
+          "musiq": 16.31605339050293,
+          "brisque": 60.57050069173177
+        },
+        "fastdvdnet": {
+          "probability": [
+            0.3134734630584717,
+            0.3220023512840271,
+            0.330096036195755,
+            0.31792548298835754,
+            0.318754106760025,
+            0.3188053369522095,
+            0.299883097410202,
+            0.23102329671382904,
+            0.2077040672302246,
+            0.21240168809890747,
+            0.21243400871753693,
+            0.22981366515159607,
+            0.268960177898407,
+            0.30160611867904663,
+            0.24160556495189667,
+            0.23650583624839783,
+            0.2628333270549774,
+            0.24761393666267395,
+            0.20186428725719452,
+            0.21379585564136505,
+            0.24478963017463684,
+            0.2541019022464752,
+            0.2833651006221771,
+            0.2717404365539551
+          ],
+          "audio_probability": [
+            0.7270359992980957,
+            0.7094970941543579,
+            0.6873804330825806,
+            0.626554548740387,
+            0.6589117646217346,
+            0.5977405905723572,
+            0.5624558329582214,
+            0.5649905204772949,
+            0.5858774781227112,
+            0.6382023692131042,
+            0.6521713733673096,
+            0.6768981218338013,
+            0.7408323884010315,
+            0.7804744243621826,
+            0.7806280255317688,
+            0.7274803519248962,
+            0.6445454359054565,
+            0.5839965343475342,
+            0.6390935778617859,
+            0.6277229189872742,
+            0.6855310797691345,
+            0.6545032262802124,
+            0.6836100220680237,
+            0.6325027942657471
+          ],
+          "musiq": 15.39635944366455,
+          "brisque": 51.259849548339844
+        }
+      },
+      "arrays_sha256": "0cd36955896d4a146a50d9e33cdbd633410d582d9eb5ea207436e07bb5818ac1",
+      "bundle_sha256": "d7a982d79620d235153b37de0d507ce314e1688faac938d3775c2fb70aec3863",
+      "annotation_sha256": "e088f44b9a8c12015a60fbb2db4e7874bcd3fe0b331669b5678d08f4cf5319a1",
+      "audio_sha256": "1f92590ef82c393bb708ac417d0b5ef88516caf0ae3b73ab630ea527649c8894",
+      "reference_wrong": 24
+    },
+    {
+      "id": "EEey6Pt0rqI__label0__sigma40",
+      "source": "EEey6Pt0rqI",
+      "start": 7.28,
+      "entity": "EEey6Pt0rqI:2",
+      "label": 0,
+      "candidates": {
+        "captured": {
+          "probability": [
+            0.3472023904323578,
+            0.3030419945716858,
+            0.3010554015636444,
+            0.281432181596756,
+            0.2939296364784241,
+            0.2758118212223053,
+            0.2833186686038971,
+            0.30094969272613525,
+            0.28008973598480225,
+            0.277157723903656,
+            0.26734814047813416,
+            0.2520264983177185,
+            0.2896190285682678,
+            0.2693246603012085,
+            0.2603949010372162,
+            0.27513885498046875,
+            0.2572343349456787,
+            0.2347049117088318,
+            0.2533901333808899,
+            0.24738216400146484,
+            0.22253350913524628,
+            0.22382572293281555,
+            0.2341299206018448,
+            0.25490736961364746
+          ],
+          "audio_probability": [
+            0.7999817728996277,
+            0.7552011013031006,
+            0.7585667371749878,
+            0.7330938577651978,
+            0.7861160039901733,
+            0.7469184994697571,
+            0.7870887517929077,
+            0.7113127708435059,
+            0.6942899227142334,
+            0.7056449055671692,
+            0.7213934659957886,
+            0.7561023831367493,
+            0.6936461925506592,
+            0.650776743888855,
+            0.60568767786026,
+            0.5879794955253601,
+            0.5836834907531738,
+            0.5954697132110596,
+            0.5990110039710999,
+            0.5872061252593994,
+            0.5647671222686768,
+            0.6001447439193726,
+            0.6148293614387512,
+            0.6174607276916504
+          ],
+          "musiq": 13.739511489868164,
+          "brisque": 62.77609380086263
+        },
+        "fastdvdnet": {
+          "probability": [
+            0.5617810487747192,
+            0.6000595688819885,
+            0.5806710124015808,
+            0.5691238045692444,
+            0.5262328386306763,
+            0.4921115040779114,
+            0.474569171667099,
+            0.4768125116825104,
+            0.47046035528182983,
+            0.4765086770057678,
+            0.4681413769721985,
+            0.43688467144966125,
+            0.47141000628471375,
+            0.43532904982566833,
+            0.39223620295524597,
+            0.37008875608444214,
+            0.3347807824611664,
+            0.31786131858825684,
+            0.3298226594924927,
+            0.32672014832496643,
+            0.30290335416793823,
+            0.29013994336128235,
+            0.31004056334495544,
+            0.3293100595474243
+          ],
+          "audio_probability": [
+            0.7999817728996277,
+            0.7552011013031006,
+            0.7585667371749878,
+            0.7330938577651978,
+            0.7861160039901733,
+            0.7469184994697571,
+            0.7870887517929077,
+            0.7113127708435059,
+            0.6942899227142334,
+            0.7056449055671692,
+            0.7213934659957886,
+            0.7561023831367493,
+            0.6936461925506592,
+            0.650776743888855,
+            0.60568767786026,
+            0.5879794955253601,
+            0.5836834907531738,
+            0.5954697132110596,
+            0.5990110039710999,
+            0.5872061252593994,
+            0.5647671222686768,
+            0.6001447439193726,
+            0.6148293614387512,
+            0.6174607276916504
+          ],
+          "musiq": 15.960729598999023,
+          "brisque": 61.099648793538414
+        }
+      },
+      "arrays_sha256": "adb48616467f83e130d5f6e120b377d423fc78332c72c4cc77a804b47972bf6d",
+      "bundle_sha256": "053ca45741fa6979eea92ed19882002acba2bcf76a5bfe71cb84965217d69b03",
+      "annotation_sha256": "af8203b16adae97e5008fbaf227e91920551610eecf86bedb106c1a7b2530823",
+      "audio_sha256": "3e60c73f46e84ab6b399e7d573b1f199d1e327a27805004d1243e50d098cf08f",
+      "reference_wrong": 0
+    },
+    {
+      "id": "EEey6Pt0rqI__label1__sigma40",
+      "source": "EEey6Pt0rqI",
+      "start": 10.72,
+      "entity": "EEey6Pt0rqI:9",
+      "label": 1,
+      "candidates": {
+        "captured": {
+          "probability": [
+            0.9529862403869629,
+            0.9526680707931519,
+            0.9720050692558289,
+            0.973401665687561,
+            0.9810845255851746,
+            0.9970280528068542,
+            0.9988435506820679,
+            0.9990440011024475,
+            0.9989237189292908,
+            0.9989293217658997,
+            0.9983963370323181,
+            0.9980717301368713,
+            0.9990264177322388,
+            0.9990147352218628,
+            0.9993972778320312,
+            0.9997751116752625,
+            0.9997895359992981,
+            0.99978107213974,
+            0.9996947050094604,
+            0.9996055960655212,
+            0.9996358156204224,
+            0.9996700286865234,
+            0.9995015859603882,
+            0.9989556074142456
+          ],
+          "audio_probability": [
+            0.6902121305465698,
+            0.632097601890564,
+            0.6400884985923767,
+            0.6889466643333435,
+            0.7675805687904358,
+            0.7145900130271912,
+            0.7047298550605774,
+            0.7261528968811035,
+            0.7262422442436218,
+            0.7070653438568115,
+            0.6956585049629211,
+            0.6867915391921997,
+            0.717362642288208,
+            0.6474025845527649,
+            0.6008062362670898,
+            0.6421037912368774,
+            0.6858177185058594,
+            0.6694293022155762,
+            0.729935884475708,
+            0.6622393131256104,
+            0.7123738527297974,
+            0.6255831718444824,
+            0.6530427932739258,
+            0.6245574355125427
+          ],
+          "musiq": 15.724623362223307,
+          "brisque": 62.94781494140625
+        },
+        "fastdvdnet": {
+          "probability": [
+            0.853561282157898,
+            0.8789165616035461,
+            0.9352342486381531,
+            0.9359674453735352,
+            0.9754077196121216,
+            0.9953461289405823,
+            0.9983029365539551,
+            0.9988364577293396,
+            0.9988160133361816,
+            0.9989748001098633,
+            0.9982185959815979,
+            0.9983932375907898,
+            0.9990587830543518,
+            0.9990251064300537,
+            0.9992935657501221,
+            0.9997740387916565,
+            0.9997881054878235,
+            0.999776303768158,
+            0.9997135996818542,
+            0.9995498061180115,
+            0.9995916485786438,
+            0.9996641874313354,
+            0.999482274055481,
+            0.9987012147903442
+          ],
+          "audio_probability": [
+            0.6902121305465698,
+            0.632097601890564,
+            0.6400884985923767,
+            0.6889466643333435,
+            0.7675805687904358,
+            0.7145900130271912,
+            0.7047298550605774,
+            0.7261528968811035,
+            0.7262422442436218,
+            0.7070653438568115,
+            0.6956585049629211,
+            0.6867915391921997,
+            0.717362642288208,
+            0.6474025845527649,
+            0.6008062362670898,
+            0.6421037912368774,
+            0.6858177185058594,
+            0.6694293022155762,
+            0.729935884475708,
+            0.6622393131256104,
+            0.7123738527297974,
+            0.6255831718444824,
+            0.6530427932739258,
+            0.6245574355125427
+          ],
+          "musiq": 16.199537595113117,
+          "brisque": 51.37677892049154
+        }
+      },
+      "arrays_sha256": "cc041e36265176f6bfb3541410e598e6fcd6497e738a55a3ad2712a3559b693d",
+      "bundle_sha256": "333e0fba899271faf8aec5cf00e52ec3e18c4e66daf9cc35c3f63aed793e7ab1",
+      "annotation_sha256": "af8203b16adae97e5008fbaf227e91920551610eecf86bedb106c1a7b2530823",
+      "audio_sha256": "cc5e3ebaba1baf3f6848c3f7c4d57985422cc302faf54b488d5fd4cd89a69218",
+      "reference_wrong": 0
+    },
+    {
+      "id": "9Zja_cIAwY8",
+      "source": "9Zja_cIAwY8",
+      "start": 0.0,
+      "entity": "9Zja_cIAwY8:0",
+      "label": 0,
+      "candidates": {
+        "captured": {
+          "probability": [
+            0.026337824761867523,
+            0.031464312225580215,
+            0.03148740157485008,
+            0.03199438005685806,
+            0.026125645264983177,
+            0.029409460723400116,
+            0.04783312603831291,
+            0.0755908414721489,
+            0.08654049783945084,
+            0.09666735678911209,
+            0.08980939537286758,
+            0.06741426140069962,
+            0.05994442477822304,
+            0.059057965874671936,
+            0.0664781853556633,
+            0.0628276988863945,
+            0.06239177659153938,
+            0.05809677764773369,
+            0.07106949388980865,
+            0.07025845348834991,
+            0.07565073668956757,
+            0.1006273552775383,
+            0.07857102900743484,
+            0.07684287428855896
+          ],
+          "audio_probability": [
+            0.3927983343601227,
+            0.5171774625778198,
+            0.5234487056732178,
+            0.5498287081718445,
+            0.5578209161758423,
+            0.6595688462257385,
+            0.7292402386665344,
+            0.8166064620018005,
+            0.7921386957168579,
+            0.8124189972877502,
+            0.840955376625061,
+            0.8473522067070007,
+            0.7863466143608093,
+            0.8145838975906372,
+            0.8132356405258179,
+            0.7788563966751099,
+            0.7783177495002747,
+            0.7285233736038208,
+            0.7055519819259644,
+            0.7029801607131958,
+            0.6006227135658264,
+            0.645423412322998,
+            0.6140442490577698,
+            0.604461133480072
+          ],
+          "musiq": 15.465910911560059,
+          "brisque": 50.29302088419596
+        },
+        "fastdvdnet": {
+          "probability": [
+            0.11309809982776642,
+            0.1293828785419464,
+            0.1326172798871994,
+            0.13505683839321136,
+            0.11543179303407669,
+            0.11938372999429703,
+            0.16793781518936157,
+            0.23850156366825104,
+            0.22242428362369537,
+            0.2342313826084137,
+            0.196559339761734,
+            0.1519220620393753,
+            0.17948150634765625,
+            0.18323449790477753,
+            0.18468838930130005,
+            0.20302653312683105,
+            0.1893267035484314,
+            0.18306203186511993,
+            0.2149435579776764,
+            0.17908553779125214,
+            0.19966481626033783,
+            0.22607915103435516,
+            0.2144886702299118,
+            0.17645350098609924
+          ],
+          "audio_probability": [
+            0.3927983343601227,
+            0.5171774625778198,
+            0.5234487056732178,
+            0.5498287081718445,
+            0.5578209161758423,
+            0.6595688462257385,
+            0.7292402386665344,
+            0.8166064620018005,
+            0.7921386957168579,
+            0.8124189972877502,
+            0.840955376625061,
+            0.8473522067070007,
+            0.7863466143608093,
+            0.8145838975906372,
+            0.8132356405258179,
+            0.7788563966751099,
+            0.7783177495002747,
+            0.7285233736038208,
+            0.7055519819259644,
+            0.7029801607131958,
+            0.6006227135658264,
+            0.645423412322998,
+            0.6140442490577698,
+            0.604461133480072
+          ],
+          "musiq": 18.66572634379069,
+          "brisque": 51.00546518961588
+        }
+      },
+      "arrays_sha256": "8fe8b05385fa800f6b15bfef806210fd69546c8d17c0f43b14ad3dccddc2c25c",
+      "bundle_sha256": "da4c1350124db3d13f8de1c9da7d186c29f1f5aa6e0921e38d74caed9213934a",
+      "annotation_sha256": "f69797926508cce0ae58bf4cf6a421eb558b8cd3ccf677623541a07b881c19ba",
+      "audio_sha256": "3ce1773ecdbaf0bf32a1648c2daf93f788a6e0fe370e0e4401df7b6e2edd2c1a",
+      "reference_wrong": 0
+    }
+  ],
+  "runs": [
+    {
+      "condition": "captured",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "yy1pt3wc2",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "yy1pt3wc2",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.3748609721660614, 0.37836435437202454, 0.32636573910713196, 0.3550179600715637, 0.3358962833881378, 0.3270438611507416, 0.31960251927375793, 0.3217109143733978, 0.32902100682258606, 0.3513236343860626, 0.3583148419857025, 0.41205358505249023, 0.38786643743515015, 0.35887789726257324, 0.37306228280067444, 0.4104023873806, 0.41043949127197266, 0.46499472856521606, 0.4139919877052307, 0.526252806186676, 0.5031706690788269, 0.5367921590805054, 0.39630386233329773, 0.4294692277908325], \"audio_only_activity_scores\": [0.6789063215255737, 0.6624888181686401, 0.7220118045806885, 0.7273311018943787, 0.7141607403755188, 0.6897080540657043, 0.6557124257087708, 0.6817003488540649, 0.6186364889144897, 0.6575987935066223, 0.6300896406173706, 0.5761513113975525, 0.5839248895645142, 0.5902925133705139, 0.5854036808013916, 0.6657516956329346, 0.7028402090072632, 0.7221939563751221, 0.6968244314193726, 0.7346373796463013, 0.70867919921875, 0.7084864377975464, 0.6222425699234009, 0.753983736038208], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 14.743904113769531, \"brisque\": 62.56959533691406, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "zn7ngrekt",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.4,\"evidence_used\":\"current\",\"frame_tags\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for this visible person stay below the 0.5 detector threshold for all 24 timestamps (range ~0.32\u20130.54, with only a few late frames marginally above 0.5). The audio-only activity is consistently high (~0.58\u20130.75), indicating speech is present, but it cannot be attributed to the visible person. Since the AV scores are mostly below threshold and only a few late frames are borderline, the visible person is not speaking for the majority of the clip. Given the uncl\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "zn7ngrekt",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.029532772,
+          "prompt_tokens": 686,
+          "prompt_time": 0.059178463,
+          "completion_tokens": 17,
+          "completion_time": 0.034538175,
+          "total_tokens": 703,
+          "total_time": 0.093716638
+        },
+        {
+          "queue_time": 0.038935958,
+          "prompt_tokens": 1948,
+          "prompt_time": 0.138394293,
+          "completion_tokens": 273,
+          "completion_time": 0.889934708,
+          "total_tokens": 2221,
+          "total_time": 1.028329001
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-9906d612-b7af-4d1f-af9a-eb5410877559",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792142953,
+          "system_fingerprint": "fp_5e14805ce3"
+        },
+        {
+          "id": "chatcmpl-050d7391-4048-4017-86e6-2c947c29739f",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792142955,
+          "system_fingerprint": "fp_c14f15bfae"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.4,
+        "evidence_used": "current",
+        "frame_tags": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for this visible person stay below the 0.5 detector threshold for all 24 timestamps (range ~0.32\u20130.54, with only a few late frames marginally above 0.5). The audio-only activity is consistently high (~0.58\u20130.75), indicating speech is present, but it cannot be attributed to the visible person. Since the AV scores are mostly below threshold and only a few late frames are borderline, the visible person is not speaking for the majority of the clip. Given the uncl"
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 24,
+        "frame_coverage": 0.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "kgVz_AXYvn0__label0__sigma40",
+      "repeat": 0
+    },
+    {
+      "condition": "restored",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "1sb8ss9g2",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "1sb8ss9g2",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.40848010778427124, 0.4119929075241089, 0.34469011425971985, 0.38427430391311646, 0.36145880818367004, 0.35565078258514404, 0.35464516282081604, 0.3407360315322876, 0.3280125856399536, 0.29569071531295776, 0.30527693033218384, 0.32305172085762024, 0.3142673373222351, 0.27007415890693665, 0.28183066844940186, 0.32266858220100403, 0.36124852299690247, 0.39672014117240906, 0.3867650330066681, 0.45238497853279114, 0.4598802626132965, 0.48265236616134644, 0.37502560019493103, 0.37557902932167053], \"audio_only_activity_scores\": [0.6789063215255737, 0.6624888181686401, 0.7220118045806885, 0.7273311018943787, 0.7141607403755188, 0.6897080540657043, 0.6557124257087708, 0.6817003488540649, 0.6186364889144897, 0.6575987935066223, 0.6300896406173706, 0.5761513113975525, 0.5839248895645142, 0.5902925133705139, 0.5854036808013916, 0.6657516956329346, 0.7028402090072632, 0.7221939563751221, 0.6968244314193726, 0.7346373796463013, 0.70867919921875, 0.7084864377975464, 0.6222425699234009, 0.753983736038208], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 16.02107302347819, \"brisque\": 57.25148137410482, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "zp7qtbcd0",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.5,\"evidence_used\":\"current\",\"frame_tags\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for the visible person range from ~0.27 to ~0.48, all below the 0.5 detector threshold, so the detector does not indicate this person is speaking at any timestamp. The audio-only activity scores are higher (~0.58-0.75), suggesting some audio activity, but that head cannot identify the visible speaker and may reflect another or offscreen person. Because the AV scores are consistently below threshold but not extremely low, I mark all timestamps as uncertain (-1\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "zp7qtbcd0",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.107285647,
+          "prompt_tokens": 686,
+          "prompt_time": 0.05727029,
+          "completion_tokens": 17,
+          "completion_time": 0.034541479,
+          "total_tokens": 703,
+          "total_time": 0.091811769
+        },
+        {
+          "queue_time": 0.021452051,
+          "prompt_tokens": 1958,
+          "prompt_time": 0.143396107,
+          "completion_tokens": 263,
+          "completion_time": 0.802312879,
+          "total_tokens": 2221,
+          "total_time": 0.945708986
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-dc376ca3-fc6b-47bc-b702-5e673470940a",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792142955,
+          "system_fingerprint": "fp_57c7e760a9"
+        },
+        {
+          "id": "chatcmpl-9ca66efc-f668-4492-a190-a4526c6c9a71",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792142956,
+          "system_fingerprint": "fp_c14f15bfae"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.5,
+        "evidence_used": "current",
+        "frame_tags": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for the visible person range from ~0.27 to ~0.48, all below the 0.5 detector threshold, so the detector does not indicate this person is speaking at any timestamp. The audio-only activity scores are higher (~0.58-0.75), suggesting some audio activity, but that head cannot identify the visible speaker and may reflect another or offscreen person. Because the AV scores are consistently below threshold but not extremely low, I mark all timestamps as uncertain (-1"
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 24,
+        "frame_coverage": 0.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "kgVz_AXYvn0__label0__sigma40",
+      "repeat": 0
+    },
+    {
+      "condition": "restored",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "t51tsamtr",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "t51tsamtr",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.40848010778427124, 0.4119929075241089, 0.34469011425971985, 0.38427430391311646, 0.36145880818367004, 0.35565078258514404, 0.35464516282081604, 0.3407360315322876, 0.3280125856399536, 0.29569071531295776, 0.30527693033218384, 0.32305172085762024, 0.3142673373222351, 0.27007415890693665, 0.28183066844940186, 0.32266858220100403, 0.36124852299690247, 0.39672014117240906, 0.3867650330066681, 0.45238497853279114, 0.4598802626132965, 0.48265236616134644, 0.37502560019493103, 0.37557902932167053], \"audio_only_activity_scores\": [0.6789063215255737, 0.6624888181686401, 0.7220118045806885, 0.7273311018943787, 0.7141607403755188, 0.6897080540657043, 0.6557124257087708, 0.6817003488540649, 0.6186364889144897, 0.6575987935066223, 0.6300896406173706, 0.5761513113975525, 0.5839248895645142, 0.5902925133705139, 0.5854036808013916, 0.6657516956329346, 0.7028402090072632, 0.7221939563751221, 0.6968244314193726, 0.7346373796463013, 0.70867919921875, 0.7084864377975464, 0.6222425699234009, 0.753983736038208], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 16.02107302347819, \"brisque\": 57.25148137410482, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "arxdqmc32",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.5,\"evidence_used\":\"current\",\"frame_tags\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for the visible person range from ~0.27 to ~0.48, all below the 0.5 detector threshold, so the detector does not indicate this person is speaking at any timestamp. The audio-only activity scores are higher (~0.58-0.75), suggesting some audio activity, but that head cannot identify the visible speaker and may reflect another or offscreen person. Because the AV scores are consistently below threshold but not extremely low, I mark all timestamps as uncertain (-1\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "arxdqmc32",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.023079009,
+          "prompt_tokens": 686,
+          "prompt_time": 0.054976587,
+          "completion_tokens": 17,
+          "completion_time": 0.034930214,
+          "total_tokens": 703,
+          "total_time": 0.089906801
+        },
+        {
+          "queue_time": 0.02399915,
+          "prompt_tokens": 1958,
+          "prompt_time": 0.143745365,
+          "completion_tokens": 263,
+          "completion_time": 0.800434367,
+          "total_tokens": 2221,
+          "total_time": 0.944179732
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-51e9c770-60c0-45e1-b3a5-6e96ee28bb33",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792142976,
+          "system_fingerprint": "fp_5e14805ce3"
+        },
+        {
+          "id": "chatcmpl-09874b68-ee9f-41cc-a70b-02b495e17fdf",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792142977,
+          "system_fingerprint": "fp_c14f15bfae"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.5,
+        "evidence_used": "current",
+        "frame_tags": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for the visible person range from ~0.27 to ~0.48, all below the 0.5 detector threshold, so the detector does not indicate this person is speaking at any timestamp. The audio-only activity scores are higher (~0.58-0.75), suggesting some audio activity, but that head cannot identify the visible speaker and may reflect another or offscreen person. Because the AV scores are consistently below threshold but not extremely low, I mark all timestamps as uncertain (-1"
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 24,
+        "frame_coverage": 0.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "kgVz_AXYvn0__label0__sigma40",
+      "repeat": 1
+    },
+    {
+      "condition": "captured",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "zr0zg8hn3",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "zr0zg8hn3",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.3748609721660614, 0.37836435437202454, 0.32636573910713196, 0.3550179600715637, 0.3358962833881378, 0.3270438611507416, 0.31960251927375793, 0.3217109143733978, 0.32902100682258606, 0.3513236343860626, 0.3583148419857025, 0.41205358505249023, 0.38786643743515015, 0.35887789726257324, 0.37306228280067444, 0.4104023873806, 0.41043949127197266, 0.46499472856521606, 0.4139919877052307, 0.526252806186676, 0.5031706690788269, 0.5367921590805054, 0.39630386233329773, 0.4294692277908325], \"audio_only_activity_scores\": [0.6789063215255737, 0.6624888181686401, 0.7220118045806885, 0.7273311018943787, 0.7141607403755188, 0.6897080540657043, 0.6557124257087708, 0.6817003488540649, 0.6186364889144897, 0.6575987935066223, 0.6300896406173706, 0.5761513113975525, 0.5839248895645142, 0.5902925133705139, 0.5854036808013916, 0.6657516956329346, 0.7028402090072632, 0.7221939563751221, 0.6968244314193726, 0.7346373796463013, 0.70867919921875, 0.7084864377975464, 0.6222425699234009, 0.753983736038208], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 14.743904113769531, \"brisque\": 62.56959533691406, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "jtgmmv6f7",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.4,\"evidence_used\":\"current\",\"frame_tags\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for this visible person stay below the 0.5 detector threshold for all 24 timestamps (range ~0.32\u20130.54, with only a few late frames marginally above 0.5). The audio-only activity is consistently high (~0.58\u20130.75), indicating speech is present, but it cannot be attributed to the visible person. Since the AV scores are mostly below threshold and only a few late frames are borderline, the visible person is not speaking for the majority of the clip. Given the uncl\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "jtgmmv6f7",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 1.163529826,
+          "prompt_tokens": 686,
+          "prompt_time": 0.050267007,
+          "completion_tokens": 17,
+          "completion_time": 0.033426774,
+          "total_tokens": 703,
+          "total_time": 0.083693781
+        },
+        {
+          "queue_time": 0.034744318,
+          "prompt_tokens": 1948,
+          "prompt_time": 0.14272103,
+          "completion_tokens": 273,
+          "completion_time": 0.852852612,
+          "total_tokens": 2221,
+          "total_time": 0.995573642
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-06c84bb9-98aa-4c3d-aebb-aafe418cfcdc",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792142979,
+          "system_fingerprint": "fp_c14f15bfae"
+        },
+        {
+          "id": "chatcmpl-8ef686a1-8e36-46c9-bbb9-e6635dde77da",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792142986,
+          "system_fingerprint": "fp_fea14bdc83"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.4,
+        "evidence_used": "current",
+        "frame_tags": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for this visible person stay below the 0.5 detector threshold for all 24 timestamps (range ~0.32\u20130.54, with only a few late frames marginally above 0.5). The audio-only activity is consistently high (~0.58\u20130.75), indicating speech is present, but it cannot be attributed to the visible person. Since the AV scores are mostly below threshold and only a few late frames are borderline, the visible person is not speaking for the majority of the clip. Given the uncl"
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 24,
+        "frame_coverage": 0.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "kgVz_AXYvn0__label0__sigma40",
+      "repeat": 1
+    },
+    {
+      "condition": "captured",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "8gc568bk5",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "8gc568bk5",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.6348747611045837, 0.6725611686706543, 0.617480993270874, 0.6456953287124634, 0.6622706055641174, 0.5976917743682861, 0.5926759243011475, 0.5487524271011353, 0.5146256685256958, 0.5379837155342102, 0.5880075097084045, 0.574225902557373, 0.6371808052062988, 0.6336846947669983, 0.5922544002532959, 0.6141613721847534, 0.636358916759491, 0.6362226009368896, 0.6357669830322266, 0.5992396473884583, 0.6366768479347229, 0.6321308612823486, 0.6370435357093811, 0.5835379362106323], \"audio_only_activity_scores\": [0.7270359992980957, 0.7094970941543579, 0.6873804330825806, 0.626554548740387, 0.6589117646217346, 0.5977405905723572, 0.5624558329582214, 0.5649905204772949, 0.5858774781227112, 0.6382023692131042, 0.6521713733673096, 0.6768981218338013, 0.7408323884010315, 0.7804744243621826, 0.7806280255317688, 0.7274803519248962, 0.6445454359054565, 0.5839965343475342, 0.6390935778617859, 0.6277229189872742, 0.6855310797691345, 0.6545032262802124, 0.6836100220680237, 0.6325027942657471], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 16.31605339050293, \"brisque\": 60.57050069173177, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "content": "Based on the evidence, the audio-visual speaking scores for the visible person are consistently above the 0.5 detector threshold across all 24 timestamps (ranging from ~0.51 to ~0.67). The audio-only activity is also present throughout, though it cannot confirm the visible person is the source. Since the AV detector indicates speaking at every timestamp, the majority is speaking.\n\n",
+          "tool_calls": [
+            {
+              "id": "nydrsqxsp",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.7,\"evidence_used\":\"current\",\"frame_tags\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],\"majority_speaking\":true,\"rationale\":\"The audio-visual speaking scores for the visible person are above the 0.5 detector threshold at all 24 timestamps (range ~0.51-0.67), indicating continuous speaking. Audio-only activity is also present throughout, consistent with speech. I tag all timestamps as speaking (1) since the AV detector consistently exceeds threshold. Confidence is moderate because scores are uncalibrated and the audio-only head cannot confirm the visible person is the speaker.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "nydrsqxsp",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.023760458,
+          "prompt_tokens": 686,
+          "prompt_time": 0.048955046,
+          "completion_tokens": 17,
+          "completion_time": 0.033468593,
+          "total_tokens": 703,
+          "total_time": 0.082423639
+        },
+        {
+          "queue_time": 0.02365064,
+          "prompt_tokens": 1939,
+          "prompt_time": 0.137561868,
+          "completion_tokens": 331,
+          "completion_time": 0.920279467,
+          "total_tokens": 2270,
+          "total_time": 1.057841335
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-31b636b8-4e86-4049-89e7-55a567a17c4b",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143011,
+          "system_fingerprint": "fp_fea14bdc83"
+        },
+        {
+          "id": "chatcmpl-d8230fdf-3544-4d42-a073-5342a26e5325",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143012,
+          "system_fingerprint": "fp_fea14bdc83"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.7,
+        "evidence_used": "current",
+        "frame_tags": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": true,
+        "rationale": "The audio-visual speaking scores for the visible person are above the 0.5 detector threshold at all 24 timestamps (range ~0.51-0.67), indicating continuous speaking. Audio-only activity is also present throughout, consistent with speech. I tag all timestamps as speaking (1) since the AV detector consistently exceeds threshold. Confidence is moderate because scores are uncalibrated and the audio-only head cannot confirm the visible person is the speaker."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      "case_id": "kgVz_AXYvn0__label1__sigma40",
+      "repeat": 0
+    },
+    {
+      "condition": "restored",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "frarawhh3",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "frarawhh3",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.3134734630584717, 0.3220023512840271, 0.330096036195755, 0.31792548298835754, 0.318754106760025, 0.3188053369522095, 0.299883097410202, 0.23102329671382904, 0.2077040672302246, 0.21240168809890747, 0.21243400871753693, 0.22981366515159607, 0.268960177898407, 0.30160611867904663, 0.24160556495189667, 0.23650583624839783, 0.2628333270549774, 0.24761393666267395, 0.20186428725719452, 0.21379585564136505, 0.24478963017463684, 0.2541019022464752, 0.2833651006221771, 0.2717404365539551], \"audio_only_activity_scores\": [0.7270359992980957, 0.7094970941543579, 0.6873804330825806, 0.626554548740387, 0.6589117646217346, 0.5977405905723572, 0.5624558329582214, 0.5649905204772949, 0.5858774781227112, 0.6382023692131042, 0.6521713733673096, 0.6768981218338013, 0.7408323884010315, 0.7804744243621826, 0.7806280255317688, 0.7274803519248962, 0.6445454359054565, 0.5839965343475342, 0.6390935778617859, 0.6277229189872742, 0.6855310797691345, 0.6545032262802124, 0.6836100220680237, 0.6325027942657471], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 15.39635944366455, \"brisque\": 51.259849548339844, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "rspqzfr79",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.55,\"evidence_used\":\"current\",\"frame_tags\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for the visible person are all well below the 0.5 detector threshold (range ~0.20\u20130.33), indicating the visible person is not clearly speaking. The audio-only activity is elevated (~0.56\u20130.78), but that head cannot identify the speaker and may reflect another/offscreen person. Since the AV scores never cross threshold, the visible person is not speaking for the majority of timestamps; I mark all as uncertain (-1) given the uncalibrated, sub-threshold signals.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "rspqzfr79",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.023964692,
+          "prompt_tokens": 686,
+          "prompt_time": 0.054969407,
+          "completion_tokens": 17,
+          "completion_time": 0.035013763,
+          "total_tokens": 703,
+          "total_time": 0.08998317
+        },
+        {
+          "queue_time": 0.023493374,
+          "prompt_tokens": 1951,
+          "prompt_time": 0.138484235,
+          "completion_tokens": 269,
+          "completion_time": 0.82323932,
+          "total_tokens": 2220,
+          "total_time": 0.961723555
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-d5829c32-a739-4bb1-a49b-e964cbc1331b",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143012,
+          "system_fingerprint": "fp_5e14805ce3"
+        },
+        {
+          "id": "chatcmpl-92e30e4d-8d89-461d-aa24-6a8f6b8ba875",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143031,
+          "system_fingerprint": "fp_fea14bdc83"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.55,
+        "evidence_used": "current",
+        "frame_tags": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for the visible person are all well below the 0.5 detector threshold (range ~0.20\u20130.33), indicating the visible person is not clearly speaking. The audio-only activity is elevated (~0.56\u20130.78), but that head cannot identify the speaker and may reflect another/offscreen person. Since the AV scores never cross threshold, the visible person is not speaking for the majority of timestamps; I mark all as uncertain (-1) given the uncalibrated, sub-threshold signals."
+      },
+      "evaluation": {
+        "majority_correct": false,
+        "frame_wrong": 0,
+        "frame_abstentions": 24,
+        "frame_coverage": 0.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "kgVz_AXYvn0__label1__sigma40",
+      "repeat": 0
+    },
+    {
+      "condition": "restored",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "xygfes47e",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "xygfes47e",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.3134734630584717, 0.3220023512840271, 0.330096036195755, 0.31792548298835754, 0.318754106760025, 0.3188053369522095, 0.299883097410202, 0.23102329671382904, 0.2077040672302246, 0.21240168809890747, 0.21243400871753693, 0.22981366515159607, 0.268960177898407, 0.30160611867904663, 0.24160556495189667, 0.23650583624839783, 0.2628333270549774, 0.24761393666267395, 0.20186428725719452, 0.21379585564136505, 0.24478963017463684, 0.2541019022464752, 0.2833651006221771, 0.2717404365539551], \"audio_only_activity_scores\": [0.7270359992980957, 0.7094970941543579, 0.6873804330825806, 0.626554548740387, 0.6589117646217346, 0.5977405905723572, 0.5624558329582214, 0.5649905204772949, 0.5858774781227112, 0.6382023692131042, 0.6521713733673096, 0.6768981218338013, 0.7408323884010315, 0.7804744243621826, 0.7806280255317688, 0.7274803519248962, 0.6445454359054565, 0.5839965343475342, 0.6390935778617859, 0.6277229189872742, 0.6855310797691345, 0.6545032262802124, 0.6836100220680237, 0.6325027942657471], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 15.39635944366455, \"brisque\": 51.259849548339844, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "3mxw3x0hj",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.55,\"evidence_used\":\"current\",\"frame_tags\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for the visible person are all well below the 0.5 detector threshold (range ~0.20\u20130.33), indicating the visible person is not clearly speaking. The audio-only activity is elevated (~0.56\u20130.78), but that head cannot identify the speaker and may reflect another/offscreen person. Since the AV scores never cross threshold, the visible person is not speaking for the majority of timestamps; I mark all as uncertain (-1) given the uncalibrated, sub-threshold signals.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "3mxw3x0hj",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.024672611,
+          "prompt_tokens": 686,
+          "prompt_time": 0.050383545,
+          "completion_tokens": 17,
+          "completion_time": 0.033547064,
+          "total_tokens": 703,
+          "total_time": 0.083930609
+        },
+        {
+          "queue_time": 0.028010653,
+          "prompt_tokens": 1951,
+          "prompt_time": 0.147467775,
+          "completion_tokens": 269,
+          "completion_time": 0.836252715,
+          "total_tokens": 2220,
+          "total_time": 0.98372049
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-55d1af03-4dc7-417e-b30e-1f800a8bc163",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143036,
+          "system_fingerprint": "fp_c14f15bfae"
+        },
+        {
+          "id": "chatcmpl-06f329d1-6935-4691-9bb3-1dd71150df00",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143053,
+          "system_fingerprint": "fp_c14f15bfae"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.55,
+        "evidence_used": "current",
+        "frame_tags": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for the visible person are all well below the 0.5 detector threshold (range ~0.20\u20130.33), indicating the visible person is not clearly speaking. The audio-only activity is elevated (~0.56\u20130.78), but that head cannot identify the speaker and may reflect another/offscreen person. Since the AV scores never cross threshold, the visible person is not speaking for the majority of timestamps; I mark all as uncertain (-1) given the uncalibrated, sub-threshold signals."
+      },
+      "evaluation": {
+        "majority_correct": false,
+        "frame_wrong": 0,
+        "frame_abstentions": 24,
+        "frame_coverage": 0.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "kgVz_AXYvn0__label1__sigma40",
+      "repeat": 1
+    },
+    {
+      "condition": "captured",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "wyxz1h4e0",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "wyxz1h4e0",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.6348747611045837, 0.6725611686706543, 0.617480993270874, 0.6456953287124634, 0.6622706055641174, 0.5976917743682861, 0.5926759243011475, 0.5487524271011353, 0.5146256685256958, 0.5379837155342102, 0.5880075097084045, 0.574225902557373, 0.6371808052062988, 0.6336846947669983, 0.5922544002532959, 0.6141613721847534, 0.636358916759491, 0.6362226009368896, 0.6357669830322266, 0.5992396473884583, 0.6366768479347229, 0.6321308612823486, 0.6370435357093811, 0.5835379362106323], \"audio_only_activity_scores\": [0.7270359992980957, 0.7094970941543579, 0.6873804330825806, 0.626554548740387, 0.6589117646217346, 0.5977405905723572, 0.5624558329582214, 0.5649905204772949, 0.5858774781227112, 0.6382023692131042, 0.6521713733673096, 0.6768981218338013, 0.7408323884010315, 0.7804744243621826, 0.7806280255317688, 0.7274803519248962, 0.6445454359054565, 0.5839965343475342, 0.6390935778617859, 0.6277229189872742, 0.6855310797691345, 0.6545032262802124, 0.6836100220680237, 0.6325027942657471], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 16.31605339050293, \"brisque\": 60.57050069173177, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "vh13a560h",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.6,\"evidence_used\":\"current\",\"frame_tags\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],\"majority_speaking\":true,\"rationale\":\"The audio-visual speaking scores for the visible person are consistently above the 0.5 detector threshold across all 24 timestamps (range ~0.51\u20130.67), and the audio-only activity is also elevated throughout (~0.56\u20130.78). Since the AV head measures this person specifically and stays above threshold for the entire clip, the visible person is speaking for the majority of timestamps. Confidence is moderate because scores are uncalibrated and the audio-only head cannot confirm the visible person,\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "vh13a560h",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.021870847,
+          "prompt_tokens": 686,
+          "prompt_time": 0.055011729,
+          "completion_tokens": 17,
+          "completion_time": 0.034296783,
+          "total_tokens": 703,
+          "total_time": 0.089308512
+        },
+        {
+          "queue_time": 0.025070572,
+          "prompt_tokens": 1939,
+          "prompt_time": 0.155968989,
+          "completion_tokens": 261,
+          "completion_time": 0.810555559,
+          "total_tokens": 2200,
+          "total_time": 0.966524548
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-34266367-c589-4551-8a74-9fc05a2c9c1c",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143058,
+          "system_fingerprint": "fp_57c7e760a9"
+        },
+        {
+          "id": "chatcmpl-8a1113ed-9b3c-4fe3-9ec9-737055fe3f8b",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143076,
+          "system_fingerprint": "fp_5e14805ce3"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.6,
+        "evidence_used": "current",
+        "frame_tags": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": true,
+        "rationale": "The audio-visual speaking scores for the visible person are consistently above the 0.5 detector threshold across all 24 timestamps (range ~0.51\u20130.67), and the audio-only activity is also elevated throughout (~0.56\u20130.78). Since the AV head measures this person specifically and stays above threshold for the entire clip, the visible person is speaking for the majority of timestamps. Confidence is moderate because scores are uncalibrated and the audio-only head cannot confirm the visible person,"
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      "case_id": "kgVz_AXYvn0__label1__sigma40",
+      "repeat": 1
+    },
+    {
+      "condition": "captured",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "b4h470r6h",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "b4h470r6h",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.3472023904323578, 0.3030419945716858, 0.3010554015636444, 0.281432181596756, 0.2939296364784241, 0.2758118212223053, 0.2833186686038971, 0.30094969272613525, 0.28008973598480225, 0.277157723903656, 0.26734814047813416, 0.2520264983177185, 0.2896190285682678, 0.2693246603012085, 0.2603949010372162, 0.27513885498046875, 0.2572343349456787, 0.2347049117088318, 0.2533901333808899, 0.24738216400146484, 0.22253350913524628, 0.22382572293281555, 0.2341299206018448, 0.25490736961364746], \"audio_only_activity_scores\": [0.7999817728996277, 0.7552011013031006, 0.7585667371749878, 0.7330938577651978, 0.7861160039901733, 0.7469184994697571, 0.7870887517929077, 0.7113127708435059, 0.6942899227142334, 0.7056449055671692, 0.7213934659957886, 0.7561023831367493, 0.6936461925506592, 0.650776743888855, 0.60568767786026, 0.5879794955253601, 0.5836834907531738, 0.5954697132110596, 0.5990110039710999, 0.5872061252593994, 0.5647671222686768, 0.6001447439193726, 0.6148293614387512, 0.6174607276916504], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 13.739511489868164, \"brisque\": 62.77609380086263, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "6t0wrqqaq",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.7,\"evidence_used\":\"current\",\"frame_tags\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for the visible person are consistently low (0.22\u20130.35), all well below the 0.5 detector threshold, indicating the visible person is not speaking. The audio-only activity scores are higher (0.56\u20130.80), suggesting audio activity is present, but this head cannot identify the speaker and may reflect another or offscreen person. Since the person-specific scores never cross threshold, the visible person is not speaking for the majority of timestamps.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "6t0wrqqaq",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.02316274,
+          "prompt_tokens": 686,
+          "prompt_time": 0.054973366,
+          "completion_tokens": 17,
+          "completion_time": 0.034708914,
+          "total_tokens": 703,
+          "total_time": 0.08968228
+        },
+        {
+          "queue_time": 0.024635505,
+          "prompt_tokens": 1947,
+          "prompt_time": 0.138213003,
+          "completion_tokens": 258,
+          "completion_time": 0.79325203,
+          "total_tokens": 2205,
+          "total_time": 0.931465033
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-757cff31-936f-4dff-9d7f-4b41fe29a09f",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143081,
+          "system_fingerprint": "fp_5e14805ce3"
+        },
+        {
+          "id": "chatcmpl-e142925d-199c-4684-81e9-85f313ec75e3",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143098,
+          "system_fingerprint": "fp_c14f15bfae"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.7,
+        "evidence_used": "current",
+        "frame_tags": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for the visible person are consistently low (0.22\u20130.35), all well below the 0.5 detector threshold, indicating the visible person is not speaking. The audio-only activity scores are higher (0.56\u20130.80), suggesting audio activity is present, but this head cannot identify the speaker and may reflect another or offscreen person. Since the person-specific scores never cross threshold, the visible person is not speaking for the majority of timestamps."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "EEey6Pt0rqI__label0__sigma40",
+      "repeat": 0
+    },
+    {
+      "condition": "restored",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "z4ageq99e",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "z4ageq99e",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.5617810487747192, 0.6000595688819885, 0.5806710124015808, 0.5691238045692444, 0.5262328386306763, 0.4921115040779114, 0.474569171667099, 0.4768125116825104, 0.47046035528182983, 0.4765086770057678, 0.4681413769721985, 0.43688467144966125, 0.47141000628471375, 0.43532904982566833, 0.39223620295524597, 0.37008875608444214, 0.3347807824611664, 0.31786131858825684, 0.3298226594924927, 0.32672014832496643, 0.30290335416793823, 0.29013994336128235, 0.31004056334495544, 0.3293100595474243], \"audio_only_activity_scores\": [0.7999817728996277, 0.7552011013031006, 0.7585667371749878, 0.7330938577651978, 0.7861160039901733, 0.7469184994697571, 0.7870887517929077, 0.7113127708435059, 0.6942899227142334, 0.7056449055671692, 0.7213934659957886, 0.7561023831367493, 0.6936461925506592, 0.650776743888855, 0.60568767786026, 0.5879794955253601, 0.5836834907531738, 0.5954697132110596, 0.5990110039710999, 0.5872061252593994, 0.5647671222686768, 0.6001447439193726, 0.6148293614387512, 0.6174607276916504], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 15.960729598999023, \"brisque\": 61.099648793538414, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "2d275h65w",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.55,\"evidence_used\":\"current\",\"frame_tags\":[1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for this visible person start just above the 0.5 threshold (0.56-0.60) for the first ~5 timestamps, then steadily decline below 0.5 (0.49 down to ~0.29-0.33) for the rest of the clip. The audio-only activity remains moderately high throughout (0.56-0.80), but it cannot identify the visible speaker and may reflect another/offscreen source. Since the AV scores are below threshold for 19 of 24 timestamps, the visible person is not speaking for the majority.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "2d275h65w",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.023477295,
+          "prompt_tokens": 686,
+          "prompt_time": 0.054925596,
+          "completion_tokens": 17,
+          "completion_time": 0.034797113,
+          "total_tokens": 703,
+          "total_time": 0.089722709
+        },
+        {
+          "queue_time": 0.02320542,
+          "prompt_tokens": 1952,
+          "prompt_time": 0.143287717,
+          "completion_tokens": 286,
+          "completion_time": 0.970013999,
+          "total_tokens": 2238,
+          "total_time": 1.113301716
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-bcc26469-2fb0-48ca-b678-3e60d6f60b0a",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143103,
+          "system_fingerprint": "fp_5e14805ce3"
+        },
+        {
+          "id": "chatcmpl-17b3711d-6a56-4fec-b2bb-51abe520aaef",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143121,
+          "system_fingerprint": "fp_c14f15bfae"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.55,
+        "evidence_used": "current",
+        "frame_tags": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for this visible person start just above the 0.5 threshold (0.56-0.60) for the first ~5 timestamps, then steadily decline below 0.5 (0.49 down to ~0.29-0.33) for the rest of the clip. The audio-only activity remains moderately high throughout (0.56-0.80), but it cannot identify the visible speaker and may reflect another/offscreen source. Since the AV scores are below threshold for 19 of 24 timestamps, the visible person is not speaking for the majority."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 5,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "case_id": "EEey6Pt0rqI__label0__sigma40",
+      "repeat": 0
+    },
+    {
+      "condition": "restored",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "3ebzpn04h",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "3ebzpn04h",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.5617810487747192, 0.6000595688819885, 0.5806710124015808, 0.5691238045692444, 0.5262328386306763, 0.4921115040779114, 0.474569171667099, 0.4768125116825104, 0.47046035528182983, 0.4765086770057678, 0.4681413769721985, 0.43688467144966125, 0.47141000628471375, 0.43532904982566833, 0.39223620295524597, 0.37008875608444214, 0.3347807824611664, 0.31786131858825684, 0.3298226594924927, 0.32672014832496643, 0.30290335416793823, 0.29013994336128235, 0.31004056334495544, 0.3293100595474243], \"audio_only_activity_scores\": [0.7999817728996277, 0.7552011013031006, 0.7585667371749878, 0.7330938577651978, 0.7861160039901733, 0.7469184994697571, 0.7870887517929077, 0.7113127708435059, 0.6942899227142334, 0.7056449055671692, 0.7213934659957886, 0.7561023831367493, 0.6936461925506592, 0.650776743888855, 0.60568767786026, 0.5879794955253601, 0.5836834907531738, 0.5954697132110596, 0.5990110039710999, 0.5872061252593994, 0.5647671222686768, 0.6001447439193726, 0.6148293614387512, 0.6174607276916504], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 15.960729598999023, \"brisque\": 61.099648793538414, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "11bdh01zg",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.55,\"evidence_used\":\"current\",\"frame_tags\":[1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for this visible person start just above the 0.5 threshold (0.56-0.60) for the first ~5 timestamps, then steadily decline below 0.5 (0.49 down to ~0.29-0.33) for the rest of the clip. The audio-only activity remains moderately high throughout (0.56-0.80), but it cannot identify the visible speaker and may reflect another/offscreen source. Since the AV scores are below threshold for 19 of 24 timestamps, the visible person is not speaking for the majority.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "11bdh01zg",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.025593869,
+          "prompt_tokens": 686,
+          "prompt_time": 0.057020149,
+          "completion_tokens": 17,
+          "completion_time": 0.035432842,
+          "total_tokens": 703,
+          "total_time": 0.092452991
+        },
+        {
+          "queue_time": 0.107577462,
+          "prompt_tokens": 1952,
+          "prompt_time": 0.157414113,
+          "completion_tokens": 286,
+          "completion_time": 0.932106989,
+          "total_tokens": 2238,
+          "total_time": 1.089521102
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-b0edaef8-22fc-4249-87d1-60860f2e7698",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143126,
+          "system_fingerprint": "fp_5e14805ce3"
+        },
+        {
+          "id": "chatcmpl-58d89f44-681c-4529-a376-994c6c87f1e9",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143143,
+          "system_fingerprint": "fp_57c7e760a9"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.55,
+        "evidence_used": "current",
+        "frame_tags": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for this visible person start just above the 0.5 threshold (0.56-0.60) for the first ~5 timestamps, then steadily decline below 0.5 (0.49 down to ~0.29-0.33) for the rest of the clip. The audio-only activity remains moderately high throughout (0.56-0.80), but it cannot identify the visible speaker and may reflect another/offscreen source. Since the AV scores are below threshold for 19 of 24 timestamps, the visible person is not speaking for the majority."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 5,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "case_id": "EEey6Pt0rqI__label0__sigma40",
+      "repeat": 1
+    },
+    {
+      "condition": "captured",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "xf0pc6ja0",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "xf0pc6ja0",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.3472023904323578, 0.3030419945716858, 0.3010554015636444, 0.281432181596756, 0.2939296364784241, 0.2758118212223053, 0.2833186686038971, 0.30094969272613525, 0.28008973598480225, 0.277157723903656, 0.26734814047813416, 0.2520264983177185, 0.2896190285682678, 0.2693246603012085, 0.2603949010372162, 0.27513885498046875, 0.2572343349456787, 0.2347049117088318, 0.2533901333808899, 0.24738216400146484, 0.22253350913524628, 0.22382572293281555, 0.2341299206018448, 0.25490736961364746], \"audio_only_activity_scores\": [0.7999817728996277, 0.7552011013031006, 0.7585667371749878, 0.7330938577651978, 0.7861160039901733, 0.7469184994697571, 0.7870887517929077, 0.7113127708435059, 0.6942899227142334, 0.7056449055671692, 0.7213934659957886, 0.7561023831367493, 0.6936461925506592, 0.650776743888855, 0.60568767786026, 0.5879794955253601, 0.5836834907531738, 0.5954697132110596, 0.5990110039710999, 0.5872061252593994, 0.5647671222686768, 0.6001447439193726, 0.6148293614387512, 0.6174607276916504], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 13.739511489868164, \"brisque\": 62.77609380086263, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "4d9pmdsgs",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.7,\"evidence_used\":\"current\",\"frame_tags\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for the visible person are consistently low (roughly 0.22\u20130.35), well below the 0.5 detector threshold across all 24 timestamps, indicating the visible person is not speaking. The audio-only activity is higher (0.56\u20130.80), but that head cannot identify the speaker and may reflect another/offscreen person. Since the person-specific scores never cross threshold, the majority answer is not speaking, with all tags set to 0.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "4d9pmdsgs",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.022653459,
+          "prompt_tokens": 686,
+          "prompt_time": 0.05500259,
+          "completion_tokens": 17,
+          "completion_time": 0.034539689,
+          "total_tokens": 703,
+          "total_time": 0.089542279
+        },
+        {
+          "queue_time": 0.022289745,
+          "prompt_tokens": 1947,
+          "prompt_time": 0.156758242,
+          "completion_tokens": 261,
+          "completion_time": 0.819690741,
+          "total_tokens": 2208,
+          "total_time": 0.976448983
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-94a73d5f-2729-4cfe-8c61-f4706cc83221",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143149,
+          "system_fingerprint": "fp_57c7e760a9"
+        },
+        {
+          "id": "chatcmpl-8c978b56-90b9-4efe-9245-a0c6a0cf78e3",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143166,
+          "system_fingerprint": "fp_57c7e760a9"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.7,
+        "evidence_used": "current",
+        "frame_tags": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for the visible person are consistently low (roughly 0.22\u20130.35), well below the 0.5 detector threshold across all 24 timestamps, indicating the visible person is not speaking. The audio-only activity is higher (0.56\u20130.80), but that head cannot identify the speaker and may reflect another/offscreen person. Since the person-specific scores never cross threshold, the majority answer is not speaking, with all tags set to 0."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "EEey6Pt0rqI__label0__sigma40",
+      "repeat": 1
+    },
+    {
+      "condition": "captured",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "54p635779",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "54p635779",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.9529862403869629, 0.9526680707931519, 0.9720050692558289, 0.973401665687561, 0.9810845255851746, 0.9970280528068542, 0.9988435506820679, 0.9990440011024475, 0.9989237189292908, 0.9989293217658997, 0.9983963370323181, 0.9980717301368713, 0.9990264177322388, 0.9990147352218628, 0.9993972778320312, 0.9997751116752625, 0.9997895359992981, 0.99978107213974, 0.9996947050094604, 0.9996055960655212, 0.9996358156204224, 0.9996700286865234, 0.9995015859603882, 0.9989556074142456], \"audio_only_activity_scores\": [0.6902121305465698, 0.632097601890564, 0.6400884985923767, 0.6889466643333435, 0.7675805687904358, 0.7145900130271912, 0.7047298550605774, 0.7261528968811035, 0.7262422442436218, 0.7070653438568115, 0.6956585049629211, 0.6867915391921997, 0.717362642288208, 0.6474025845527649, 0.6008062362670898, 0.6421037912368774, 0.6858177185058594, 0.6694293022155762, 0.729935884475708, 0.6622393131256104, 0.7123738527297974, 0.6255831718444824, 0.6530427932739258, 0.6245574355125427], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 15.724623362223307, \"brisque\": 62.94781494140625, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "10k66bsc0",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.85,\"evidence_used\":\"current\",\"frame_tags\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],\"majority_speaking\":true,\"rationale\":\"The audio-visual speaking scores for the visible person are consistently very high (0.95\u20130.999) across all 24 timestamps, well above the 0.5 detector threshold, indicating the visible person is speaking throughout the clip. The audio-only activity scores are moderate (~0.6\u20130.77) and consistent with ongoing speech, though they cannot confirm speaker identity. No timestamps appear uncertain, so all are tagged 1.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "10k66bsc0",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.086854618,
+          "prompt_tokens": 686,
+          "prompt_time": 0.05723807,
+          "completion_tokens": 17,
+          "completion_time": 0.034233332,
+          "total_tokens": 703,
+          "total_time": 0.091471402
+        },
+        {
+          "queue_time": 0.023884941,
+          "prompt_tokens": 1938,
+          "prompt_time": 0.141973841,
+          "completion_tokens": 250,
+          "completion_time": 0.750416131,
+          "total_tokens": 2188,
+          "total_time": 0.892389972
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-cad77d33-a77e-4271-833a-e4b16e20a493",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143171,
+          "system_fingerprint": "fp_57c7e760a9"
+        },
+        {
+          "id": "chatcmpl-fb997947-5169-458d-b2a6-d5ff5ef5c67f",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143188,
+          "system_fingerprint": "fp_fea14bdc83"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.85,
+        "evidence_used": "current",
+        "frame_tags": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": true,
+        "rationale": "The audio-visual speaking scores for the visible person are consistently very high (0.95\u20130.999) across all 24 timestamps, well above the 0.5 detector threshold, indicating the visible person is speaking throughout the clip. The audio-only activity scores are moderate (~0.6\u20130.77) and consistent with ongoing speech, though they cannot confirm speaker identity. No timestamps appear uncertain, so all are tagged 1."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      "case_id": "EEey6Pt0rqI__label1__sigma40",
+      "repeat": 0
+    },
+    {
+      "condition": "restored",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "m6bhvrysw",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "m6bhvrysw",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.853561282157898, 0.8789165616035461, 0.9352342486381531, 0.9359674453735352, 0.9754077196121216, 0.9953461289405823, 0.9983029365539551, 0.9988364577293396, 0.9988160133361816, 0.9989748001098633, 0.9982185959815979, 0.9983932375907898, 0.9990587830543518, 0.9990251064300537, 0.9992935657501221, 0.9997740387916565, 0.9997881054878235, 0.999776303768158, 0.9997135996818542, 0.9995498061180115, 0.9995916485786438, 0.9996641874313354, 0.999482274055481, 0.9987012147903442], \"audio_only_activity_scores\": [0.6902121305465698, 0.632097601890564, 0.6400884985923767, 0.6889466643333435, 0.7675805687904358, 0.7145900130271912, 0.7047298550605774, 0.7261528968811035, 0.7262422442436218, 0.7070653438568115, 0.6956585049629211, 0.6867915391921997, 0.717362642288208, 0.6474025845527649, 0.6008062362670898, 0.6421037912368774, 0.6858177185058594, 0.6694293022155762, 0.729935884475708, 0.6622393131256104, 0.7123738527297974, 0.6255831718444824, 0.6530427932739258, 0.6245574355125427], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 16.199537595113117, \"brisque\": 51.37677892049154, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "h2jk4j1n2",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.85,\"evidence_used\":\"current\",\"frame_tags\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],\"majority_speaking\":true,\"rationale\":\"The audio-visual speaking scores for the visible person are consistently high (0.85\u20130.999) across all 24 timestamps, well above the 0.5 detector threshold, indicating the visible person is speaking throughout the clip. Audio-only activity is also present (~0.6\u20130.77), consistent with ongoing speech. Image quality is moderate but does not affect speaker attribution.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "h2jk4j1n2",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.021848199,
+          "prompt_tokens": 686,
+          "prompt_time": 0.05501755,
+          "completion_tokens": 17,
+          "completion_time": 0.034366181,
+          "total_tokens": 703,
+          "total_time": 0.089383731
+        },
+        {
+          "queue_time": 0.022838353,
+          "prompt_tokens": 1938,
+          "prompt_time": 0.155804789,
+          "completion_tokens": 239,
+          "completion_time": 0.719422062,
+          "total_tokens": 2177,
+          "total_time": 0.875226851
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-8bbccea4-9800-45ac-a95a-1ca9a702653d",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143194,
+          "system_fingerprint": "fp_57c7e760a9"
+        },
+        {
+          "id": "chatcmpl-8795477f-f157-499f-8687-8be71cc755cb",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143211,
+          "system_fingerprint": "fp_5e14805ce3"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.85,
+        "evidence_used": "current",
+        "frame_tags": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": true,
+        "rationale": "The audio-visual speaking scores for the visible person are consistently high (0.85\u20130.999) across all 24 timestamps, well above the 0.5 detector threshold, indicating the visible person is speaking throughout the clip. Audio-only activity is also present (~0.6\u20130.77), consistent with ongoing speech. Image quality is moderate but does not affect speaker attribution."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      "case_id": "EEey6Pt0rqI__label1__sigma40",
+      "repeat": 0
+    },
+    {
+      "condition": "restored",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "fxfsb4x1g",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "fxfsb4x1g",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.853561282157898, 0.8789165616035461, 0.9352342486381531, 0.9359674453735352, 0.9754077196121216, 0.9953461289405823, 0.9983029365539551, 0.9988364577293396, 0.9988160133361816, 0.9989748001098633, 0.9982185959815979, 0.9983932375907898, 0.9990587830543518, 0.9990251064300537, 0.9992935657501221, 0.9997740387916565, 0.9997881054878235, 0.999776303768158, 0.9997135996818542, 0.9995498061180115, 0.9995916485786438, 0.9996641874313354, 0.999482274055481, 0.9987012147903442], \"audio_only_activity_scores\": [0.6902121305465698, 0.632097601890564, 0.6400884985923767, 0.6889466643333435, 0.7675805687904358, 0.7145900130271912, 0.7047298550605774, 0.7261528968811035, 0.7262422442436218, 0.7070653438568115, 0.6956585049629211, 0.6867915391921997, 0.717362642288208, 0.6474025845527649, 0.6008062362670898, 0.6421037912368774, 0.6858177185058594, 0.6694293022155762, 0.729935884475708, 0.6622393131256104, 0.7123738527297974, 0.6255831718444824, 0.6530427932739258, 0.6245574355125427], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 16.199537595113117, \"brisque\": 51.37677892049154, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "zkdxg70k2",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.85,\"evidence_used\":\"current\",\"frame_tags\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],\"majority_speaking\":true,\"rationale\":\"The audio-visual speaking scores for the visible person are consistently high (0.85\u20130.999) across all 24 timestamps, well above the 0.5 detector threshold, indicating the visible person is speaking throughout the clip. Audio-only activity is also present (~0.6\u20130.77), consistent with ongoing speech. Image quality is moderate but does not affect speaker attribution.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "zkdxg70k2",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.023465094,
+          "prompt_tokens": 686,
+          "prompt_time": 0.056299652,
+          "completion_tokens": 17,
+          "completion_time": 0.039682499,
+          "total_tokens": 703,
+          "total_time": 0.095982151
+        },
+        {
+          "queue_time": 0.023166307,
+          "prompt_tokens": 1938,
+          "prompt_time": 0.15591419,
+          "completion_tokens": 239,
+          "completion_time": 0.720009826,
+          "total_tokens": 2177,
+          "total_time": 0.875924016
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-4d9c2b01-d6f7-418a-a19e-eee7714c62b9",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143216,
+          "system_fingerprint": "fp_57c7e760a9"
+        },
+        {
+          "id": "chatcmpl-ab31a287-94a3-4fa6-8fd7-a454e9c3e3c7",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143234,
+          "system_fingerprint": "fp_5e14805ce3"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.85,
+        "evidence_used": "current",
+        "frame_tags": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": true,
+        "rationale": "The audio-visual speaking scores for the visible person are consistently high (0.85\u20130.999) across all 24 timestamps, well above the 0.5 detector threshold, indicating the visible person is speaking throughout the clip. Audio-only activity is also present (~0.6\u20130.77), consistent with ongoing speech. Image quality is moderate but does not affect speaker attribution."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      "case_id": "EEey6Pt0rqI__label1__sigma40",
+      "repeat": 1
+    },
+    {
+      "condition": "captured",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "h46cphajr",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "h46cphajr",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.9529862403869629, 0.9526680707931519, 0.9720050692558289, 0.973401665687561, 0.9810845255851746, 0.9970280528068542, 0.9988435506820679, 0.9990440011024475, 0.9989237189292908, 0.9989293217658997, 0.9983963370323181, 0.9980717301368713, 0.9990264177322388, 0.9990147352218628, 0.9993972778320312, 0.9997751116752625, 0.9997895359992981, 0.99978107213974, 0.9996947050094604, 0.9996055960655212, 0.9996358156204224, 0.9996700286865234, 0.9995015859603882, 0.9989556074142456], \"audio_only_activity_scores\": [0.6902121305465698, 0.632097601890564, 0.6400884985923767, 0.6889466643333435, 0.7675805687904358, 0.7145900130271912, 0.7047298550605774, 0.7261528968811035, 0.7262422442436218, 0.7070653438568115, 0.6956585049629211, 0.6867915391921997, 0.717362642288208, 0.6474025845527649, 0.6008062362670898, 0.6421037912368774, 0.6858177185058594, 0.6694293022155762, 0.729935884475708, 0.6622393131256104, 0.7123738527297974, 0.6255831718444824, 0.6530427932739258, 0.6245574355125427], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 15.724623362223307, \"brisque\": 62.94781494140625, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "gpkb73mqg",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.85,\"evidence_used\":\"current\",\"frame_tags\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],\"majority_speaking\":true,\"rationale\":\"The audio-visual speaking scores for the visible person are consistently very high (0.95\u20130.999) across all 24 timestamps, well above the 0.5 detector threshold, indicating the visible person is speaking throughout the clip. The audio-only activity scores are moderate (~0.6\u20130.77) and consistent with ongoing speech, though they cannot confirm speaker identity. Image quality metrics are neutral and do not affect speaker attribution. Based on the strong, consistent audio-visual evidence, the tag\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "gpkb73mqg",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.022260441,
+          "prompt_tokens": 686,
+          "prompt_time": 0.060240478,
+          "completion_tokens": 17,
+          "completion_time": 0.034574268,
+          "total_tokens": 703,
+          "total_time": 0.094814746
+        },
+        {
+          "queue_time": 0.025252057,
+          "prompt_tokens": 1938,
+          "prompt_time": 0.15637348,
+          "completion_tokens": 263,
+          "completion_time": 0.817180432,
+          "total_tokens": 2201,
+          "total_time": 0.973553912
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-4ca4dfc9-44bf-4a46-b3da-4c7c7f6d0df6",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143240,
+          "system_fingerprint": "fp_57c7e760a9"
+        },
+        {
+          "id": "chatcmpl-1c385d37-28fb-4e4f-b793-04365b8ec2f0",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143256,
+          "system_fingerprint": "fp_5e14805ce3"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.85,
+        "evidence_used": "current",
+        "frame_tags": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": true,
+        "rationale": "The audio-visual speaking scores for the visible person are consistently very high (0.95\u20130.999) across all 24 timestamps, well above the 0.5 detector threshold, indicating the visible person is speaking throughout the clip. The audio-only activity scores are moderate (~0.6\u20130.77) and consistent with ongoing speech, though they cannot confirm speaker identity. Image quality metrics are neutral and do not affect speaker attribution. Based on the strong, consistent audio-visual evidence, the tag"
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      "case_id": "EEey6Pt0rqI__label1__sigma40",
+      "repeat": 1
+    },
+    {
+      "condition": "captured",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "jmmx7emy6",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "jmmx7emy6",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.026337824761867523, 0.031464312225580215, 0.03148740157485008, 0.03199438005685806, 0.026125645264983177, 0.029409460723400116, 0.04783312603831291, 0.0755908414721489, 0.08654049783945084, 0.09666735678911209, 0.08980939537286758, 0.06741426140069962, 0.05994442477822304, 0.059057965874671936, 0.0664781853556633, 0.0628276988863945, 0.06239177659153938, 0.05809677764773369, 0.07106949388980865, 0.07025845348834991, 0.07565073668956757, 0.1006273552775383, 0.07857102900743484, 0.07684287428855896], \"audio_only_activity_scores\": [0.3927983343601227, 0.5171774625778198, 0.5234487056732178, 0.5498287081718445, 0.5578209161758423, 0.6595688462257385, 0.7292402386665344, 0.8166064620018005, 0.7921386957168579, 0.8124189972877502, 0.840955376625061, 0.8473522067070007, 0.7863466143608093, 0.8145838975906372, 0.8132356405258179, 0.7788563966751099, 0.7783177495002747, 0.7285233736038208, 0.7055519819259644, 0.7029801607131958, 0.6006227135658264, 0.645423412322998, 0.6140442490577698, 0.604461133480072], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 15.465910911560059, \"brisque\": 50.29302088419596, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "f5t4d86gf",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.7,\"evidence_used\":\"current\",\"frame_tags\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for this visible person are all very low (0.026\u20130.101), far below the 0.5 detector threshold, indicating the visible person is not speaking. The audio-only activity is elevated (0.39\u20130.85), suggesting someone is speaking, but that head cannot identify the speaker and may be another/offscreen person. Since the AV scores for this person never approach the threshold, the visible person is not speaking for the majority of timestamps.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "f5t4d86gf",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.0243449,
+          "prompt_tokens": 686,
+          "prompt_time": 0.057004726,
+          "completion_tokens": 17,
+          "completion_time": 0.034902235,
+          "total_tokens": 703,
+          "total_time": 0.091906961
+        },
+        {
+          "queue_time": 0.02322055,
+          "prompt_tokens": 1966,
+          "prompt_time": 0.158844162,
+          "completion_tokens": 260,
+          "completion_time": 0.84935182,
+          "total_tokens": 2226,
+          "total_time": 1.008195982
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-9fd65809-49b7-4ac1-8c5d-75c54c739542",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143261,
+          "system_fingerprint": "fp_5e14805ce3"
+        },
+        {
+          "id": "chatcmpl-c8f51e64-d74b-49fa-82a9-41e629ce170f",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143278,
+          "system_fingerprint": "fp_57c7e760a9"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.7,
+        "evidence_used": "current",
+        "frame_tags": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for this visible person are all very low (0.026\u20130.101), far below the 0.5 detector threshold, indicating the visible person is not speaking. The audio-only activity is elevated (0.39\u20130.85), suggesting someone is speaking, but that head cannot identify the speaker and may be another/offscreen person. Since the AV scores for this person never approach the threshold, the visible person is not speaking for the majority of timestamps."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "9Zja_cIAwY8",
+      "repeat": 0
+    },
+    {
+      "condition": "restored",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "hzg7k8h8y",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "hzg7k8h8y",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.11309809982776642, 0.1293828785419464, 0.1326172798871994, 0.13505683839321136, 0.11543179303407669, 0.11938372999429703, 0.16793781518936157, 0.23850156366825104, 0.22242428362369537, 0.2342313826084137, 0.196559339761734, 0.1519220620393753, 0.17948150634765625, 0.18323449790477753, 0.18468838930130005, 0.20302653312683105, 0.1893267035484314, 0.18306203186511993, 0.2149435579776764, 0.17908553779125214, 0.19966481626033783, 0.22607915103435516, 0.2144886702299118, 0.17645350098609924], \"audio_only_activity_scores\": [0.3927983343601227, 0.5171774625778198, 0.5234487056732178, 0.5498287081718445, 0.5578209161758423, 0.6595688462257385, 0.7292402386665344, 0.8166064620018005, 0.7921386957168579, 0.8124189972877502, 0.840955376625061, 0.8473522067070007, 0.7863466143608093, 0.8145838975906372, 0.8132356405258179, 0.7788563966751099, 0.7783177495002747, 0.7285233736038208, 0.7055519819259644, 0.7029801607131958, 0.6006227135658264, 0.645423412322998, 0.6140442490577698, 0.604461133480072], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 18.66572634379069, \"brisque\": 51.00546518961588, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "ysezavyqm",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.5,\"evidence_used\":\"current\",\"frame_tags\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for this visible person stay low (0.11\u20130.24), well below the 0.5 detector threshold across all 24 timestamps, indicating the visible person is not clearly speaking. The audio-only activity is higher (0.39\u20130.85), but that head cannot identify the speaker and may reflect another/offscreen person. Since the AV scores never cross threshold and are uncalibrated, I mark all timestamps uncertain (-1) and conclude the visible person is not speaking for the majority.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "ysezavyqm",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.023231273,
+          "prompt_tokens": 686,
+          "prompt_time": 0.055045263,
+          "completion_tokens": 17,
+          "completion_time": 0.034904725,
+          "total_tokens": 703,
+          "total_time": 0.089949988
+        },
+        {
+          "queue_time": 0.022136532,
+          "prompt_tokens": 1955,
+          "prompt_time": 0.138928178,
+          "completion_tokens": 267,
+          "completion_time": 0.824155802,
+          "total_tokens": 2222,
+          "total_time": 0.96308398
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-a311d34a-bd17-4e3a-b206-f743333fd692",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143284,
+          "system_fingerprint": "fp_5e14805ce3"
+        },
+        {
+          "id": "chatcmpl-08228293-8bc0-4069-95e4-b962bd892ff3",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143301,
+          "system_fingerprint": "fp_c14f15bfae"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.5,
+        "evidence_used": "current",
+        "frame_tags": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for this visible person stay low (0.11\u20130.24), well below the 0.5 detector threshold across all 24 timestamps, indicating the visible person is not clearly speaking. The audio-only activity is higher (0.39\u20130.85), but that head cannot identify the speaker and may reflect another/offscreen person. Since the AV scores never cross threshold and are uncalibrated, I mark all timestamps uncertain (-1) and conclude the visible person is not speaking for the majority."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 24,
+        "frame_coverage": 0.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "9Zja_cIAwY8",
+      "repeat": 0
+    },
+    {
+      "condition": "restored",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "hmpzksb0q",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "hmpzksb0q",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.11309809982776642, 0.1293828785419464, 0.1326172798871994, 0.13505683839321136, 0.11543179303407669, 0.11938372999429703, 0.16793781518936157, 0.23850156366825104, 0.22242428362369537, 0.2342313826084137, 0.196559339761734, 0.1519220620393753, 0.17948150634765625, 0.18323449790477753, 0.18468838930130005, 0.20302653312683105, 0.1893267035484314, 0.18306203186511993, 0.2149435579776764, 0.17908553779125214, 0.19966481626033783, 0.22607915103435516, 0.2144886702299118, 0.17645350098609924], \"audio_only_activity_scores\": [0.3927983343601227, 0.5171774625778198, 0.5234487056732178, 0.5498287081718445, 0.5578209161758423, 0.6595688462257385, 0.7292402386665344, 0.8166064620018005, 0.7921386957168579, 0.8124189972877502, 0.840955376625061, 0.8473522067070007, 0.7863466143608093, 0.8145838975906372, 0.8132356405258179, 0.7788563966751099, 0.7783177495002747, 0.7285233736038208, 0.7055519819259644, 0.7029801607131958, 0.6006227135658264, 0.645423412322998, 0.6140442490577698, 0.604461133480072], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 18.66572634379069, \"brisque\": 51.00546518961588, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "ds58n4430",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.5,\"evidence_used\":\"current\",\"frame_tags\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for this visible person stay low (0.11\u20130.24), well below the 0.5 detector threshold across all 24 timestamps, indicating the visible person is not clearly speaking. The audio-only activity is higher (0.39\u20130.85), but that head cannot identify the speaker and may reflect another/offscreen person. Since the AV scores never cross threshold and are uncalibrated, I mark all timestamps uncertain (-1) and conclude the visible person is not speaking for the majority.\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "ds58n4430",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.063980212,
+          "prompt_tokens": 686,
+          "prompt_time": 0.057233216,
+          "completion_tokens": 17,
+          "completion_time": 0.034938175,
+          "total_tokens": 703,
+          "total_time": 0.092171391
+        },
+        {
+          "queue_time": 0.022898216,
+          "prompt_tokens": 1955,
+          "prompt_time": 0.143065642,
+          "completion_tokens": 267,
+          "completion_time": 0.817594939,
+          "total_tokens": 2222,
+          "total_time": 0.960660581
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-ce66e7c0-34dc-4469-88b4-7e057c263863",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143306,
+          "system_fingerprint": "fp_5e14805ce3"
+        },
+        {
+          "id": "chatcmpl-281b9ea5-ecca-455a-a50c-cfe3c273e7ab",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143324,
+          "system_fingerprint": "fp_fea14bdc83"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.5,
+        "evidence_used": "current",
+        "frame_tags": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for this visible person stay low (0.11\u20130.24), well below the 0.5 detector threshold across all 24 timestamps, indicating the visible person is not clearly speaking. The audio-only activity is higher (0.39\u20130.85), but that head cannot identify the speaker and may reflect another/offscreen person. Since the AV scores never cross threshold and are uncalibrated, I mark all timestamps uncertain (-1) and conclude the visible person is not speaking for the majority."
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 24,
+        "frame_coverage": 0.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "9Zja_cIAwY8",
+      "repeat": 1
+    },
+    {
+      "condition": "captured",
+      "configuration_sha256": "d2e2f5c85e6104c5a3f81c74c95dca5e980eb40dece881871d0680b64c72e3f0",
+      "trace": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "xqsegbjfy",
+              "type": "function",
+              "function": {
+                "name": "inspect_current_evidence",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "xqsegbjfy",
+          "content": "{\"relative_times_seconds\": [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92], \"audio_visual_speaking_scores\": [0.026337824761867523, 0.031464312225580215, 0.03148740157485008, 0.03199438005685806, 0.026125645264983177, 0.029409460723400116, 0.04783312603831291, 0.0755908414721489, 0.08654049783945084, 0.09666735678911209, 0.08980939537286758, 0.06741426140069962, 0.05994442477822304, 0.059057965874671936, 0.0664781853556633, 0.0628276988863945, 0.06239177659153938, 0.05809677764773369, 0.07106949388980865, 0.07025845348834991, 0.07565073668956757, 0.1006273552775383, 0.07857102900743484, 0.07684287428855896], \"audio_only_activity_scores\": [0.3927983343601227, 0.5171774625778198, 0.5234487056732178, 0.5498287081718445, 0.5578209161758423, 0.6595688462257385, 0.7292402386665344, 0.8166064620018005, 0.7921386957168579, 0.8124189972877502, 0.840955376625061, 0.8473522067070007, 0.7863466143608093, 0.8145838975906372, 0.8132356405258179, 0.7788563966751099, 0.7783177495002747, 0.7285233736038208, 0.7055519819259644, 0.7029801607131958, 0.6006227135658264, 0.645423412322998, 0.6140442490577698, 0.604461133480072], \"score_note\": \"Audio-visual scores concern this person; audio-only activity cannot identify who speaks. Scores uncalibrated, detector threshold 0.5.\", \"quality\": {\"musiq\": 15.465910911560059, \"brisque\": 50.29302088419596, \"note\": \"MUSIQ higher and BRISQUE lower indicate better appearance, not correct speaker attribution.\"}}"
+        },
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "hhfye099t",
+              "type": "function",
+              "function": {
+                "name": "submit_answer",
+                "arguments": "{\"confidence\":0.7,\"evidence_used\":\"current\",\"frame_tags\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"majority_speaking\":false,\"rationale\":\"The audio-visual speaking scores for this visible person are very low across all 24 timestamps (max ~0.10, well below the 0.5 detector threshold), indicating the visible person is not speaking. The audio-only activity is elevated (0.39\u20130.85), but that head cannot identify the speaker and may reflect another/offscreen person. Since the person-specific scores are uniformly low, I tag all timestamps as not speaking (0) and conclude the visible person is not speaking for the majority of the clip\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "hhfye099t",
+          "content": "{\"accepted\": true}"
+        }
+      ],
+      "usage": [
+        {
+          "queue_time": 0.024970021,
+          "prompt_tokens": 686,
+          "prompt_time": 0.054995599,
+          "completion_tokens": 17,
+          "completion_time": 0.034570899,
+          "total_tokens": 703,
+          "total_time": 0.089566498
+        },
+        {
+          "queue_time": 0.022925069,
+          "prompt_tokens": 1966,
+          "prompt_time": 0.144001368,
+          "completion_tokens": 264,
+          "completion_time": 0.813814767,
+          "total_tokens": 2230,
+          "total_time": 0.957816135
+        }
+      ],
+      "responses": [
+        {
+          "id": "chatcmpl-fec38cdb-8cdb-4428-9f87-40b29148e2af",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143330,
+          "system_fingerprint": "fp_57c7e760a9"
+        },
+        {
+          "id": "chatcmpl-a9996539-b3fc-4662-b793-521ccf566c01",
+          "model": "qwen/qwen3.8-27b",
+          "created": 1792143347,
+          "system_fingerprint": "fp_fea14bdc83"
+        }
+      ],
+      "status": "completed",
+      "submission": {
+        "confidence": 0.7,
+        "evidence_used": "current",
+        "frame_tags": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "majority_speaking": false,
+        "rationale": "The audio-visual speaking scores for this visible person are very low across all 24 timestamps (max ~0.10, well below the 0.5 detector threshold), indicating the visible person is not speaking. The audio-only activity is elevated (0.39\u20130.85), but that head cannot identify the speaker and may reflect another/offscreen person. Since the person-specific scores are uniformly low, I tag all timestamps as not speaking (0) and conclude the visible person is not speaking for the majority of the clip"
+      },
+      "evaluation": {
+        "majority_correct": true,
+        "frame_wrong": 0,
+        "frame_abstentions": 0,
+        "frame_coverage": 1.0,
+        "false_speaking_indices": []
+      },
+      "case_id": "9Zja_cIAwY8",
+      "repeat": 1
+    }
+  ],
+  "started_utc": "2026-10-16T09:29:12.474036+00:00",
+  "pairs": [
+    {
+      "case_id": "kgVz_AXYvn0__label0__sigma40",
+      "source": "kgVz_AXYvn0",
+      "repeat": 0,
+      "captured_correct": true,
+      "restored_correct": true,
+      "correct_to_wrong": false,
+      "wrong_to_correct": false,
+      "captured_wrong_tags": 0,
+      "restored_wrong_tags": 0,
+      "captured_abstentions": 24,
+      "restored_abstentions": 24
+    },
+    {
+      "case_id": "kgVz_AXYvn0__label0__sigma40",
+      "source": "kgVz_AXYvn0",
+      "repeat": 1,
+      "captured_correct": true,
+      "restored_correct": true,
+      "correct_to_wrong": false,
+      "wrong_to_correct": false,
+      "captured_wrong_tags": 0,
+      "restored_wrong_tags": 0,
+      "captured_abstentions": 24,
+      "restored_abstentions": 24
+    },
+    {
+      "case_id": "kgVz_AXYvn0__label1__sigma40",
+      "source": "kgVz_AXYvn0",
+      "repeat": 0,
+      "captured_correct": true,
+      "restored_correct": false,
+      "correct_to_wrong": true,
+      "wrong_to_correct": false,
+      "captured_wrong_tags": 0,
+      "restored_wrong_tags": 0,
+      "captured_abstentions": 0,
+      "restored_abstentions": 24
+    },
+    {
+      "case_id": "kgVz_AXYvn0__label1__sigma40",
+      "source": "kgVz_AXYvn0",
+      "repeat": 1,
+      "captured_correct": true,
+      "restored_correct": false,
+      "correct_to_wrong": true,
+      "wrong_to_correct": false,
+      "captured_wrong_tags": 0,
+      "restored_wrong_tags": 0,
+      "captured_abstentions": 0,
+      "restored_abstentions": 24
+    },
+    {
+      "case_id": "EEey6Pt0rqI__label0__sigma40",
+      "source": "EEey6Pt0rqI",
+      "repeat": 0,
+      "captured_correct": true,
+      "restored_correct": true,
+      "correct_to_wrong": false,
+      "wrong_to_correct": false,
+      "captured_wrong_tags": 0,
+      "restored_wrong_tags": 5,
+      "captured_abstentions": 0,
+      "restored_abstentions": 0
+    },
+    {
+      "case_id": "EEey6Pt0rqI__label0__sigma40",
+      "source": "EEey6Pt0rqI",
+      "repeat": 1,
+      "captured_correct": true,
+      "restored_correct": true,
+      "correct_to_wrong": false,
+      "wrong_to_correct": false,
+      "captured_wrong_tags": 0,
+      "restored_wrong_tags": 5,
+      "captured_abstentions": 0,
+      "restored_abstentions": 0
+    },
+    {
+      "case_id": "EEey6Pt0rqI__label1__sigma40",
+      "source": "EEey6Pt0rqI",
+      "repeat": 0,
+      "captured_correct": true,
+      "restored_correct": true,
+      "correct_to_wrong": false,
+      "wrong_to_correct": false,
+      "captured_wrong_tags": 0,
+      "restored_wrong_tags": 0,
+      "captured_abstentions": 0,
+      "restored_abstentions": 0
+    },
+    {
+      "case_id": "EEey6Pt0rqI__label1__sigma40",
+      "source": "EEey6Pt0rqI",
+      "repeat": 1,
+      "captured_correct": true,
+      "restored_correct": true,
+      "correct_to_wrong": false,
+      "wrong_to_correct": false,
+      "captured_wrong_tags": 0,
+      "restored_wrong_tags": 0,
+      "captured_abstentions": 0,
+      "restored_abstentions": 0
+    },
+    {
+      "case_id": "9Zja_cIAwY8",
+      "source": "9Zja_cIAwY8",
+      "repeat": 0,
+      "captured_correct": true,
+      "restored_correct": true,
+      "correct_to_wrong": false,
+      "wrong_to_correct": false,
+      "captured_wrong_tags": 0,
+      "restored_wrong_tags": 0,
+      "captured_abstentions": 0,
+      "restored_abstentions": 24
+    },
+    {
+      "case_id": "9Zja_cIAwY8",
+      "source": "9Zja_cIAwY8",
+      "repeat": 1,
+      "captured_correct": true,
+      "restored_correct": true,
+      "correct_to_wrong": false,
+      "wrong_to_correct": false,
+      "captured_wrong_tags": 0,
+      "restored_wrong_tags": 0,
+      "captured_abstentions": 0,
+      "restored_abstentions": 24
+    }
+  ],
+  "repeated_harm_sources": [
+    "kgVz_AXYvn0"
+  ],
+  "expansion_gate_passed": false,
+  "finished_utc": "2026-10-16T09:35:47.524608+00:00"
+}

@@ -1,0 +1,101 @@
+{
+  "model": "qwen/qwen3.8-27b",
+  "temperature": 0,
+  "max_completion_tokens": 800,
+  "repetitions": 2,
+  "system_prompt": "You are a tool-using audiovisual assistant deciding whether one visible person is speaking. You cannot see or hear media directly. Inspect current evidence before answering. The audio-visual detector estimates whether THIS visible person speaks. The audio-only head measures activity in the audio and CANNOT identify the visible speaker: another person or offscreen person may be speaking. Neither head is ground truth; scores are uncalibrated. Image-quality scores measure appearance, not speaker correctness. You may disagree with the detector. Do not invent identities, words, visual observations, or ground truth. Give a best binary majority-speaking answer and separate timestamped tags, using -1 for uncertain timestamps. Confidence is self-reported, not calibrated. Submit through submit_answer within six model calls.",
+  "user_prompt": "For this two-second clip, is the visible person speaking for the majority of the 49 scored timestamps? Provide one tag per timestamp: 1=speaking, 0=not speaking, -1=uncertain. Explain your evidence briefly. Do not attribute words to anyone.",
+  "measurement_sha256": "8eabff06a66aadb85ed3b3f8cfc334d50ae855d6ad542ea0d735ae2b514ae637",
+  "selection_protocol": {
+    "selection": [
+      {
+        "source": "Pc5iQdNpDX0",
+        "kind": "speaking"
+      },
+      {
+        "source": "QRXbRSq8p4s",
+        "kind": "listening"
+      },
+      {
+        "source": "ho_oK12hY6M",
+        "kind": "transition"
+      }
+    ],
+    "frames": 50,
+    "fps": 25,
+    "selection_rule": "Earliest available contiguous track per assigned category, ties by entity; transition has 10..40 speaking frames. No outcome selection.",
+    "conditions": {
+      "noise25": "Gaussian sigma25; FastDVDnet supplied sigma25",
+      "lowres4": "128 to32 bicubic; captured bicubic128, restored pretrained FSRCNN x4",
+      "jpeg10": "JPEG quality10; restored bilateral filter diameter5 color25 space3 (classical baseline, not learned JPEG model)"
+    },
+    "seed": 20261017,
+    "quality_frames": [
+      0,
+      24,
+      49
+    ],
+    "repetitions": 2,
+    "model": "qwen/qwen3.8-27b",
+    "investment_screen": "At least one source with repeated captured-error corrections, at least one with repeated new errors, and fixed-capture-coverage timestamp oracle reduces error by at least 5 percentage points in BOTH repeats.",
+    "scope": "Small purposive CPU pilot; source/category confounded, synthetic degradations, same dataset and Qwen model. No claim of representative prevalence or exhaustive restorers.",
+    "oracle": "Evaluation labels only; oracle is not deployable. Fixed captured answered timestamps; choose restored only if it corrects a captured error.",
+    "fsrcnn_source": "https://github.com/Saafke/FSRCNN_Tensorflow"
+  },
+  "frame_times_relative": [
+    0.0,
+    0.04,
+    0.08,
+    0.12,
+    0.16,
+    0.2,
+    0.24,
+    0.28,
+    0.32,
+    0.36,
+    0.4,
+    0.44,
+    0.48,
+    0.52,
+    0.56,
+    0.6,
+    0.64,
+    0.68,
+    0.72,
+    0.76,
+    0.8,
+    0.84,
+    0.88,
+    0.92,
+    0.96,
+    1.0,
+    1.04,
+    1.08,
+    1.12,
+    1.16,
+    1.2,
+    1.24,
+    1.28,
+    1.32,
+    1.36,
+    1.4,
+    1.44,
+    1.48,
+    1.52,
+    1.56,
+    1.6,
+    1.64,
+    1.68,
+    1.72,
+    1.76,
+    1.8,
+    1.84,
+    1.88,
+    1.92
+  ],
+  "conditions": [
+    "captured",
+    "restored"
+  ],
+  "prompt_source_sha256": "b1d6805edc80e3c7e75c94421bcf7076106a0144aa56af53b5b023b243885349"
+}

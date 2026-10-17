@@ -1,0 +1,7 @@
+{
+  "inference_run_receipt_sha256": "3e1d7dfe4e4dbefbaf361692566efa9fc65fff190699391272e2f481400c00df",
+  "inference_script_sha256_as_recorded": "17bdde08645b6f509690680492cfee268e3280d1a11e7dd46827a93ee2557036",
+  "figure_render_script_sha256": "bd5c232d9ee7e3b9a1389b8375856291c4c94e190d37c238cbb8e23def5f2d1e",
+  "change_this_turn": "Adjusted figure xlabel and subplot margins; reused the completed inference measurements",
+  "note": "The inference-time source digest is retained in its original receipt. This render receipt does not assert that the current script is the inference-time snapshot."
+}

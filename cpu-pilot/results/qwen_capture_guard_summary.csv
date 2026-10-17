@@ -1,0 +1,6 @@
+policy,wrong_tags,answered_tags,majority_wrong,majority_answered,new_errors_vs_captured,corrections_vs_captured,common_answered_with_restored,wrong_on_common_guard,wrong_on_common_restored,timestamp_coverage,selective_error_rate
+captured_only,0,192,0,10,0,0,96,0,10,0.8,0.0
+restored_only,10,96,2,10,10,0,96,10,10,0.4,0.10416666666666667
+detector_disagreement_abstain,0,86,0,4,0,0,86,0,0,0.35833333333333334,0.0
+detector_disagreement_capture,0,144,0,10,0,0,96,0,10,0.6,0.0
+captured_answer_priority,0,192,0,10,0,0,96,0,10,0.8,0.0

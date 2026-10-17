@@ -1,0 +1,45 @@
+{
+  "model": "qwen/qwen3.8-27b",
+  "confusion_matrix": [
+    [
+      4,
+      0
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "frame_error_counts": [
+    8,
+    3,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "selection_error_percent": {
+    "MUSIQ": 16.666666666666668,
+    "Keep captured": 18.229166666666664,
+    "Qwen": 18.229166666666664,
+    "Fixed safeguard": 19.270833333333332,
+    "BRISQUE": 30.208333333333336
+  },
+  "case_ids": [
+    "kgVz_AXYvn0__label0__sigma15",
+    "kgVz_AXYvn0__label0__sigma40",
+    "kgVz_AXYvn0__label1__sigma15",
+    "kgVz_AXYvn0__label1__sigma40",
+    "EEey6Pt0rqI__label0__sigma15",
+    "EEey6Pt0rqI__label0__sigma40",
+    "EEey6Pt0rqI__label1__sigma15",
+    "EEey6Pt0rqI__label1__sigma40"
+  ],
+  "source_aliases": {
+    "A": "kgVz_AXYvn0",
+    "B": "EEey6Pt0rqI"
+  },
+  "interpretation": "Qwen clip decisions and selected-evidence TalkNet frame decisions are distinct endpoints."
+}

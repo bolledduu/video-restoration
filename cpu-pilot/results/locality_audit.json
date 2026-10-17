@@ -1,0 +1,96 @@
+{
+  "status": "COMPLETE",
+  "measurement_sha256": "6550cbbdab1484b13909fce59439362df16fd5e8b80c9cd72c789f6e543c940e",
+  "totals": {
+    "pairs": 17,
+    "n": 633,
+    "captured_errors": 236,
+    "restored_errors": 269,
+    "harm": 33,
+    "corrections": 0,
+    "lower_rescued": 20,
+    "upper_rescued": 13,
+    "lower_errors": 253,
+    "upper_errors": 274
+  },
+  "by_source": {
+    "ABqo634gI5s": {
+      "pairs": 4,
+      "n": 96,
+      "captured_errors": 48,
+      "restored_errors": 48,
+      "harm": 0,
+      "corrections": 0,
+      "lower_rescued": 0,
+      "upper_rescued": 0,
+      "lower_errors": 48,
+      "upper_errors": 47
+    },
+    "qv3-HaaxGUc": {
+      "pairs": 4,
+      "n": 96,
+      "captured_errors": 12,
+      "restored_errors": 42,
+      "harm": 30,
+      "corrections": 0,
+      "lower_rescued": 19,
+      "upper_rescued": 12,
+      "lower_errors": 26,
+      "upper_errors": 30
+    },
+    "Pc5iQdNpDX0": {
+      "pairs": 3,
+      "n": 147,
+      "captured_errors": 147,
+      "restored_errors": 147,
+      "harm": 0,
+      "corrections": 0,
+      "lower_rescued": 0,
+      "upper_rescued": 0,
+      "lower_errors": 147,
+      "upper_errors": 147
+    },
+    "QRXbRSq8p4s": {
+      "pairs": 3,
+      "n": 147,
+      "captured_errors": 0,
+      "restored_errors": 0,
+      "harm": 0,
+      "corrections": 0,
+      "lower_rescued": 0,
+      "upper_rescued": 0,
+      "lower_errors": 0,
+      "upper_errors": 0
+    },
+    "ho_oK12hY6M": {
+      "pairs": 3,
+      "n": 147,
+      "captured_errors": 29,
+      "restored_errors": 32,
+      "harm": 3,
+      "corrections": 0,
+      "lower_rescued": 1,
+      "upper_rescued": 1,
+      "lower_errors": 32,
+      "upper_errors": 50
+    }
+  },
+  "lower_face_gate_passed": false,
+  "supporting_sources": [
+    "qv3-HaaxGUc"
+  ],
+  "descriptive_candidate_harm_auc": {
+    "lower_spatial_change": 0.4230769230769231,
+    "lower_temporal_change": 0.5384615384615384,
+    "upper_spatial_change": 0.4230769230769231,
+    "upper_temporal_change": 0.4423076923076923,
+    "global_spatial_change": 0.4423076923076923,
+    "global_temporal_change": 0.46153846153846156,
+    "musiq_improvement": 0.38461538461538464,
+    "brisque_improvement": 0.6346153846153846,
+    "binary_disagreement": 1.0,
+    "restored_uncertainty": 0.75
+  },
+  "auc_warning": "Same 17 exploratory candidates; dependent conditions and tracks, no fitted estimator, no held-out validation or incremental predictive claim.",
+  "decision": "Do not build a lower-face-specific framework on this screen; broader quality-attribution failure study remains separately motivated."
+}

@@ -2,3 +2,25 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 *.tmp
+
+# Local assets and environments; retain scientific results under cpu-pilot/results.
+/data/
+/results/
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+tools/
+external/
+*.pth
+*.pt
+*.onnx
+# LaTeX build products; retain editable manuscript source.
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.pdf

@@ -1,0 +1,32 @@
+{
+  "sources": [
+    "ABqo634gI5s",
+    "qv3-HaaxGUc"
+  ],
+  "labels": [
+    0,
+    1
+  ],
+  "selection": "Earliest valid one-second constant-label track per source and label; ties by entity. No inference-based selection.",
+  "sigma": 25,
+  "seed": 20261016,
+  "candidates": [
+    "captured",
+    "fastdvdnet",
+    "spatial_nlm"
+  ],
+  "quality_frames": [
+    0,
+    12,
+    24
+  ],
+  "model": "qwen/qwen3.8-27b",
+  "repetitions": 2,
+  "primary_rq1": "Repeated new Qwen timestamp errors on jointly answered timestamps while both MUSIQ and BRISQUE improve.",
+  "secondary": "Majority answers, single-metric improvement, coverage gains/losses and detector errors.",
+  "rq2": "Compare fixed quality, confidence and disagreement risk rankings; AUROC undefined without both harmful and non-harmful candidates. No learned assessor claimed.",
+  "rq3": "Frozen deterministic guards vs captured-only and restored-only: errors, coverage, and common-answered comparisons. No novel framework claimed.",
+  "rq4": "Source transfer and two restoration families, same Qwen model and one synthetic degradation severity; not full generalization validation.",
+  "investment_screen": "Support focused method development only if at least one new source shows repeatable primary harm and at least one track shows repeatable correction of a captured Qwen error. Otherwise do not launch full framework experiments from this pilot.",
+  "scope": "New to paired Qwen test, not untouched sources in the broader project. Same dataset. Preserve all selected cases and negative outcomes."
+}

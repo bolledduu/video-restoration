@@ -1,0 +1,1 @@
+{"utc": "2026-10-16T21:35:13.205246+00:00", "http_status": 400, "code": "tool_use_failed", "message": "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details."}

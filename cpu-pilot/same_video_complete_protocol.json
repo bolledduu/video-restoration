@@ -1,0 +1,25 @@
+{
+  "scope": "Same-video CPU selection and baseline assessment pilot, not full causal/method validation",
+  "primary_gate": "At least two independent sources with a BRISQUE/MUSIQ agreed restoration increasing speaker error by >=1/24, plus any restoration reducing error in at least one source.",
+  "primary_cases": "Original 8 cases, original 4 candidates; gate unchanged",
+  "expanded_cases": "All 8 original and 3 additional cases; common captured/spatial_nlm/fastdvdnet candidates",
+  "exclusions": "Unverified AV-SpeakerBench labels excluded from accuracy; DMD gaze not an ASD test",
+  "quality": "BRISQUE/MUSIQ means over frames 0,12,24; SSIM diagnostic only",
+  "selection_rules": [
+    "retain",
+    "always_nlm",
+    "always_fastdvdnet",
+    "musiq",
+    "brisque",
+    "confidence",
+    "agreement_guard",
+    "disagreement_guard_10pct",
+    "disagreement_guard_zero",
+    "oracle"
+  ],
+  "detection": "Fixed, untrained risk scores on noninput candidates: disagreement, uncertainty, input MSE, negative MUSIQ, BRISQUE",
+  "harm_label": "At least one correct-to-incorrect frame; report net-worse cases separately",
+  "coverage": "Full coverage for every selection rule; no abstention",
+  "sensitivity": "Repeat summaries on tracks whose source-reference predictions are all correct",
+  "limits": "Reused sources; 3 additional tracks all silent; no held-out trained assessor or enhancer transfer"
+}

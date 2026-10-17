@@ -4,3 +4,70 @@ cpu-pilot/scripts/ava_evidence_environment.py -text
 cpu-pilot/scripts/run_ava_local.py -text
 cpu-pilot/scripts/run_evidence_agent.py -text
 cpu-pilot/results/ava_smoke_v1/*.json -text whitespace=cr-at-eol
+
+# Preserve byte hashes in newly published historical experiments.
+cpu-pilot/benefit_qwen_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/benefit_screen_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/failure_confirmation_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/locality_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/one_video_qwen_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/qwen_capture_guard_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/results/additional_fastdvdnet_videos.json -text whitespace=cr-at-eol
+cpu-pilot/results/agent_propagation_audit.json -text whitespace=cr-at-eol
+cpu-pilot/results/benefit_measurements.json -text whitespace=cr-at-eol
+cpu-pilot/results/benefit_qwen.json -text whitespace=cr-at-eol
+cpu-pilot/results/benefit_screen_progress.json -text whitespace=cr-at-eol
+cpu-pilot/results/benefit_transport_errors.jsonl -text whitespace=cr-at-eol
+cpu-pilot/results/benefit_transport_status.json -text whitespace=cr-at-eol
+cpu-pilot/results/locality_audit.json -text whitespace=cr-at-eol
+cpu-pilot/results/locality_measurements.json -text whitespace=cr-at-eol
+cpu-pilot/results/one_video_qwen_audit.json -text whitespace=cr-at-eol
+cpu-pilot/results/one_video_qwen_paired.json -text whitespace=cr-at-eol
+cpu-pilot/results/qwen_capture_guard.json -text whitespace=cr-at-eol
+cpu-pilot/results/qwen_failure_plot_data.json -text whitespace=cr-at-eol
+cpu-pilot/results/restoration_before_after_reproduction.json -text whitespace=cr-at-eol
+cpu-pilot/results/restoration_figure_render_receipt.json -text whitespace=cr-at-eol
+cpu-pilot/results/same_video_complete_pilot.json -text whitespace=cr-at-eol
+cpu-pilot/results/teammate_branch_reproduction.json -text whitespace=cr-at-eol
+cpu-pilot/results/temporal_evidence_audit.json -text whitespace=cr-at-eol
+cpu-pilot/results/temporal_evidence_measurements.json -text whitespace=cr-at-eol
+cpu-pilot/results/temporal_evidence_setup_interrupted.json -text whitespace=cr-at-eol
+cpu-pilot/results/three_video_qwen_audit.json -text whitespace=cr-at-eol
+cpu-pilot/results/three_video_qwen_interrupted_1600_tokens.json -text whitespace=cr-at-eol
+cpu-pilot/results/three_video_qwen_paired.json -text whitespace=cr-at-eol
+cpu-pilot/results/transfer_rq_audit.json -text whitespace=cr-at-eol
+cpu-pilot/results/transfer_rq_measurements.json -text whitespace=cr-at-eol
+cpu-pilot/results/transfer_rq_qwen.json -text whitespace=cr-at-eol
+cpu-pilot/same_video_complete_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/scripts/audit_agent_propagation.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/benefit_measure.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/benefit_qwen.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/check_additional_fastdvdnet_videos.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/complete_same_video_pilot.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/evaluate_qwen_capture_guard.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/localize_restoration_effects.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/one_video_qwen_paired.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/plot_qwen_failures.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/prepare_failure_study.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/report_benefit_progress.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/report_benefit_screen.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/report_locality_screen.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/report_one_video_qwen.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/report_temporal_evidence.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/report_three_video_qwen.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/report_transfer_rqs.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/reproduce_restoration_comparison.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/reproduce_teammate_branch.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/resume_benefit_qwen.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/test_temporal_evidence.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/three_video_qwen_paired.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/transfer_rq_measure.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/transfer_rq_qwen.py -text whitespace=cr-at-eol
+cpu-pilot/temporal_evidence_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/temporal_evidence_setup_interrupted_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/three_video_qwen_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/transfer_rq_protocol.json -text whitespace=cr-at-eol
+cpu-pilot/transfer_rq_qwen_protocol.json -text whitespace=cr-at-eol
+
+# Preserve generated vector output without hand-editing renderer whitespace.
+cpu-pilot/results/*.svg -text -whitespace

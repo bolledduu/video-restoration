@@ -1,0 +1,879 @@
+{
+  "started_utc": "2026-10-16T01:28:44.696678+00:00",
+  "revision": "5f8307aee5ffb0f83c7f17ee343a23bd9626d4a3",
+  "run_type": "same-source restoration and downstream inference replay; no tuning",
+  "status": "PASS_REPRODUCED_AV_SPEAKERBENCH; DMD_NOT_A_PAIRED_RESTORATION_TEST",
+  "script_sha256": "f2f8e224d0ee89b49240d20d3faf256a0195b4766baa9ea31a6d8fe1a2aefd04",
+  "branch_file_sha256": {
+    "scripts/cpu_media.py": "5757e2bcaa75d1b65c4ccc54a390e815b2cc4b4ed55f9c3aa6d5deb6a4d715d7",
+    "scripts/video_baseline.py": "3d9ea3683d6b1ca0597c962ea757147d7c2a6cef4a612223b9b6f01082ee02fe",
+    "scripts/talknet_cpu.py": "d24f63f98fe610c3e3731661af00fa96ae4a7b2fa1a3e9a6c92e9a2ed321c0ea",
+    "scripts/false_restoration_event.py": "17166795813bf411f6f83379dac19f835daf4d89dcd9104cf6efce6760f34926",
+    "scripts/qwen_api_batch.py": "228b5573962b30f1aef6040a073520bbc5195cd84f5efd49401b8cbc92c70891",
+    "scripts/qwen_api_probe.py": "c140fb85cbbc27f367ad23dd1605ebbfee957a47e8c5f227f5279c4f7b25c8b8",
+    "results/source_downloads.json": "f25bd5acb31f1f81af11b8e738945ff4817695dbc90c218f23fe7546337ae025",
+    "results/cpu_degradations.json": "d8ef3752b878f0b9a021ce3d1274aa093f8efd3bce63022741115bcf31649181",
+    "results/video_baseline.json": "e706963d7573cf4f2003bfb26656e7a55ec91f6ddd99fc129630834e5b5fe15b",
+    "results/talknet_diagnostics.json": "e73e28d3448e7f9842689b35f7393fd081818c93689490b8cfd4fc7c5a48ef6a",
+    "results/cpu_paired_diagnostics.csv": "32988c90e3c22291100e65ffc9d3ec14b44d409887756592c13afa1ff075e81f",
+    "results/qwen_groq_batch.json": "a318795d6be8bdf1e3931a1e1e8bc3020b08d7f3b9350d4dda8388694c90056d",
+    "results/qwen_groq_probe.json": "4d7b6ffadf69372a71428111bea27b1d852ee66f7342270d9387ca2a9c7bf6ab"
+  },
+  "inputs": [
+    {
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\raw\\pilot_01_speaker_recognition.mp4",
+      "sha256": "3f5ef74c2471d30f9035424907c5c67acc04f82af9cc0d242151d70e999f9358",
+      "matches_branch": true
+    },
+    {
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\raw\\pilot_02_speaker_detection_positive.mp4",
+      "sha256": "e08e8a3ccd6000169d2534a6f80a2d3d253040daa6e874a3f66d2295fc01c2bc",
+      "matches_branch": true
+    },
+    {
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\raw\\pilot_03_speaker_detection_negative.mp4",
+      "sha256": "a55d337f4ebe3d97895568b4fe1eb6992014a25f8e2d2ac6deabb8b669bde660",
+      "matches_branch": true
+    },
+    {
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\processed\\pilot_01_speaker_recognition__moderate.mp4",
+      "sha256": "3dbf3e6de5f603b291b59babd6ac495710a9b275744d6debdc036f5a36e6be35",
+      "comparison": "decoded input metrics checked against branch below"
+    },
+    {
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\processed\\pilot_01_speaker_recognition__severe.mp4",
+      "sha256": "84865997e9dcec70e5e8f363fa7419e2fc51b6a7d53542331fdebde2e12c43ac",
+      "comparison": "decoded input metrics checked against branch below"
+    },
+    {
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\processed\\pilot_02_speaker_detection_positive__moderate.mp4",
+      "sha256": "fc0a16a56ce85098b6009a2bdbe277d30c9cc4df98e0a2266a67a4c72e450401",
+      "comparison": "decoded input metrics checked against branch below"
+    },
+    {
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\processed\\pilot_02_speaker_detection_positive__severe.mp4",
+      "sha256": "6c115df4aa91c98b5a3bbc4f6efe3ef77ca58537f8708fc5e99f02f0b9340f27",
+      "comparison": "decoded input metrics checked against branch below"
+    },
+    {
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\processed\\pilot_03_speaker_detection_negative__moderate.mp4",
+      "sha256": "b3a03b81a58dc8e18e8c531fa26a78c60b40ac3e6a4e3698ec3bc7e38edddd31",
+      "comparison": "decoded input metrics checked against branch below"
+    },
+    {
+      "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\agent-audio-visual\\data\\processed\\pilot_03_speaker_detection_negative__severe.mp4",
+      "sha256": "2230932e1e26a0aec0f3a1c2b35c0d78fa143255bcc0eebe125ae14daaec3239",
+      "comparison": "decoded input metrics checked against branch below"
+    }
+  ],
+  "dmd_replay_status": "NOT_EXECUTED: media absent locally; no paired restored DMD outputs committed",
+  "ground_truth_verified_for_av_speakerbench": false,
+  "versions": {
+    "python": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
+    "torch": "2.8.0+cpu",
+    "cv2": "4.12.0",
+    "av": "16.0.1"
+  },
+  "quality_comparison": [
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "deltas_vs_branch": {
+        "input_quality_psnr_db": 0.0,
+        "input_quality_ssim_rgb_mean": 0.0,
+        "output_quality_psnr_db": -2.0163052383281865e-07,
+        "output_quality_ssim_rgb_mean": -6.127245022469197e-08
+      }
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "deltas_vs_branch": {
+        "input_quality_psnr_db": 0.0,
+        "input_quality_ssim_rgb_mean": 0.0,
+        "output_quality_psnr_db": -7.964752093414518e-07,
+        "output_quality_ssim_rgb_mean": 1.4564071171285775e-08
+      }
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "deltas_vs_branch": {
+        "input_quality_psnr_db": 0.0,
+        "input_quality_ssim_rgb_mean": 0.0,
+        "output_quality_psnr_db": -1.1751936312975886e-07,
+        "output_quality_ssim_rgb_mean": 4.816792431583394e-08
+      }
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "deltas_vs_branch": {
+        "input_quality_psnr_db": 0.0,
+        "input_quality_ssim_rgb_mean": 0.0,
+        "output_quality_psnr_db": -5.558127504912136e-07,
+        "output_quality_ssim_rgb_mean": -4.458031388487882e-08
+      }
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "deltas_vs_branch": {
+        "input_quality_psnr_db": 0.0,
+        "input_quality_ssim_rgb_mean": 0.0,
+        "output_quality_psnr_db": -2.0244168723593248e-06,
+        "output_quality_ssim_rgb_mean": -4.6008443610467964e-08
+      }
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "deltas_vs_branch": {
+        "input_quality_psnr_db": 0.0,
+        "input_quality_ssim_rgb_mean": 0.0,
+        "output_quality_psnr_db": -1.3383228747443354e-08,
+        "output_quality_ssim_rgb_mean": -4.248926976924139e-08
+      }
+    }
+  ],
+  "logit_comparison": [
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "condition": "reference",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.172325134277344e-07
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "condition": "reference",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 5.066394805908203e-07
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "condition": "reference",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 1.3113021850585938e-06
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "condition": "degraded",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.3213367462158203e-07
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "condition": "degraded",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 5.066394805908203e-07
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "condition": "degraded",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 1.0728836059570312e-06
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "condition": "restored",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 8.110702037811279e-05
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "condition": "restored",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 5.066394805908203e-07
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "condition": "restored",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 0.0002931356430053711
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "condition": "reference",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.172325134277344e-07
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "condition": "reference",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 5.066394805908203e-07
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "condition": "reference",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 1.3113021850585938e-06
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "condition": "degraded",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 5.960464477539062e-07
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "condition": "degraded",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 5.066394805908203e-07
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "condition": "degraded",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 1.3709068298339844e-06
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "condition": "restored",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 8.767843246459961e-05
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "condition": "restored",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 5.066394805908203e-07
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "condition": "restored",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 5.766749382019043e-05
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "condition": "reference",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.917383193969727e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "condition": "reference",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 9.5367431640625e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "condition": "reference",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 1.0728836059570312e-06
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "condition": "degraded",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.172325134277344e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "condition": "degraded",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 9.5367431640625e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "condition": "degraded",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 1.0728836059570312e-06
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "condition": "restored",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 0.00013420730829238892
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "condition": "restored",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 9.5367431640625e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "condition": "restored",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 0.0001323223114013672
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "condition": "reference",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.917383193969727e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "condition": "reference",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 9.5367431640625e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "condition": "reference",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 1.0728836059570312e-06
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "condition": "degraded",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.544854164123535e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "condition": "degraded",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 9.5367431640625e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "condition": "degraded",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 7.152557373046875e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "condition": "restored",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 8.428096771240234e-05
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "condition": "restored",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 9.5367431640625e-07
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "condition": "restored",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 0.00017195940017700195
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "condition": "reference",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.3213367462158203e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "condition": "reference",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 6.854534149169922e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "condition": "reference",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 1.0728836059570312e-06
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "condition": "degraded",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.842877388000488e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "condition": "degraded",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 6.854534149169922e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "condition": "degraded",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 1.3113021850585938e-06
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "condition": "restored",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.172325134277344e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "condition": "restored",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 6.854534149169922e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "condition": "restored",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 7.152557373046875e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "condition": "reference",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.3213367462158203e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "condition": "reference",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 6.854534149169922e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "condition": "reference",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 1.0728836059570312e-06
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "condition": "degraded",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 4.991888999938965e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "condition": "degraded",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 6.854534149169922e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "condition": "degraded",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 7.748603820800781e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "condition": "restored",
+      "head": "visual_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 0.00030011311173439026
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "condition": "restored",
+      "head": "audio_only",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 6.854534149169922e-07
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "condition": "restored",
+      "head": "fixed_audio_visual",
+      "decision_differences": 0,
+      "max_absolute_logit_difference": 0.0003548860549926758
+    }
+  ],
+  "counter_semantics_audit": {
+    "fixture_description": "10 complete synthetic pairs; one 0-to-1 change; true label 1 (a correction)",
+    "branch_output": {
+      "event_count": 1,
+      "events": [
+        {
+          "clip_id": "audit_fixture",
+          "frame": 0,
+          "original_prediction": 0,
+          "restored_prediction": 1
+        }
+      ],
+      "event_rate": 1.0
+    },
+    "correct_prediction_flip_rate": 0.1,
+    "correct_false_positive_count": 0,
+    "issues": [
+      "event_rate divides events by events rather than complete pairs",
+      "no ground-truth check: a correction is named a false-positive event",
+      "rows lacking clip/frame keys are silently skipped; zero is not a completed test"
+    ]
+  },
+  "qwen_record_audit": {
+    "batch_records": 2,
+    "probe_records": 2,
+    "unique_video_sha256": [
+      "381d3e0b78c7ba83bc55b99987cbdbf6eec7d51f7147e44317dc9501ecdcd82f",
+      "814f1c2064da3ecb0f7776e056e17e3776740bf6302426008f7093fd22fd463b"
+    ],
+    "paired_restoration_records": 0,
+    "batch_prompt": "Look at this face image. Is the driver likely looking forward? Reply in one short sentence with yes/no and a confidence score.",
+    "batch_sampled_images_per_video": 1,
+    "batch_audio_sent": false,
+    "counter_result_if_batch_passed_directly": {
+      "event_count": 0,
+      "events": [],
+      "event_rate": 0.0
+    },
+    "interpretation": "Two source gaze probes, not original/restored speaker comparisons; no accuracy label or calibrated confidence."
+  },
+  "rows": [
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "head": "visual_only",
+      "frames": 49,
+      "reference_class1_frames": 37,
+      "degraded_class1_frames": 36,
+      "restored_class1_frames": 35,
+      "reference_vs_degraded_disagreements": 5,
+      "reference_vs_restored_disagreements": 6,
+      "degraded_vs_restored_disagreements": 5,
+      "no_to_yes": 2,
+      "yes_to_no": 3
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "head": "audio_only",
+      "frames": 49,
+      "reference_class1_frames": 49,
+      "degraded_class1_frames": 49,
+      "restored_class1_frames": 49,
+      "reference_vs_degraded_disagreements": 0,
+      "reference_vs_restored_disagreements": 0,
+      "degraded_vs_restored_disagreements": 0,
+      "no_to_yes": 0,
+      "yes_to_no": 0
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "moderate",
+      "head": "fixed_audio_visual",
+      "frames": 49,
+      "reference_class1_frames": 6,
+      "degraded_class1_frames": 9,
+      "restored_class1_frames": 4,
+      "reference_vs_degraded_disagreements": 3,
+      "reference_vs_restored_disagreements": 2,
+      "degraded_vs_restored_disagreements": 5,
+      "no_to_yes": 0,
+      "yes_to_no": 5
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "head": "visual_only",
+      "frames": 49,
+      "reference_class1_frames": 37,
+      "degraded_class1_frames": 32,
+      "restored_class1_frames": 31,
+      "reference_vs_degraded_disagreements": 17,
+      "reference_vs_restored_disagreements": 16,
+      "degraded_vs_restored_disagreements": 3,
+      "no_to_yes": 1,
+      "yes_to_no": 2
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "head": "audio_only",
+      "frames": 49,
+      "reference_class1_frames": 49,
+      "degraded_class1_frames": 49,
+      "restored_class1_frames": 49,
+      "reference_vs_degraded_disagreements": 0,
+      "reference_vs_restored_disagreements": 0,
+      "degraded_vs_restored_disagreements": 0,
+      "no_to_yes": 0,
+      "yes_to_no": 0
+    },
+    {
+      "sample_id": "pilot_01_speaker_recognition",
+      "level": "severe",
+      "head": "fixed_audio_visual",
+      "frames": 49,
+      "reference_class1_frames": 6,
+      "degraded_class1_frames": 21,
+      "restored_class1_frames": 19,
+      "reference_vs_degraded_disagreements": 15,
+      "reference_vs_restored_disagreements": 13,
+      "degraded_vs_restored_disagreements": 2,
+      "no_to_yes": 0,
+      "yes_to_no": 2
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "head": "visual_only",
+      "frames": 47,
+      "reference_class1_frames": 17,
+      "degraded_class1_frames": 8,
+      "restored_class1_frames": 8,
+      "reference_vs_degraded_disagreements": 11,
+      "reference_vs_restored_disagreements": 11,
+      "degraded_vs_restored_disagreements": 0,
+      "no_to_yes": 0,
+      "yes_to_no": 0
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "head": "audio_only",
+      "frames": 47,
+      "reference_class1_frames": 47,
+      "degraded_class1_frames": 47,
+      "restored_class1_frames": 47,
+      "reference_vs_degraded_disagreements": 0,
+      "reference_vs_restored_disagreements": 0,
+      "degraded_vs_restored_disagreements": 0,
+      "no_to_yes": 0,
+      "yes_to_no": 0
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "moderate",
+      "head": "fixed_audio_visual",
+      "frames": 47,
+      "reference_class1_frames": 47,
+      "degraded_class1_frames": 30,
+      "restored_class1_frames": 0,
+      "reference_vs_degraded_disagreements": 17,
+      "reference_vs_restored_disagreements": 47,
+      "degraded_vs_restored_disagreements": 30,
+      "no_to_yes": 0,
+      "yes_to_no": 30
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "head": "visual_only",
+      "frames": 47,
+      "reference_class1_frames": 17,
+      "degraded_class1_frames": 8,
+      "restored_class1_frames": 7,
+      "reference_vs_degraded_disagreements": 11,
+      "reference_vs_restored_disagreements": 12,
+      "degraded_vs_restored_disagreements": 1,
+      "no_to_yes": 0,
+      "yes_to_no": 1
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "head": "audio_only",
+      "frames": 47,
+      "reference_class1_frames": 47,
+      "degraded_class1_frames": 47,
+      "restored_class1_frames": 47,
+      "reference_vs_degraded_disagreements": 0,
+      "reference_vs_restored_disagreements": 0,
+      "degraded_vs_restored_disagreements": 0,
+      "no_to_yes": 0,
+      "yes_to_no": 0
+    },
+    {
+      "sample_id": "pilot_02_speaker_detection_positive",
+      "level": "severe",
+      "head": "fixed_audio_visual",
+      "frames": 47,
+      "reference_class1_frames": 47,
+      "degraded_class1_frames": 5,
+      "restored_class1_frames": 10,
+      "reference_vs_degraded_disagreements": 42,
+      "reference_vs_restored_disagreements": 37,
+      "degraded_vs_restored_disagreements": 5,
+      "no_to_yes": 5,
+      "yes_to_no": 0
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "head": "visual_only",
+      "frames": 49,
+      "reference_class1_frames": 18,
+      "degraded_class1_frames": 15,
+      "restored_class1_frames": 9,
+      "reference_vs_degraded_disagreements": 3,
+      "reference_vs_restored_disagreements": 9,
+      "degraded_vs_restored_disagreements": 6,
+      "no_to_yes": 0,
+      "yes_to_no": 6
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "head": "audio_only",
+      "frames": 49,
+      "reference_class1_frames": 48,
+      "degraded_class1_frames": 48,
+      "restored_class1_frames": 48,
+      "reference_vs_degraded_disagreements": 0,
+      "reference_vs_restored_disagreements": 0,
+      "degraded_vs_restored_disagreements": 0,
+      "no_to_yes": 0,
+      "yes_to_no": 0
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "moderate",
+      "head": "fixed_audio_visual",
+      "frames": 49,
+      "reference_class1_frames": 0,
+      "degraded_class1_frames": 0,
+      "restored_class1_frames": 0,
+      "reference_vs_degraded_disagreements": 0,
+      "reference_vs_restored_disagreements": 0,
+      "degraded_vs_restored_disagreements": 0,
+      "no_to_yes": 0,
+      "yes_to_no": 0
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "head": "visual_only",
+      "frames": 49,
+      "reference_class1_frames": 18,
+      "degraded_class1_frames": 14,
+      "restored_class1_frames": 9,
+      "reference_vs_degraded_disagreements": 18,
+      "reference_vs_restored_disagreements": 17,
+      "degraded_vs_restored_disagreements": 5,
+      "no_to_yes": 0,
+      "yes_to_no": 5
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "head": "audio_only",
+      "frames": 49,
+      "reference_class1_frames": 48,
+      "degraded_class1_frames": 48,
+      "restored_class1_frames": 48,
+      "reference_vs_degraded_disagreements": 0,
+      "reference_vs_restored_disagreements": 0,
+      "degraded_vs_restored_disagreements": 0,
+      "no_to_yes": 0,
+      "yes_to_no": 0
+    },
+    {
+      "sample_id": "pilot_03_speaker_detection_negative",
+      "level": "severe",
+      "head": "fixed_audio_visual",
+      "frames": 49,
+      "reference_class1_frames": 0,
+      "degraded_class1_frames": 0,
+      "restored_class1_frames": 0,
+      "reference_vs_degraded_disagreements": 0,
+      "reference_vs_restored_disagreements": 0,
+      "degraded_vs_restored_disagreements": 0,
+      "no_to_yes": 0,
+      "yes_to_no": 0
+    }
+  ],
+  "summary": {
+    "source_videos": 3,
+    "restoration_runs": 6,
+    "talknet_runs": 18,
+    "branch_decisions_reproduced": true,
+    "audio_only_invariant": true,
+    "paired_av_frames": 290,
+    "changed_av_frames": 42,
+    "changed_av_cases": 4,
+    "verified_false_attribution_events": null
+  },
+  "finished_utc": "2026-10-16T01:36:08.303169+00:00"
+}
