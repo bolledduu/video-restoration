@@ -1,0 +1,34 @@
+{
+  "dataset": "AVA & UniTalk Development Cohort",
+  "scope": "Rigorous CTS safeguard pilot on frozen development partition",
+  "method": "Captured Temporal Support (CTS) Verifier with Masked Audit & Timing Disruption",
+  "seed": 20261017,
+  "mask_fraction": 0.15,
+  "timing_shifts": [
+    -4,
+    -2,
+    2,
+    4
+  ],
+  "non_mouth_control": "upper lateral cheek",
+  "audio_condition": "original unchanged audio across all paired comparisons",
+  "target_states": [
+    "CC",
+    "CI (Harm)",
+    "IC (Correction)",
+    "II"
+  ],
+  "baselines_compared": [
+    "captured_only",
+    "restored_only",
+    "quality_musiq",
+    "quality_brisque",
+    "quality_consensus",
+    "confidence_max",
+    "disagreement_capture_fallback",
+    "disagreement_abstain",
+    "cdi_consistency_baseline",
+    "proposed_cts_safeguard",
+    "oracle_upper_bound"
+  ]
+}

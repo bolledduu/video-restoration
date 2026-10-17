@@ -28,6 +28,8 @@ class EvidenceEnvironment:
                 raise ValueError('Unsupported candidate')
             # Explicit allowlist prevents label, error, reference, and source leakage.
             self.data[name] = {k:copy.deepcopy(value[k]) for k in ('musiq','brisque','probability')}
+            if 'cts' in value and isinstance(value['cts'], dict):
+                self.data[name]['cts'] = {k:copy.deepcopy(value['cts'][k]) for k in ('cts_support','mouth_specificity','heldout_mse','cdi_consistency','mask_stability','diagnostic_validity') if k in value['cts']}
             if not self.data[name]['probability']:
                 raise ValueError('Empty perception output')
             for p in self.data[name]['probability']:
@@ -86,6 +88,17 @@ class EvidenceEnvironment:
             return {'disagreement':sum((a>=.5)!=(b>=.5) for a,b in zip(value['probability'],base['probability']))/self.n,
                     'mean_absolute_score_change':sum(abs(a-b) for a,b in zip(value['probability'],base['probability']))/self.n,
                     'delta_musiq':value['musiq']-base['musiq'],'delta_brisque':value['brisque']-base['brisque']}
+        if name=='verify_captured_temporal_support':
+            if set(args)!={'candidate'}: raise ValueError('Unexpected arguments')
+            cts=value.get('cts',{})
+            s=cts.get('cts_support',0.0)
+            validity=cts.get('diagnostic_validity','VALID')
+            disagreement=sum((a>=.5)!=(b>=.5) for a,b in zip(value['probability'],base['probability']))/self.n
+            rec='SAFE_TO_RESTORE' if s>=0.0 and validity=='VALID' else 'REVERT_TO_CAPTURED'
+            return {'candidate':candidate,'cts_support':s,'mouth_specificity':cts.get('mouth_specificity',0.0),
+                    'heldout_mse':cts.get('heldout_mse',0.0),'cdi_consistency':cts.get('cdi_consistency',0.0),
+                    'mask_stability':cts.get('mask_stability',0.0),'attribution_disagreement':disagreement,
+                    'recommendation':rec,'diagnostic_validity':validity,'provenance':'withheld_pixel_temporal_audit'}
         if name=='submit_decisions':
             if set(args) not in ({'candidate','decisions','rationale'},{'candidate','intervals','rationale'}): raise ValueError('Unexpected arguments')
             if 'captured' not in self.inspected or candidate not in self.inspected: raise ValueError('Inspect captured and selected speaking evidence first')
@@ -118,5 +131,6 @@ def schemas():
                  ('inspect_speaking','Inspect lossless threshold-decision intervals and uncalibrated score summaries.',{'candidate':candidate}),
                  ('inspect_interval','Inspect local scores for at most 20 consecutive scored timestamps.',{'candidate':candidate,'start':{'type':'integer'},'end':{'type':'integer'}}),
                  ('compare_with_capture','Compare restoration with captured evidence; disagreement does not reveal truth.',{'candidate':candidate}),
+                 ('verify_captured_temporal_support','Verify whether restoration-induced temporal changes are supported by withheld captured measurements without ground truth.',{'candidate':candidate}),
                  ('submit_decisions','Select evidence and partition ALL timestamps into consecutive decision intervals from 0 to the total count, end exclusive.',{'candidate':candidate,'intervals':{'type':'array','items':{'type':'object','properties':{'start':{'type':'integer'},'end':{'type':'integer'},'decision':{'type':'string','enum':['speaking','not_speaking','abstain']}},'required':['start','end','decision'],'additionalProperties':False}},'rationale':{'type':'string'}})]
     return [{'type':'function','function':{'name':n,'description':d,'parameters':{'type':'object','properties':p,'required':list(p),'additionalProperties':False}}} for n,d,p in definitions]

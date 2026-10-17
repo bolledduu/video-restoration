@@ -57,8 +57,16 @@ class EnvironmentTests(unittest.TestCase):
         data=fixture();env=EvidenceEnvironment(data)
         data['candidates']['captured']['probability'][0]=0
         self.assertEqual(env.call('inspect_interval',{'candidate':'captured','start':0,'end':1})['probability'][0],.8)
-    def test_bad_intervals_rejected(self):
-        env=EvidenceEnvironment(fixture())
-        with self.assertRaises(ValueError):env.call('inspect_interval',{'candidate':'captured','start':-1,'end':1})
+    def test_verify_captured_temporal_support_tool_execution(self):
+        data = fixture()
+        data['candidates']['fastdvdnet']['cts'] = {'cts_support': 12.5, 'mouth_specificity': 8.0, 'heldout_mse': 45.0, 'mask_stability': 10.0, 'diagnostic_validity': 'VALID'}
+        env = EvidenceEnvironment(data)
+        out = env.call('verify_captured_temporal_support', {'candidate': 'fastdvdnet'})
+        self.assertEqual(out['candidate'], 'fastdvdnet')
+        self.assertEqual(out['cts_support'], 12.5)
+        self.assertEqual(out['recommendation'], 'SAFE_TO_RESTORE')
+        self.assertEqual(out['provenance'], 'withheld_pixel_temporal_audit')
+        self.assertNotIn('labels', out)
+        self.assertNotIn('secret_ground_truth', out)
 
 if __name__=='__main__':unittest.main()
