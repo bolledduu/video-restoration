@@ -1,0 +1,314 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "completed_requests": 16,
+  "source_count": 2,
+  "paired_rows": [
+    {
+      "case_id": "aca7e0ed106b9ca1",
+      "source": "4ZpjKfu6Cl8",
+      "repeat": 0,
+      "truth": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "majority_truth": 1,
+      "captured": {
+        "decisions": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "restored": {
+        "decisions": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "jointly_answered": 4,
+      "captured_errors": 2,
+      "restored_errors": 3,
+      "harm": 1,
+      "corrections": 0,
+      "majority_captured_error": 0,
+      "majority_restored_error": 1
+    },
+    {
+      "case_id": "b5e7d06dbd1cfb8a",
+      "source": "4ZpjKfu6Cl8",
+      "repeat": 0,
+      "truth": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "majority_truth": 0,
+      "captured": {
+        "decisions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "restored": {
+        "decisions": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "jointly_answered": 4,
+      "captured_errors": 0,
+      "restored_errors": 2,
+      "harm": 2,
+      "corrections": 0,
+      "majority_captured_error": 0,
+      "majority_restored_error": 1
+    },
+    {
+      "case_id": "eaa58bfe0ca84011",
+      "source": "4ZpjKfu6Cl8",
+      "repeat": 0,
+      "truth": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "majority_truth": 0,
+      "captured": {
+        "decisions": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "restored": {
+        "decisions": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "jointly_answered": 4,
+      "captured_errors": 2,
+      "restored_errors": 2,
+      "harm": 0,
+      "corrections": 0,
+      "majority_captured_error": 1,
+      "majority_restored_error": 0
+    },
+    {
+      "case_id": "d389b6e89b92cde6",
+      "source": "IKdBLciu_-A",
+      "repeat": 0,
+      "truth": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "majority_truth": 0,
+      "captured": {
+        "decisions": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "restored": {
+        "decisions": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "majority_speaking": 0
+      },
+      "jointly_answered": 4,
+      "captured_errors": 1,
+      "restored_errors": 1,
+      "harm": 1,
+      "corrections": 1,
+      "majority_captured_error": 0,
+      "majority_restored_error": 0
+    },
+    {
+      "case_id": "aca7e0ed106b9ca1",
+      "source": "4ZpjKfu6Cl8",
+      "repeat": 1,
+      "truth": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "majority_truth": 1,
+      "captured": {
+        "decisions": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "restored": {
+        "decisions": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "jointly_answered": 4,
+      "captured_errors": 2,
+      "restored_errors": 1,
+      "harm": 0,
+      "corrections": 1,
+      "majority_captured_error": 0,
+      "majority_restored_error": 0
+    },
+    {
+      "case_id": "b5e7d06dbd1cfb8a",
+      "source": "4ZpjKfu6Cl8",
+      "repeat": 1,
+      "truth": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "majority_truth": 0,
+      "captured": {
+        "decisions": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "restored": {
+        "decisions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "jointly_answered": 4,
+      "captured_errors": 2,
+      "restored_errors": 0,
+      "harm": 0,
+      "corrections": 2,
+      "majority_captured_error": 1,
+      "majority_restored_error": 0
+    },
+    {
+      "case_id": "eaa58bfe0ca84011",
+      "source": "4ZpjKfu6Cl8",
+      "repeat": 1,
+      "truth": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "majority_truth": 0,
+      "captured": {
+        "decisions": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": 1
+      },
+      "restored": {
+        "decisions": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": 1
+      },
+      "jointly_answered": 4,
+      "captured_errors": 1,
+      "restored_errors": 1,
+      "harm": 0,
+      "corrections": 0,
+      "majority_captured_error": 1,
+      "majority_restored_error": 1
+    },
+    {
+      "case_id": "d389b6e89b92cde6",
+      "source": "IKdBLciu_-A",
+      "repeat": 1,
+      "truth": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "majority_truth": 0,
+      "captured": {
+        "decisions": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "restored": {
+        "decisions": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "jointly_answered": 4,
+      "captured_errors": 1,
+      "restored_errors": 2,
+      "harm": 1,
+      "corrections": 0,
+      "majority_captured_error": 0,
+      "majority_restored_error": 0
+    }
+  ],
+  "totals": {
+    "jointly_answered": 32,
+    "captured_errors": 11,
+    "restored_errors": 12,
+    "harm": 5,
+    "corrections": 4,
+    "majority_captured_error": 3,
+    "majority_restored_error": 3
+  },
+  "note": "Four development clips, two sources, two repetitions; repeated bins are not independent samples. No method or agent-tool evaluation.",
+  "unavailable_model": "gemini-2.5-flash-lite"
+}

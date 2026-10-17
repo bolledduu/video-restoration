@@ -1,3 +1,5 @@
+> **Native Gemini pilot:** [Four-clip audiovisual results](cpu-pilot/results/gemini_av_pilot_v1/REPORT.md): Gemini 3.5 Flash-Lite completed; Gemini 2.5 Flash-Lite unavailable for this account. This pilot is separate from the tool-agent and proposed safeguard evaluations.
+
 > **Evaluation correction (2026-10-17):** The old unified benchmark has clip-pairing errors and the old final-suite output does not validate CTS. Use [the repair report](cpu-pilot/reviews/FIXES_2026-10-17.md) and [artifact validity registry](cpu-pilot/results/EXPERIMENT_VALIDITY.json) before interpreting results. Historical outputs are preserved.
 
 # Video restoration and speaker-evidence assessment

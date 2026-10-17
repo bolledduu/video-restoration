@@ -1,0 +1,30 @@
+[
+  {
+    "case_id": "aca7e0ed106b9ca1",
+    "captured_repeat_disagreements": 0,
+    "restored_repeat_disagreements": 2,
+    "harm_in_both_repeats": [],
+    "correction_in_both_repeats": []
+  },
+  {
+    "case_id": "b5e7d06dbd1cfb8a",
+    "captured_repeat_disagreements": 2,
+    "restored_repeat_disagreements": 2,
+    "harm_in_both_repeats": [],
+    "correction_in_both_repeats": []
+  },
+  {
+    "case_id": "eaa58bfe0ca84011",
+    "captured_repeat_disagreements": 1,
+    "restored_repeat_disagreements": 1,
+    "harm_in_both_repeats": [],
+    "correction_in_both_repeats": []
+  },
+  {
+    "case_id": "d389b6e89b92cde6",
+    "captured_repeat_disagreements": 0,
+    "restored_repeat_disagreements": 3,
+    "harm_in_both_repeats": [],
+    "correction_in_both_repeats": []
+  }
+]

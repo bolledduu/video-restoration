@@ -1,0 +1,203 @@
+{
+  "status": "INCOMPLETE",
+  "protocol_sha256": "188e4e9a6c07cdcf66d504a4b1fb937eab7dd6cea77ebfa91d1db58b40fdb15b",
+  "reserved_upper_cost_usd": 0.0140358,
+  "runs": [
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "fastdvdnet",
+      "media_sha256": "b6828354840d16613229f9b7ade1ca635b7618bfbf061d0880f9803313e3ea22",
+      "request_sha256": "2b45641c837a4615e8be1795218ea8923c59f5f4148faee6f2c6d6960e56d72a",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    1,\n    1,\n    1\n  ],\n  \"majority_speaking\": 1\n}",
+                  "thoughtSignature": "EmAKXgFpFH0T1Ab9jTlBCFf55GA5oI04JHlPePujCk6W3R20lkjmSDKF1jk09dS/Ov/WVpOPYIL5T2Gx6wo4E2FwMUQ58YPMM1szogLwFrJ4CalO2fW5UQoohlyXNUVzBBo="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "z8HTauiMKs-839IPxLenkAE"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": 1
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 1,
+        "error_rate": 0.25,
+        "majority_error": 1
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "captured",
+      "media_sha256": "d9a5b1013364db4e777b3aa461d8921b1cbc843cf5460226c556abd2176cff67",
+      "request_sha256": "cd87d24202f7e4febfcd1ab1d191a007d25e8c8705656db36ae9ada183ded999",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [0, 1, 0, 0],\n  \"majority_speaking\": 0\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TIRWjYBe0+tkWOs073xx0tYZxX7lcbUKdYYQqjNSIOMAbo3Fm3azF5Mql9izVLELCMybbOM4rtHZeTW8AUdbdw/Uxs4q885BoqdXN6U+5BhAD/XHkk7rLIDo="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 30,
+          "totalTokenCount": 6443,
+          "promptTokensDetails": [
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "2MHTapnHLKPb-8YP-6T78Ao"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 1,
+        "error_rate": 0.25,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "fastdvdnet",
+      "media_sha256": "08c9f08e674394a40a248bbd7ad0a36c101242f0af8d1928aa9fb462bfd92fac",
+      "request_sha256": "a738b2e80efb85d5ff3dfb447ef82bbb25c1bf1c6dbf0d3b5159dbdac64fdaf6",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    0,\n    0,\n    1\n  ],\n  \"majority_speaking\": 0\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TLoARnyPxmNSJGA/WaVBeCQQHzQmy+GQKd21W2yBtbWBjQs1j3u7kRhs9kBxDWX2KpqGY8xhgdd5q+jh7nWKzvJ7QXWRQ3aAkifrU0EZ6yjsTc0s4DWW8qGk="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "38HTarGxIoqV39IPhsbhgAE"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "majority_speaking": 0
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 1,
+        "error_rate": 0.25,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "captured",
+      "media_sha256": "d9a5b1013364db4e777b3aa461d8921b1cbc843cf5460226c556abd2176cff67",
+      "request_sha256": "cd87d24202f7e4febfcd1ab1d191a007d25e8c8705656db36ae9ada183ded999",
+      "status": "FAILED",
+      "error": "Google HTTP 404; response withheld to avoid credential disclosure"
+    }
+  ]
+}

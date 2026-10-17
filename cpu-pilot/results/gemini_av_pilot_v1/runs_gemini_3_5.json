@@ -1,0 +1,1047 @@
+{
+  "status": "COMPLETE_FOR_AVAILABLE_MODEL",
+  "protocol_sha256": "188e4e9a6c07cdcf66d504a4b1fb937eab7dd6cea77ebfa91d1db58b40fdb15b",
+  "continuation_script_sha256": "3798726a69c19673c3b76b0b7c69438ee7c2408f5233d646241c65e10625dfc9",
+  "inherited_runs_sha256": "a14f2771eac6d93cb79c957bd6aaad7a19e7e02d6b4495b75032560cb00be21a",
+  "unavailable_model": "gemini-2.5-flash-lite",
+  "unavailability": "Google NOT_FOUND: model no longer available to new users; countTokens and generateContent both rejected",
+  "reserved_upper_cost_usd": 0.0748576,
+  "runs": [
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "fastdvdnet",
+      "media_sha256": "b6828354840d16613229f9b7ade1ca635b7618bfbf061d0880f9803313e3ea22",
+      "request_sha256": "2b45641c837a4615e8be1795218ea8923c59f5f4148faee6f2c6d6960e56d72a",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    1,\n    1,\n    1\n  ],\n  \"majority_speaking\": 1\n}",
+                  "thoughtSignature": "EmAKXgFpFH0T1Ab9jTlBCFf55GA5oI04JHlPePujCk6W3R20lkjmSDKF1jk09dS/Ov/WVpOPYIL5T2Gx6wo4E2FwMUQ58YPMM1szogLwFrJ4CalO2fW5UQoohlyXNUVzBBo="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "z8HTauiMKs-839IPxLenkAE"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": 1
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 1,
+        "error_rate": 0.25,
+        "majority_error": 1
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "captured",
+      "media_sha256": "d9a5b1013364db4e777b3aa461d8921b1cbc843cf5460226c556abd2176cff67",
+      "request_sha256": "cd87d24202f7e4febfcd1ab1d191a007d25e8c8705656db36ae9ada183ded999",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [0, 1, 0, 0],\n  \"majority_speaking\": 0\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TIRWjYBe0+tkWOs073xx0tYZxX7lcbUKdYYQqjNSIOMAbo3Fm3azF5Mql9izVLELCMybbOM4rtHZeTW8AUdbdw/Uxs4q885BoqdXN6U+5BhAD/XHkk7rLIDo="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 30,
+          "totalTokenCount": 6443,
+          "promptTokensDetails": [
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "2MHTapnHLKPb-8YP-6T78Ao"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 1,
+        "error_rate": 0.25,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "fastdvdnet",
+      "media_sha256": "08c9f08e674394a40a248bbd7ad0a36c101242f0af8d1928aa9fb462bfd92fac",
+      "request_sha256": "a738b2e80efb85d5ff3dfb447ef82bbb25c1bf1c6dbf0d3b5159dbdac64fdaf6",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    0,\n    0,\n    1\n  ],\n  \"majority_speaking\": 0\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TLoARnyPxmNSJGA/WaVBeCQQHzQmy+GQKd21W2yBtbWBjQs1j3u7kRhs9kBxDWX2KpqGY8xhgdd5q+jh7nWKzvJ7QXWRQ3aAkifrU0EZ6yjsTc0s4DWW8qGk="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "38HTarGxIoqV39IPhsbhgAE"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "majority_speaking": 0
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 1,
+        "error_rate": 0.25,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "captured",
+      "media_sha256": "4c4face006c14d4191f86712107f231b140db66f6b11312627628546e82314ec",
+      "request_sha256": "471d00d3c002dc94d9e510410023e5402c030ea8205b8e68abea5f513e3a8d34",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    1,\n    1,\n    0\n  ],\n  \"majority_speaking\": 1\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TxOR7IGSnyVMRk4nYrx7lF8nwfFh+IO2NTgV4Bh0urj54XFHew6tWofthtfrS27HNNSBDWb5kjQEodYnA7a+Du3XcM+lRyNI5zcNAYEfmKzqhQ/C0z8R3EN8="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "U8LTas4qmp-OsQ_F7rjYDQ"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 2,
+        "error_rate": 0.5,
+        "majority_error": 1
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "fastdvdnet",
+      "media_sha256": "e108b236341279b48a4f03173632ae3a3ff8a211083002caffe2a42177e17ebf",
+      "request_sha256": "ba9bb395cc71ac79256d93020459af9d038c8525891b440463392edf2ba76722",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    0,\n    0,\n    0\n  ],\n  \"majority_speaking\": 0\n}",
+                  "thoughtSignature": "EmAKXgFpFH0T2I9PHE2hvaHq07iqASCQn0Eoa8m9Y0Dtphjgc97PoBrIpu3XlY6LEUDqvdsc9kMZS49W4a/R8lZqRD8mX4s+8d+DNujooBgHq79A4yyhnHmKBv0dNCV65fk="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "XcLTaqrdAfusjrEP_szroAk"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 0,
+        "error_rate": 0.0,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "captured",
+      "media_sha256": "aab6959b87f54f00df8b82c13c00a741d4cdb4ec9c20fd318450ccbaa9d38f0b",
+      "request_sha256": "6966cceb44619b7d7bf4b1b69f38c4c3fcd6ccfe69abfb7794dd64d456e71655",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    0,\n    0,\n    0\n  ],\n  \"majority_speaking\": 0\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TaVRu7Cw0QMWWCBSc3qInyzHNowsE4h3LgZBXVEutQA7t1Gsp+psaXyxLzIu+DwyYEvy7FUo8REzP7UqrRuT8+yeDSaZUpSp6TKJGBgs662pEWSmfIoAz0GE="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "acLTap7gH6j3-8YP8d7AeQ"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 0,
+        "error_rate": 0.0,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "fastdvdnet",
+      "media_sha256": "5e8b89f165716e40bef1501542d378e79a5230602b715510e16d651348400c94",
+      "request_sha256": "3f42c4481296917efac888ce81725c551a943114cf972187c2c4394060f90313",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    1,\n    0,\n    0\n  ],\n  \"majority_speaking\": 0\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TSC/hcT1E5k0rjtDjV/nhCxKfYTGPsQXhPfBF+hHqEW/E7Ij+7Q8fYhINfrK0f9JUXxC7Ghwdd8P+m5wAtDOruWbfk98ZJANdMhSKonFXszyf5t/rjO6jBw4="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "c8LTarLuFfK-39IPucWt-Qc"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 3,
+        "error_rate": 0.75,
+        "majority_error": 1
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "fastdvdnet",
+      "media_sha256": "5e8b89f165716e40bef1501542d378e79a5230602b715510e16d651348400c94",
+      "request_sha256": "3f42c4481296917efac888ce81725c551a943114cf972187c2c4394060f90313",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    1,\n    1,\n    1,\n    0\n  ],\n  \"majority_speaking\": 1\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TG4uuLFQCUpw9K2v+7jAmGDAeuoxIWv9ruRUjj6ynIi5tqb6i/b0KmLWbGdTcztU5gkdO2Crwqi/pN8eviZESi5srDtikEuHXhvifShqNJcIMrUUgAF0czpo="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "ecLTaoaZOqjV-8YPt4GzgQE"
+      },
+      "answer": {
+        "decisions": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 1,
+        "error_rate": 0.25,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "captured",
+      "media_sha256": "d8933515a67587eada68df2b1d8e5fb39cf0850582a4b08b243a1f10a3097499",
+      "request_sha256": "b3b1d260e1f58267c3028a88094762fb01b4ad6e6b175884babd201a2491ae0b",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    1,\n    1,\n    0,\n    0\n  ],\n  \"majority_speaking\": 1\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TXGMlLgGeRxH2POQo5zdpKHOM8tYBrbgZbYAJbgvTQ1/O8oPOiCf1QjMyKeNkb3udly05p7+jjbt/IR4KXO85nQRRqMtQiHsYSDjcuAybj7Zw1ShYDnM/hDE="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "iMLTarHCIcb3jrEPhZ_zgAU"
+      },
+      "answer": {
+        "decisions": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 2,
+        "error_rate": 0.5,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "captured",
+      "media_sha256": "4c4face006c14d4191f86712107f231b140db66f6b11312627628546e82314ec",
+      "request_sha256": "471d00d3c002dc94d9e510410023e5402c030ea8205b8e68abea5f513e3a8d34",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    1,\n    1,\n    1\n  ],\n  \"majority_speaking\": 1\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TmbL8lANMqkRvMdfTeflgTF1BKFT81cU6JxIa8OjeO2M/NqEFyAJdGA2Lyxc3a+gtBcPUk6ZmnkbovChHuVRg0erVP/wFvxaF/uCtLs54bcgJp0ScFhZFrtQ="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "cachedContentTokenCount": 3386,
+          "promptTokensDetails": [
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            }
+          ],
+          "cacheTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 89
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 3297
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "rcLTavfRHOTV-8YP6868kQk"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "majority_speaking": 1
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 1,
+        "error_rate": 0.25,
+        "majority_error": 1
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "captured",
+      "media_sha256": "aab6959b87f54f00df8b82c13c00a741d4cdb4ec9c20fd318450ccbaa9d38f0b",
+      "request_sha256": "6966cceb44619b7d7bf4b1b69f38c4c3fcd6ccfe69abfb7794dd64d456e71655",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    1,\n    1,\n    0\n  ],\n  \"majority_speaking\": 1\n}",
+                  "thoughtSignature": "EmAKXgFpFH0Tt1Ov6jJcvunxW57JWfkvnqGq5SCACHi1yuOatsleHTru2SiT8MZAmw2a0aNxxK0FlNtWIm1vyspujNqUWe/jMaHEimHHOu5kmAk3kJ9x1/IPQdFprw5V3ew="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "cachedContentTokenCount": 3386,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            }
+          ],
+          "cacheTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 89
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 3297
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "vMLTauL9D9eP39IPipTNcQ"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 2,
+        "error_rate": 0.5,
+        "majority_error": 1
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "fastdvdnet",
+      "media_sha256": "08c9f08e674394a40a248bbd7ad0a36c101242f0af8d1928aa9fb462bfd92fac",
+      "request_sha256": "a738b2e80efb85d5ff3dfb447ef82bbb25c1bf1c6dbf0d3b5159dbdac64fdaf6",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    1,\n    1,\n    0\n  ],\n  \"majority_speaking\": 0\n}",
+                  "thoughtSignature": "EmAKXgFpFH0T21AOTqR7DD+vy5p1rXxBv8XznDsKE+1+nOS1ktrEv9W3UQycbDMuTig61N7AaHxbpO5VS7YHeS7ivL1C464Md0Ssnuda0xZZHSz8US+rRHrPMV9JauJ97fU="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "cachedContentTokenCount": 3386,
+          "promptTokensDetails": [
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            }
+          ],
+          "cacheTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 89
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 3297
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "yMLTarKdLsz5-8YPzfWecA"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 2,
+        "error_rate": 0.5,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "fastdvdnet",
+      "media_sha256": "e108b236341279b48a4f03173632ae3a3ff8a211083002caffe2a42177e17ebf",
+      "request_sha256": "ba9bb395cc71ac79256d93020459af9d038c8525891b440463392edf2ba76722",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    1,\n    1,\n    0\n  ],\n  \"majority_speaking\": 1\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TrU9wJwPWS/uJ/Svk9EEB5eAn6QgQDxZ9h08ZNTKdKXIac6UqW7e6lUZ134pWSx42BSbx+T7yGfVyKPAoctPtLSpHXcjbf8/FXkUrLGP6zJtliE/mWsTrAfk="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "zcLTarqKIa_BsOIPrfXT8QE"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 2,
+        "error_rate": 0.5,
+        "majority_error": 1
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "fastdvdnet",
+      "media_sha256": "b6828354840d16613229f9b7ade1ca635b7618bfbf061d0880f9803313e3ea22",
+      "request_sha256": "2b45641c837a4615e8be1795218ea8923c59f5f4148faee6f2c6d6960e56d72a",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    1,\n    1,\n    0\n  ],\n  \"majority_speaking\": 0\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TzAMkAbWdsEi26QVnH5Oyvpp0lrxSfv4N6ZGK0zw6f0rXIa4S/xg2ZYBeh/GnSeU25+s2P3yfGPa7wvpq4Wu3hly0NI+Yz7jrjjOH4eu1exeTLFRKgGEaNvA="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "1MLTatfLDIDW-8YP3tqQaA"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 2,
+        "error_rate": 0.5,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "captured",
+      "media_sha256": "d9a5b1013364db4e777b3aa461d8921b1cbc843cf5460226c556abd2176cff67",
+      "request_sha256": "cd87d24202f7e4febfcd1ab1d191a007d25e8c8705656db36ae9ada183ded999",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    0,\n    1,\n    0,\n    0\n  ],\n  \"majority_speaking\": 0\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TVTN16Og7lUfJdRUe8MwkX9BEiYIQyuZjiG2Yh0DJUxWIClQJJcNpM/cxccaB5O7MK0J7EX4n/WNm+yzsU/gbPsEydYI1Zg9ximjtJXFGl4qhcnYa/YI/dlo="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "3cLTas7nB9a739IPsfCfgAs"
+      },
+      "answer": {
+        "decisions": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 0
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 1,
+        "error_rate": 0.25,
+        "majority_error": 0
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "captured",
+      "media_sha256": "d8933515a67587eada68df2b1d8e5fb39cf0850582a4b08b243a1f10a3097499",
+      "request_sha256": "b3b1d260e1f58267c3028a88094762fb01b4ad6e6b175884babd201a2491ae0b",
+      "status": "COMPLETE",
+      "input_token_count": 7062,
+      "reserved_upper_cost_usd": 0.0046786,
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"decisions\": [\n    1,\n    1,\n    0,\n    0\n  ],\n  \"majority_speaking\": 1\n}",
+                  "thoughtSignature": "EmAKXgFpFH0TJLbuuRJuc2tmf4DlZuhmDLQTnhdoB2Kf2cRfIseIxjwTTon/Ks0lRyCVyFdM/diVA8NS4S/QUtlLd6ehpyVXafcXpUgo9vdUSEZMcuAXx/07oG1Z5f0L+hI="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 6413,
+          "candidatesTokenCount": 37,
+          "totalTokenCount": 6450,
+          "cachedContentTokenCount": 3386,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 169
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 6244
+            }
+          ],
+          "cacheTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 89
+            },
+            {
+              "modality": "VIDEO",
+              "tokenCount": 3297
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "48LTarP4GeyxsOIPz6jB8Q0"
+      },
+      "answer": {
+        "decisions": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "majority_speaking": 1
+      },
+      "evaluation": {
+        "eligible": 4,
+        "answered": 4,
+        "errors": 2,
+        "error_rate": 0.5,
+        "majority_error": 0
+      }
+    }
+  ]
+}

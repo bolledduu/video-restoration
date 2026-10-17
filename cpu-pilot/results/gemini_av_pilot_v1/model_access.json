@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-17",
+  "provider": "Google Gemini Developer API",
+  "credentials_checked": 2,
+  "both_authenticate": true,
+  "models_listed": [
+    "gemini-3.5-flash-lite",
+    "gemini-2.5-flash-lite"
+  ],
+  "gemini-2.5-flash-lite": {
+    "metadata_http": 200,
+    "countTokens_http": 404,
+    "generateContent_http": 404,
+    "provider_status": "NOT_FOUND",
+    "provider_message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements.",
+    "generation_results": null
+  },
+  "gemini-3.5-flash-lite": {
+    "generation_access_verified": true
+  },
+  "backup_used_for_generation": false,
+  "substitution": false
+}

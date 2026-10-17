@@ -1,0 +1,418 @@
+{
+  "status": "PREPARED",
+  "scope": "Exploratory native audiovisual perception pilot; not held-out confirmation, agent tooling, or CTS evaluation",
+  "models": [
+    "gemini-3.5-flash-lite",
+    "gemini-2.5-flash-lite"
+  ],
+  "conditions": [
+    "captured",
+    "fastdvdnet"
+  ],
+  "repetitions": 2,
+  "prompt": "This is a four-second face-crop video with synchronized scene audio. Determine whether the visible person is audibly speaking, not merely whether speech is present in the scene. Another person or an offscreen person may produce the audio. Do not identify anyone or infer commitments or words. For each interval [0,1), [1,2), [2,3), [3,4) seconds, decide whether this visible person is audibly speaking for MORE THAN HALF of that interval. Return four decisions in order: 1=speaking, 0=not speaking, -1=insufficient evidence. Also give your best binary majority_speaking decision (0 or 1) for MORE THAN HALF of the entire four seconds, even if uncertain. Do not return frame-level claims or explanations. Return only the requested JSON.",
+  "generation_config": {
+    "temperature": 0,
+    "maxOutputTokens": 1024,
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "OBJECT",
+      "properties": {
+        "decisions": {
+          "type": "ARRAY",
+          "items": {
+            "type": "INTEGER"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "majority_speaking": {
+          "type": "INTEGER"
+        }
+      },
+      "required": [
+        "decisions",
+        "majority_speaking"
+      ]
+    }
+  },
+  "requested_video_fps": 24,
+  "output_unit": "One-second majority speaking decisions plus clip majority; never dense frame accuracy",
+  "label_rule": "More than half of 25 official frame labels per second; clip tie maps to not speaking",
+  "audio_policy": "Identical AAC encoding across conditions, decoded equality verified; originals preserved",
+  "cost_limit_usd": 1.0,
+  "cost_reservation": "CountTokens plus 1024 output; conservative rates $0.30/M input and $2.50/M output for both models; not a billing receipt",
+  "selection": "All four existing hashed AVA development bundles; not selected by Gemini outcomes",
+  "code_sha256": "af536aea05a6db9b4c1120a99fedbd66397917b629d9d303f6fee7cbc2429b3f",
+  "cases": [
+    {
+      "id": "aca7e0ed106b9ca1",
+      "source": "4ZpjKfu6Cl8",
+      "start": 946.31,
+      "truth": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "majority_truth": 1,
+      "input_measurement": "cpu-pilot\\results\\ava_smoke_v1\\measurements.json",
+      "input_measurement_sha256": "37108cc49ec3aacafc0735b1b8ba1c1f458ff2bc0c6645b20fd9e0a8cce061f0",
+      "bundle_sha256": "fbe1d04a59ea158dc6f4592b7aff770dff6a967c645d33fe9fa97323a0c1a7d0",
+      "audio_original_sha256": "cbb5e31bafb80b6d28910e973a2f9e4616e8aa36affa9b23ba8d1d5808b917b1",
+      "media": {
+        "captured": {
+          "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\gemini_av_pilot_v1\\aca7e0ed106b9ca1_captured.mp4",
+          "sha256": "d8933515a67587eada68df2b1d8e5fb39cf0850582a4b08b243a1f10a3097499",
+          "decoded_pixels_sha256": "e1a97678b6e62bb4b34a47efc0b32d751f8bfcdcfbcfc3c2e8c5ce7f548c4407",
+          "decoded_audio_sha256": "fdba4f920b180b2466a2f05984ee48af6cf16f45e8bac6d6bc3a71c524244ccf",
+          "decoded_audio_samples": 64512
+        },
+        "fastdvdnet": {
+          "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\gemini_av_pilot_v1\\aca7e0ed106b9ca1_fastdvdnet.mp4",
+          "sha256": "5e8b89f165716e40bef1501542d378e79a5230602b715510e16d651348400c94",
+          "decoded_pixels_sha256": "8a78321c76819cb347da885b48e048dcb138e4858755a41f647ff9b1889f2212",
+          "decoded_audio_sha256": "fdba4f920b180b2466a2f05984ee48af6cf16f45e8bac6d6bc3a71c524244ccf",
+          "decoded_audio_samples": 64512
+        }
+      },
+      "quality": {
+        "captured": {
+          "musiq": 18.14721171061198,
+          "brisque": 41.14602915445963
+        },
+        "fastdvdnet": {
+          "musiq": 32.5880978902181,
+          "brisque": 35.3070182800293
+        }
+      }
+    },
+    {
+      "id": "b5e7d06dbd1cfb8a",
+      "source": "4ZpjKfu6Cl8",
+      "start": 914.11,
+      "truth": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "majority_truth": 0,
+      "input_measurement": "cpu-pilot\\results\\ava_smoke_v1\\measurements.json",
+      "input_measurement_sha256": "37108cc49ec3aacafc0735b1b8ba1c1f458ff2bc0c6645b20fd9e0a8cce061f0",
+      "bundle_sha256": "a6dfbf0cf6ea8fd82dc749df2c8e590165f8e9d3725bcec3c797914a44567a3f",
+      "audio_original_sha256": "16c2bf89d7fb47d6faeb79715e075ddeab56862e000404c3835f76c2d17a5d50",
+      "media": {
+        "captured": {
+          "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\gemini_av_pilot_v1\\b5e7d06dbd1cfb8a_captured.mp4",
+          "sha256": "aab6959b87f54f00df8b82c13c00a741d4cdb4ec9c20fd318450ccbaa9d38f0b",
+          "decoded_pixels_sha256": "7ca0c9df37cf3c246b8cd50b0296a594a16a50abd86bc39663c7dd8fab0590aa",
+          "decoded_audio_sha256": "1eb878b17dfeb04fac90c1ecf71932a3a1332d33e71f2ba627e1d23b15597362",
+          "decoded_audio_samples": 64512
+        },
+        "fastdvdnet": {
+          "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\gemini_av_pilot_v1\\b5e7d06dbd1cfb8a_fastdvdnet.mp4",
+          "sha256": "e108b236341279b48a4f03173632ae3a3ff8a211083002caffe2a42177e17ebf",
+          "decoded_pixels_sha256": "1b1caecbd60821f6c4fb7cf453b1163dfc8da95b62cbf123ad0aa8f8a6d9adf9",
+          "decoded_audio_sha256": "1eb878b17dfeb04fac90c1ecf71932a3a1332d33e71f2ba627e1d23b15597362",
+          "decoded_audio_samples": 64512
+        }
+      },
+      "quality": {
+        "captured": {
+          "musiq": 15.8765287399292,
+          "brisque": 49.42034149169922
+        },
+        "fastdvdnet": {
+          "musiq": 15.766924540201822,
+          "brisque": 48.053941090901695
+        }
+      }
+    },
+    {
+      "id": "eaa58bfe0ca84011",
+      "source": "4ZpjKfu6Cl8",
+      "start": 919.58,
+      "truth": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "majority_truth": 0,
+      "input_measurement": "cpu-pilot\\results\\ava_smoke_v1\\measurements.json",
+      "input_measurement_sha256": "37108cc49ec3aacafc0735b1b8ba1c1f458ff2bc0c6645b20fd9e0a8cce061f0",
+      "bundle_sha256": "a098f8fd254a760d48309fdcbd1f69408f729a7ae67ebda110aa5bca2f8e2cf3",
+      "audio_original_sha256": "e73b8bfda3666371c2dae3ed724153ac2db8bf902f52e7312f0a9ff09cdd0e68",
+      "media": {
+        "captured": {
+          "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\gemini_av_pilot_v1\\eaa58bfe0ca84011_captured.mp4",
+          "sha256": "4c4face006c14d4191f86712107f231b140db66f6b11312627628546e82314ec",
+          "decoded_pixels_sha256": "6f5b2b6196c7ef4f60fae629050764e02acaeac3e69f9f555d3b4bb355706fcc",
+          "decoded_audio_sha256": "1ec0ea1d500fbcce86f76ff75ecc9da87fb9c69d96d7ff5922187e0287a753c0",
+          "decoded_audio_samples": 64512
+        },
+        "fastdvdnet": {
+          "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\gemini_av_pilot_v1\\eaa58bfe0ca84011_fastdvdnet.mp4",
+          "sha256": "b6828354840d16613229f9b7ade1ca635b7618bfbf061d0880f9803313e3ea22",
+          "decoded_pixels_sha256": "373b2b693b13954de4160fbb8b58aceb1a51c262158f7c8bc00be42243e4108e",
+          "decoded_audio_sha256": "1ec0ea1d500fbcce86f76ff75ecc9da87fb9c69d96d7ff5922187e0287a753c0",
+          "decoded_audio_samples": 64512
+        }
+      },
+      "quality": {
+        "captured": {
+          "musiq": 22.969134012858074,
+          "brisque": 43.00470860799154
+        },
+        "fastdvdnet": {
+          "musiq": 31.10271708170573,
+          "brisque": 35.67409642537435
+        }
+      }
+    },
+    {
+      "id": "d389b6e89b92cde6",
+      "source": "IKdBLciu_-A",
+      "start": 924.44,
+      "truth": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "majority_truth": 0,
+      "input_measurement": "cpu-pilot\\results\\ava_corrected_dev_v3\\measurements.json",
+      "input_measurement_sha256": "29175cc7a8ab8fcbd623d3e68a5d3005cf307a6fcc1ab658d3c37d7d8c40323c",
+      "bundle_sha256": "e2c41bd075b6ac5f76c5fa736029dd7b3009c1b8e30da1be4bdb20e46435cafc",
+      "audio_original_sha256": "a6b24ca3819bb260a908ccd9981730f3426dfa619105329cb2996912e3526059",
+      "media": {
+        "captured": {
+          "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\gemini_av_pilot_v1\\d389b6e89b92cde6_captured.mp4",
+          "sha256": "d9a5b1013364db4e777b3aa461d8921b1cbc843cf5460226c556abd2176cff67",
+          "decoded_pixels_sha256": "b10782b44dc37cf1c40304684281b0fbc77a5e7f120fa6450f0db4b349523ba6",
+          "decoded_audio_sha256": "0e954c590f1dd2e057e8a107d8f6520041cd4cc80dafb981fbb9788ec0dbc567",
+          "decoded_audio_samples": 64512
+        },
+        "fastdvdnet": {
+          "path": "C:\\Users\\bolle\\Downloads\\cvpr submission\\video-restoration\\cpu-pilot\\data\\gemini_av_pilot_v1\\d389b6e89b92cde6_fastdvdnet.mp4",
+          "sha256": "08c9f08e674394a40a248bbd7ad0a36c101242f0af8d1928aa9fb462bfd92fac",
+          "decoded_pixels_sha256": "0cb44db3ae78ddc8aed27b792936f1b8c1044c6be0edbac0762bcb95131fd008",
+          "decoded_audio_sha256": "0e954c590f1dd2e057e8a107d8f6520041cd4cc80dafb981fbb9788ec0dbc567",
+          "decoded_audio_samples": 64512
+        }
+      },
+      "quality": {
+        "captured": {
+          "musiq": 24.577608108520508,
+          "brisque": 44.818827311197914
+        },
+        "fastdvdnet": {
+          "musiq": 39.814056396484375,
+          "brisque": 20.752731323242188
+        }
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 0,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 0,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 0,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 0,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 0,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 0,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "b5e7d06dbd1cfb8a",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 0,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "eaa58bfe0ca84011",
+      "condition": "fastdvdnet"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 1,
+      "case_id": "d389b6e89b92cde6",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "repeat": 0,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "captured"
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 0,
+      "case_id": "aca7e0ed106b9ca1",
+      "condition": "fastdvdnet"
+    }
+  ],
+  "limitations": [
+    "Two source videos only",
+    "Existing exploratory clips",
+    "Official labels without independent relabeling",
+    "Requested FPS does not prove internal model sampling",
+    "Single-person crop omits competing faces"
+  ]
+}
