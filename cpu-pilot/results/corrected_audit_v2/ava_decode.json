@@ -1,0 +1,301 @@
+{
+  "scope": "One second at first annotated time; technical decode only, not semantic synchronization validation",
+  "sources": [
+    {
+      "source": "1j20qq1JyX4",
+      "start": 900.46,
+      "annotation_rows": 10447,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 30
+    },
+    {
+      "source": "2DUITARAsWQ",
+      "start": 900.0,
+      "annotation_rows": 28575,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 30
+    },
+    {
+      "source": "4ZpjKfu6Cl8",
+      "start": 902.5,
+      "annotation_rows": 16540,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 30
+    },
+    {
+      "source": "5milLu-6bWI",
+      "start": 917.47,
+      "annotation_rows": 23100,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "8nO5FFbIAog",
+      "start": 903.0,
+      "annotation_rows": 14101,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "HKjR70GCRPE",
+      "start": 900.0,
+      "annotation_rows": 30547,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "HV0H6oc4Kvs",
+      "start": 900.0,
+      "annotation_rows": 27133,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "IKdBLciu_-A",
+      "start": 900.0,
+      "annotation_rows": 21939,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "IzvOYVMltkI",
+      "start": 905.28,
+      "annotation_rows": 32172,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "JNb4nWexD0I",
+      "start": 900.0,
+      "annotation_rows": 25550,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "KHHgQ_Pe4cI",
+      "start": 900.0,
+      "annotation_rows": 23849,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 30
+    },
+    {
+      "source": "LgBQlW6OTr0",
+      "start": 912.59,
+      "annotation_rows": 20365,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 29
+    },
+    {
+      "source": "P60OxWahxBQ",
+      "start": 900.0,
+      "annotation_rows": 36175,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 30
+    },
+    {
+      "source": "PmElx9ZVByw",
+      "start": 900.0,
+      "annotation_rows": 20564,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "UrsCy6qIGoo",
+      "start": 904.96,
+      "annotation_rows": 22730,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "_7oWZq_s_Sk",
+      "start": 900.96,
+      "annotation_rows": 10908,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 30
+    },
+    {
+      "source": "a5mEmM6w_ks",
+      "start": 900.0,
+      "annotation_rows": 23978,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "ax3q-RkVIt4",
+      "start": 916.09,
+      "annotation_rows": 29615,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 30
+    },
+    {
+      "source": "j5jmjhGBW44",
+      "start": 900.0,
+      "annotation_rows": 16837,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "kMy-6RtoOVU",
+      "start": 922.14,
+      "annotation_rows": 18900,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 23
+    },
+    {
+      "source": "qrkff49p4E4",
+      "start": 900.0,
+      "annotation_rows": 27079,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "rJKeqfTlAeY",
+      "start": 900.0,
+      "annotation_rows": 22807,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "xJmRNZVDDCY",
+      "start": 900.84,
+      "annotation_rows": 12715,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "z-fsLpGHq6o",
+      "start": 903.23,
+      "annotation_rows": 42348,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE",
+        "SPEAKING_NOT_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 25
+    },
+    {
+      "source": "zC5Fh2tTS1U",
+      "start": 903.95,
+      "annotation_rows": 10005,
+      "labels": [
+        "NOT_SPEAKING",
+        "SPEAKING_AUDIBLE"
+      ],
+      "status": "DECODE_OK",
+      "decoded_frames": 24
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+> **Evaluation correction (2026-10-17):** The old unified benchmark has clip-pairing errors and the old final-suite output does not validate CTS. Use [the repair report](cpu-pilot/reviews/FIXES_2026-10-17.md) and [artifact validity registry](cpu-pilot/results/EXPERIMENT_VALIDITY.json) before interpreting results. Historical outputs are preserved.
+
 # Video restoration and speaker-evidence assessment
 
 Research code, saved experiments, and a draft manuscript for studying when restoration helps or harms speaking-state decisions in tool-using multimodal pipelines.

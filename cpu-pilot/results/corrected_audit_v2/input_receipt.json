@@ -1,0 +1,11 @@
+{
+  "input_sha256": {
+    "results/temporal_evidence_measurements.json": "71e30d3603429ed97a250c8e949252524a55878e95ed913104ad504b5d233426",
+    "results/ava_smoke_v1/measurements.json": "37108cc49ec3aacafc0735b1b8ba1c1f458ff2bc0c6645b20fd9e0a8cce061f0",
+    "results/same_video_complete_pilot.json": "a471d605721290a1c790ff5f50cf823cb50296cbacbb57dcea0dc4526865384c",
+    "results/ami_agent_pilot.json": "8427c7541f38234c190425e928521cc55f2da99826e0e21cbaf17ad7cbdabd44",
+    "results/three_video_qwen_paired.json": "c87394c792824087431d582a7658694155b42de1381a7fb8d9118f27ded656fd",
+    "results/transfer_rq_qwen.json": "6d1b9762f7915554059e1987eeaa886e194e0577932ec887b74b94667285e7b1"
+  },
+  "historical_files_modified": false
+}

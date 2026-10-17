@@ -1,8 +1,8 @@
 # Preserve bytes of hashed experiment code and receipts across Windows checkouts.
 cpu-pilot/scripts/prepare_ava_agent.py -text
 cpu-pilot/scripts/ava_evidence_environment.py -text
-cpu-pilot/scripts/run_ava_local.py -text
-cpu-pilot/scripts/run_evidence_agent.py -text
+cpu-pilot/scripts/run_ava_local.py -text whitespace=cr-at-eol
+cpu-pilot/scripts/run_evidence_agent.py -text whitespace=cr-at-eol
 cpu-pilot/results/ava_smoke_v1/*.json -text whitespace=cr-at-eol
 # Preserve byte hashes in newly published historical experiments.
 cpu-pilot/benefit_qwen_protocol.json -text whitespace=cr-at-eol

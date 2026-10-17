@@ -1,0 +1,1735 @@
+{
+  "scope": "Separate historical protocols and attempts; do not pool into a model leaderboard",
+  "runs": [
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "kgVz_AXYvn0__label0__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 3,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 3
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "kgVz_AXYvn0__label0__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "restored",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 3,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 3
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "kgVz_AXYvn0__label0__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "restored",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 3,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 3
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "kgVz_AXYvn0__label0__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 3,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 3
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "kgVz_AXYvn0__label1__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 24,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "kgVz_AXYvn0__label1__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "restored",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 24,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "kgVz_AXYvn0__label1__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "restored",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 24,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "kgVz_AXYvn0__label1__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 24,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "EEey6Pt0rqI__label0__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 5,
+            "harm": 5,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "EEey6Pt0rqI__label0__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "restored",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 5,
+            "harm": 5,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 5,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "EEey6Pt0rqI__label0__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "restored",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 5,
+            "harm": 5,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 5,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "EEey6Pt0rqI__label0__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 5,
+            "harm": 5,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "EEey6Pt0rqI__label1__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "EEey6Pt0rqI__label1__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "restored",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "EEey6Pt0rqI__label1__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "restored",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "EEey6Pt0rqI__label1__sigma40",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "9Zja_cIAwY8",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "9Zja_cIAwY8",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "restored",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "9Zja_cIAwY8",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "restored",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "three_video_qwen_paired.json",
+      "clip_id": "9Zja_cIAwY8",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "fastdvdnet",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "spatial_nlm",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "spatial_nlm",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "fastdvdnet",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 24,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "fastdvdnet",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 24,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "spatial_nlm",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 24,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "spatial_nlm",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 24,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "fastdvdnet",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 24,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "ABqo634gI5s__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 24,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 0,
+        "coverage": 0.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "fastdvdnet",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "spatial_nlm",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "spatial_nlm",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "fastdvdnet",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label0__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 0,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 6,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 18,
+            "harm": 12,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 18,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 6,
+        "captured_errors_on_same_answered_frames": 6
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "fastdvdnet",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 6,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 18,
+            "harm": 12,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 18,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 24,
+        "captured_errors_on_same_answered_frames": 6
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "spatial_nlm",
+      "repeat": 0,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 6,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 18,
+            "harm": 12,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 18,
+            "corrections": 0
+          }
+        },
+        "answered": 21,
+        "coverage": 0.875,
+        "agent_errors": 15,
+        "captured_errors_on_same_answered_frames": 6
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "spatial_nlm",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 6,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 18,
+            "harm": 12,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 18,
+            "corrections": 0
+          }
+        },
+        "answered": 8,
+        "coverage": 0.3333333333333333,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "fastdvdnet",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 6,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 18,
+            "harm": 12,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 18,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 24,
+        "captured_errors_on_same_answered_frames": 6
+      }
+    },
+    {
+      "cohort": "transfer_rq_qwen.json",
+      "clip_id": "qv3-HaaxGUc__label1__sigma25",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "condition": "captured",
+      "repeat": 1,
+      "evaluation": {
+        "eligible": 24,
+        "captured_errors": 6,
+        "restorers": {
+          "spatial_nlm": {
+            "errors": 18,
+            "harm": 12,
+            "corrections": 0
+          },
+          "fastdvdnet": {
+            "errors": 24,
+            "harm": 18,
+            "corrections": 0
+          }
+        },
+        "answered": 24,
+        "coverage": 1.0,
+        "agent_errors": 6,
+        "captured_errors_on_same_answered_frames": 6
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_120b_interval_v1.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "COMPLETE",
+      "model": "openai/gpt-oss-120b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 73,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 62,
+            "harm": 0,
+            "corrections": 11
+          },
+          "spatial_nlm": {
+            "errors": 64,
+            "harm": 0,
+            "corrections": 9
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 62,
+        "captured_errors_on_same_answered_frames": 73
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_120b_interval_v1.json",
+      "clip_id": "b5e7d06dbd1cfb8a",
+      "status": "COMPLETE",
+      "model": "openai/gpt-oss-120b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_120b_interval_v1.json",
+      "clip_id": "eaa58bfe0ca84011",
+      "status": "COMPLETE",
+      "model": "openai/gpt-oss-120b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 45,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 45,
+        "captured_errors_on_same_answered_frames": 45
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_complete.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "BUDGET_EXHAUSTED",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_interval_v1.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "BUDGET_EXHAUSTED",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_interval_v2.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "BUDGET_EXHAUSTED",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_interval_v3.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "BUDGET_EXHAUSTED",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_interval_v4.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "BUDGET_EXHAUSTED",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_interval_v5.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "COMPLETE",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 73,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 62,
+            "harm": 0,
+            "corrections": 11
+          },
+          "spatial_nlm": {
+            "errors": 64,
+            "harm": 0,
+            "corrections": 9
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 62,
+        "captured_errors_on_same_answered_frames": 73
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_interval_v5.json",
+      "clip_id": "b5e7d06dbd1cfb8a",
+      "status": "COMPLETE",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_interval_v5.json",
+      "clip_id": "eaa58bfe0ca84011",
+      "status": "BUDGET_EXHAUSTED",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_interval_v6.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "COMPLETE",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 73,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 62,
+            "harm": 0,
+            "corrections": 11
+          },
+          "spatial_nlm": {
+            "errors": 64,
+            "harm": 0,
+            "corrections": 9
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 62,
+        "captured_errors_on_same_answered_frames": 73
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_interval_v6.json",
+      "clip_id": "b5e7d06dbd1cfb8a",
+      "status": "COMPLETE",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_gpt_oss_20b_interval_v6.json",
+      "clip_id": "eaa58bfe0ca84011",
+      "status": "COMPLETE",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 45,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 45,
+        "captured_errors_on_same_answered_frames": 45
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_openai_gpt-oss-20b_interval_v1.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "PROVIDER_FAILED",
+      "model": "openai/gpt-oss-20b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_qwen_qwen3_8-27b.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "PROVIDER_FAILED",
+      "model": "qwen/qwen3.8-27b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_qwen_qwen3_8-27b_bounded_v1.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "BUDGET_EXHAUSTED",
+      "model": "qwen/qwen3.8-27b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_qwen_qwen3_8-27b_compact_v1.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "BUDGET_EXHAUSTED",
+      "model": "qwen/qwen3.8-27b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_qwen_qwen3_8-27b_interval_v1.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 73,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 62,
+            "harm": 0,
+            "corrections": 11
+          },
+          "spatial_nlm": {
+            "errors": 64,
+            "harm": 0,
+            "corrections": 9
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 62,
+        "captured_errors_on_same_answered_frames": 73
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_qwen_qwen3_8-27b_interval_v1.json",
+      "clip_id": "b5e7d06dbd1cfb8a",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_qwen_qwen3_8-27b_interval_v1.json",
+      "clip_id": "eaa58bfe0ca84011",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3.8-27b",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 45,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 45,
+        "captured_errors_on_same_answered_frames": 45
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_qwen_retry1.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "PROVIDER_FAILED",
+      "model": "qwen/qwen3.8-27b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_groq_qwen_retry2.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "PROVIDER_FAILED",
+      "model": "qwen/qwen3.8-27b",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_openrouter_glm_4_6v_interval_v1.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "BUDGET_EXHAUSTED",
+      "model": "z-ai/glm-4.6v",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_openrouter_llama_3_3_70b_interval_v1.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "COMPLETE",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 73,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 62,
+            "harm": 0,
+            "corrections": 11
+          },
+          "spatial_nlm": {
+            "errors": 64,
+            "harm": 0,
+            "corrections": 9
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 62,
+        "captured_errors_on_same_answered_frames": 73
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_openrouter_llama_3_3_70b_interval_v1.json",
+      "clip_id": "b5e7d06dbd1cfb8a",
+      "status": "BUDGET_EXHAUSTED",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "evaluation": null
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_openrouter_llama_3_3_70b_interval_v2.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "COMPLETE",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 73,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 62,
+            "harm": 0,
+            "corrections": 11
+          },
+          "spatial_nlm": {
+            "errors": 64,
+            "harm": 0,
+            "corrections": 9
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 73,
+        "captured_errors_on_same_answered_frames": 73
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_openrouter_llama_3_3_70b_interval_v2.json",
+      "clip_id": "b5e7d06dbd1cfb8a",
+      "status": "COMPLETE",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_openrouter_llama_3_3_70b_interval_v2.json",
+      "clip_id": "eaa58bfe0ca84011",
+      "status": "COMPLETE",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 45,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 54,
+        "captured_errors_on_same_answered_frames": 45
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_openrouter_qwen3_vl_8b_interval_v1.json",
+      "clip_id": "aca7e0ed106b9ca1",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3-vl-8b-instruct",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 73,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 62,
+            "harm": 0,
+            "corrections": 11
+          },
+          "spatial_nlm": {
+            "errors": 64,
+            "harm": 0,
+            "corrections": 9
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 62,
+        "captured_errors_on_same_answered_frames": 73
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_openrouter_qwen3_vl_8b_interval_v1.json",
+      "clip_id": "b5e7d06dbd1cfb8a",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3-vl-8b-instruct",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 0,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 0,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 0,
+        "captured_errors_on_same_answered_frames": 0
+      }
+    },
+    {
+      "cohort": "ava_smoke_v1",
+      "artifact": "agent_openrouter_qwen3_vl_8b_interval_v1.json",
+      "clip_id": "eaa58bfe0ca84011",
+      "status": "COMPLETE",
+      "model": "qwen/qwen3-vl-8b-instruct",
+      "evaluation": {
+        "eligible": 99,
+        "captured_errors": 45,
+        "restorers": {
+          "fastdvdnet": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          },
+          "spatial_nlm": {
+            "errors": 45,
+            "harm": 0,
+            "corrections": 0
+          }
+        },
+        "answered": 99,
+        "coverage": 1.0,
+        "agent_errors": 45,
+        "captured_errors_on_same_answered_frames": 45
+      }
+    }
+  ]
+}

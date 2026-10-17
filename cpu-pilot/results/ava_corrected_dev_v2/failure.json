@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "stage": "audio duration validation",
+  "expected_samples": 64000,
+  "observed_samples": 64004,
+  "scored": false,
+  "resolution": "Bounded excess trimming, no padding; retry is ava_corrected_dev_v3"
+}

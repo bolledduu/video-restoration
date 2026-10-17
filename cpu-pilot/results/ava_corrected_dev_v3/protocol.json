@@ -1,0 +1,32 @@
+{
+  "dataset": "AVA-ActiveSpeaker v1.0 validation",
+  "scope": "One-source smoke test",
+  "sources": [
+    "IKdBLciu_-A"
+  ],
+  "episode_ids": [
+    "d389b6e89b92cde6"
+  ],
+  "manifest_sha256": "5ebb75f2e05296585433ed449341f79cd1cd897d004f4402814671d1b16c1db2",
+  "code_sha256": "30d9721af6d202b34e5abe1caf217e26a5a47addc1c1691e5d8525fd64c551d4",
+  "noise_sigma": 25,
+  "seed": 20261017,
+  "fps": 25,
+  "seconds": 4,
+  "crop_size": 128,
+  "candidate_names": [
+    "captured",
+    "fastdvdnet",
+    "spatial_nlm"
+  ],
+  "quality_frames": [
+    0,
+    49,
+    99
+  ],
+  "label_policy": "Official published annotations; inaudible speech excluded; no independent relabeling",
+  "alignment_policy": "Select decoded frames by absolute PTS; nearest official face annotation within 25ms; original audio segment at matching source time; technical alignment only, human sync review pending",
+  "source_sha256": {
+    "IKdBLciu_-A": "c1235a9927433a069fdaf8e46a992a11ef3bdb0c9326723fac7a471f8bd38678"
+  }
+}

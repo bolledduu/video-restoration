@@ -1,0 +1,1806 @@
+{
+  "root": "C:\\Users\\bolle\\Final Experiments\\video-restoration\\cpu-pilot\\data",
+  "summary": {
+    "files": 176,
+    "unreadable": 0,
+    "video_and_audio": 33,
+    "video_only": 64,
+    "audio_only": 79
+  },
+  "scope": "Stream headers only; does not certify decoding, synchronization, annotations or ground truth",
+  "files": [
+    {
+      "path": "ami\\meetings\\ES2002a\\ES2002a.Closeup1.avi",
+      "bytes": 60991090,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 391 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2002a\\ES2002a.Closeup2.avi",
+      "bytes": 39783576,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 250 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2002a\\ES2002a.Closeup3.avi",
+      "bytes": 38992476,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 244 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2002a\\ES2002a.Closeup4.avi",
+      "bytes": 42274936,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 265 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2002a\\ES2002a.Headset-0.wav",
+      "bytes": 40727594,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2002a\\ES2002a.Headset-1.wav",
+      "bytes": 40727594,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2002a\\ES2002a.Headset-2.wav",
+      "bytes": 40727594,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2002a\\ES2002a.Headset-3.wav",
+      "bytes": 40727594,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2002a\\ES2002a.Mix-Headset.wav",
+      "bytes": 40724524,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2003a\\ES2003a.Closeup1.avi",
+      "bytes": 25800036,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 178 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2003a\\ES2003a.Closeup2.avi",
+      "bytes": 36996618,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 257 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2003a\\ES2003a.Closeup3.avi",
+      "bytes": 25344318,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 175 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2003a\\ES2003a.Closeup4.avi",
+      "bytes": 26572950,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 183 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2003a\\ES2003a.Headset-0.wav",
+      "bytes": 36472536,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2003a\\ES2003a.Headset-1.wav",
+      "bytes": 36472536,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2003a\\ES2003a.Headset-2.wav",
+      "bytes": 36472536,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2003a\\ES2003a.Headset-3.wav",
+      "bytes": 36472536,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2003a\\ES2003a.Mix-Headset.wav",
+      "bytes": 36472536,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2004a\\ES2004a.Closeup1.avi",
+      "bytes": 29234432,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 196 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2004a\\ES2004a.Closeup2.avi",
+      "bytes": 41619828,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 282 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2004a\\ES2004a.Closeup3.avi",
+      "bytes": 33606840,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 226 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2004a\\ES2004a.Closeup4.avi",
+      "bytes": 32442176,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 218 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2004a\\ES2004a.Headset-0.wav",
+      "bytes": 33579394,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2004a\\ES2004a.Headset-1.wav",
+      "bytes": 33579394,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2004a\\ES2004a.Headset-2.wav",
+      "bytes": 33579394,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2004a\\ES2004a.Headset-3.wav",
+      "bytes": 33579394,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2004a\\ES2004a.Mix-Headset.wav",
+      "bytes": 33579394,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2005a\\ES2005a.Closeup1.avi",
+      "bytes": 12361056,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 206 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2005a\\ES2005a.Closeup2.avi",
+      "bytes": 11289384,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 187 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2005a\\ES2005a.Closeup3.avi",
+      "bytes": 12014026,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 199 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2005a\\ES2005a.Closeup4.avi",
+      "bytes": 10778960,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 177 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2005a\\ES2005a.Headset-0.wav",
+      "bytes": 15292120,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2005a\\ES2005a.Headset-1.wav",
+      "bytes": 15292120,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2005a\\ES2005a.Headset-2.wav",
+      "bytes": 15292120,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2005a\\ES2005a.Headset-3.wav",
+      "bytes": 15292120,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2005a\\ES2005a.Mix-Headset.wav",
+      "bytes": 15292120,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2006a\\ES2006a.Closeup1.avi",
+      "bytes": 46472604,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 286 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2006a\\ES2006a.Closeup2.avi",
+      "bytes": 43092734,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 265 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2006a\\ES2006a.Closeup3.avi",
+      "bytes": 34954266,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 214 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2006a\\ES2006a.Closeup4.avi",
+      "bytes": 47454400,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 291 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2006a\\ES2006a.Headset-0.wav",
+      "bytes": 41098968,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2006a\\ES2006a.Headset-1.wav",
+      "bytes": 41098968,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2006a\\ES2006a.Headset-2.wav",
+      "bytes": 41098968,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2006a\\ES2006a.Headset-3.wav",
+      "bytes": 41098968,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2006a\\ES2006a.Mix-Headset.wav",
+      "bytes": 41098968,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2007a\\ES2007a.Closeup1.avi",
+      "bytes": 32883534,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 213 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2007a\\ES2007a.Closeup2.avi",
+      "bytes": 29705458,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 191 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2007a\\ES2007a.Closeup3.avi",
+      "bytes": 32043046,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 207 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2007a\\ES2007a.Closeup4.avi",
+      "bytes": 31879722,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 206 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2007a\\ES2007a.Headset-0.wav",
+      "bytes": 38601772,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2007a\\ES2007a.Headset-1.wav",
+      "bytes": 38601772,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2007a\\ES2007a.Headset-2.wav",
+      "bytes": 38601772,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2007a\\ES2007a.Headset-3.wav",
+      "bytes": 38601772,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2007a\\ES2007a.Mix-Headset.wav",
+      "bytes": 38601772,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2008a\\ES2008a.Closeup1.avi",
+      "bytes": 36253102,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 275 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2008a\\ES2008a.Closeup2.avi",
+      "bytes": 30521414,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 230 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2008a\\ES2008a.Closeup3.avi",
+      "bytes": 28846722,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 217 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2008a\\ES2008a.Closeup4.avi",
+      "bytes": 37885098,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 287 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2008a\\ES2008a.Headset-0.wav",
+      "bytes": 33387564,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2008a\\ES2008a.Headset-1.wav",
+      "bytes": 33387564,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2008a\\ES2008a.Headset-2.wav",
+      "bytes": 33387564,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2008a\\ES2008a.Headset-3.wav",
+      "bytes": 33387564,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\ES2008a\\ES2008a.Mix-Headset.wav",
+      "bytes": 33387564,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1000a\\IS1000a.Closeup1.avi",
+      "bytes": 43448508,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 226 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1000a\\IS1000a.Closeup2.avi",
+      "bytes": 62087450,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 325 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1000a\\IS1000a.Closeup3.avi",
+      "bytes": 51965152,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 270 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1000a\\IS1000a.Closeup4.avi",
+      "bytes": 54859014,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 272 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1000a\\IS1000a.Headset-0.wav",
+      "bytes": 50643078,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1000a\\IS1000a.Headset-1.wav",
+      "bytes": 50643078,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1000a\\IS1000a.Headset-2.wav",
+      "bytes": 50643078,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1000a\\IS1000a.Headset-3.wav",
+      "bytes": 50643078,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1000a\\IS1000a.Mix-Headset.wav",
+      "bytes": 50645452,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1001a\\IS1001a.Closeup1.avi",
+      "bytes": 47033986,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 416 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1001a\\IS1001a.Closeup2.avi",
+      "bytes": 28628440,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 251 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1001a\\IS1001a.Closeup3.avi",
+      "bytes": 34781434,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 306 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1001a\\IS1001a.Closeup4.avi",
+      "bytes": 30344552,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 267 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1001a\\IS1001a.Headset-0.wav",
+      "bytes": 29091261,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1001a\\IS1001a.Headset-1.wav",
+      "bytes": 29091261,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1001a\\IS1001a.Headset-2.wav",
+      "bytes": 29091261,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1001a\\IS1001a.Headset-3.wav",
+      "bytes": 29091261,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1001a\\IS1001a.Mix-Headset.wav",
+      "bytes": 29089836,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1003a\\IS1003a.Closeup1.avi",
+      "bytes": 51633568,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 452 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1003a\\IS1003a.Closeup2.avi",
+      "bytes": 36318540,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 316 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1003a\\IS1003a.Closeup3.avi",
+      "bytes": 46057278,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 402 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1003a\\IS1003a.Closeup4.avi",
+      "bytes": 29649128,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 257 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1003a\\IS1003a.Headset-0.wav",
+      "bytes": 29233255,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1003a\\IS1003a.Headset-1.wav",
+      "bytes": 29233255,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1003a\\IS1003a.Headset-2.wav",
+      "bytes": 29233255,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1003a\\IS1003a.Headset-3.wav",
+      "bytes": 29233255,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1003a\\IS1003a.Mix-Headset.wav",
+      "bytes": 29231830,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1004a\\IS1004a.Closeup1.avi",
+      "bytes": 51954196,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 520 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1004a\\IS1004a.Closeup2.avi",
+      "bytes": 30647598,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 304 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1004a\\IS1004a.Closeup3.avi",
+      "bytes": 25656630,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 254 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1004a\\IS1004a.Closeup4.avi",
+      "bytes": 24239378,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 239 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1004a\\IS1004a.Headset-0.wav",
+      "bytes": 25494975,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1004a\\IS1004a.Headset-1.wav",
+      "bytes": 25494975,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1004a\\IS1004a.Headset-2.wav",
+      "bytes": 25494975,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1004a\\IS1004a.Headset-3.wav",
+      "bytes": 25494975,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\IS1004a\\IS1004a.Mix-Headset.wav",
+      "bytes": 25500093,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3003a\\TS3003a.Closeup1.avi",
+      "bytes": 67135068,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 354 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3003a\\TS3003a.Closeup2.avi",
+      "bytes": 49897724,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 262 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3003a\\TS3003a.Closeup3.avi",
+      "bytes": 60668032,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 320 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3003a\\TS3003a.Closeup4.avi",
+      "bytes": 56705506,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 297 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3003a\\TS3003a.Headset-0.wav",
+      "bytes": 48183678,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3003a\\TS3003a.Headset-1.wav",
+      "bytes": 48183678,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3003a\\TS3003a.Headset-2.wav",
+      "bytes": 48183678,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3003a\\TS3003a.Headset-3.wav",
+      "bytes": 48183678,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3003a\\TS3003a.Mix-Headset.wav",
+      "bytes": 48180608,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3004a\\TS3004a.Closeup1.avi",
+      "bytes": 59470384,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 351 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3004a\\TS3004a.Closeup2.avi",
+      "bytes": 43548738,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 256 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3004a\\TS3004a.Closeup3.avi",
+      "bytes": 50395994,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 298 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3004a\\TS3004a.Closeup4.avi",
+      "bytes": 53888502,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 317 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3004a\\TS3004a.Headset-0.wav",
+      "bytes": 43051390,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3004a\\TS3004a.Headset-1.wav",
+      "bytes": 43051390,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3004a\\TS3004a.Headset-2.wav",
+      "bytes": 43051390,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3004a\\TS3004a.Headset-3.wav",
+      "bytes": 43051390,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3004a\\TS3004a.Mix-Headset.wav",
+      "bytes": 43050368,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3005a\\TS3005a.Closeup1.avi",
+      "bytes": 54401540,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 327 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3005a\\TS3005a.Closeup2.avi",
+      "bytes": 46098718,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 277 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3005a\\TS3005a.Closeup3.avi",
+      "bytes": 44360644,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 266 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3005a\\TS3005a.Closeup4.avi",
+      "bytes": 60662486,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 364 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3005a\\TS3005a.Headset-0.wav",
+      "bytes": 42206250,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3005a\\TS3005a.Headset-1.wav",
+      "bytes": 42206250,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3005a\\TS3005a.Headset-2.wav",
+      "bytes": 42206250,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3005a\\TS3005a.Headset-3.wav",
+      "bytes": 42206250,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3005a\\TS3005a.Mix-Headset.wav",
+      "bytes": 42203180,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3006a\\TS3006a.Closeup1.avi",
+      "bytes": 51399310,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 325 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3006a\\TS3006a.Closeup2.avi",
+      "bytes": 42765996,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 269 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3006a\\TS3006a.Closeup3.avi",
+      "bytes": 53902668,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 340 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3006a\\TS3006a.Closeup4.avi",
+      "bytes": 48049468,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0: Video: mpeg4 (Simple Profile) (DIVX / 0x58564944), yuv420p, 352x288 [SAR 1:1 DAR 11:9], 304 kb/s, 25 fps, 25 tbr, 25 tbn"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3006a\\TS3006a.Headset-0.wav",
+      "bytes": 40092714,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3006a\\TS3006a.Headset-1.wav",
+      "bytes": 40092714,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3006a\\TS3006a.Headset-2.wav",
+      "bytes": 40092714,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3006a\\TS3006a.Headset-3.wav",
+      "bytes": 40092714,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ami\\meetings\\TS3006a\\TS3006a.Mix-Headset.wav",
+      "bytes": 40091692,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s16, 256 kb/s"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\1j20qq1JyX4.mp4",
+      "bytes": 252209059,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 600x480 [SAR 1:1 DAR 5:4], 504 kb/s, 29.97 fps, 29.97 tbr, 90k tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 125 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\2DUITARAsWQ.mp4",
+      "bytes": 182078258,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 640x480 [SAR 1:1 DAR 4:3], 556 kb/s, 30 fps, 30 tbr, 90k tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 125 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\4ZpjKfu6Cl8.f251.webm",
+      "bytes": 85607433,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\4ZpjKfu6Cl8.f398.mp4",
+      "bytes": 556338995,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: av1 (libaom-av1) (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x620 [SAR 1:1 DAR 64:31], 47 kb/s, 29.97 fps, 29.97 tbr, 30k tbn (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\5milLu-6bWI.mp4",
+      "bytes": 235901323,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 788x480 [SAR 1:1 DAR 197:120], 526 kb/s, 25 fps, 25 tbr, 90k tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 125 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\8nO5FFbIAog.f251.webm",
+      "bytes": 42920833,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\8nO5FFbIAog.f397.mp4",
+      "bytes": 122929806,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: av1 (libaom-av1) (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 656x480 [SAR 1:1 DAR 41:30], 90 kb/s, 25 fps, 25 tbr, 12800 tbn (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\_7oWZq_s_Sk.mkv",
+      "bytes": 388756569,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(und): Video: h264 (Main), yuv420p(progressive), 480x360 [SAR 1:1 DAR 4:3], 29.97 fps, 29.97 tbr, 1k tbn (default)",
+        "Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\a5mEmM6w_ks.f243.webm",
+      "bytes": 82609840,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0(eng): Video: vp9 (Profile 0), yuv420p(tv, bt709), 640x360, SAR 1:1 DAR 16:9, 25 fps, 25 tbr, 1k tbn (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\a5mEmM6w_ks.f251.webm",
+      "bytes": 46768802,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\ax3q-RkVIt4.f251.webm",
+      "bytes": 67840813,
+      "video": false,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\ax3q-RkVIt4.f397.mp4",
+      "bytes": 196678909,
+      "video": true,
+      "audio": false,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: av1 (libaom-av1) (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 640x480 [SAR 1:1 DAR 4:3], 257 kb/s, 30 fps, 30 tbr, 15360 tbn (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\HKjR70GCRPE.mp4",
+      "bytes": 552997299,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, smpte170m/smpte170m/bt709, progressive), 640x480 [SAR 1:1 DAR 4:3], 541 kb/s, 25 fps, 25 tbr, 12800 tbn (default)",
+        "Stream #0:1[0x2](eng): Audio: opus (Opus / 0x7375704F), 48000 Hz, stereo, fltp, 119 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\HV0H6oc4Kvs.mkv",
+      "bytes": 331591448,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(und): Video: h264 (Main), yuv420p(progressive), 640x346 [SAR 1:1 DAR 320:173], 25 fps, 25 tbr, 1k tbn (default)",
+        "Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\IKdBLciu_-A.mp4",
+      "bytes": 551708510,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 656x480 [SAR 1:1 DAR 41:30], 605 kb/s, 25 fps, 25 tbr, 90k tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 125 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\IzvOYVMltkI.mp4",
+      "bytes": 356569513,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: av1 (libaom-av1) (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x718 [SAR 1:1 DAR 640:359], 459 kb/s, 25 fps, 25 tbr, 12800 tbn (default)",
+        "Stream #0:1[0x2](eng): Audio: opus (Opus / 0x7375704F), 48000 Hz, stereo, fltp, 93 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\j5jmjhGBW44.mkv",
+      "bytes": 872299176,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(und): Video: h264 (Main), yuv420p(progressive), 854x468, SAR 1:1 DAR 427:234, 25 fps, 25 tbr, 1k tbn (default)",
+        "Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\JNb4nWexD0I.mkv",
+      "bytes": 302799293,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(und): Video: h264 (Main), yuv420p(progressive), 640x480, SAR 1:1 DAR 4:3, 25 fps, 25 tbr, 1k tbn (default)",
+        "Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\KHHgQ_Pe4cI.mkv",
+      "bytes": 885690634,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(und): Video: h264 (High), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 29.97 fps, 29.97 tbr, 1k tbn (default)",
+        "Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\kMy-6RtoOVU.mp4",
+      "bytes": 163514647,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: av1 (libaom-av1) (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 505 kb/s, 23.98 fps, 23.98 tbr, 24k tbn (default)",
+        "Stream #0:1[0x2](eng): Audio: opus (Opus / 0x7375704F), 48000 Hz, stereo, fltp, 112 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\LgBQlW6OTr0.mp4",
+      "bytes": 414151933,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 640x480 [SAR 1:1 DAR 4:3], 462 kb/s, 29.97 fps, 29.97 tbr, 90k tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 125 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\P60OxWahxBQ.mkv",
+      "bytes": 846462318,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(und): Video: h264 (High), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 29.97 fps, 29.97 tbr, 1k tbn (default)",
+        "Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\PmElx9ZVByw.mp4",
+      "bytes": 452297489,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 656x480 [SAR 1:1 DAR 41:30], 491 kb/s, 25 fps, 25 tbr, 90k tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 125 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\qrkff49p4E4.mp4",
+      "bytes": 352943421,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 640x480 [SAR 1:1 DAR 4:3], 671 kb/s, 25 fps, 25 tbr, 90k tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 125 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\rJKeqfTlAeY.mkv",
+      "bytes": 1499835604,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(und): Video: h264 (High), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 1k tbn (default)",
+        "Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\UrsCy6qIGoo.mkv",
+      "bytes": 322204716,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(und): Video: h264 (Main), yuv420p(tv, smpte170m/bt470bg/bt709, progressive), 640x360 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 1k tbn (default)",
+        "Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\xJmRNZVDDCY.mkv",
+      "bytes": 1586771513,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0(und): Video: h264 (High), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 1k tbn (default)",
+        "Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\z-fsLpGHq6o.mp4",
+      "bytes": 476429838,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: av1 (libaom-av1) (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 448 kb/s, 25 fps, 25 tbr, 12800 tbn (default)",
+        "Stream #0:1[0x2](eng): Audio: opus (Opus / 0x7375704F), 48000 Hz, stereo, fltp, 127 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "ava\\videos\\zC5Fh2tTS1U.mp4",
+      "bytes": 187024972,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 640x360 [SAR 1:1 DAR 16:9], 264 kb/s, 23.25 fps, 23.25 tbr, 90k tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 125 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "omnivr\\degraded\\speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+      "bytes": 7866853,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 12261 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 214 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "omnivr\\degraded\\speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+      "bytes": 14146828,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 22240 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 198 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "omnivr\\degraded\\speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+      "bytes": 18607558,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 29325 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "omnivr\\omnivr_author_output\\speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+      "bytes": 3741272,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1088, 5733 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 194 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "omnivr\\omnivr_author_output\\speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+      "bytes": 3657423,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1088, 5599 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 194 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "omnivr\\omnivr_author_output\\speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+      "bytes": 17327640,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1088, 27279 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 206 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "omnivr\\reference\\speech_000_4b8f0f25-7620-45cb-9523-5a5f07b8277a.mp4",
+      "bytes": 2045635,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 3048 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 193 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "omnivr\\reference\\speech_001_7230c6dc-4da3-4b59-9038-22f9afe05f34.mp4",
+      "bytes": 2960313,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 4500 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 192 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "omnivr\\reference\\speech_002_68fec0b4-495f-482d-b597-ed82d335f2f8.mp4",
+      "bytes": 4786166,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 7397 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 193 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "raw\\pilot_01_speaker_recognition.mp4",
+      "bytes": 1247210,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 640x360, 486 kb/s, 25 fps, 25 tbr, 12800 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 129 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "raw\\pilot_02_speaker_detection_positive.mp4",
+      "bytes": 453811,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 640x360, 319 kb/s, 23.98 fps, 23.98 tbr, 19184 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)"
+      ],
+      "probe_readable": true
+    },
+    {
+      "path": "raw\\pilot_03_speaker_detection_negative.mp4",
+      "bytes": 1064815,
+      "video": true,
+      "audio": true,
+      "streams": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 854x480, 810 kb/s, 25 fps, 25 tbr, 12800 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)"
+      ],
+      "probe_readable": true
+    }
+  ]
+}

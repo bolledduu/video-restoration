@@ -44,11 +44,10 @@ class Provider:
         self.session=requests.Session()
 
     def request(self, method, path, **kwargs):
-        headers = {'Authorization': 'Bearer ' + self.key}
-        if self.name == 'openrouter':
-            headers['HTTP-Referer'] = 'https://github.com/google-deepmind/antigravity'
-            headers['X-Title'] = 'Video Restoration Benchmark'
         for attempt in range(10):
+            headers = {'Authorization': 'Bearer ' + self.key}
+            if self.name == 'openrouter':
+                headers['X-Title'] = 'Video Restoration Benchmark'
             try: r=self.session.request(method,self.base+path,headers=headers,timeout=90,**kwargs)
             except requests.RequestException:raise RuntimeError('Provider transport failed; no response recorded') from None
             if r.status_code==401 and self.backup and not self.used_backup:
@@ -69,21 +68,17 @@ def run_episode(provider, model, case, provider_name):
     env=EvidenceEnvironment(blind_case(case));usage=[];served=[];messages=[{'role':'system','content':SYSTEM},
         {'role':'user','content':f'The total number of scored timestamps for this clip is exactly {env.n}. Inspect the available candidates, compare restored candidates with capture, select the best candidate, and submit decisions covering all timestamps from 0 to {env.n} using submit_decisions.'}]
 
-    for turn in range(12):
-        has_inspected = set(env.data) <= env.inspected
-        has_compared = (set(env.data) - {'captured'}) <= env.compared
-        ready = has_inspected and has_compared
+    for turn in range(8):
+        ready = (set(env.data) <= env.inspected and
+                 (set(env.data) - {'captured'}) <= env.compared)
         tools = schemas()
         tool_choice = 'auto'
-        if has_inspected and not has_compared and turn >= 6:
-            messages.append({'role': 'user', 'content': 'Do not inspect local intervals. Call compare_with_capture for the restored candidates now.'})
-        elif ready and turn >= 8:
-            messages.append({'role': 'user', 'content': 'All candidate evidence has been inspected and compared. Please call submit_decisions now to submit the speaking decisions.'})
-        if turn == 11:
-            tools = [s for s in schemas() if s['function']['name'] == 'submit_decisions']
-            tool_choice = 'required'
-            if not ready:
-                messages.append({'role': 'user', 'content': 'Budget limit reached. You must submit decisions now using candidate="captured".'})
+        if ready and turn >= 4:
+            tools = [s for s in tools if s['function']['name'] == 'submit_decisions']
+            tool_choice = {'type':'function', 'function':{'name':'submit_decisions'}}
+        elif turn >= 5:
+            messages.append({'role':'user', 'content':
+                'Complete missing candidate inspections and comparisons, then submit. Do not repeat completed inspections.'})
         payload={'model':model,'messages':messages,'tools':tools,'tool_choice':tool_choice,'temperature':0,'max_completion_tokens':1024}
 
 
@@ -110,7 +105,8 @@ def run_episode(provider, model, case, provider_name):
 def score(case, run):
     """Paired counts, not independent-frame significance tests."""
     truth=case['labels'];base=[int(p>=.5) for p in case['candidates']['captured']['probability']]
-    if len(truth)!=len(base):raise ValueError('Label grid mismatch')
+    if not truth or len(truth)!=len(base):raise ValueError('Label grid mismatch')
+    if any(type(y) not in (int, bool) or y not in (0,1) for y in truth):raise ValueError('Invalid labels')
     result={'eligible':len(truth),'captured_errors':sum(a!=b for a,b in zip(base,truth)),'restorers':{}}
     for name,value in case['candidates'].items():
         if name in ('captured','reference'):continue
@@ -120,7 +116,10 @@ def score(case, run):
             'harm':sum(b==y and p!=y for b,p,y in zip(base,pred,truth)),
             'corrections':sum(b!=y and p==y for b,p,y in zip(base,pred,truth))}
     if run.get('submission'):
-        decisions=run['submission']['decisions'];pairs=[(i,int(v=='speaking')) for i,v in enumerate(decisions) if v!='abstain']
+        decisions=run['submission']['decisions']
+        if len(decisions)!=len(truth):raise ValueError('Incomplete decision grid')
+        if any(v not in ('speaking','not_speaking','abstain') for v in decisions):raise ValueError('Invalid decision')
+        pairs=[(i,int(v=='speaking')) for i,v in enumerate(decisions) if v!='abstain']
         result.update(answered=len(pairs),coverage=len(pairs)/len(truth),
             agent_errors=sum(p!=truth[i] for i,p in pairs),
             captured_errors_on_same_answered_frames=sum(base[i]!=truth[i] for i,p in pairs))
@@ -134,8 +133,8 @@ def main():
     if not measured['cases']:raise RuntimeError('No eligible cases')
     identity={'measurements_sha256':sha(args.measurements),'runner_sha256':sha(__file__),
         'environment_sha256':sha(Path(__file__).with_name('ava_evidence_environment.py')),'provider':args.provider,'model':args.model,
-        'max_turns':12,'max_tools':24,'max_completion_tokens':1024,'access':'tool_measurements_only','temperature':0,
-        'finalization_policy':'Remind at turn 8, force submission when ready at turn 11','submission_format':'complete interval partition'}
+        'max_turns':8,'max_tools':24,'max_completion_tokens':1024,'access':'tool_measurements_only','temperature':0,
+        'finalization_policy':'Force submission from turn 5 only after all inspections and comparisons; incomplete evidence exhausts budget','submission_format':'complete interval partition'}
 
     args.output.parent.mkdir(parents=True,exist_ok=True)
     report={'identity':identity,'status':'RUNNING','cases':[]}

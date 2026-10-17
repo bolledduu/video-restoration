@@ -1,14 +1,8 @@
-"""Final Experimentation Suite for Audiovisual Restoration & Speaker-Evidence Safeguards.
+"""Historical exploratory Ridge baseline and policy utilities.
 
-Strictly follows Prompt 1 and METHOD_PROPOSAL_2026-10-15:
-1. Source-disjoint development and held-out test splits.
-2. Complete implementation of Captured Temporal Support (CTS) safeguard.
-3. Full comparison against captured-only, restored-only, quality-based,
-   confidence-based, disagreement fallback/abstain, and labeled oracle.
-4. Component ablations (audio probe, decision margin, quality-only, symmetric disagreement).
-5. Downstream real Qwen-27B agent evaluation.
-6. Source-level bootstrap uncertainty estimation (2,000 replicates).
-7. Publication plots and structured reports.
+This is NOT the proposed masked Captured Temporal Support method. The former
+full-experiment entry point is disabled: it used proxy audio features and
+training-set threshold tuning. Use reanalyse_pilot.py for corrected policies.
 """
 
 import argparse
@@ -69,7 +63,7 @@ def load_all_experimental_data():
             res_m = c['metrics']['restored']['musiq']
             cap_b = c['metrics']['captured']['brisque']
             res_b = c['metrics']['restored']['brisque']
-            arc = float(c.get('alignment_response_change', 0.0))
+            arc = c.get('alignment_response_change')
             
             all_pairs.append({
                 'id': c['id'],
@@ -107,9 +101,7 @@ def load_all_experimental_data():
                     res_m = res['musiq']
                     res_b = res['brisque']
                     
-                    # Compute synthetic audio probe proxy based on cross-entropy stability
-                    p_diff = np.abs(res_p - cap_p)
-                    arc = float(np.mean(p_diff) * 0.15)
+                    arc = None  # Not measured; never substitute a probability-difference proxy.
                     
                     all_pairs.append({
                         'id': f"{c['id']}__{restorer_name}",
@@ -152,7 +144,7 @@ def load_all_experimental_data():
                 res_p = np.asarray(res['probability'], dtype=float)
                 res_m = res['musiq']
                 res_b = res['brisque']
-                arc = float(np.mean(np.abs(res_p - cap_p)) * 0.2)
+                arc = None  # No audio intervention measured.
                 
                 all_pairs.append({
                     'id': f"{cid}__{restorer_name}",
@@ -192,12 +184,12 @@ def load_all_experimental_data():
                     res_p = np.asarray(res['probability'], dtype=float)
                     res_m = res['musiq']
                     res_b = res['brisque']
-                    arc = 0.05
+                    arc = None  # No audio intervention measured.
                     all_pairs.append({
                         'id': f"{cid}__{restorer_name}",
                         'source': src,
                         'dataset': 'AMI-Meeting',
-                        'degradation': 'Meeting-Capture',
+                        'degradation': 'Meeting-Capture-plus-synthetic-noise-sigma40',
                         'restorer': restorer_name,
                         'labels': labels,
                         'captured_prob': cap_p,
@@ -239,7 +231,9 @@ def extract_features(pair, ablation=None):
     cap_p = pair['captured_prob']
     res_p = pair['restored_prob']
     
-    arc = pair['audio_alignment_change']
+    # Audio interventions are absent in several cohorts. Exclude this feature
+    # consistently rather than encode dataset-specific missingness or proxies.
+    arc = 0.0
     score_disagree = float(np.mean(np.abs(res_p - cap_p)))
     thresh_disagree = float(np.mean((res_p >= 0.5) != (cap_p >= 0.5)))
     conf_gain = float(np.mean(np.abs(res_p - 0.5) - np.abs(cap_p - 0.5)))
@@ -262,8 +256,8 @@ def extract_features(pair, ablation=None):
         
     return feats
 
-class CTSSafeguard:
-    """Captured Temporal Support (CTS) Safeguard.
+class ExploratoryRidgeSelector:
+    """Historical aggregate-feature Ridge selector; not the proposed CTS method.
     Predicts harm probability h_hat and correction potential g_hat,
     then executes quality-seeking risk-constrained selection.
     """
@@ -303,11 +297,11 @@ class CTSSafeguard:
         self.harm_model.fit(X, y_harm)
         self.corr_model.fit(X, y_corr)
         
-        # Calibrate thresholds on dev set to preserve corrections while capping harm <= 2%
+        # Historical in-sample heuristic; provides NO calibrated risk guarantee.
         preds_harm = np.clip(self.harm_model.predict(X), 0.0, 1.0)
         preds_corr = np.clip(self.corr_model.predict(X), 0.0, 1.0)
         
-        # Select tau_h at 75th percentile of harmless cases
+        # In-sample 80th percentile; exploratory only.
         harmless_mask = (y_harm == 0)
         if harmless_mask.any():
             self.tau_h = float(np.percentile(preds_harm[harmless_mask], 80))
@@ -457,6 +451,15 @@ def evaluate_policy_on_pair(policy, pair, cts_safeguard=None):
         harm = 0
         corr = 0
         
+    # Evidence origin must be determined by the selection rule, not by class agreement.
+    if selected_cand in ('restored', 'captured'):
+        restored_mask = np.full(n, selected_cand == 'restored')
+    elif selected_cand == 'mixed_confidence':
+        restored_mask = res_conf > cap_conf
+    elif selected_cand in ('fallback_disagreement', 'abstain_disagreement'):
+        restored_mask = ~disagree
+    else:
+        restored_mask = res_correct
     # Quality changes
     if selected_cand == 'restored':
         d_mu = pair['restored_musiq'] - pair['captured_musiq']
@@ -465,11 +468,10 @@ def evaluate_policy_on_pair(policy, pair, cts_safeguard=None):
         d_mu = 0.0
         d_br = 0.0
     else:
-        # Weighted by fraction of frames selected as restored
-        frac_res = np.mean(final_dec == r_dec) if n_ans > 0 else 0.0
-        d_mu = frac_res * (pair['restored_musiq'] - pair['captured_musiq'])
-        d_br = frac_res * (pair['captured_brisque'] - pair['restored_brisque'])
-        
+        # Clip IQA cannot measure the quality of a temporally mixed output.
+        d_mu = None
+        d_br = None
+
     return {
         'pair_id': pair['id'],
         'source': pair['source'],
@@ -478,7 +480,7 @@ def evaluate_policy_on_pair(policy, pair, cts_safeguard=None):
         'answered_frames': n_ans,
         'coverage': n_ans / n,
         'errors': errors,
-        'error_rate': errors / n_ans if n_ans > 0 else 0.0,
+        'error_rate': errors / n_ans if n_ans > 0 else None,
         'captured_errors_on_answered': cap_errors_on_answered,
         'harm': harm,
         'harm_rate': harm / n,
@@ -487,7 +489,9 @@ def evaluate_policy_on_pair(policy, pair, cts_safeguard=None):
         'net_accuracy_gain': (corr - harm) / n,
         'delta_musiq': d_mu,
         'delta_brisque': d_br,
-        'selected_candidate': selected_cand
+        'selected_candidate': selected_cand,
+        'restored_selected_frames': int(np.sum(restored_mask & answered)),
+        'quality_available': d_mu is not None
     }
 
 # ==============================================================================
@@ -546,70 +550,24 @@ def run_source_bootstrap(eval_rows, n_bootstraps=2000, seed=42):
 # ==============================================================================
 
 def evaluate_downstream_agent_runs():
-    """Aggregates and scores the real completed Qwen-3.8-27b agent traces."""
-    agent_results = []
-    
-    # 1. AVA smoke agent run
-    f_ava_agent = RESULTS_DIR / 'ava_smoke_v1/agent_groq_qwen_qwen3_8-27b_interval_v1.json'
-    if f_ava_agent.exists():
-        data = json.loads(f_ava_agent.read_text(encoding='utf-8'))
-        for c in data.get('cases', []):
-            ev = c['evaluation']
-            sub = c['run'].get('submission', {})
-            agent_results.append({
-                'cohort': 'AVA-ActiveSpeaker-Smoke',
-                'clip_id': c['id'],
-                'model': data['identity']['model'],
-                'selected_candidate': sub.get('candidate', 'unknown'),
-                'eligible': ev['eligible'],
-                'answered': ev['answered'],
-                'coverage': ev['coverage'],
-                'agent_errors': ev['agent_errors'],
-                'captured_errors': ev['captured_errors_on_same_answered_frames'],
-                'benefit': ev['captured_errors_on_same_answered_frames'] - ev['agent_errors']
-            })
-            
-    # 2. Three video Qwen paired (kgVz_AXYvn0, EEey6Pt0rqI, 9Zja_cIAwY8)
-    f_three = RESULTS_DIR / 'three_video_qwen_paired.json'
-    if f_three.exists():
-        data = json.loads(f_three.read_text(encoding='utf-8'))
-        for r in data.get('runs', []):
-            if r.get('status') == 'COMPLETE':
-                ev = r.get('evaluation', {})
-                agent_results.append({
-                    'cohort': 'Three-Video-Qwen-Paired',
-                    'clip_id': r.get('case_id', 'unknown'),
-                    'model': 'qwen/qwen3.8-27b',
-                    'selected_candidate': r.get('condition', 'unknown'),
-                    'eligible': ev.get('eligible', 24),
-                    'answered': ev.get('answered', 24),
-                    'coverage': ev.get('coverage', 1.0),
-                    'agent_errors': ev.get('agent_errors', 0),
-                    'captured_errors': ev.get('captured_errors_on_same_answered_frames', 0),
-                    'benefit': ev.get('captured_errors_on_same_answered_frames', 0) - ev.get('agent_errors', 0)
-                })
-                
-    # 3. Transfer RQ Qwen (ABqo634gI5s, qv3-HaaxGUc)
-    f_trans = RESULTS_DIR / 'transfer_rq_qwen.json'
-    if f_trans.exists():
-        data = json.loads(f_trans.read_text(encoding='utf-8'))
-        for r in data.get('runs', []):
-            if r.get('status') == 'COMPLETE':
-                ev = r.get('evaluation', {})
-                agent_results.append({
-                    'cohort': 'Transfer-RQ-Qwen',
-                    'clip_id': r.get('case_id', 'unknown'),
-                    'model': 'qwen/qwen3.8-27b',
-                    'selected_candidate': r.get('condition', 'unknown'),
-                    'eligible': ev.get('eligible', 24),
-                    'answered': ev.get('answered', 24),
-                    'coverage': ev.get('coverage', 1.0),
-                    'agent_errors': ev.get('agent_errors', 0),
-                    'captured_errors': ev.get('captured_errors_on_same_answered_frames', 0),
-                    'benefit': ev.get('captured_errors_on_same_answered_frames', 0) - ev.get('agent_errors', 0)
-                })
-                
-    return agent_results
+    """Legacy cohorts stay separate; reconstruct scores instead of defaulting to zero."""
+    from agent_result_adapters import legacy_runs
+    from run_evidence_agent import score
+    rows = []
+    for name in ('three_video_qwen_paired.json', 'transfer_rq_qwen.json'):
+        path = RESULTS_DIR / name
+        if path.exists():
+            rows.extend(legacy_runs(json.loads(path.read_text()), name))
+    measurements = json.loads((RESULTS_DIR/'ava_smoke_v1/measurements.json').read_text())
+    cases = {c['id']:c for c in measurements['cases']}
+    for path in sorted((RESULTS_DIR/'ava_smoke_v1').glob('agent_*.json')):
+        document = json.loads(path.read_text())
+        for entry in document['cases']:
+            run = entry['run']
+            rows.append(dict(cohort='ava_smoke_v1', artifact=path.name,
+                clip_id=entry['id'], status=run['status'], model=document['identity']['model'],
+                evaluation=score(cases[entry['id']],run) if run['status']=='COMPLETE' else None))
+    return rows
 
 # ==============================================================================
 # 6. PLOT GENERATION
@@ -737,6 +695,7 @@ def generate_publication_plots(summary_df, ablations_df, output_dir):
 # ==============================================================================
 
 def main():
+    raise RuntimeError('Historical final-suite claims are invalid. Run reanalyse_pilot.py; preserve old outputs.')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output-dir', type=Path, default=RESULTS_DIR)
     args = parser.parse_args()
@@ -756,7 +715,7 @@ def main():
     
     # Step 2: Fit and Calibrate CTS Safeguard on Dev Data ONLY
     print(f"\n[2] Developing and Calibrating CTS Safeguard on Development Data ONLY...")
-    cts = CTSSafeguard()
+    cts = ExploratoryRidgeSelector()
     cts.fit(dev_pairs)
     print(f"    -> Fitted Transition Estimators (Harm & Correction Models).")
     print(f"    -> Calibrated Risk Threshold tau_h = {cts.tau_h:.4f}, tau_net = {cts.tau_net:.4f}")
@@ -765,10 +724,10 @@ def main():
     # Step 3: Fit Ablation Variants
     ablations = {
         'full_cts': cts,
-        'ablation_no_audio_probe': CTSSafeguard(ablation='no_audio_probe'),
-        'ablation_no_decision_margin': CTSSafeguard(ablation='no_decision_margin'),
-        'ablation_quality_only': CTSSafeguard(ablation='quality_only'),
-        'ablation_symmetric_disagreement': CTSSafeguard(ablation='symmetric_disagreement')
+        'ablation_no_audio_probe': ExploratoryRidgeSelector(ablation='no_audio_probe'),
+        'ablation_no_decision_margin': ExploratoryRidgeSelector(ablation='no_decision_margin'),
+        'ablation_quality_only': ExploratoryRidgeSelector(ablation='quality_only'),
+        'ablation_symmetric_disagreement': ExploratoryRidgeSelector(ablation='symmetric_disagreement')
     }
     for name, model in ablations.items():
         if name != 'full_cts':

@@ -1,0 +1,18 @@
+{
+  "full_held_out_test_measurements.json": {
+    "status": "INVALID_PAIRING",
+    "reason": "Truncated identities mixed different states and degradation levels; replaced for exploratory use by corrected_audit_v2/measurements.json"
+  },
+  "final_experiment_results.json": {
+    "status": "NOT_VALID_FOR_METHOD_CLAIMS",
+    "reason": "Aggregate Ridge selector mislabeled CTS, synthetic audio features, in-sample thresholds, misleading mixed-output quality"
+  },
+  "corrected_audit_v2/policies.json": {
+    "status": "EXPLORATORY_BASELINES_ONLY",
+    "reason": "Paired historical measurements; shared timestamps and previously inspected sources"
+  },
+  "corrected_audit_v2/agent_rescore.json": {
+    "status": "RESCORED_HISTORICAL_RUNS",
+    "reason": "Different protocols and attempts retained separately; not a fair model ranking"
+  }
+}

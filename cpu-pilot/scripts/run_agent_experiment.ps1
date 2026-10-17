@@ -1,11 +1,11 @@
 param(
     [ValidateSet('measure','agent','check')][string]$Stage = 'check',
     [string]$RuntimeRoot = '',
-    [ValidateSet('groq','gemini')][string]$Provider = 'groq',
+    [ValidateSet('groq','gemini','openrouter')][string]$Provider = 'groq',
     [string]$Model = 'qwen/qwen3.8-27b',
     [int]$Sources = 1,
     [string]$RunName = 'ava_smoke_v1',
-    [string]$Attempt = 'interval_v1'
+    [string]$Attempt = 'audited_v2'
 )
 $ErrorActionPreference = 'Stop'
 $pilotRoot = Split-Path $PSScriptRoot -Parent

@@ -11,8 +11,15 @@ def sha(p):
 def save(p,obj):
     t=p.with_suffix('.tmp');t.write_text(json.dumps(obj,indent=2,allow_nan=False));t.replace(p)
 
+def trim_audio_rounding(audio, expected, tolerance=16):
+    """Discard at most 1 ms of excess 16 kHz resampler output; never pad gaps."""
+    excess = len(audio) - expected
+    if not 0 <= excess <= tolerance:
+        raise RuntimeError(f'Audio duration mismatch: {len(audio)} samples, expected {expected}')
+    return audio[:expected].copy(), excess
+
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--runtime-root',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--max-sources',type=int,default=1);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--runtime-root',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--max-sources',type=int,default=1);ap.add_argument('--data-root',type=Path);ap.add_argument('--media-manifest',type=Path);ap.add_argument('--episode-id');args=ap.parse_args()
     root=args.runtime_root.resolve();out=args.output.resolve();out.mkdir(parents=True,exist_ok=True)
     for f in ['tools/quality_cpu','tools/iqa_models','tools/python','tools/media_runtime','scripts']:sys.path.insert(0,str(root/f))
     import av, cv2, torch, numpy as np, pyiqa, imageio_ffmpeg
@@ -20,9 +27,19 @@ def main():
     sys.path.insert(0,str(root/'external/fastdvdnet'))
     from models import FastDVDnet
     from fastdvdnet import denoise_seq_fastdvdnet
-    data=root/'data/ava_agent';mp=data/'manifest.json';manifest=json.loads(mp.read_text());downloads={x['source']:x for x in json.loads((data/'media_download_audit.json').read_text())}
+    data=args.data_root or root/'data/ava_agent';mp=data/'manifest.json';manifest=json.loads(mp.read_text())
+    if args.media_manifest:
+        receipts=json.loads(args.media_manifest.read_text())['sources']
+        downloads={x['source']:{'path':x['path'],'sha256':sha(x['path'])} for x in receipts}
+    else:
+        downloads={x['source']:x for x in json.loads((data/'media_download_audit.json').read_text())}
     sources=manifest['selected_sources'][:args.max_sources];episodes=[x for x in manifest['episodes'] if x['source'] in sources]
+    if args.episode_id:
+        episodes=[e for e in manifest['episodes'] if e['episode_id']==args.episode_id]
+        if len(episodes)!=1:raise ValueError('Episode ID must select exactly one frozen episode')
+        sources=[episodes[0]['source']]
     protocol={'dataset':'AVA-ActiveSpeaker v1.0 validation','scope':'One-source smoke test' if len(sources)==1 else 'Frozen integration batch','sources':sources,'episode_ids':[e['episode_id'] for e in episodes],'manifest_sha256':sha(mp),'code_sha256':sha(__file__),'noise_sigma':25,'seed':20261017,'fps':25,'seconds':4,'crop_size':128,'candidate_names':['captured','fastdvdnet','spatial_nlm'],'quality_frames':[0,49,99],'label_policy':'Official published annotations; inaudible speech excluded; no independent relabeling','alignment_policy':'Select decoded frames by absolute PTS; nearest official face annotation within 25ms; original audio segment at matching source time; technical alignment only, human sync review pending'}
+    protocol['source_sha256']={source:downloads[source]['sha256'] for source in sources}
     pp=out/'protocol.json'
     if pp.exists() and json.loads(pp.read_text())!=protocol:raise RuntimeError('Configuration mismatch: use a new output directory')
     save(pp,protocol)
@@ -67,12 +84,12 @@ def main():
             result['exclusions'].append({'id':sid,'reason':'native_face_below_32px','minimum':min(sizes)});save(rp,result);continue
         audio_cmd=[ff,'-v','error','-ss',str(start),'-i',str(source),'-t','4','-map','0:a:0','-ac','1','-ar','16000','-f','f32le','pipe:1']
         audio=np.frombuffer(subprocess.run(audio_cmd,capture_output=True,check=True,timeout=90).stdout,dtype='<f4').copy()
-        if len(audio)!=64000:raise RuntimeError('Audio duration mismatch')
+        audio,audio_excess_samples=trim_audio_rounding(audio,64000)
         reference=np.stack(crops);rng=np.random.default_rng(20261017+int(sid[:8],16));captured=np.rint(np.clip(reference.astype(float)+rng.normal(0,25,reference.shape),0,255)).astype(np.uint8)
         x=torch.from_numpy(captured.transpose(0,3,1,2).copy()).float()/255
         with torch.inference_mode():restored=denoise_seq_fastdvdnet(x,torch.tensor([25/255]),5,restorer)
         videos={'captured':captured,'fastdvdnet':(restored.permute(0,2,3,1).numpy().clip(0,1)*255).round().astype(np.uint8),'spatial_nlm':np.stack([cv2.cvtColor(cv2.fastNlMeansDenoisingColored(cv2.cvtColor(f,cv2.COLOR_RGB2BGR),None,10,10,7,21),cv2.COLOR_BGR2RGB) for f in captured])}
-        case={'id':sid,'source':episode['source'],'category':episode['category'],'start':start,'entity':episode['entity'],'max_frame_grid_delta':max_delta,'max_label_delta':max(label_deltas),'min_native_face':min(sizes),'audio_sha256':hashlib.sha256(audio.tobytes()).hexdigest(),'candidates':{}}
+        case={'audio_excess_samples_trimmed':audio_excess_samples,'id':sid,'source':episode['source'],'category':episode['category'],'start':start,'entity':episode['entity'],'max_frame_grid_delta':max_delta,'max_label_delta':max(label_deltas),'min_native_face':min(sizes),'audio_sha256':hashlib.sha256(audio.tobytes()).hexdigest(),'candidates':{}}
         audios=[]
         for name,video in {**videos,'reference':reference}.items():
             probs,indices=detector.predict(video,audio,[[0,0,128,128]]*100,25);audios.append(probs['A']);truth=np.array(labels)[indices]
@@ -85,7 +102,7 @@ def main():
             print(sid,name,case['candidates'][name]['error_count'],'/',len(truth),flush=True)
         assert all(np.array_equal(audios[0],v) for v in audios),'Audio branch changed'
         case['audio_branch_invariant']=True
-        bundle=data/(sid+'_smoke_outputs.npz');np.savez_compressed(bundle,reference=reference,audio=audio,labels=np.array(labels),**videos)
+        bundle=out/(sid+'_smoke_outputs.npz');np.savez_compressed(bundle,reference=reference,audio=audio,labels=np.array(labels),**videos)
         case['local_bundle']=str(bundle);case['bundle_sha256']=sha(bundle)
         sheet=np.concatenate([np.concatenate([reference[i],captured[i],videos['fastdvdnet'][i]],axis=1) for i in [0,49,99]],axis=0)
         cv2.imwrite(str(out/(sid+'_review.jpg')),cv2.cvtColor(sheet,cv2.COLOR_RGB2BGR))
