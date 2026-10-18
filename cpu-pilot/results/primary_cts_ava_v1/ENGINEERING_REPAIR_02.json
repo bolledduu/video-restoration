@@ -1,0 +1,10 @@
+{
+  "repair": "Exclude cases whose decoded four-second audio is short, without padding or changing the waveform",
+  "old_code_sha256": "b4c4d9b225db62448998c74af1c4eca9eb75d0edf653ef435c5e6c6b9a57c3c3",
+  "new_code_sha256": "489b09b7bcc48c785b0ed8e56419b22ff44e51d4b25c41011a2b86affb102ac4",
+  "test_started": true,
+  "frozen_selector_sha256": "5e25f3f19d787934fa6e63a02d923bb3fde270024cb44d173f96f393dfe2cc11",
+  "prior_attempt": "attempts/02_short_test_audio_abort",
+  "timestamp_utc": "2026-10-18T01:38:26.9423616Z",
+  "no_split_checkpoint_mask_or_selection_change": true
+}

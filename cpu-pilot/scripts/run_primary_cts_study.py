@@ -110,14 +110,21 @@ def main_job(args):
     def audit(name,measurements):
         run([scripts/'measure_captured_support.py','--runtime-root',config['runtime'],'--output',job/name/'audit','--measurement-files',measurements,'--detector-checkpoint',config['checkpoint'],'--compact-controls'])
     try:
-        verify_code();state('train_audit');audit('train',job/'train/normalized_measurements.json')
-        state('fit_training')
-        if not (job/'trained.json').exists():run([job/'code/run_primary_cts_study.py','--stage','fit','--job',job])
-        state('calibration_raw');data=create_split('calibration')
-        run([scripts/'run_ava_local.py','--runtime-root',config['runtime'],'--data-root',data,'--max-sources','5','--detector-checkpoint',config['checkpoint'],'--output',job/'calibration/raw'])
-        state('calibration_audit');audit('calibration',job/'calibration/raw/measurements.json')
-        state('freeze_calibration')
-        if not (job/'frozen_selector.json').exists():run([job/'code/run_primary_cts_study.py','--stage','calibrate','--job',job])
+        verify_code()
+        if (job/'frozen_selector.json').exists():
+            frozen=read(job/'frozen_selector.json')
+            if frozen['status']!='FROZEN_BEFORE_TEST' or sha(job/'trained.json')!=frozen['trained_sha256'] or sha(job/'calibration/audit/measurements.json')!=frozen['calibration_sha256']:
+                raise ValueError('Frozen selector dependencies changed before test resume')
+            state('resume_frozen_test',frozen_selector_sha256=sha(job/'frozen_selector.json'))
+        else:
+            state('train_audit');audit('train',job/'train/normalized_measurements.json')
+            state('fit_training')
+            if not (job/'trained.json').exists():run([job/'code/run_primary_cts_study.py','--stage','fit','--job',job])
+            state('calibration_raw');data=create_split('calibration')
+            run([scripts/'run_ava_local.py','--runtime-root',config['runtime'],'--data-root',data,'--max-sources','5','--detector-checkpoint',config['checkpoint'],'--output',job/'calibration/raw'])
+            state('calibration_audit');audit('calibration',job/'calibration/raw/measurements.json')
+            state('freeze_calibration')
+            run([job/'code/run_primary_cts_study.py','--stage','calibrate','--job',job])
         frozen_hash=sha(job/'frozen_selector.json');state('test_raw',frozen_selector_sha256=frozen_hash);data=create_split('test')
         run([scripts/'run_ava_local.py','--runtime-root',config['runtime'],'--data-root',data,'--max-sources','15','--detector-checkpoint',config['checkpoint'],'--output',job/'test/raw'])
         state('test_audit',frozen_selector_sha256=frozen_hash);audit('test',job/'test/raw/measurements.json')

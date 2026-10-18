@@ -1,0 +1,10 @@
+{
+  "repair": "Resume from verified frozen selector without rerunning completed calibration",
+  "old_code_sha256": "1ed2980e1f44b7f7abe419568dd591595dfd37537fcbf5f8b7e18a07ebb2654d",
+  "new_code_sha256": "82d4ebd5df64e775b89fa39d4669137bbf642429445123a14df5342c188d18e0",
+  "test_started": true,
+  "frozen_selector_sha256": "5e25f3f19d787934fa6e63a02d923bb3fde270024cb44d173f96f393dfe2cc11",
+  "prior_attempt": "attempts/03_resume_replayed_calibration",
+  "timestamp_utc": "2026-10-18T02:00:36.5118813Z",
+  "no_split_checkpoint_mask_or_selection_change": true
+}

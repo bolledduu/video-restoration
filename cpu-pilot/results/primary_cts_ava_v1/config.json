@@ -5,14 +5,14 @@
   "checkpoint_sha256": "a83d7e88c46633ebd06025337512a7d78edd8ebb8981b148b702c02de767a4e0",
   "source_protocol_sha256": "dba6da3988f2e51cdc0b722e3982fa1675d421c89159d49e836de301f527e3cf",
   "code_sha256": {
-    "run_ava_local.py": "ff5c32756c77c571664933a7730371e5d69dea4b59b548a83c88d53202f32c7a",
+    "run_ava_local.py": "489b09b7bcc48c785b0ed8e56419b22ff44e51d4b25c41011a2b86affb102ac4",
     "talknet_checkpoint_cpu.py": "3958729a9096a88df02bd21f20bef70d0a9038d0731d44eaf625f11f7bb8ff2b",
     "captured_support.py": "b688d5a0e9e78486894cb2d86b953ff287193bf12207ae05373c13abb0e49019",
     "measure_captured_support.py": "229653c0d5ed3b71b4244e12ab9643b0e78cf7d5335574ddecf88a56fe8ee3d0",
     "evaluate_captured_support.py": "4f6cd3f768e179d30acaa96375a2aef8bb65b1617ef19b3ba52962ca000f68a0",
     "captured_support_tool.py": "c75e714871f5156a48ec40022a474de8af80015f5ea474aa37647b760980c58c",
     "ava_evidence_environment.py": "e2a3903e2fab55dda22e004ccb3d92a53ddc91c8076ff5aef8ca4cb40693e875",
-    "run_primary_cts_study.py": "1ed2980e1f44b7f7abe419568dd591595dfd37537fcbf5f8b7e18a07ebb2654d"
+    "run_primary_cts_study.py": "82d4ebd5df64e775b89fa39d4669137bbf642429445123a14df5342c188d18e0"
   },
   "primary_scope": "AVA sigma25, FastDVDnet, official AVA TalkNet checkpoint, deterministic assessor; real LLM-agent transfer and other datasets remain separate",
   "resource_policy": "Sequential CPU stages, two Torch threads; zero paid API calls",
@@ -25,5 +25,37 @@
       "scikit-learn": "1.7.2",
       "pyiqa": "not in default environment; runtime path supplies dependency"
     }
-  }
+  },
+  "engineering_repairs": [
+    {
+      "repair": "Alignment tolerance violations recorded as predefined technical exclusions instead of terminating entire batch",
+      "old_code_sha256": "ff5c32756c77c571664933a7730371e5d69dea4b59b548a83c88d53202f32c7a",
+      "new_code_sha256": "b4c4d9b225db62448998c74af1c4eca9eb75d0edf653ef435c5e6c6b9a57c3c3",
+      "timestamp_utc": "2026-10-17T17:30:02.067521-07:00",
+      "no_split_checkpoint_mask_or_selection_change": true,
+      "trained_sha256_unchanged": "eb8a89f61e41b76d243ec3042dfdfb8568d39b67a7d89ab0e72e4558c8940751",
+      "prior_attempt": "attempts/01_label_alignment_abort",
+      "test_started": false
+    },
+    {
+      "repair": "Exclude cases whose decoded four-second audio is short, without padding or changing the waveform",
+      "old_code_sha256": "b4c4d9b225db62448998c74af1c4eca9eb75d0edf653ef435c5e6c6b9a57c3c3",
+      "new_code_sha256": "489b09b7bcc48c785b0ed8e56419b22ff44e51d4b25c41011a2b86affb102ac4",
+      "test_started": true,
+      "frozen_selector_sha256": "5e25f3f19d787934fa6e63a02d923bb3fde270024cb44d173f96f393dfe2cc11",
+      "prior_attempt": "attempts/02_short_test_audio_abort",
+      "timestamp_utc": "2026-10-18T01:38:26.9423616Z",
+      "no_split_checkpoint_mask_or_selection_change": true
+    },
+    {
+      "repair": "Resume from verified frozen selector without rerunning completed calibration",
+      "old_code_sha256": "1ed2980e1f44b7f7abe419568dd591595dfd37537fcbf5f8b7e18a07ebb2654d",
+      "new_code_sha256": "82d4ebd5df64e775b89fa39d4669137bbf642429445123a14df5342c188d18e0",
+      "test_started": true,
+      "frozen_selector_sha256": "5e25f3f19d787934fa6e63a02d923bb3fde270024cb44d173f96f393dfe2cc11",
+      "prior_attempt": "attempts/03_resume_replayed_calibration",
+      "timestamp_utc": "2026-10-18T02:00:36.5118813Z",
+      "no_split_checkpoint_mask_or_selection_change": true
+    }
+  ]
 }

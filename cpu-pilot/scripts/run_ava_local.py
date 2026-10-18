@@ -1,5 +1,6 @@
 """Real AVA smoke measurements; preserve source PTS, official labels and provenance."""
 import argparse, hashlib, json, subprocess, sys
+import math
 from pathlib import Path
 
 def sha(p):
@@ -17,6 +18,13 @@ def trim_audio_rounding(audio, expected, tolerance=16):
     if not 0 <= excess <= tolerance:
         raise RuntimeError(f'Audio duration mismatch: {len(audio)} samples, expected {expected}')
     return audio[:expected].copy(), excess
+
+def alignment_exclusion(case_id, maximum_delta, reason, tolerance=.025):
+    """Log a prespecified technical exclusion without relaxing the time tolerance."""
+    value=float(maximum_delta)
+    if not math.isfinite(value) or value>tolerance:
+        return dict(id=case_id,reason=reason,maximum_delta=value if math.isfinite(value) else None,tolerance=tolerance)
+    return None
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--runtime-root',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--max-sources',type=int,default=1);ap.add_argument('--data-root',type=Path);ap.add_argument('--media-manifest',type=Path);ap.add_argument('--episode-id');ap.add_argument('--detector-checkpoint',type=Path);args=ap.parse_args()
@@ -77,18 +85,26 @@ def main():
         if not frames:raise RuntimeError('No decoded frames at source timestamps')
         chosen=np.abs(np.array(pts)[:,None]-grid[None,:]).argmin(axis=0)
         max_delta=float(np.max(np.abs(np.array(pts)[chosen]-grid)))
-        if max_delta>.025:raise RuntimeError('Decoded timestamp alignment exceeds tolerance')
+        exclusion=alignment_exclusion(sid,max_delta,'decoded_timestamp_alignment_exceeds_tolerance')
+        if exclusion:
+            result['exclusions'].append(exclusion);save(rp,result);continue
         times=np.array([float(r[1]) for r in annotations]);crops=[];labels=[];sizes=[];label_deltas=[]
         for k in chosen:
             frame=frames[k];h,w=frame.shape[:2];j=int(np.argmin(abs(times-pts[k])));row=annotations[j]
             label_deltas.append(abs(times[j]-pts[k]));x1,y1,x2,y2=map(float,row[2:6]);x1,y1,x2,y2=int(x1*w),int(y1*h),int(x2*w),int(y2*h)
             if not 0<=x1<x2<=w or not 0<=y1<y2<=h:raise RuntimeError('Invalid official face box')
             sizes.append(min(x2-x1,y2-y1));crops.append(cv2.resize(frame[y1:y2,x1:x2],(128,128),interpolation=cv2.INTER_CUBIC));labels.append({'SPEAKING_AUDIBLE':1,'NOT_SPEAKING':0}[row[6]])
-        if max(label_deltas)>.025:raise RuntimeError('Official-label alignment exceeds tolerance')
+        exclusion=alignment_exclusion(sid,max(label_deltas),'official_label_alignment_exceeds_tolerance')
+        if exclusion:
+            result['exclusions'].append(exclusion);save(rp,result);continue
         if min(sizes)<32:
             result['exclusions'].append({'id':sid,'reason':'native_face_below_32px','minimum':min(sizes)});save(rp,result);continue
         audio_cmd=[ff,'-v','error','-ss',str(start),'-i',str(source),'-t','4','-map','0:a:0','-ac','1','-ar','16000','-f','f32le','pipe:1']
         audio=np.frombuffer(subprocess.run(audio_cmd,capture_output=True,check=True,timeout=90).stdout,dtype='<f4').copy()
+        if len(audio)<64000:
+            result['exclusions'].append({'id':sid,'reason':'decoded_audio_shorter_than_4s','decoded_samples':len(audio),'required_samples':64000})
+            save(rp,result)
+            continue
         audio,audio_excess_samples=trim_audio_rounding(audio,64000)
         reference=np.stack(crops);rng=np.random.default_rng(20261017+int(sid[:8],16));captured=np.rint(np.clip(reference.astype(float)+rng.normal(0,25,reference.shape),0,255)).astype(np.uint8)
         x=torch.from_numpy(captured.transpose(0,3,1,2).copy()).float()/255

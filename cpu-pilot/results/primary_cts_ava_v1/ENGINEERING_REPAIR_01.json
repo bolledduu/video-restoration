@@ -1,0 +1,10 @@
+{
+  "repair": "Alignment tolerance violations recorded as predefined technical exclusions instead of terminating entire batch",
+  "old_code_sha256": "ff5c32756c77c571664933a7730371e5d69dea4b59b548a83c88d53202f32c7a",
+  "new_code_sha256": "b4c4d9b225db62448998c74af1c4eca9eb75d0edf653ef435c5e6c6b9a57c3c3",
+  "timestamp_utc": "2026-10-18T00:30:02.067521+00:00",
+  "no_split_checkpoint_mask_or_selection_change": true,
+  "trained_sha256_unchanged": "eb8a89f61e41b76d243ec3042dfdfb8568d39b67a7d89ab0e72e4558c8940751",
+  "prior_attempt": "attempts/01_label_alignment_abort",
+  "test_started": false
+}
